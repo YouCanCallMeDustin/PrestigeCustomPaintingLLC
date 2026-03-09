@@ -1,0 +1,20 @@
+{
+    "name": "Prestige Painting",
+    "phone": "(509) 714-9491",
+    "email": "buddylee12091@gmail.com",
+    "location": {
+        "city": "Spokane Valley",
+        "state": "WA",
+        "county": "Spokane County"
+    },
+    "branding": {
+        "primary": "#34A853",
+        "secondary": "#000000",
+        "accent": "#FFFFFF",
+        "vibe": "Modern Conversion"
+    },
+    "messaging": {
+        "tagline": "We strive to make our clients happy.",
+        "main_cta": "CALL NOW!"
+    }
+}
