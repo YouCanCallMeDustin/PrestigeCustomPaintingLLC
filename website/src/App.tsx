@@ -55,8 +55,8 @@ function App() {
                             TRUSTED YEAR-ROUND IN SPOKANE COUNTY
                         </div>
                         <h1 className="text-4xl md:text-5xl lg:text-7xl font-poppins font-bold leading-tight mb-6 md:mb-8">
-                            We strive to make our <br className="hidden md:block" />
-                            <span className="text-brand-green">clients happy.</span>
+                            Top-Rated House Painters in <br className="hidden md:block" />
+                            <span className="text-brand-green">Spokane, WA.</span>
                         </h1>
                         <p className="text-lg md:text-xl text-gray-600 mb-8 md:mb-10 leading-relaxed max-w-2xl mx-auto md:mx-0">
                             Professional, modern painting solutions for your home and business.
@@ -101,9 +101,9 @@ function App() {
 
                     <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
                         {[
-                            { title: "Interior Painting", desc: "Precise edge work and premium finishes for every room in your home." },
-                            { title: "Exterior Painting", desc: "Durable, weather-resistant coatings to protect your property's value." },
-                            { title: "Finish Work", desc: "Expert trim, door, and cabinet painting that feels like a factory finish." }
+                            { title: "Interior Painting", desc: "Precise edge work and premium finishes for every room in your home.", link: "/interior-painting-spokane" },
+                            { title: "Exterior Painting", desc: "Durable, weather-resistant coatings to protect your property's value.", link: "/exterior-painting-spokane" },
+                            { title: "Cabinet Painting", desc: "Expert trim, door, and cabinet painting that feels like a factory finish.", link: "/cabinet-painting-spokane" }
                         ].map((service, idx) => (
                             <div key={idx} className="group p-6 md:p-8 border border-gray-100 rounded-3xl hover:border-brand-green hover:shadow-2xl hover:shadow-green-500/10 transition-all cursor-default overflow-hidden relative">
                                 <div className="absolute top-0 right-0 w-24 h-24 bg-brand-green/5 rounded-bl-full translate-x-4 -translate-y-4 group-hover:scale-150 transition-transform" />
@@ -112,7 +112,7 @@ function App() {
                                 </div>
                                 <h3 className="text-xl md:text-2xl font-poppins font-bold mb-4">{service.title}</h3>
                                 <p className="text-gray-600 mb-6 leading-relaxed text-sm md:text-base">{service.desc}</p>
-                                <Link to="/services" className="flex items-center gap-2 text-brand-green font-bold text-sm hover:translate-x-1 transition-transform">
+                                <Link to={service.link} className="flex items-center gap-2 text-brand-green font-bold text-sm hover:translate-x-1 transition-transform">
                                     LEARN MORE <ArrowRight size={16} />
                                 </Link>
                             </div>

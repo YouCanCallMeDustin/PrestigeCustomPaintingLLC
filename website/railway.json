@@ -4,7 +4,7 @@
         "builder": "NIXPACKS"
     },
     "deploy": {
-        "startCommand": "npx serve -s dist",
+        "startCommand": "npx sirv-cli dist --single --gzip --brotli",
         "restartPolicyType": "ON_FAILURE"
     }
 }
