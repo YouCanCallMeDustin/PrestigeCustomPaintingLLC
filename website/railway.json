@@ -4,7 +4,7 @@
         "builder": "NIXPACKS"
     },
     "deploy": {
-        "startCommand": "npx sirv-cli dist --single --gzip --brotli",
+        "startCommand": "npx sirv-cli dist --host 0.0.0.0 --port $PORT --single --gzip --brotli",
         "restartPolicyType": "ON_FAILURE"
     }
 }
