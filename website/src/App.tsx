@@ -1,11 +1,18 @@
 import { Phone, Mail, MapPin, CheckCircle, ArrowRight, Star, Heart, Shield } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
 
 function App() {
     const phoneNumber = "(509) 714-9491";
     const email = "buddylee12091@gmail.com";
     const location = "Spokane Valley, WA";
     const ownerName = "Robert";
+
+    useEffect(() => {
+        document.title = "Professional Painters in Spokane | #1 Rated Prestige Custom Painting";
+        const meta = document.querySelector('meta[name="description"]');
+        if (meta) meta.setAttribute('content', 'Searching for professional painters in Spokane, WA? Prestige Custom Painting LLC offers premium interior, exterior, and cabinet painting services. Locally owned with 5-star results.');
+    }, []);
 
     const handleScrollToServices = (e: React.MouseEvent) => {
         e.preventDefault();
@@ -34,6 +41,7 @@ function App() {
                     </Link>
 
                     <div className="flex items-center gap-3 md:gap-6">
+                        <Link to="/our-work" className="hidden md:block text-sm font-bold hover:text-brand-green transition-colors">OUR WORK</Link>
                         <a href={`tel:${phoneNumber}`} className="hidden lg:flex items-center gap-2 text-sm font-semibold hover:text-brand-green transition-colors">
                             <Phone size={18} className="text-brand-green" />
                             {phoneNumber}
@@ -55,7 +63,7 @@ function App() {
                             TRUSTED YEAR-ROUND IN SPOKANE COUNTY
                         </div>
                         <h1 className="text-4xl md:text-5xl lg:text-7xl font-poppins font-bold leading-tight mb-6 md:mb-8">
-                            Top-Rated House Painters in <br className="hidden md:block" />
+                            Professional Painters in <br className="hidden md:block" />
                             <span className="text-brand-green">Spokane, WA.</span>
                         </h1>
                         <p className="text-lg md:text-xl text-gray-600 mb-8 md:mb-10 leading-relaxed max-w-2xl mx-auto md:mx-0">
@@ -241,16 +249,17 @@ function App() {
                                 <li><Link to="/painting-airway-heights" className="hover:text-brand-green transition-colors">Airway Heights, WA</Link></li>
                                 <li><Link to="/painting-cheney" className="hover:text-brand-green transition-colors">Cheney, WA</Link></li>
                                 <li><Link to="/painting-deer-park" className="hover:text-brand-green transition-colors">Deer Park, WA</Link></li>
-                                <li><Link to="/house-painters-spokane" className="hover:text-brand-green transition-colors">Spokane, WA</Link></li>
+                                <li><Link to="/house-painters-spokane" className="hover:text-brand-green transition-colors font-bold">Professional Painters in Spokane</Link></li>
                             </ul>
                         </div>
 
                         <div className="text-center md:text-left">
                             <h4 className="font-bold text-lg mb-4 uppercase tracking-wider text-brand-green">Local Resources</h4>
                             <ul className="text-gray-600 text-sm space-y-3 font-semibold">
+                                <li><Link to="/our-work" className="hover:text-brand-green transition-colors uppercase">Our Work (Gallery)</Link></li>
                                 <li><Link to="/blog/cost-to-paint-house-spokane" className="hover:text-brand-green transition-colors">How Much Does Painting Cost in Spokane?</Link></li>
                                 <li><Link to="/blog/best-exterior-paint-spokane" className="hover:text-brand-green transition-colors">Best Exterior Paint for Spokane Weather</Link></li>
-                                <li><Link to="/blog/how-often-to-paint-house-spokane" className="hover:text-brand-green transition-colors">How Often Should You Paint Your House?</Link></li>
+                                <li><Link to="/blog/how-often-to-paint-house-spokane" className="hover:text-brand-green transition-colors">How Often Should You Paint?</Link></li>
                                 <li><Link to="/blog/interior-painting-tips-spokane" className="hover:text-brand-green transition-colors">Interior Painting Tips for Spokane Homes</Link></li>
                             </ul>
                         </div>

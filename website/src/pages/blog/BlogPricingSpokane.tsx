@@ -7,8 +7,8 @@ export default function BlogPricingSpokane() {
             date="March 10, 2026"
             readTime="8 MIN"
             category="PRICING GUIDE"
-            metaTitle="How Much Does It Cost to Paint a House in Spokane? | Prestige Painting"
-            metaDesc="Discover the average cost of interior and exterior house painting in Spokane, WA. Learn about pricing factors, local averages, and how to get the best value for your project."
+            metaTitle="How Much Does It Cost to Paint a House in Spokane? | Professional Painters"
+            metaDesc="Discover the average cost of interior and exterior painting from professional painters in Spokane, WA. Learn about pricing factors and local averages."
             intro="If you're a homeowner in Spokane or Spokane Valley, one of the first questions on your mind when considering a home improvement project is: 'How much is this going to cost?' Painting is one of the most cost-effective ways to transform your home's appearance, but understanding the local market pricing is key to planning your budget."
             sections={[
                 {
@@ -48,9 +48,9 @@ export default function BlogPricingSpokane() {
                 }
             ]}
             relatedServices={[
-                { label: "Exterior Painting", to: "/exterior-painting-spokane" },
-                { label: "Interior Painting", to: "/interior-painting-spokane" },
-                { label: "Cabinet Painting", to: "/cabinet-painting-spokane" }
+                { label: "Professional Exterior Painting", to: "/exterior-painting-spokane" },
+                { label: "Professional Interior Painting", to: "/interior-painting-spokane" },
+                { label: "Professional Cabinet Painting", to: "/cabinet-painting-spokane" }
             ]}
         />
     );

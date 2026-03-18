@@ -7,8 +7,8 @@ export default function BlogHowOftenToPaint() {
             date="March 10, 2026"
             readTime="7 MIN"
             category="MAINTENANCE GUIDE"
-            metaTitle="How Often Should You Paint a House in Spokane WA? | Prestige Painting"
-            metaDesc="Discover how often you should repaint your Spokane home to maintain its beauty and protection. Learn about the signs of wear specific to our Inland Northwest climate."
+            metaTitle="How Often Should You Paint a House in Spokane WA? | Professional Painters"
+            metaDesc="Discover how often you should repaint your Spokane home with advice from professional painters. Signs of wear specific to our Inland Northwest climate."
             intro="Maintaining your home's exterior and interior paint is a key part of responsible homeownership. But how often should you actually repaint? In Spokane and the surrounding Inland Northwest, the answer depends on several factors, including our unique climate and the type of surfaces involved."
             sections={[
                 {
@@ -48,9 +48,9 @@ export default function BlogHowOftenToPaint() {
                 }
             ]}
             relatedServices={[
-                { label: "Exterior Painting", to: "/exterior-painting-spokane" },
-                { label: "Interior Painting", to: "/interior-painting-spokane" },
-                { label: "House Painters", to: "/house-painters-spokane" }
+                { label: "Professional Exterior Painting", to: "/exterior-painting-spokane" },
+                { label: "Professional Interior Painting", to: "/interior-painting-spokane" },
+                { label: "Professional Cabinet Painting", to: "/cabinet-painting-spokane" }
             ]}
         />
     );

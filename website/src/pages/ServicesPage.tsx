@@ -25,6 +25,7 @@ function ServicesPage() {
                     </Link>
 
                     <div className="flex items-center gap-3 md:gap-6">
+                        <Link to="/our-work" className="hidden md:block text-sm font-bold hover:text-brand-green transition-colors">OUR WORK</Link>
                         <a href={`tel:${phoneNumber}`} className="hidden lg:flex items-center gap-2 text-sm font-semibold hover:text-brand-green transition-colors">
                             <Phone size={18} className="text-brand-green" />
                             {phoneNumber}
@@ -105,7 +106,7 @@ function ServicesPage() {
                             </p>
                             <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-4">
                                 {[
-                                    "Complete house exterior painting",
+                                    "Complete professional exterior painting",
                                     "Deck and fence staining",
                                     "Pressure washing and surface prep",
                                     "Siding and trim repair",
@@ -239,6 +240,7 @@ function ServicesPage() {
                         <div className="text-center md:text-left">
                             <h4 className="font-bold text-lg mb-4 uppercase tracking-wider text-brand-green">Local Resources</h4>
                             <ul className="text-gray-600 text-sm space-y-3 font-semibold">
+                                <li><Link to="/our-work" className="hover:text-brand-green transition-colors uppercase">Our Work (Gallery)</Link></li>
                                 <li><Link to="/blog/cost-to-paint-house-spokane" className="hover:text-brand-green transition-colors">How Much Does Painting Cost in Spokane?</Link></li>
                                 <li><Link to="/blog/best-exterior-paint-spokane" className="hover:text-brand-green transition-colors">Best Exterior Paint for Spokane Weather</Link></li>
                                 <li><Link to="/blog/how-often-to-paint-house-spokane" className="hover:text-brand-green transition-colors">How Often Should You Paint Your House?</Link></li>

@@ -8,9 +8,9 @@ function CommercialPaintingPage() {
     const location = "Spokane Valley, WA";
 
     useEffect(() => {
-        document.title = "Commercial Painting in Spokane WA | Prestige Custom Painting LLC";
+        document.title = "Professional Commercial Painters in Spokane | Prestige Custom Painting LLC";
         const meta = document.querySelector('meta[name="description"]');
-        if (meta) meta.setAttribute('content', 'Professional commercial painting services in Spokane, WA. Prestige Custom Painting LLC paints offices, retail spaces, and commercial buildings with minimal disruption. Call (509) 714-9491.');
+        if (meta) meta.setAttribute('content', 'Searching for professional commercial painters in Spokane? Prestige Custom Painting LLC provides expert workspace transformations and durable business painting solutions.');
     }, []);
 
     const services = [

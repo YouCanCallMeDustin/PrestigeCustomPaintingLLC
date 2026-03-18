@@ -13,6 +13,7 @@ import LibertyLakePage from './pages/LibertyLakePage.tsx'
 import AirwayHeightsPage from './pages/AirwayHeightsPage.tsx'
 import CheneyPage from './pages/CheneyPage.tsx'
 import DeerParkPage from './pages/DeerParkPage.tsx'
+import OurWorkPage from './pages/OurWorkPage.tsx'
 import BlogPricingSpokane from './pages/blog/BlogPricingSpokane.tsx'
 import BlogBestExteriorPaint from './pages/blog/BlogBestExteriorPaint.tsx'
 import BlogHowOftenToPaint from './pages/blog/BlogHowOftenToPaint.tsx'
@@ -25,6 +26,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
             <Routes>
                 <Route path="/" element={<App />} />
                 <Route path="/services" element={<ServicesPage />} />
+                <Route path="/our-work" element={<OurWorkPage />} />
                 <Route path="/interior-painting-spokane" element={<InteriorPaintingPage />} />
                 <Route path="/exterior-painting-spokane" element={<ExteriorPaintingPage />} />
                 <Route path="/house-painters-spokane" element={<HousePaintersPage />} />

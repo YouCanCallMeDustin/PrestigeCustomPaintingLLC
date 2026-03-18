@@ -8,9 +8,9 @@ function HousePaintersPage() {
     const location = "Spokane Valley, WA";
 
     useEffect(() => {
-        document.title = "House Painters in Spokane WA | Prestige Custom Painting LLC";
+        document.title = "Professional Painters in Spokane | Prestige Custom Painting LLC";
         const meta = document.querySelector('meta[name="description"]');
-        if (meta) meta.setAttribute('content', 'Need house painters in Spokane, WA? Prestige Custom Painting LLC offers interior and exterior residential painting with premium results. Locally owned & operated. Call (509) 714-9491 for a free estimate.');
+        if (meta) meta.setAttribute('content', 'Looking for professional painters in Spokane, WA? Prestige Custom Painting LLC delivers expert interior and exterior painting with a focus on quality and client satisfaction.');
     }, []);
 
     const services = [
@@ -37,6 +37,7 @@ function HousePaintersPage() {
                         </span>
                     </Link>
                     <div className="flex items-center gap-3 md:gap-6">
+                        <Link to="/our-work" className="hidden md:block text-sm font-bold hover:text-brand-green transition-colors">OUR WORK</Link>
                         <a href={`tel:${phoneNumber}`} className="hidden lg:flex items-center gap-2 text-sm font-semibold hover:text-brand-green transition-colors"><Phone size={18} className="text-brand-green" />{phoneNumber}</a>
                         <a href={`mailto:${email}`} className="bg-brand-green hover:bg-green-600 text-white px-5 md:px-6 py-2 md:py-2.5 rounded-full font-bold text-sm md:text-base transition-all transform hover:scale-105 shadow-lg shadow-green-500/30">GET A QUOTE</a>
                     </div>
@@ -50,7 +51,7 @@ function HousePaintersPage() {
                     <div className="max-w-3xl">
                         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-green/20 text-brand-green text-xs font-bold mb-6"><Star size={12} fill="currentColor" /> LOCALLY OWNED IN SPOKANE, WA</div>
                         <h1 className="text-4xl md:text-5xl lg:text-6xl font-poppins font-bold mb-6 leading-tight">
-                            House Painters<br /><span className="text-brand-green">in Spokane, WA</span>
+                            Professional Painters<br /><span className="text-brand-green">in Spokane, WA</span>
                         </h1>
                         <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8 max-w-2xl">Prestige Custom Painting LLC is Spokane's trusted residential painting company. We handle interior, exterior, and specialty painting with the professionalism and attention to detail your home deserves.</p>
                         <div className="flex flex-col sm:flex-row gap-4">
@@ -191,6 +192,7 @@ function HousePaintersPage() {
                         <div className="text-center md:text-left">
                             <h4 className="font-bold text-lg mb-4 uppercase tracking-wider text-brand-green">Local Resources</h4>
                             <ul className="text-gray-600 text-sm space-y-3 font-semibold">
+                                <li><Link to="/our-work" className="hover:text-brand-green transition-colors uppercase">Our Work (Gallery)</Link></li>
                                 <li><Link to="/blog/cost-to-paint-house-spokane" className="hover:text-brand-green transition-colors">How Much Does Painting Cost in Spokane?</Link></li>
                                 <li><Link to="/blog/best-exterior-paint-spokane" className="hover:text-brand-green transition-colors">Best Exterior Paint for Spokane Weather</Link></li>
                                 <li><Link to="/blog/how-often-to-paint-house-spokane" className="hover:text-brand-green transition-colors">How Often Should You Paint Your House?</Link></li>

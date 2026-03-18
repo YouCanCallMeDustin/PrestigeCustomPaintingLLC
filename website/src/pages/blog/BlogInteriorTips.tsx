@@ -7,8 +7,8 @@ export default function BlogInteriorTips() {
             date="March 10, 2026"
             readTime="9 MIN"
             category="DESIGN TIPS"
-            metaTitle="Interior Painting Tips for Spokane Homes | Prestige Painting"
-            metaDesc="Discover expert tips for your next interior painting project in Spokane, WA. Learn about color selection, preparation, and choosing the right finishes for your home."
+            metaTitle="Interior Painting Tips for Spokane Homes | Professional Painters"
+            metaDesc="Expert interior painting tips from professional painters in Spokane, WA. Color selection, prep, and finish guide for your next home project."
             intro="A fresh coat of interior paint can completely transform the look and feel of your Spokane home. Whether you're preparing to sell or just want to refresh your living space, following these professional tips will help you achieve a beautiful and long-lasting result."
             sections={[
                 {
@@ -51,9 +51,9 @@ export default function BlogInteriorTips() {
                 }
             ]}
             relatedServices={[
-                { label: "Interior Painting", to: "/interior-painting-spokane" },
-                { label: "Cabinet Painting", to: "/cabinet-painting-spokane" },
-                { label: "House Painters", to: "/house-painters-spokane" }
+                { label: "Professional Interior Painting", to: "/interior-painting-spokane" },
+                { label: "Professional House Painters", to: "/house-painters-spokane" },
+                { label: "Professional Cabinet Painting", to: "/cabinet-painting-spokane" }
             ]}
         />
     );

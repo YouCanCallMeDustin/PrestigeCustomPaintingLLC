@@ -6,8 +6,8 @@ export default function LibertyLakePage() {
             city="Liberty Lake"
             state="WA"
             slug="liberty-lake"
-            metaTitle="House Painters Liberty Lake WA | Prestige Custom Painting LLC"
-            metaDesc="Professional house painters in Liberty Lake, WA. Prestige Custom Painting LLC delivers premium interior and exterior painting for Liberty Lake homes. Call (509) 714-9491 for a free estimate."
+            metaTitle="Professional Painters in Liberty Lake WA | Prestige Custom Painting LLC"
+            metaDesc="Searching for professional painters in Liberty Lake, WA? Prestige Custom Painting LLC delivers high-end interior, exterior, and cabinet painting for Liberty Lake homes. Expert results guaranteed."
             heroTagline="LIBERTY LAKE'S PREMIER PAINTING COMPANY"
             introParagraphs={[
                 "Liberty Lake, WA is one of Spokane County's most desirable communities — and a community that beautiful deserves paint that's just as impressive. Prestige Custom Painting LLC proudly serves homeowners throughout Liberty Lake with professional interior and exterior painting that enhances curb appeal, protects your investment, and transforms how your home looks and feels.",

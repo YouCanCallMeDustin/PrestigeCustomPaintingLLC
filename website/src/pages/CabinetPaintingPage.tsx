@@ -8,9 +8,9 @@ function CabinetPaintingPage() {
     const location = "Spokane Valley, WA";
 
     useEffect(() => {
-        document.title = "Cabinet Painting in Spokane WA | Prestige Custom Painting LLC";
+        document.title = "Professional Cabinet Painters in Spokane | Prestige Custom Painting LLC";
         const meta = document.querySelector('meta[name="description"]');
-        if (meta) meta.setAttribute('content', 'Transform your kitchen or bathroom with professional cabinet painting in Spokane, WA. Prestige Custom Painting LLC delivers factory-smooth finishes at a fraction of replacement cost. Call (509) 714-9491.');
+        if (meta) meta.setAttribute('content', 'Searching for professional cabinet painters in Spokane? Prestige Custom Painting LLC specializes in high-end cabinet refinishing for kitchens and bathrooms.');
     }, []);
 
     const services = [

@@ -6,8 +6,8 @@ export default function CheneyPage() {
             city="Cheney"
             state="WA"
             slug="cheney"
-            metaTitle="House Painters Cheney WA | Prestige Custom Painting LLC"
-            metaDesc="Professional house painters in Cheney, WA. Prestige Custom Painting LLC offers interior and exterior painting for Cheney homeowners and businesses. Call (509) 714-9491 for a free estimate."
+            metaTitle="Professional Painters in Cheney WA | Prestige Custom Painting LLC"
+            metaDesc="Searching for professional painters in Cheney, WA? Prestige Custom Painting LLC offers high-quality interior, exterior, and cabinet refinishing services. Expert craftsmanship you can trust."
             heroTagline="CHENEY'S LOCAL PAINTING PROFESSIONALS"
             introParagraphs={[
                 "Cheney, WA is a vibrant college town and residential community, and Prestige Custom Painting LLC is the painting company Cheney residents trust for professional interior and exterior painting results. Whether you own a home near Eastern Washington University or in one of Cheney's established residential neighborhoods, we're ready to help you transform your property.",
