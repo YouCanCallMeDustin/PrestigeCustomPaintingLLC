@@ -249,15 +249,13 @@ function App() {
                                 <li><Link to="/painting-airway-heights" className="hover:text-brand-green transition-colors">Airway Heights, WA</Link></li>
                                 <li><Link to="/painting-cheney" className="hover:text-brand-green transition-colors">Cheney, WA</Link></li>
                                 <li><Link to="/painting-deer-park" className="hover:text-brand-green transition-colors">Deer Park, WA</Link></li>
-                                <li><span className="text-gray-400">Williamson & Surrounding Areas</span></li>
-                                <li><Link to="/house-painters-spokane" className="hover:text-brand-green transition-colors font-bold">Professional Painters in Spokane</Link></li>
                             </ul>
                         </div>
 
                         <div className="text-center md:text-left">
                             <h4 className="font-bold text-lg mb-4 uppercase tracking-wider text-brand-green">Local Resources</h4>
                             <ul className="text-gray-600 text-sm space-y-3 font-semibold">
-                                <li><Link to="/our-work" className="hover:text-brand-green transition-colors uppercase">Our Work (Gallery)</Link></li>
+                                <li><Link to="/house-painters-spokane" className="hover:text-brand-green transition-colors font-bold">Professional Painters in Spokane</Link></li>
                                 <li><Link to="/blog/cost-to-paint-house-spokane" className="hover:text-brand-green transition-colors">How Much Does Painting Cost in Spokane?</Link></li>
                                 <li><Link to="/blog/best-exterior-paint-spokane" className="hover:text-brand-green transition-colors">Best Exterior Paint for Spokane Weather</Link></li>
                                 <li><Link to="/blog/how-often-to-paint-house-spokane" className="hover:text-brand-green transition-colors">How Often Should You Paint?</Link></li>
