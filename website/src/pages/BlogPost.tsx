@@ -1,6 +1,8 @@
 import { Phone, Mail, MapPin, Clock, ArrowLeft, ArrowRight, Share2, Facebook, Twitter, Linkedin, Star } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
+import { SITE_INFO } from '../lib/constants';
+import Footer from '../components/Footer';
 
 export interface BlogSection {
     heading: string;
@@ -30,8 +32,7 @@ export default function BlogPost({
     sections,
     relatedServices,
 }: BlogPostProps) {
-    const phoneNumber = "(509) 714-9491";
-    const email = "buddylee12091@gmail.com";
+    const { phoneNumber, email } = SITE_INFO;
 
     useEffect(() => {
         document.title = metaTitle;
@@ -188,34 +189,7 @@ export default function BlogPost({
                 </a>
             </div>
 
-            {/* Standard Footer */}
-            <footer className="bg-gray-50 py-16 border-t border-gray-100">
-                <div className="max-w-7xl mx-auto px-4">
-                    <div className="grid md:grid-cols-3 gap-12 mb-12">
-                        <div>
-                            <div className="flex items-center gap-2 mb-6">
-                                <img src="/logo.png" alt="Prestige Custom Painting LLC logo - House Painters Spokane WA" className="w-10 h-10 object-contain" />
-                                <span className="font-bold text-base tracking-tight leading-tight uppercase">PRESTIGE CUSTOM PAINTING <span className="text-brand-green">LLC</span></span>
-                            </div>
-                            <p className="text-gray-500 italic">"We strive to make our clients happy."</p>
-                        </div>
-                        <div className="space-y-4">
-                            <h4 className="font-bold text-lg mb-4 text-brand-black">Contact Info</h4>
-                            <div className="flex items-center gap-3 text-gray-600"><Phone size={18} className="text-brand-green" /> {phoneNumber}</div>
-                            <div className="flex items-center gap-3 text-gray-600"><Mail size={18} className="text-brand-green" /> {email}</div>
-                            <div className="flex items-center gap-3 text-gray-600"><MapPin size={18} className="text-brand-green" /> Spokane Valley, WA</div>
-                        </div>
-                        <div>
-                            <h4 className="font-bold text-lg mb-4 text-brand-black">Service Areas</h4>
-                            <div className="flex flex-wrap gap-2">
-                                {["Spokane", "Spokane Valley", "Liberty Lake", "Cheney", "Airway Heights"].map((area, i) => (
-                                    <span key={i} className="text-xs font-bold bg-gray-200 text-gray-500 px-3 py-1 rounded-full uppercase tracking-tighter">{area}</span>
-                                ))}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </footer>
+            <Footer />
         </div>
     );
 }
