@@ -67,7 +67,7 @@ function App() {
                             <span className="text-brand-green">Spokane, WA.</span>
                         </h1>
                         <p className="text-lg md:text-xl text-gray-600 mb-8 md:mb-10 leading-relaxed max-w-2xl mx-auto md:mx-0">
-                            As a leading **residential painting company**, we provide professional, modern painting solutions for your home and business.
+                            As a leading residential painting company, we provide professional, modern painting solutions for your home and business.
                             Top-tier quality based in Spokane Valley, serving the entire Inland Northwest.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
@@ -111,7 +111,7 @@ function App() {
                         {[
                             { title: "Interior Painting", desc: "Precise edge work and premium finishes for every room in your home.", link: "/interior-painting-spokane" },
                             { title: "Exterior Painting", desc: "Durable, weather-resistant coatings to protect your property's value.", link: "/exterior-painting-spokane" },
-                            { title: "Cabinet Painting", desc: "Expert trim, door, and cabinet **paintings** that feel like a factory finish.", link: "/cabinet-painting-spokane" }
+                            { title: "Cabinet Painting", desc: "Expert trim, door, and cabinet paintings that feel like a factory finish.", link: "/cabinet-painting-spokane" }
                         ].map((service, idx) => (
                             <div key={idx} className="group p-6 md:p-8 border border-gray-100 rounded-3xl hover:border-brand-green hover:shadow-2xl hover:shadow-green-500/10 transition-all cursor-default overflow-hidden relative">
                                 <div className="absolute top-0 right-0 w-24 h-24 bg-brand-green/5 rounded-bl-full translate-x-4 -translate-y-4 group-hover:scale-150 transition-transform" />
@@ -150,7 +150,7 @@ function App() {
                             <h2 className="text-3xl md:text-4xl font-poppins font-bold mb-6 md:mb-8">Meet {ownerName}</h2>
                             <p className="text-lg md:text-xl text-gray-600 leading-relaxed mb-8">
                                 With years of experience serving Spokane County, I founded Prestige Custom Painting LLC with a simple mission:
-                                to bring a higher standard of **professional** care to the local painting industry using premium materials like **Benjamin Moore**.
+                                to bring a higher standard of professional care to the local painting industry using premium materials like Benjamin Moore.
                             </p>
                             <div className="space-y-6 max-w-md mx-auto lg:mx-0 text-left">
                                 <div className="flex gap-4">
@@ -249,7 +249,7 @@ function App() {
                                 <li><Link to="/painting-airway-heights" className="hover:text-brand-green transition-colors">Airway Heights, WA</Link></li>
                                 <li><Link to="/painting-cheney" className="hover:text-brand-green transition-colors">Cheney, WA</Link></li>
                                 <li><Link to="/painting-deer-park" className="hover:text-brand-green transition-colors">Deer Park, WA</Link></li>
-                                <li><span className="text-gray-400">**Williamson** & Surrounding Areas</span></li>
+                                <li><span className="text-gray-400">Williamson & Surrounding Areas</span></li>
                                 <li><Link to="/house-painters-spokane" className="hover:text-brand-green transition-colors font-bold">Professional Painters in Spokane</Link></li>
                             </ul>
                         </div>
