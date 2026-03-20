@@ -1,4 +1,4 @@
-import { Phone, Mail, MapPin, Clock, ArrowLeft, ArrowRight, Share2, Facebook, Twitter, Linkedin, Star } from 'lucide-react';
+import { Phone, Mail, Clock, ArrowLeft, ArrowRight, Share2, Facebook, Twitter, Linkedin, Star } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
 import { SITE_INFO } from '../lib/constants';
