@@ -19,10 +19,16 @@ import BlogBestExteriorPaint from './pages/blog/BlogBestExteriorPaint.tsx'
 import BlogHowOftenToPaint from './pages/blog/BlogHowOftenToPaint.tsx'
 import BlogInteriorTips from './pages/blog/BlogInteriorTips.tsx'
 import './index.css'
+import { initGA } from './lib/analytics'
+import PageTracker from './components/PageTracker'
+
+// Initialize GA4
+initGA();
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
     <React.StrictMode>
         <BrowserRouter>
+            <PageTracker />
             <Routes>
                 <Route path="/" element={<App />} />
                 <Route path="/services" element={<ServicesPage />} />
