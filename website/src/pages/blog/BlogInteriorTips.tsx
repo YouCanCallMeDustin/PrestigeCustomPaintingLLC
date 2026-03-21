@@ -50,11 +50,6 @@ export default function BlogInteriorTips() {
                     content: "While many homeowners enjoy tackling their own interior painting projects, there are times when it makes sense to call in the professionals. If you have large-scale projects, high ceilings, or simply want a guaranteed, flawless result without the time and effort, Prestige Custom Painting LLC is here to help. We bring the skills, tools, and meticulous attention to detail to every interior project we take on in the Spokane area."
                 }
             ]}
-            relatedServices={[
-                { label: "Professional Interior Painting", to: "/interior-painting-spokane" },
-                { label: "Professional House Painters", to: "/house-painters-spokane" },
-                { label: "Professional Cabinet Painting", to: "/cabinet-painting-spokane" }
-            ]}
         />
     );
 }

@@ -47,11 +47,6 @@ export default function BlogPricingSpokane() {
                     content: "The best way to know your actual cost is a professional on-site estimate. We visit your home, measure the surfaces, assess the condition, and discuss your color goals. This allows us to provide a firm, written price with no hidden surprises. We offer free estimates throughout the Spokane region, including Spokane Valley, Cheney, and Liberty Lake."
                 }
             ]}
-            relatedServices={[
-                { label: "Professional Exterior Painting", to: "/exterior-painting-spokane" },
-                { label: "Professional Interior Painting", to: "/interior-painting-spokane" },
-                { label: "Professional Cabinet Painting", to: "/cabinet-painting-spokane" }
-            ]}
         />
     );
 }

@@ -47,11 +47,6 @@ export default function BlogHowOftenToPaint() {
                     content: "Unsure if it's time to repaint your home? We're happy to provide a professional assessment and recommendation. We'll walk your property with you, point out any areas of concern, and discuss the best course of action for your specific needs. Contact us today to schedule your free estimate in Spokane, Spokane Valley, or the surrounding area."
                 }
             ]}
-            relatedServices={[
-                { label: "Professional Exterior Painting", to: "/exterior-painting-spokane" },
-                { label: "Professional Interior Painting", to: "/interior-painting-spokane" },
-                { label: "Professional Cabinet Painting", to: "/cabinet-painting-spokane" }
-            ]}
         />
     );
 }

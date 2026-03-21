@@ -49,11 +49,6 @@ export default function BlogBestExteriorPaint() {
                     content: "Choosing the right paint for your home can be overwhelming. As local painting experts, we have years of experience working with different products and understanding how they perform in our area. We're happy to provide recommendations based on your home's specific needs and your aesthetic preferences. Contact us today for a free consultation and estimate."
                 }
             ]}
-            relatedServices={[
-                { label: "Professional Exterior Painting", to: "/exterior-painting-spokane" },
-                { label: "Professional House Painters", to: "/house-painters-spokane" },
-                { label: "Professional Commercial Painting", to: "/commercial-painting-spokane" }
-            ]}
         />
     );
 }
