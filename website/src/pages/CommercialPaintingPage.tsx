@@ -14,9 +14,13 @@ function CommercialPaintingPage() {
     }, []);
 
     const services = [
-        "Office interior painting", "Retail store painting", "Warehouse and industrial coating",
-        "Restaurant and hospitality painting", "Property management repaints", "Parking lot lines and curb paint",
-        "Exterior commercial painting", "Epoxy floor coatings",
+        "Commercial Painting",
+        "Exterior painting",
+        "House Painters",
+        "Surface Priming",
+        "Paint Touch-Up Services",
+        "Wall Texture Matching",
+        "Garage Floor Epoxy Coating",
     ];
 
     const faqs = [
@@ -55,7 +59,7 @@ function CommercialPaintingPage() {
                         <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8 max-w-2xl">Prestige Custom Painting LLC brings the same level of craftsmanship to commercial projects as we do to every home. From offices and retail stores to warehouses and apartment complexes — we deliver professional results with minimal disruption to your business.</p>
                         <div className="flex flex-col sm:flex-row gap-4">
                             <a href={`tel:${phoneNumber}`} className="flex items-center justify-center gap-3 bg-brand-green hover:bg-green-600 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all shadow-xl"><Phone size={20} /> CALL FOR FREE ESTIMATE</a>
-                            <Link to="/services" className="flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all">ALL SERVICES <ArrowRight size={20} /></Link>
+                            <Link to="/#services" className="flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all">ALL SERVICES <ArrowRight size={20} /></Link>
                         </div>
                     </div>
                 </div>

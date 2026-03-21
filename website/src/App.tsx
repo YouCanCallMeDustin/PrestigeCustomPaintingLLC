@@ -1,11 +1,50 @@
 import { Phone, Mail, CheckCircle, ArrowRight, Star, Heart, Shield } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { SITE_INFO } from './lib/constants';
 import Footer from './components/Footer';
 
 function App() {
     const { phoneNumber, email, ownerName } = SITE_INFO;
+    const [activeTab, setActiveTab] = useState("painting");
+
+    const serviceCategories = [
+        {
+            id: "painting",
+            title: "Expert Painting Services",
+            description: "Our primary work is house painters. We do everything from exterior painting to cabinet painting with meticulous care.",
+            link: "/house-painters-spokane",
+            services: ["Exterior painting", "Cabinet painting", "Deck painting", "Door painting", "House Painters", "Commercial Painting", "Kitchen Cabinet Painting", "Ceiling Painting", "Trim and Molding Painting", "Accent Wall Painting", "Exterior Siding Painting", "Stucco Painting", "Brick Painting", "Fence Painting", "Fence Staining", "Deck Staining", "Surface Priming", "Garage Painting", "Baseboard Painting", "Crown Molding Painting", "Color Consultation", "Paint Touch-Up Services", "Wall Texture Matching", "Garage Floor Epoxy Coating"]
+        },
+        {
+            id: "drywall",
+            title: "Drywall Contractor",
+            description: "We are also a local drywall contractor when your walls need more than just a new coat of paint. Sometimes, old Spokane homes have cracks from the ground shifting. We can help with ceiling repair and drywall finishing to make things smooth again.",
+            link: "/drywall-contractor-spokane",
+            services: ["Ceiling repair", "Drywall finishing", "Popcorn ceiling removal", "Hole Repair in Drywall", "Crack Repair in Walls", "Drywall Patching", "Texture Matching", "Wall Texture Application", "Ceiling Texture Removal", "Drywall Installation Repair", "Wall Resurfacing"]
+        },
+        {
+            id: "wallpaper",
+            title: "Wallpaper Installer",
+            description: "If you want a unique look, our wallpaper installer services can change any room. We help with wallpaper removal if your old style is out of date. Then, we provide wallpaper installation with a perfect finish.",
+            link: "/wallpaper-installer-spokane",
+            services: ["Wallpaper Removal", "Wallpaper Installation", "Wallpaper Repair", "Wallpaper Service Preparation", "Decorative Wallpaper Installation"]
+        },
+        {
+            id: "paint-stripping",
+            title: "Paint Stripping Service",
+            description: "Good paint starts with a clean surface. Our paint stripping service removes old layers that are failing. We offer wood paint removal for your trim and doors.",
+            link: "/paint-stripping-spokane",
+            services: ["Paint Stripping", "Wood Paint Removal", "Metal Paint Removal", "Surface Coating Removal", "Paint Removal From Masonry", "Exterior Paint Removal"]
+        },
+        {
+            id: "pressure-washing",
+            title: "Pressure Washing Service",
+            description: "A clean home stays in good shape longer. Our pressure washing service helps with house washing and deck cleaning. We use power washing to remove dirt and mold from the damp Spokane winters.",
+            link: "/pressure-washing-spokane",
+            services: ["Pressure Washing", "Power Washing", "House Washing", "Deck Cleaning", "Fence Cleaning", "Driveway Pressure Washing", "Exterior Surface Cleaning", "Mold and Mildew Removal", "Patio and Walkway Cleaning"]
+        }
+    ];
 
     useEffect(() => {
         document.title = "Professional Painters in Spokane | #1 Rated Prestige Custom Painting";
@@ -13,76 +52,131 @@ function App() {
         if (meta) meta.setAttribute('content', 'Searching for professional painters in Spokane, WA? Prestige Custom Painting LLC offers premium interior, exterior, and cabinet painting services. Locally owned with 5-star results.');
     }, []);
 
-    const handleScrollToServices = (e: React.MouseEvent) => {
-        e.preventDefault();
-        const element = document.getElementById('services');
-        if (element) {
-            element.scrollIntoView({ behavior: 'smooth' });
-        }
-    };
-
     return (
         <div className="min-h-screen bg-white text-brand-black selection:bg-brand-green selection:text-white pb-20 md:pb-0">
-            {/* Navigation */}
+            {/* Standard Navigation - Same on all pages */}
             <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100 h-20">
                 <div className="max-w-7xl mx-auto px-4 h-full flex items-center justify-between">
-                    <Link to="/" className="flex items-center gap-2">
-                        <img
-                            src="/logo.png"
-                            alt="Prestige Custom Painting LLC logo - House Painters Spokane WA"
-                            className="w-10 h-10 md:w-12 md:h-12 object-contain"
-                        />
+                    <Link to="/" className="flex items-center gap-2 outline-none">
+                        <img src="/logo.png" alt="Prestige Custom Painting LLC logo - House Painters Spokane WA" className="w-10 h-10 md:w-12 md:h-12 object-contain" />
                         <span className="font-poppins font-bold text-base md:text-xl tracking-tight leading-tight">
-                            <span className="text-brand-black">PRESTIGE CUSTOM</span>{" "}
-                            <span className="text-brand-green">PAINTING</span>{" "}
-                            <span className="text-brand-black">LLC.</span>
+                            <span className="text-brand-black">PRESTIGE CUSTOM</span>{" "}<span className="text-brand-green">PAINTING</span>{" "}<span className="text-brand-black">LLC.</span>
                         </span>
                     </Link>
 
-                    <div className="flex items-center gap-3 md:gap-6">
-                        <Link to="/our-work" className="hidden md:block text-sm font-bold hover:text-brand-green transition-colors">OUR WORK</Link>
-                        <a href={`tel:${phoneNumber}`} className="hidden lg:flex items-center gap-2 text-sm font-semibold hover:text-brand-green transition-colors">
-                            <Phone size={18} className="text-brand-green" />
-                            {phoneNumber}
-                        </a>
-                        <a href={`mailto:${email}`} className="bg-brand-green hover:bg-green-600 text-white px-5 md:px-6 py-2 md:py-2.5 rounded-full font-bold text-sm md:text-base transition-all transform hover:scale-105 shadow-lg shadow-green-500/30">
-                            GET A QUOTE
+                    <div className="hidden md:flex items-center gap-8">
+                        <Link to="/" className="text-sm font-bold border-b-2 border-brand-green text-brand-black">HOME</Link>
+                        <Link to="/our-work" className="text-sm font-bold hover:text-brand-green transition-colors text-brand-black">OUR WORK</Link>
+                        <a href={`tel:${phoneNumber}`} className="flex items-center gap-2 bg-brand-black text-white px-6 py-2.5 rounded-full font-bold text-sm hover:bg-gray-800 transition-all shadow-lg shadow-black/20">
+                            <Phone size={16} className="text-brand-green" /> {phoneNumber}
                         </a>
                     </div>
+                    
+                    <a href={`tel:${phoneNumber}`} className="md:hidden flex items-center gap-2 bg-brand-green text-white p-3 rounded-full shadow-lg shadow-green-500/30">
+                        <Phone size={20} />
+                    </a>
                 </div>
             </nav>
 
-            {/* Hero Section */}
-            <section className="relative py-12 md:py-20 lg:py-32 overflow-hidden">
-                <div className="absolute top-0 right-0 w-1/3 h-full bg-brand-green/5 -skew-x-12 transform translate-x-20" />
-                <div className="max-w-7xl mx-auto px-4 relative">
-                    <div className="max-w-3xl text-center md:text-left">
-                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-green/10 text-brand-green text-xs md:text-sm font-bold mb-6">
-                            <Star size={14} fill="currentColor" />
-                            TRUSTED YEAR-ROUND IN SPOKANE COUNTY
+            <header className="relative bg-brand-black text-white pt-20 pb-32 md:pt-32 md:pb-48 overflow-hidden">
+                <div className="absolute top-0 right-0 w-full md:w-1/2 h-full bg-brand-green/10 -skew-x-12 transform translate-x-24 md:translate-x-32" />
+                <div className="max-w-7xl mx-auto px-4 relative z-10">
+                    <div className="max-w-3xl">
+                        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-green/20 text-brand-green text-xs md:text-sm font-bold mb-8 animate-fade-in">
+                            <Star size={14} fill="currentColor" /> SPOKANE'S TOP-RATED PAINTING COMPANY
                         </div>
-                        <h1 className="text-4xl md:text-5xl lg:text-7xl font-poppins font-bold leading-tight mb-6 md:mb-8">
-                            Professional Painters in <br className="hidden md:block" />
-                            <span className="text-brand-green">Spokane, WA.</span>
+                        <h1 className="text-4xl md:text-6xl lg:text-7xl font-poppins font-bold mb-8 leading-tight tracking-tight">
+                            House Painters Spokane: <br /><span className="text-brand-green italic">Prestige Custom Painting</span>
                         </h1>
-                        <p className="text-lg md:text-xl text-gray-600 mb-8 md:mb-10 leading-relaxed max-w-2xl mx-auto md:mx-0">
-                            As a leading residential painting company, we provide professional, modern painting solutions for your home and business.
-                            Top-tier quality based in Spokane Valley, serving the entire Inland Northwest.
+                        <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-12 max-w-2xl font-medium">
+                            Last year, a family near South Hill called us with a common problem. Their sunny exterior was starting to flake after a hot Spokane summer. We helped them choose a durable paint that handles our local weather. This is what we do as house painters Spokane residents rely on. We help you protect your biggest investment with care and skill.
                         </p>
-                        <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                            <a href={`tel:${phoneNumber}`} className="flex items-center justify-center gap-3 bg-brand-black text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-800 transition-all shadow-xl">
-                                <Phone size={22} className="text-brand-green" />
-                                CALL NOW
+                        <div className="flex flex-col sm:flex-row gap-5">
+                            <a href={`tel:${phoneNumber}`} className="flex items-center justify-center gap-3 bg-brand-green hover:bg-green-600 text-white px-10 py-5 rounded-2xl font-extrabold text-lg transition-all transform hover:scale-105 shadow-2xl shadow-green-500/40">
+                                <Phone size={24} /> CALL FOR FREE ESTIMATE
                             </a>
-                            <button
-                                onClick={handleScrollToServices}
-                                className="flex items-center justify-center gap-2 border-2 border-brand-black px-8 py-4 rounded-xl font-bold text-lg hover:bg-brand-gray transition-all"
-                            >
-                                OUR SERVICES
-                                <ArrowRight size={20} />
-                            </button>
+                            <Link to="/our-work" className="flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white px-10 py-5 rounded-2xl font-bold text-lg transition-all border border-white/20">
+                                VIEW OUR WORK <ArrowRight size={22} />
+                            </Link>
                         </div>
                     </div>
+                </div>
+            </header>
+
+
+
+            {/* Services Tabbed Interface */}
+            <section id="services" className="py-20 md:py-24 bg-gray-50/50 scroll-mt-24">
+                <div className="max-w-7xl mx-auto px-4">
+                    
+                    <div className="text-center mb-12 md:mb-16">
+                        <h2 className="text-brand-green font-bold tracking-widest text-sm mb-4">OUR SPECIALTIES</h2>
+                        <h3 className="text-4xl md:text-5xl font-poppins font-bold text-brand-black">Comprehensive Services</h3>
+                    </div>
+
+                    {/* Desktop Tabs */}
+                    <div className="hidden lg:flex justify-center gap-4 mb-12 flex-wrap">
+                        {serviceCategories.map((cat) => (
+                            <button
+                                key={cat.id}
+                                onClick={() => setActiveTab(cat.id)}
+                                className={`px-6 py-3 rounded-xl font-bold transition-all duration-300 ${activeTab === cat.id ? 'bg-brand-green text-white shadow-[0_8px_30px_rgba(74,222,128,0.25)] scale-105' : 'bg-white text-gray-600 hover:bg-gray-100 hover:text-brand-black shadow-sm'}`}
+                            >
+                                {cat.title}
+                            </button>
+                        ))}
+                    </div>
+
+                    {/* Mobile/Tablet Tabs (Scrollable) */}
+                    <div className="flex lg:hidden overflow-x-auto pb-6 mb-8 gap-3 snap-x scrollbar-hide px-2">
+                        {serviceCategories.map((cat) => (
+                            <button
+                                key={cat.id}
+                                onClick={() => setActiveTab(cat.id)}
+                                className={`shrink-0 px-5 py-3 rounded-xl font-bold transition-all whitespace-nowrap snap-center ${activeTab === cat.id ? 'bg-brand-green text-white shadow-md' : 'bg-white text-gray-600 border border-gray-100'}`}
+                            >
+                                {cat.title}
+                            </button>
+                        ))}
+                    </div>
+
+                    {/* Tab Content */}
+                    <div className="relative">
+                        {serviceCategories.map((cat) => (
+                            <div 
+                                key={cat.id} 
+                                className={`transition-all duration-500 w-full ${activeTab === cat.id ? 'opacity-100 translate-y-0 block' : 'opacity-0 translate-y-8 hidden'}`}
+                            >
+                                <div className="bg-white rounded-[2.5rem] p-8 md:p-12 shadow-[0_8px_30px_rgba(0,0,0,0.04)] border border-gray-100">
+                                    <div className="flex flex-col lg:flex-row justify-between lg:items-end gap-6 mb-12 border-b border-gray-100 pb-8">
+                                        <div className="max-w-3xl">
+                                            <h3 className="text-3xl font-poppins font-bold text-brand-black mb-4">{cat.title}</h3>
+                                            <p className="text-lg text-gray-600 leading-relaxed">{cat.description}</p>
+                                        </div>
+                                        <Link to={cat.link} className="inline-flex items-center justify-center gap-2 bg-brand-green/10 text-brand-green hover:bg-brand-green hover:text-white px-6 py-3 rounded-full font-bold transition-all shrink-0 group">
+                                            Explore All <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+                                        </Link>
+                                    </div>
+
+                                    <div className="grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4">
+                                        {cat.services.map((service, idx) => (
+                                            <Link 
+                                                to={`/service/${service.toLowerCase().replace(/ /g, '-').replace(/&/g, 'and')}`} 
+                                                key={idx} 
+                                                className="group flex items-center gap-3 p-4 bg-gray-50/50 hover:bg-white border border-transparent hover:border-brand-green rounded-2xl transition-all duration-300 hover:shadow-[0_8px_20px_rgba(74,222,128,0.15)] hover:-translate-y-0.5"
+                                            >
+                                                <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center shrink-0 shadow-sm border border-gray-100 group-hover:border-transparent group-hover:bg-brand-green transition-all duration-300">
+                                                    <CheckCircle size={14} className="text-brand-green group-hover:text-white transition-colors" />
+                                                </div>
+                                                <span className="text-sm font-bold text-gray-700 group-hover:text-brand-black transition-colors">{service}</span>
+                                            </Link>
+                                        ))}
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+
                 </div>
             </section>
 
@@ -94,36 +188,6 @@ function App() {
                         <div className="flex items-center justify-center font-bold text-sm md:text-lg tracking-widest text-gray-400 text-center">SHERWIN WILLIAMS</div>
                         <div className="flex items-center justify-center font-bold text-sm md:text-lg tracking-widest text-gray-400 text-center">BEHR</div>
                         <div className="flex items-center justify-center font-bold text-sm md:text-lg tracking-widest text-gray-400 text-center">PPG PAINTS</div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Services Grid */}
-            <section id="services" className="py-20 md:py-24 bg-white scroll-mt-24">
-                <div className="max-w-7xl mx-auto px-4">
-                    <div className="text-center mb-12 md:mb-16">
-                        <h2 className="text-3xl md:text-4xl font-poppins font-bold mb-4">Our Professional Services</h2>
-                        <div className="h-1.5 w-20 bg-brand-green mx-auto rounded-full" />
-                    </div>
-
-                    <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
-                        {[
-                            { title: "Interior Painting", desc: "Precise edge work and premium finishes for every room in your home.", link: "/interior-painting-spokane" },
-                            { title: "Exterior Painting", desc: "Durable, weather-resistant coatings to protect your property's value.", link: "/exterior-painting-spokane" },
-                            { title: "Cabinet Painting", desc: "Expert trim, door, and cabinet paintings that feel like a factory finish.", link: "/cabinet-painting-spokane" }
-                        ].map((service, idx) => (
-                            <div key={idx} className="group p-6 md:p-8 border border-gray-100 rounded-3xl hover:border-brand-green hover:shadow-2xl hover:shadow-green-500/10 transition-all cursor-default overflow-hidden relative">
-                                <div className="absolute top-0 right-0 w-24 h-24 bg-brand-green/5 rounded-bl-full translate-x-4 -translate-y-4 group-hover:scale-150 transition-transform" />
-                                <div className="w-12 h-12 md:w-14 md:h-14 bg-brand-green/10 rounded-2xl flex items-center justify-center mb-6 text-brand-green">
-                                    <CheckCircle size={26} />
-                                </div>
-                                <h3 className="text-xl md:text-2xl font-poppins font-bold mb-4">{service.title}</h3>
-                                <p className="text-gray-600 mb-6 leading-relaxed text-sm md:text-base">{service.desc}</p>
-                                <Link to={service.link} className="flex items-center gap-2 text-brand-green font-bold text-sm hover:translate-x-1 transition-transform">
-                                    LEARN MORE <ArrowRight size={16} />
-                                </Link>
-                            </div>
-                        ))}
                     </div>
                 </div>
             </section>

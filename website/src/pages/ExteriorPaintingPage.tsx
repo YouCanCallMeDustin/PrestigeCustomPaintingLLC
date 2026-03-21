@@ -14,14 +14,19 @@ function ExteriorPaintingPage() {
     }, []);
 
     const services = [
-        "Complete house exterior painting",
-        "Deck and fence staining",
-        "Pressure washing and surface prep",
-        "Siding repair and painting",
-        "Trim, fascia, and soffit painting",
-        "Garage door painting",
-        "Stucco and masonry coatings",
-        "Foundation and retaining wall paint",
+        "Exterior painting",
+        "Deck painting",
+        "Door painting",
+        "Exterior Siding Painting",
+        "Stucco Painting",
+        "Brick Painting",
+        "Fence Painting",
+        "Fence Staining",
+        "Deck Staining",
+        "Surface Priming",
+        "Garage Painting",
+        "Color Consultation",
+        "Paint Touch-Up Services",
     ];
 
     const faqs = [
@@ -61,7 +66,7 @@ function ExteriorPaintingPage() {
                         <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8 max-w-2xl">Protect your home and boost curb appeal with professional exterior painting from Prestige Custom Painting LLC. We use weather-resistant coatings built for the Inland Northwest climate.</p>
                         <div className="flex flex-col sm:flex-row gap-4">
                             <a href={`tel:${phoneNumber}`} className="flex items-center justify-center gap-3 bg-brand-green hover:bg-green-600 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all shadow-xl"><Phone size={20} /> CALL FOR FREE ESTIMATE</a>
-                            <Link to="/services" className="flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all">ALL SERVICES <ArrowRight size={20} /></Link>
+                            <Link to="/#services" className="flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all">ALL SERVICES <ArrowRight size={20} /></Link>
                         </div>
                     </div>
                 </div>

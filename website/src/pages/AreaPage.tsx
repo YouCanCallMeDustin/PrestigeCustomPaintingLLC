@@ -123,7 +123,7 @@ export default function AreaPage({
                             <a href={`tel:${phoneNumber}`} className="flex items-center justify-center gap-3 bg-brand-green hover:bg-green-600 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all shadow-xl">
                                 <Phone size={20} /> CALL FOR FREE ESTIMATE
                             </a>
-                            <Link to="/services" className="flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all">
+                            <Link to="/#services" className="flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all">
                                 OUR SERVICES <ArrowRight size={20} />
                             </Link>
                         </div>

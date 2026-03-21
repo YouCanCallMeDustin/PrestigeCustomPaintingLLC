@@ -44,7 +44,6 @@ function OurWorkPage() {
                         </span>
                     </Link>
                     <div className="flex items-center gap-3 md:gap-6">
-                        <Link to="/services" className="hidden md:block text-sm font-bold hover:text-brand-green transition-colors">SERVICES</Link>
                         <a href={`tel:${phoneNumber}`} className="hidden lg:flex items-center gap-2 text-sm font-semibold hover:text-brand-green transition-colors">
                             <Phone size={18} className="text-brand-green" />{phoneNumber}
                         </a>

@@ -8,16 +8,26 @@ function HousePaintersPage() {
     const { phoneNumber, email } = SITE_INFO;
 
     useEffect(() => {
-        document.title = "Professional Painters in Spokane | Prestige Custom Painting LLC";
+        document.title = "House Painters Spokane | Prestige Custom Painting LLC";
         const meta = document.querySelector('meta[name="description"]');
-        if (meta) meta.setAttribute('content', 'Looking for professional painters in Spokane, WA? Prestige Custom Painting LLC delivers expert interior and exterior painting with a focus on quality and client satisfaction.');
+        if (meta) meta.setAttribute('content', 'Looking for expert house painters in Spokane, WA? Prestige Custom Painting LLC delivers top-quality interior and exterior painting services across the Inland Northwest.');
     }, []);
 
-    const services = [
-        "Interior house painting", "Exterior house painting", "Trim and door painting",
-        "Cabinet refinishing", "Deck and fence staining", "Accent wall painting",
-        "Drywall repair & texture matching", "Wallpaper removal",
+    const mappedServices = [
+        "Exterior painting", "Cabinet painting", "Deck painting", "Door painting",
+        "House Painters", "Commercial Painting", "Kitchen Cabinet Painting",
+        "Ceiling Painting", "Trim and Molding Painting", "Accent Wall Painting",
+        "Exterior Siding Painting", "Stucco Painting", "Brick Painting",
+        "Fence Painting", "Fence Staining", "Deck Staining", "Surface Priming",
+        "Garage Painting", "Baseboard Painting", "Crown Molding Painting",
+        "Color Consultation", "Paint Touch-Up Services", "Wall Texture Matching",
+        "Garage Floor Epoxy Coating"
     ];
+
+    const services = mappedServices.map(s => ({
+        name: s,
+        slug: s.toLowerCase().replace(/ /g, '-').replace(/&/g, 'and')
+    }));
 
     const faqs = [
         { q: "How much does it cost to paint a house in Spokane?", a: "The cost to paint a house in Spokane depends on the size, number of rooms or stories, and prep work required. Interior projects typically start around $500 for a single room, while full exterior projects can range from $2,500 to $8,000+. We provide free, detailed estimates with no obligation." },
@@ -51,12 +61,12 @@ function HousePaintersPage() {
                     <div className="max-w-3xl">
                         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-green/20 text-brand-green text-xs font-bold mb-6"><Star size={12} fill="currentColor" /> LOCALLY OWNED IN SPOKANE, WA</div>
                         <h1 className="text-4xl md:text-5xl lg:text-6xl font-poppins font-bold mb-6 leading-tight">
-                            Professional Painters<br /><span className="text-brand-green">in Spokane, WA</span>
+                            House Painters<br /><span className="text-brand-green">Spokane</span>
                         </h1>
                         <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8 max-w-2xl">Prestige Custom Painting LLC is Spokane's trusted residential painting company. We handle interior, exterior, and specialty painting with the professionalism and attention to detail your home deserves.</p>
                         <div className="flex flex-col sm:flex-row gap-4">
                             <a href={`tel:${phoneNumber}`} className="flex items-center justify-center gap-3 bg-brand-green hover:bg-green-600 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all shadow-xl"><Phone size={20} /> CALL FOR FREE ESTIMATE</a>
-                            <Link to="/services" className="flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all">ALL SERVICES <ArrowRight size={20} /></Link>
+                            <Link to="/#services" className="flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all">ALL SERVICES <ArrowRight size={20} /></Link>
                         </div>
                     </div>
                 </div>
@@ -82,10 +92,10 @@ function HousePaintersPage() {
                     </div>
                     <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-5xl mx-auto">
                         {services.map((item, idx) => (
-                            <div key={idx} className="flex items-center gap-3 bg-white p-4 rounded-2xl shadow-sm border border-gray-100 hover:border-brand-green transition-colors">
-                                <CheckCircle size={20} className="text-brand-green shrink-0" />
-                                <span className="text-sm font-semibold text-gray-700">{item}</span>
-                            </div>
+                            <Link to={`/service/${item.slug}`} key={idx} className="flex items-center gap-3 bg-white p-4 rounded-2xl shadow-sm border border-gray-100 hover:border-brand-green transition-colors group cursor-pointer text-left">
+                                <CheckCircle size={20} className="text-brand-green shrink-0 group-hover:scale-110 transition-transform" />
+                                <span className="text-sm font-semibold text-gray-700 group-hover:text-brand-green transition-colors">{item.name}</span>
+                            </Link>
                         ))}
                     </div>
                 </div>

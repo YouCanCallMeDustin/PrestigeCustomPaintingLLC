@@ -18,7 +18,6 @@ export interface BlogPostProps {
     metaDesc: string;
     intro: string;
     sections: BlogSection[];
-    relatedServices: { label: string; to: string }[];
 }
 
 export default function BlogPost({
@@ -30,7 +29,6 @@ export default function BlogPost({
     metaDesc,
     intro,
     sections,
-    relatedServices,
 }: BlogPostProps) {
     const { phoneNumber, email } = SITE_INFO;
 
@@ -135,15 +133,16 @@ export default function BlogPost({
                     <aside className="space-y-12">
                         <div className="bg-brand-gray/30 p-8 rounded-[2rem] border border-gray-100 sticky top-32">
                             <h3 className="text-xl font-bold mb-6 flex items-center gap-2">
-                                <Star size={20} className="text-brand-green fill-brand-green" /> Related Services
+                                <Star size={20} className="text-brand-green fill-brand-green" /> All Services
                             </h3>
                             <div className="space-y-3">
-                                {relatedServices.map((service, i) => (
-                                    <Link key={i} to={service.to} className="flex items-center justify-between group bg-white p-4 rounded-xl border border-gray-50 hover:border-brand-green transition-all shadow-sm">
-                                        <span className="font-semibold text-gray-700 group-hover:text-brand-green transition-colors">{service.label}</span>
-                                        <ArrowRight size={16} className="text-gray-300 group-hover:text-brand-green group-hover:translate-x-1 transition-all" />
-                                    </Link>
-                                ))}
+                                <Link to="/#services" className="flex items-center justify-between group bg-white p-4 rounded-xl border border-gray-50 hover:border-brand-green transition-all shadow-sm">
+                                    <div className="flex flex-col">
+                                        <span className="font-bold text-brand-black group-hover:text-brand-green transition-colors">View Service Hub</span>
+                                        <span className="text-xs text-gray-500 mt-1">Explore all 50+ services on our homepage</span>
+                                    </div>
+                                    <ArrowRight size={16} className="text-gray-300 group-hover:text-brand-green group-hover:translate-x-1 transition-all" />
+                                </Link>
                             </div>
                             
                             <hr className="my-8 border-gray-200" />

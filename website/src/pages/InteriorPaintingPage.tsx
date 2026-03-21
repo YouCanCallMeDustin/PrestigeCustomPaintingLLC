@@ -20,14 +20,18 @@ function InteriorPaintingPage() {
     ];
 
     const services = [
-        "Full wall and ceiling painting",
-        "Accent walls and feature rooms",
-        "Cabinet painting and refinishing",
-        "Drywall repair and texture matching",
-        "Wallpaper removal and wall prep",
-        "Trim, door, and baseboard painting",
-        "Staircase railings and banisters",
-        "Living rooms, bedrooms, and kitchens",
+        "Cabinet painting",
+        "Door painting",
+        "Kitchen Cabinet Painting",
+        "Ceiling Painting",
+        "Trim and Molding Painting",
+        "Accent Wall Painting",
+        "Surface Priming",
+        "Baseboard Painting",
+        "Crown Molding Painting",
+        "Color Consultation",
+        "Paint Touch-Up Services",
+        "Wall Texture Matching",
     ];
 
     const faqs = [
@@ -96,7 +100,7 @@ function InteriorPaintingPage() {
                             <a href={`tel:${phoneNumber}`} className="flex items-center justify-center gap-3 bg-brand-green hover:bg-green-600 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all shadow-xl">
                                 <Phone size={20} /> CALL FOR FREE ESTIMATE
                             </a>
-                            <Link to="/services" className="flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all">
+                            <Link to="/#services" className="flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all">
                                 ALL SERVICES <ArrowRight size={20} />
                             </Link>
                         </div>

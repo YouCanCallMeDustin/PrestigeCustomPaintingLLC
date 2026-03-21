@@ -1,88 +1,194 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    <!-- ========== HOMEPAGE ========== -->
     <url>
         <loc>https://prestigecustompaintingllc.com/</loc>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
+        <lastmod>2026-03-21</lastmod>
     </url>
-    <url>
-        <loc>https://prestigecustompaintingllc.com/services</loc>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
+
+    <!-- ========== OUR WORK ========== -->
     <url>
         <loc>https://prestigecustompaintingllc.com/our-work</loc>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <lastmod>2026-03-21</lastmod>
+    </url>
+
+    <!-- ========== PRIMARY SERVICE CATEGORY PAGES ========== -->
+    <url>
+        <loc>https://prestigecustompaintingllc.com/house-painters-spokane</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.95</priority>
+        <lastmod>2026-03-21</lastmod>
     </url>
     <url>
         <loc>https://prestigecustompaintingllc.com/interior-painting-spokane</loc>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
+        <lastmod>2026-03-21</lastmod>
     </url>
     <url>
         <loc>https://prestigecustompaintingllc.com/exterior-painting-spokane</loc>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
-    </url>
-    <url>
-        <loc>https://prestigecustompaintingllc.com/house-painters-spokane</loc>
-        <changefreq>monthly</changefreq>
-        <priority>0.9</priority>
+        <lastmod>2026-03-21</lastmod>
     </url>
     <url>
         <loc>https://prestigecustompaintingllc.com/commercial-painting-spokane</loc>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
+        <lastmod>2026-03-21</lastmod>
     </url>
     <url>
         <loc>https://prestigecustompaintingllc.com/cabinet-painting-spokane</loc>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
+        <lastmod>2026-03-21</lastmod>
     </url>
+    <url>
+        <loc>https://prestigecustompaintingllc.com/drywall-contractor-spokane</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+        <lastmod>2026-03-21</lastmod>
+    </url>
+    <url>
+        <loc>https://prestigecustompaintingllc.com/wallpaper-installer-spokane</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+        <lastmod>2026-03-21</lastmod>
+    </url>
+    <url>
+        <loc>https://prestigecustompaintingllc.com/paint-stripping-spokane</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+        <lastmod>2026-03-21</lastmod>
+    </url>
+    <url>
+        <loc>https://prestigecustompaintingllc.com/pressure-washing-spokane</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+        <lastmod>2026-03-21</lastmod>
+    </url>
+
+    <!-- ========== AREA PAGES ========== -->
     <url>
         <loc>https://prestigecustompaintingllc.com/painting-spokane-valley</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
+        <lastmod>2026-03-21</lastmod>
     </url>
     <url>
         <loc>https://prestigecustompaintingllc.com/painting-liberty-lake</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
+        <lastmod>2026-03-21</lastmod>
     </url>
     <url>
         <loc>https://prestigecustompaintingllc.com/painting-airway-heights</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
+        <lastmod>2026-03-21</lastmod>
     </url>
     <url>
         <loc>https://prestigecustompaintingllc.com/painting-cheney</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
+        <lastmod>2026-03-21</lastmod>
     </url>
     <url>
         <loc>https://prestigecustompaintingllc.com/painting-deer-park</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
+        <lastmod>2026-03-21</lastmod>
     </url>
+
+    <!-- ========== BLOG POSTS (Static) ========== -->
     <url>
         <loc>https://prestigecustompaintingllc.com/blog/cost-to-paint-house-spokane</loc>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
+        <lastmod>2026-03-21</lastmod>
     </url>
     <url>
         <loc>https://prestigecustompaintingllc.com/blog/best-exterior-paint-spokane</loc>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
+        <lastmod>2026-03-21</lastmod>
     </url>
     <url>
         <loc>https://prestigecustompaintingllc.com/blog/how-often-to-paint-house-spokane</loc>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
+        <lastmod>2026-03-21</lastmod>
     </url>
     <url>
         <loc>https://prestigecustompaintingllc.com/blog/interior-painting-tips-spokane</loc>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
+        <lastmod>2026-03-21</lastmod>
     </url>
+
+    <!-- ========== SERVICE BLOG PAGES (Dynamic /service/:slug) ========== -->
+    <!-- PAINTER SERVICES (24) -->
+    <url><loc>https://prestigecustompaintingllc.com/service/exterior-painting</loc><changefreq>monthly</changefreq><priority>0.7</priority><lastmod>2026-03-21</lastmod></url>
+    <url><loc>https://prestigecustompaintingllc.com/service/cabinet-painting</loc><changefreq>monthly</changefreq><priority>0.7</priority><lastmod>2026-03-21</lastmod></url>
+    <url><loc>https://prestigecustompaintingllc.com/service/deck-painting</loc><changefreq>monthly</changefreq><priority>0.7</priority><lastmod>2026-03-21</lastmod></url>
+    <url><loc>https://prestigecustompaintingllc.com/service/door-painting</loc><changefreq>monthly</changefreq><priority>0.7</priority><lastmod>2026-03-21</lastmod></url>
+    <url><loc>https://prestigecustompaintingllc.com/service/house-painters</loc><changefreq>monthly</changefreq><priority>0.7</priority><lastmod>2026-03-21</lastmod></url>
+    <url><loc>https://prestigecustompaintingllc.com/service/commercial-painting</loc><changefreq>monthly</changefreq><priority>0.7</priority><lastmod>2026-03-21</lastmod></url>
+    <url><loc>https://prestigecustompaintingllc.com/service/kitchen-cabinet-painting</loc><changefreq>monthly</changefreq><priority>0.7</priority><lastmod>2026-03-21</lastmod></url>
+    <url><loc>https://prestigecustompaintingllc.com/service/ceiling-painting</loc><changefreq>monthly</changefreq><priority>0.7</priority><lastmod>2026-03-21</lastmod></url>
+    <url><loc>https://prestigecustompaintingllc.com/service/trim-and-molding-painting</loc><changefreq>monthly</changefreq><priority>0.7</priority><lastmod>2026-03-21</lastmod></url>
+    <url><loc>https://prestigecustompaintingllc.com/service/accent-wall-painting</loc><changefreq>monthly</changefreq><priority>0.7</priority><lastmod>2026-03-21</lastmod></url>
+    <url><loc>https://prestigecustompaintingllc.com/service/exterior-siding-painting</loc><changefreq>monthly</changefreq><priority>0.7</priority><lastmod>2026-03-21</lastmod></url>
+    <url><loc>https://prestigecustompaintingllc.com/service/stucco-painting</loc><changefreq>monthly</changefreq><priority>0.7</priority><lastmod>2026-03-21</lastmod></url>
+    <url><loc>https://prestigecustompaintingllc.com/service/brick-painting</loc><changefreq>monthly</changefreq><priority>0.7</priority><lastmod>2026-03-21</lastmod></url>
+    <url><loc>https://prestigecustompaintingllc.com/service/fence-painting</loc><changefreq>monthly</changefreq><priority>0.7</priority><lastmod>2026-03-21</lastmod></url>
+    <url><loc>https://prestigecustompaintingllc.com/service/pressure-washing</loc><changefreq>monthly</changefreq><priority>0.7</priority><lastmod>2026-03-21</lastmod></url>
+    <url><loc>https://prestigecustompaintingllc.com/service/deck-staining</loc><changefreq>monthly</changefreq><priority>0.7</priority><lastmod>2026-03-21</lastmod></url>
+    <url><loc>https://prestigecustompaintingllc.com/service/baseboard-painting</loc><changefreq>monthly</changefreq><priority>0.7</priority><lastmod>2026-03-21</lastmod></url>
+    <url><loc>https://prestigecustompaintingllc.com/service/crown-molding-painting</loc><changefreq>monthly</changefreq><priority>0.7</priority><lastmod>2026-03-21</lastmod></url>
+    <url><loc>https://prestigecustompaintingllc.com/service/wall-texture-matching</loc><changefreq>monthly</changefreq><priority>0.7</priority><lastmod>2026-03-21</lastmod></url>
+    <url><loc>https://prestigecustompaintingllc.com/service/garage-floor-epoxy-coating</loc><changefreq>monthly</changefreq><priority>0.7</priority><lastmod>2026-03-21</lastmod></url>
+    <url><loc>https://prestigecustompaintingllc.com/service/popcorn-ceiling-removal</loc><changefreq>monthly</changefreq><priority>0.7</priority><lastmod>2026-03-21</lastmod></url>
+    <url><loc>https://prestigecustompaintingllc.com/service/color-consultation</loc><changefreq>monthly</changefreq><priority>0.7</priority><lastmod>2026-03-21</lastmod></url>
+    <url><loc>https://prestigecustompaintingllc.com/service/interior-painting</loc><changefreq>monthly</changefreq><priority>0.7</priority><lastmod>2026-03-21</lastmod></url>
+    <url><loc>https://prestigecustompaintingllc.com/service/full-house-painting</loc><changefreq>monthly</changefreq><priority>0.7</priority><lastmod>2026-03-21</lastmod></url>
+
+    <!-- DRYWALL SERVICES (5) -->
+    <url><loc>https://prestigecustompaintingllc.com/service/drywall-repair</loc><changefreq>monthly</changefreq><priority>0.7</priority><lastmod>2026-03-21</lastmod></url>
+    <url><loc>https://prestigecustompaintingllc.com/service/drywall-installation</loc><changefreq>monthly</changefreq><priority>0.7</priority><lastmod>2026-03-21</lastmod></url>
+    <url><loc>https://prestigecustompaintingllc.com/service/texture-matching</loc><changefreq>monthly</changefreq><priority>0.7</priority><lastmod>2026-03-21</lastmod></url>
+    <url><loc>https://prestigecustompaintingllc.com/service/ceiling-texture-removal</loc><changefreq>monthly</changefreq><priority>0.7</priority><lastmod>2026-03-21</lastmod></url>
+    <url><loc>https://prestigecustompaintingllc.com/service/drywall-finishing</loc><changefreq>monthly</changefreq><priority>0.7</priority><lastmod>2026-03-21</lastmod></url>
+
+    <!-- WALLPAPER SERVICES (5) -->
+    <url><loc>https://prestigecustompaintingllc.com/service/wallpaper-installation</loc><changefreq>monthly</changefreq><priority>0.7</priority><lastmod>2026-03-21</lastmod></url>
+    <url><loc>https://prestigecustompaintingllc.com/service/wallpaper-removal</loc><changefreq>monthly</changefreq><priority>0.7</priority><lastmod>2026-03-21</lastmod></url>
+    <url><loc>https://prestigecustompaintingllc.com/service/accent-wall-wallpaper</loc><changefreq>monthly</changefreq><priority>0.7</priority><lastmod>2026-03-21</lastmod></url>
+    <url><loc>https://prestigecustompaintingllc.com/service/commercial-wallpaper</loc><changefreq>monthly</changefreq><priority>0.7</priority><lastmod>2026-03-21</lastmod></url>
+    <url><loc>https://prestigecustompaintingllc.com/service/wallpaper-repair</loc><changefreq>monthly</changefreq><priority>0.7</priority><lastmod>2026-03-21</lastmod></url>
+
+    <!-- PAINT STRIPPING SERVICES (6) -->
+    <url><loc>https://prestigecustompaintingllc.com/service/paint-stripping</loc><changefreq>monthly</changefreq><priority>0.7</priority><lastmod>2026-03-21</lastmod></url>
+    <url><loc>https://prestigecustompaintingllc.com/service/lead-paint-removal</loc><changefreq>monthly</changefreq><priority>0.7</priority><lastmod>2026-03-21</lastmod></url>
+    <url><loc>https://prestigecustompaintingllc.com/service/chemical-paint-stripping</loc><changefreq>monthly</changefreq><priority>0.7</priority><lastmod>2026-03-21</lastmod></url>
+    <url><loc>https://prestigecustompaintingllc.com/service/paint-removal-from-wood</loc><changefreq>monthly</changefreq><priority>0.7</priority><lastmod>2026-03-21</lastmod></url>
+    <url><loc>https://prestigecustompaintingllc.com/service/deck-paint-stripping</loc><changefreq>monthly</changefreq><priority>0.7</priority><lastmod>2026-03-21</lastmod></url>
+    <url><loc>https://prestigecustompaintingllc.com/service/surface-preparation</loc><changefreq>monthly</changefreq><priority>0.7</priority><lastmod>2026-03-21</lastmod></url>
+
+    <!-- PRESSURE WASHING SERVICES (9) -->
+    <url><loc>https://prestigecustompaintingllc.com/service/house-washing</loc><changefreq>monthly</changefreq><priority>0.7</priority><lastmod>2026-03-21</lastmod></url>
+    <url><loc>https://prestigecustompaintingllc.com/service/driveway-cleaning</loc><changefreq>monthly</changefreq><priority>0.7</priority><lastmod>2026-03-21</lastmod></url>
+    <url><loc>https://prestigecustompaintingllc.com/service/deck-cleaning</loc><changefreq>monthly</changefreq><priority>0.7</priority><lastmod>2026-03-21</lastmod></url>
+    <url><loc>https://prestigecustompaintingllc.com/service/fence-cleaning</loc><changefreq>monthly</changefreq><priority>0.7</priority><lastmod>2026-03-21</lastmod></url>
+    <url><loc>https://prestigecustompaintingllc.com/service/gutter-cleaning</loc><changefreq>monthly</changefreq><priority>0.7</priority><lastmod>2026-03-21</lastmod></url>
+    <url><loc>https://prestigecustompaintingllc.com/service/roof-washing</loc><changefreq>monthly</changefreq><priority>0.7</priority><lastmod>2026-03-21</lastmod></url>
+    <url><loc>https://prestigecustompaintingllc.com/service/concrete-cleaning</loc><changefreq>monthly</changefreq><priority>0.7</priority><lastmod>2026-03-21</lastmod></url>
+    <url><loc>https://prestigecustompaintingllc.com/service/patio-cleaning</loc><changefreq>monthly</changefreq><priority>0.7</priority><lastmod>2026-03-21</lastmod></url>
+    <url><loc>https://prestigecustompaintingllc.com/service/commercial-pressure-washing</loc><changefreq>monthly</changefreq><priority>0.7</priority><lastmod>2026-03-21</lastmod></url>
+
 </urlset>
