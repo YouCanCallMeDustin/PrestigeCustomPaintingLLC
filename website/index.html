@@ -10,22 +10,47 @@
   <link rel="icon" type="image/png" href="/logo.png" />
   <link rel="shortcut icon" href="/logo.png" />
   <link rel="apple-touch-icon" href="/logo.png" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Prestige Custom Painting LLC" />
+  <meta property="og:title" content="Professional Painters in Spokane | Prestige Custom Painting LLC" />
+  <meta property="og:description" content="Professional painters in Spokane, WA. Prestige Custom Painting offers premium interior, exterior, and cabinet painting. Best results guaranteed." />
+  <meta property="og:url" content="https://prestigecustompaintingllc.com/" />
+  <meta property="og:image" content="https://prestigecustompaintingllc.com/logo.png" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Professional Painters in Spokane | Prestige Custom Painting LLC" />
+  <meta name="twitter:description" content="Professional painters in Spokane, WA. Prestige Custom Painting offers premium interior, exterior, and cabinet painting." />
+  <meta name="twitter:image" content="https://prestigecustompaintingllc.com/logo.png" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@600;700&display=swap"
     rel="stylesheet">
+
+  <!-- LocalBusiness + HousePainter Schema -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "HousePainter",
     "name": "Prestige Custom Painting LLC",
+    "description": "Professional painters in Spokane, WA. Prestige Custom Painting LLC offers premium interior, exterior, cabinet, and commercial painting services across the Inland Northwest. Locally owned, fully licensed and insured.",
     "image": "https://prestigecustompaintingllc.com/logo.png",
     "url": "https://prestigecustompaintingllc.com",
     "telephone": "(509) 714-9491",
+    "email": "buddylee12091@gmail.com",
+    "founder": {
+      "@type": "Person",
+      "name": "Robert"
+    },
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Spokane Valley",
       "addressRegion": "WA",
+      "postalCode": "99206",
       "addressCountry": "US"
     },
     "geo": {
@@ -46,16 +71,73 @@
       "closes": "18:00"
     },
     "areaServed": [
-      "Spokane",
-      "Spokane Valley",
-      "Liberty Lake",
-      "Airway Heights",
-      "Cheney",
-      "Deer Park"
+      { "@type": "City", "name": "Spokane", "sameAs": "https://en.wikipedia.org/wiki/Spokane,_Washington" },
+      { "@type": "City", "name": "Spokane Valley", "sameAs": "https://en.wikipedia.org/wiki/Spokane_Valley,_Washington" },
+      { "@type": "City", "name": "Liberty Lake", "sameAs": "https://en.wikipedia.org/wiki/Liberty_Lake,_Washington" },
+      { "@type": "City", "name": "Airway Heights", "sameAs": "https://en.wikipedia.org/wiki/Airway_Heights,_Washington" },
+      { "@type": "City", "name": "Cheney", "sameAs": "https://en.wikipedia.org/wiki/Cheney,_Washington" },
+      { "@type": "City", "name": "Deer Park", "sameAs": "https://en.wikipedia.org/wiki/Deer_Park,_Washington" }
     ],
-    "priceRange": "$$"
+    "priceRange": "$$",
+    "paymentAccepted": ["Cash", "Credit Card", "Check"],
+    "sameAs": [
+      "https://www.google.com/maps/place/Prestige+Custom+Painting+LLC"
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5.0",
+      "bestRating": "5",
+      "ratingCount": "25",
+      "reviewCount": "25"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Painting & Home Services",
+      "itemListElement": [
+        {
+          "@type": "OfferCatalog",
+          "name": "House Painting Services",
+          "itemListElement": [
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Interior House Painting" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Exterior House Painting" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Cabinet Painting" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Commercial Painting" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Deck Painting & Staining" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Trim and Molding Painting" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Color Consultation" } }
+          ]
+        },
+        {
+          "@type": "OfferCatalog",
+          "name": "Drywall Services",
+          "itemListElement": [
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Drywall Repair" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Drywall Installation" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Texture Matching" } }
+          ]
+        },
+        {
+          "@type": "OfferCatalog",
+          "name": "Wallpaper Services",
+          "itemListElement": [
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Wallpaper Installation" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Wallpaper Removal" } }
+          ]
+        },
+        {
+          "@type": "OfferCatalog",
+          "name": "Pressure Washing Services",
+          "itemListElement": [
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "House Washing" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Driveway Cleaning" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Deck Cleaning" } }
+          ]
+        }
+      ]
+    }
   }
   </script>
+
   <link rel="canonical" href="https://prestigecustompaintingllc.com/" />
   <script>
     if (location.protocol === 'http:' && location.hostname !== 'localhost') {
@@ -82,7 +164,10 @@
         <li><a href="/cabinet-painting-spokane">Cabinet Painting in Spokane</a></li>
         <li><a href="/commercial-painting-spokane">Commercial Painting in Spokane</a></li>
         <li><a href="/house-painters-spokane">House Painters in Spokane</a></li>
-        <li><a href="/services">View All Painting Services</a></li>
+        <li><a href="/drywall-contractor-spokane">Drywall Contractor in Spokane</a></li>
+        <li><a href="/wallpaper-installer-spokane">Wallpaper Installer in Spokane</a></li>
+        <li><a href="/paint-stripping-spokane">Paint Stripping in Spokane</a></li>
+        <li><a href="/pressure-washing-spokane">Pressure Washing in Spokane</a></li>
       </ul>
 
       <h3>Service Areas</h3>

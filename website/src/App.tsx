@@ -2,6 +2,7 @@ import { Phone, Mail, CheckCircle, ArrowRight, Star, Heart, Shield } from 'lucid
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { SITE_INFO } from './lib/constants';
+import { injectPageSEO } from './lib/seo';
 import Footer from './components/Footer';
 
 function App() {
@@ -50,6 +51,11 @@ function App() {
         document.title = "Professional Painters in Spokane | #1 Rated Prestige Custom Painting";
         const meta = document.querySelector('meta[name="description"]');
         if (meta) meta.setAttribute('content', 'Searching for professional painters in Spokane, WA? Prestige Custom Painting LLC offers premium interior, exterior, and cabinet painting services. Locally owned with 5-star results.');
+        return injectPageSEO({
+            title: 'Professional Painters in Spokane | #1 Rated Prestige Custom Painting',
+            description: 'Searching for professional painters in Spokane, WA? Prestige Custom Painting LLC offers premium interior, exterior, and cabinet painting services. Locally owned with 5-star results.',
+            path: '/',
+        });
     }, []);
 
     return (
@@ -236,6 +242,39 @@ function App() {
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Service Area Map */}
+            <section className="py-16 md:py-20 bg-white">
+                <div className="max-w-7xl mx-auto px-4">
+                    <div className="text-center mb-10">
+                        <h2 className="text-brand-green font-bold tracking-widest text-sm mb-4">OUR SERVICE AREA</h2>
+                        <h3 className="text-3xl md:text-4xl font-poppins font-bold text-brand-black mb-4">Serving the Inland Northwest</h3>
+                        <p className="text-lg text-gray-600 max-w-2xl mx-auto">From Spokane Valley to Liberty Lake, Cheney to Airway Heights — we bring premium painting results to your doorstep.</p>
+                    </div>
+                    <div className="rounded-3xl overflow-hidden shadow-xl border border-gray-100" style={{ height: '400px' }}>
+                        <iframe
+                            title="Prestige Custom Painting LLC Service Area - Spokane WA"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d172477.98704624225!2d-117.5274!3d47.6588!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x549e185c30bbe7e5%3A0xddfcc9d60b84d9b1!2sSpokane%2C%20WA!5e0!3m2!1sen!2sus!4v1710000000000!5m2!1sen!2sus"
+                            width="100%"
+                            height="100%"
+                            style={{ border: 0 }}
+                            allowFullScreen
+                            loading="lazy"
+                            referrerPolicy="no-referrer-when-downgrade"
+                        />
+                    </div>
+                    <div className="mt-8 text-center">
+                        <a
+                            href="https://www.google.com/maps/place/Prestige+Custom+Painting+LLC"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-2 bg-brand-green hover:bg-green-600 text-white px-8 py-4 rounded-full font-bold text-lg transition-all shadow-xl shadow-green-500/20 hover:scale-105"
+                        >
+                            <Star size={20} fill="currentColor" /> Leave Us a Google Review
+                        </a>
                     </div>
                 </div>
             </section>

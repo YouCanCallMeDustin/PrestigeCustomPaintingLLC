@@ -2,6 +2,7 @@ import { Phone, Mail, CheckCircle, ArrowLeft, ArrowRight, Star, Shield, Clock } 
 import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
 import { SITE_INFO } from '../lib/constants';
+import { injectPageSEO } from '../lib/seo';
 import Footer from '../components/Footer';
 
 function InteriorPaintingPage() {
@@ -11,6 +12,12 @@ function InteriorPaintingPage() {
         document.title = "Professional Interior Painters in Spokane | Prestige Custom Painting LLC";
         const meta = document.querySelector('meta[name="description"]');
         if (meta) meta.setAttribute('content', 'Searching for professional interior painters in Spokane? Prestige Custom Painting LLC offers high-end residential painting with modern finishes. Call (509) 714-9491 for your estimate.');
+        return injectPageSEO({
+            title: 'Professional Interior Painters in Spokane | Prestige Custom Painting LLC',
+            description: 'Searching for professional interior painters in Spokane? Prestige Custom Painting LLC offers high-end residential painting with modern finishes.',
+            path: '/interior-painting-spokane',
+            faqs,
+        });
     }, []);
 
     const benefits = [

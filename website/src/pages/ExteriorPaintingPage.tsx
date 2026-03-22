@@ -2,6 +2,7 @@ import { Phone, Mail, CheckCircle, ArrowLeft, ArrowRight, Star, Shield } from 'l
 import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
 import { SITE_INFO } from '../lib/constants';
+import { injectPageSEO } from '../lib/seo';
 import Footer from '../components/Footer';
 
 function ExteriorPaintingPage() {
@@ -11,6 +12,12 @@ function ExteriorPaintingPage() {
         document.title = "Professional Exterior Painters in Spokane | Prestige Custom Painting LLC";
         const meta = document.querySelector('meta[name="description"]');
         if (meta) meta.setAttribute('content', 'Need professional exterior painters in Spokane? Prestige Custom Painting LLC specializes in high-quality exterior house painting built for the Inland Northwest. Call (509) 714-9491.');
+        return injectPageSEO({
+            title: 'Professional Exterior Painters in Spokane | Prestige Custom Painting LLC',
+            description: 'Need professional exterior painters in Spokane? Prestige Custom Painting LLC specializes in high-quality exterior house painting built for the Inland Northwest.',
+            path: '/exterior-painting-spokane',
+            faqs,
+        });
     }, []);
 
     const services = [

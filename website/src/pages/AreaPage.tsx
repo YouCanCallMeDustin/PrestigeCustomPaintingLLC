@@ -2,6 +2,7 @@ import { Phone, Mail, MapPin, CheckCircle, ArrowLeft, ArrowRight, Star, Shield, 
 import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
 import { SITE_INFO } from '../lib/constants';
+import { injectPageSEO } from '../lib/seo';
 import Footer from '../components/Footer';
 
 export interface AreaPageProps {
@@ -31,6 +32,12 @@ export default function AreaPage({
         document.title = metaTitle;
         const meta = document.querySelector('meta[name="description"]');
         if (meta) meta.setAttribute('content', metaDesc);
+        return injectPageSEO({
+            title: metaTitle,
+            description: metaDesc,
+            path: `/painting-${city.toLowerCase().replace(/ /g, '-')}`,
+            faqs,
+        });
     }, [metaTitle, metaDesc]);
 
     const services = [

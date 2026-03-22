@@ -2,15 +2,29 @@ import { Phone, Mail, CheckCircle, ArrowLeft, ArrowRight, Star, Home } from 'luc
 import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
 import { SITE_INFO } from '../lib/constants';
+import { injectPageSEO } from '../lib/seo';
 import Footer from '../components/Footer';
 
 function HousePaintersPage() {
     const { phoneNumber, email } = SITE_INFO;
 
+    const faqs = [
+        { q: "How much does it cost to paint a house in Spokane?", a: "The cost to paint a house in Spokane depends on the size, number of rooms or stories, and prep work required. Interior projects typically start around $500 for a single room, while full exterior projects can range from $2,500 to $8,000+. We provide free, detailed estimates with no obligation." },
+        { q: "Are you licensed and insured in Washington State?", a: "Yes, Prestige Custom Painting LLC is fully licensed and insured to operate in Washington State. You can hire us with complete confidence that your property and our workers are protected." },
+        { q: "Do you paint both interior and exterior?", a: "Absolutely. We handle full residential painting projects for both interior and exterior surfaces. Many of our Spokane customers hire us for complete home refreshes — inside and out." },
+        { q: "What areas of Spokane do you serve?", a: "We serve all of Spokane and the surrounding region including Spokane Valley, Liberty Lake, Cheney, Mead, Deer Park, and the broader Inland Northwest area." },
+    ];
+
     useEffect(() => {
         document.title = "House Painters Spokane | Prestige Custom Painting LLC";
         const meta = document.querySelector('meta[name="description"]');
         if (meta) meta.setAttribute('content', 'Looking for expert house painters in Spokane, WA? Prestige Custom Painting LLC delivers top-quality interior and exterior painting services across the Inland Northwest.');
+        return injectPageSEO({
+            title: 'House Painters Spokane | Prestige Custom Painting LLC',
+            description: 'Looking for expert house painters in Spokane, WA? Prestige Custom Painting LLC delivers top-quality interior and exterior painting services across the Inland Northwest.',
+            path: '/house-painters-spokane',
+            faqs,
+        });
     }, []);
 
     const mappedServices = [
@@ -28,13 +42,6 @@ function HousePaintersPage() {
         name: s,
         slug: s.toLowerCase().replace(/ /g, '-').replace(/&/g, 'and')
     }));
-
-    const faqs = [
-        { q: "How much does it cost to paint a house in Spokane?", a: "The cost to paint a house in Spokane depends on the size, number of rooms or stories, and prep work required. Interior projects typically start around $500 for a single room, while full exterior projects can range from $2,500 to $8,000+. We provide free, detailed estimates with no obligation." },
-        { q: "Are you licensed and insured in Washington State?", a: "Yes, Prestige Custom Painting LLC is fully licensed and insured to operate in Washington State. You can hire us with complete confidence that your property and our workers are protected." },
-        { q: "Do you paint both interior and exterior?", a: "Absolutely. We handle full residential painting projects for both interior and exterior surfaces. Many of our Spokane customers hire us for complete home refreshes — inside and out." },
-        { q: "What areas of Spokane do you serve?", a: "We serve all of Spokane and the surrounding region including Spokane Valley, Liberty Lake, Cheney, Mead, Deer Park, and the broader Inland Northwest area." },
-    ];
 
     return (
         <div className="min-h-screen bg-white text-brand-black selection:bg-brand-green selection:text-white pb-20 md:pb-0">

@@ -2,6 +2,7 @@ import { Phone, Mail, CheckCircle, ArrowLeft, ArrowRight, Star, Building } from 
 import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
 import { SITE_INFO } from '../lib/constants';
+import { injectPageSEO } from '../lib/seo';
 import Footer from '../components/Footer';
 
 function CommercialPaintingPage() {
@@ -11,6 +12,12 @@ function CommercialPaintingPage() {
         document.title = "Professional Commercial Painters in Spokane | Prestige Custom Painting LLC";
         const meta = document.querySelector('meta[name="description"]');
         if (meta) meta.setAttribute('content', 'Searching for professional commercial painters in Spokane? Prestige Custom Painting LLC provides expert workspace transformations and durable business painting solutions.');
+        return injectPageSEO({
+            title: 'Professional Commercial Painters in Spokane | Prestige Custom Painting LLC',
+            description: 'Searching for professional commercial painters in Spokane? Prestige Custom Painting LLC provides expert workspace transformations and durable business painting solutions.',
+            path: '/commercial-painting-spokane',
+            faqs,
+        });
     }, []);
 
     const services = [
