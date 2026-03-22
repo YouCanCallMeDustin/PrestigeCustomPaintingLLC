@@ -257,7 +257,7 @@ function App() {
                     <div className="rounded-3xl overflow-hidden shadow-xl border border-gray-100" style={{ height: '400px' }}>
                         <iframe
                             title="Prestige Custom Painting LLC Service Area - Spokane WA"
-                            src="https://www.google.com/maps?cid=1951368306882914057&output=embed"
+                            src="https://maps.google.com/maps?q=Spokane,%20WA&t=&z=10&ie=UTF8&iwloc=&output=embed"
                             width="100%"
                             height="100%"
                             style={{ border: 0 }}
@@ -303,7 +303,7 @@ function App() {
                                         ].map((review, idx) => (
                                             <a
                                                 key={`${i}-${idx}`}
-                                                href="https://www.google.com/maps?cid=1951368306882914057"
+                                                href="https://www.google.com/search?q=Prestige+Custom+Painting+LLC+Spokane+WA"
                                                 target="_blank"
                                                 rel="noopener noreferrer"
                                                 className="flex items-center gap-4 bg-white border border-gray-100 rounded-2xl px-5 py-4 shadow-sm hover:shadow-md hover:border-yellow-200 transition-all shrink-0 w-[280px] sm:w-[300px] cursor-pointer"
@@ -333,7 +333,7 @@ function App() {
 
                     <div className="text-center">
                         <a
-                            href="https://search.google.com/local/writereview?placeid=ChIJ&q=Prestige+Custom+Painting+LLC"
+                            href="https://g.page/r/CaeovOje_oP7EAE/review"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="inline-flex items-center gap-2 bg-brand-green hover:bg-green-600 text-white px-8 py-4 rounded-full font-bold text-lg transition-all shadow-xl shadow-green-500/20 hover:scale-105"
