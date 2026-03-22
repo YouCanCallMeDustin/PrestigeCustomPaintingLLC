@@ -257,7 +257,7 @@ function App() {
                     <div className="rounded-3xl overflow-hidden shadow-xl border border-gray-100" style={{ height: '400px' }}>
                         <iframe
                             title="Prestige Custom Painting LLC Service Area - Spokane WA"
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d172477.98704624225!2d-117.5274!3d47.6588!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x549e185c30bbe7e5%3A0xddfcc9d60b84d9b1!2sSpokane%2C%20WA!5e0!3m2!1sen!2sus!4v1710000000000!5m2!1sen!2sus"
+                            src="https://www.google.com/maps?cid=1951368306882914057&output=embed"
                             width="100%"
                             height="100%"
                             style={{ border: 0 }}
@@ -266,9 +266,74 @@ function App() {
                             referrerPolicy="no-referrer-when-downgrade"
                         />
                     </div>
-                    <div className="mt-8 text-center">
+
+                    {/* Google Reviews Showcase */}
+                    <div className="mt-16 mb-12">
+                        {/* Header */}
+                        <div className="text-center mb-10">
+                            <div className="flex items-center justify-center gap-3 mb-3">
+                                <img src="https://www.gstatic.com/images/branding/product/1x/googleg_48dp.png" alt="Google" className="w-8 h-8" />
+                                <span className="text-2xl font-poppins font-bold text-brand-black">Google Reviews</span>
+                            </div>
+                            <div className="flex items-center justify-center gap-2">
+                                <div className="flex">
+                                    {[...Array(5)].map((_, i) => (
+                                        <Star key={i} size={24} className="text-yellow-400 fill-yellow-400" />
+                                    ))}
+                                </div>
+                                <span className="text-xl font-bold text-brand-black ml-1">5.0</span>
+                                <span className="text-gray-400">·</span>
+                                <span className="text-sm text-gray-500">6 verified reviews</span>
+                            </div>
+                        </div>
+
+
+                        {/* Review Cards — Infinite Marquee */}
+                        <div className="relative overflow-hidden py-4 -mx-4">
+                            <div className="flex gap-4 animate-marquee hover:[animation-play-state:paused] w-max px-4">
+                                {[...Array(2)].map((_, i) => (
+                                    <div key={i} className="flex gap-4">
+                                        {[
+                                            { name: "Dustin Shoemake", initial: "DS", color: "bg-blue-500", date: "a day ago" },
+                                            { name: "After Words", initial: "AW", color: "bg-purple-500", date: "a day ago" },
+                                            { name: "Touch Flow Pro", initial: "TF", color: "bg-teal-500", date: "a day ago" },
+                                            { name: "Get Creep'D", initial: "GC", color: "bg-orange-500", date: "2 days ago" },
+                                            { name: "Deskman Union Gospel Mission", initial: "DU", color: "bg-rose-500", date: "2 days ago" },
+                                            { name: "Robert Butler", initial: "RB", color: "bg-indigo-500", date: "4 days ago" },
+                                        ].map((review, idx) => (
+                                            <a
+                                                key={`${i}-${idx}`}
+                                                href="https://www.google.com/maps?cid=1951368306882914057"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="flex items-center gap-4 bg-white border border-gray-100 rounded-2xl px-5 py-4 shadow-sm hover:shadow-md hover:border-yellow-200 transition-all shrink-0 w-[280px] sm:w-[300px] cursor-pointer"
+                                            >
+                                                <div className={`w-11 h-11 rounded-full ${review.color} flex items-center justify-center text-white font-bold text-xs shrink-0 shadow-sm`}>
+                                                    {review.initial}
+                                                </div>
+                                                <div className="flex-1 min-w-0">
+                                                    <p className="font-bold text-brand-black text-sm truncate">{review.name}</p>
+                                                    <div className="flex items-center gap-2 mt-0.5">
+                                                        <div className="flex">
+                                                            {[...Array(5)].map((_, j) => (
+                                                                <Star key={j} size={12} className="text-yellow-400 fill-yellow-400" />
+                                                            ))}
+                                                        </div>
+                                                        <span className="text-xs text-gray-400">{review.date}</span>
+                                                    </div>
+                                                </div>
+                                                <img src="https://www.gstatic.com/images/branding/product/1x/googleg_48dp.png" alt="Google" className="w-5 h-5 opacity-40 shrink-0" />
+                                            </a>
+                                        ))}
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="text-center">
                         <a
-                            href="https://www.google.com/maps/place/Prestige+Custom+Painting+LLC"
+                            href="https://search.google.com/local/writereview?placeid=ChIJ&q=Prestige+Custom+Painting+LLC"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="inline-flex items-center gap-2 bg-brand-green hover:bg-green-600 text-white px-8 py-4 rounded-full font-bold text-lg transition-all shadow-xl shadow-green-500/20 hover:scale-105"
