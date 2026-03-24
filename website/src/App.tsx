@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { SITE_INFO } from './lib/constants';
 import { injectPageSEO } from './lib/seo';
 import Footer from './components/Footer';
+import Navbar from './components/Navbar';
 
 function App() {
     const { phoneNumber, email, ownerName } = SITE_INFO;
@@ -61,28 +62,7 @@ function App() {
     return (
         <div className="min-h-screen bg-white text-brand-black selection:bg-brand-green selection:text-white pb-20 md:pb-0">
             {/* Standard Navigation - Same on all pages */}
-            <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100 h-20">
-                <div className="max-w-7xl mx-auto px-4 h-full flex items-center justify-between">
-                    <Link to="/" className="flex items-center gap-2 outline-none">
-                        <img src="/logo.png" alt="Prestige Custom Painting LLC logo - House Painters Spokane WA" className="w-10 h-10 md:w-12 md:h-12 object-contain" />
-                        <span className="font-poppins font-bold text-base md:text-xl tracking-tight leading-tight">
-                            <span className="text-brand-black">PRESTIGE CUSTOM</span>{" "}<span className="text-brand-green">PAINTING</span>{" "}<span className="text-brand-black">LLC.</span>
-                        </span>
-                    </Link>
-
-                    <div className="hidden md:flex items-center gap-8">
-                        <Link to="/" className="text-sm font-bold border-b-2 border-brand-green text-brand-black">HOME</Link>
-                        <Link to="/our-work" className="text-sm font-bold hover:text-brand-green transition-colors text-brand-black">OUR WORK</Link>
-                        <a href={`tel:${phoneNumber}`} className="flex items-center gap-2 bg-brand-black text-white px-6 py-2.5 rounded-full font-bold text-sm hover:bg-gray-800 transition-all shadow-lg shadow-black/20">
-                            <Phone size={16} className="text-brand-green" /> {phoneNumber}
-                        </a>
-                    </div>
-                    
-                    <a href={`tel:${phoneNumber}`} className="md:hidden flex items-center gap-2 bg-brand-green text-white p-3 rounded-full shadow-lg shadow-green-500/30">
-                        <Phone size={20} />
-                    </a>
-                </div>
-            </nav>
+            <Navbar />
 
             <header className="relative bg-brand-black text-white pt-20 pb-32 md:pt-32 md:pb-48 overflow-hidden">
                 <div className="absolute top-0 right-0 w-full md:w-1/2 h-full bg-brand-green/10 -skew-x-12 transform translate-x-24 md:translate-x-32" />

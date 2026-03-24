@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import { SITE_INFO } from '../lib/constants';
 import { injectPageSEO } from '../lib/seo';
 import Footer from '../components/Footer';
+import Navbar from '../components/Navbar';
 
 function CabinetPaintingPage() {
     const { phoneNumber, email } = SITE_INFO;
@@ -37,20 +38,7 @@ function CabinetPaintingPage() {
 
     return (
         <div className="min-h-screen bg-white text-brand-black selection:bg-brand-green selection:text-white pb-20 md:pb-0">
-            <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100 h-20">
-                <div className="max-w-7xl mx-auto px-4 h-full flex items-center justify-between">
-                    <Link to="/" className="flex items-center gap-2 outline-none">
-                        <img src="/logo.png" alt="Prestige Custom Painting LLC logo - House Painters Spokane WA" className="w-10 h-10 md:w-12 md:h-12 object-contain" />
-                        <span className="font-poppins font-bold text-base md:text-xl tracking-tight leading-tight">
-                            <span className="text-brand-black">PRESTIGE CUSTOM</span>{" "}<span className="text-brand-green">PAINTING</span>{" "}<span className="text-brand-black">LLC.</span>
-                        </span>
-                    </Link>
-                    <div className="flex items-center gap-3 md:gap-6">
-                        <a href={`tel:${phoneNumber}`} className="hidden lg:flex items-center gap-2 text-sm font-semibold hover:text-brand-green transition-colors"><Phone size={18} className="text-brand-green" />{phoneNumber}</a>
-                        <a href={`mailto:${email}`} className="bg-brand-green hover:bg-green-600 text-white px-5 md:px-6 py-2 md:py-2.5 rounded-full font-bold text-sm md:text-base transition-all transform hover:scale-105 shadow-lg shadow-green-500/30">GET A QUOTE</a>
-                    </div>
-                </div>
-            </nav>
+            <Navbar />
 
             <section className="bg-brand-black py-16 md:py-24 text-white relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-1/2 h-full bg-brand-green/10 -skew-x-12 transform translate-x-32" />

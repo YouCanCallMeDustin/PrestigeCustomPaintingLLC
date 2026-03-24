@@ -1,4 +1,4 @@
-import { Phone, Mail, MapPin } from 'lucide-react';
+import { Phone, Mail, MapPin, Facebook, Star, CheckCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { SITE_INFO } from '../lib/constants';
 
@@ -33,6 +33,32 @@ const Footer = () => {
                         </div>
                         <div className="flex items-center justify-center md:justify-start gap-3 text-gray-600">
                             <MapPin size={18} className="text-brand-green" /> {SITE_INFO.location}
+                        </div>
+                        <div className="flex flex-wrap items-center justify-center md:justify-start gap-3 mt-4">
+                            <a 
+                                href={SITE_INFO.facebookUrl} 
+                                target="_blank" 
+                                rel="noopener noreferrer" 
+                                className="flex items-center gap-2 bg-white border border-gray-200 px-4 py-2 rounded-xl text-sm font-bold text-gray-700 hover:text-[#1877F2] hover:border-[#1877F2] transition-all shadow-sm group"
+                            >
+                                <Facebook size={18} className="group-hover:fill-[#1877F2] transition-colors" /> Facebook
+                            </a>
+                            <a 
+                                href={SITE_INFO.yelpUrl} 
+                                target="_blank" 
+                                rel="noopener noreferrer" 
+                                className="flex items-center gap-2 bg-white border border-gray-200 px-4 py-2 rounded-xl text-sm font-bold text-gray-700 hover:text-[#FF1A1A] hover:border-[#FF1A1A] transition-all shadow-sm group"
+                            >
+                                <Star size={18} className="group-hover:fill-[#FF1A1A] transition-colors" /> Yelp
+                            </a>
+                            <a 
+                                href={SITE_INFO.bizapediaUrl} 
+                                target="_blank" 
+                                rel="noopener noreferrer" 
+                                className="flex items-center gap-2 bg-white border border-gray-200 px-4 py-2 rounded-xl text-sm font-bold text-gray-700 hover:text-brand-green hover:border-brand-green transition-all shadow-sm group"
+                            >
+                                <CheckCircle size={18} className="group-hover:fill-brand-green transition-colors" /> Registered Business
+                            </a>
                         </div>
                     </div>
 
