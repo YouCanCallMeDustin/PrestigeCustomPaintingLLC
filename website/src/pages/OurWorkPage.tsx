@@ -15,15 +15,29 @@ function OurWorkPage() {
     }, []);
 
     const images = [
-        { id: 1, src: "/1.jpg", alt: "Professional interior painting in Spokane - living room transformation" },
-        { id: 2, src: "/2.jpg", alt: "Expert exterior house painting Spokane WA - crisp trim and siding" },
-        { id: 3, src: "/3.jpg", alt: "Professional cabinet refinishing Spokane - modern kitchen update" },
-        { id: 4, src: "/4.jpg", alt: "High-end interior paint application - Spokane residential project" },
-        { id: 5, src: "/5.jpg", alt: "Professional exterior painting services - durable home protection" },
-        { id: 6, src: "/6.jpg", alt: "Custom interior painting Spokane WA - bedroom accent wall" },
-        { id: 7, src: "/7.jpg", alt: "Professional interior painting - high-quality wall finishes in Spokane" },
-        { id: 8, src: "/8.jpg", alt: "Professional commercial painting project Spokane - workspace update" },
-        { id: 9, src: "/9.jpg", alt: "Modern home exterior - professional painters Spokane WA" },
+        { id: 1, src: "/1.jpg", alt: "Interior - Custom cabinet drawer detail with floral lining" },
+        { id: 2, src: "/2.jpg", alt: "Interior - Professional cabinet refinishing (green dresser medium shot)" },
+        { id: 3, src: "/3.jpg", alt: "Interior - Furniture/Cabinet transformation showcase in living area" },
+        { id: 4, src: "/4.jpg", alt: "Exterior - Professional wooden deck painting and house siding refresh" },
+        { id: 5, src: "/5.jpg", alt: "Interior - Clean living room wall and window painting" },
+        { id: 6, src: "/6.jpg", alt: "Interior - Professional trim work and internal window cutout/pass-through" },
+        { id: 7, src: "/7.jpg", alt: "Interior - Detail-oriented window trim and turquoise accent wall" },
+        { id: 8, src: "/8.jpg", alt: "Exterior - Side siding and trim detail on a residential home" },
+        { id: 9, src: "/9.jpg", alt: "Interior - Custom blue-grey painted cabinetry/shelving" },
+        { id: 10, src: "/10.jpg", alt: "Exterior - Upper level siding and chimney painting" },
+        { id: 11, src: "/11.jpg", alt: "Exterior - Full two-story residential exterior painting (white with black trim)" },
+        { id: 12, src: "/12.jpg", alt: "Exterior - Single-story house siding and trim refresh (beige/tan)" },
+        { id: 13, src: "/13.jpg", alt: "Exterior - Patio area and French door trim painting" },
+        { id: 14, src: "/14.jpg", alt: "Exterior - Front entrance portico and black door painting" },
+        { id: 15, src: "/15.jpg", alt: "Exterior - Modern house facade with stone accents and brown garage door" },
+        { id: 16, src: "/16.jpg", alt: "Exterior - Multi-texture house exterior (upper shingles and lower siding)" },
+        { id: 17, src: "/17.jpg", alt: "Exterior - Professional window and siding paint application" },
+        { id: 18, src: "/18.jpg", alt: "Exterior - Durable siding and trim protection on house wall" },
+        { id: 19, src: "/19.jpg", alt: "Exterior - House siding and wooden fence/screen refresh" },
+        { id: 20, src: "/20.jpg", alt: "Exterior - Vertical siding and corner trim detail" },
+        { id: 21, src: "/21.jpg", alt: "Exterior - Back porch pillars and siding transformation" },
+        { id: 22, src: "/22.jpg", alt: "Exterior - Large window facade and vertical siding refresh" },
+        { id: 23, src: "/23.jpg", alt: "Exterior - Complete high-end residential exterior refresh (full house view)" },
     ];
 
     return (
