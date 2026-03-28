@@ -37,7 +37,9 @@ export default function AreaPage({
             title: metaTitle,
             description: metaDesc,
             path: `/painting-${city.toLowerCase().replace(/ /g, '-')}`,
-            faqs,
+            schemas: [
+                { id: 'faq', data: { "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": faqs.map(f => ({ "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } })) } }
+            ]
         });
     }, [metaTitle, metaDesc]);
 
@@ -77,12 +79,6 @@ export default function AreaPage({
         },
     ];
 
-    const otherPages = [
-        { label: "Interior Painting", to: "/interior-painting-spokane" },
-        { label: "Exterior Painting", to: "/exterior-painting-spokane" },
-        { label: "Cabinet Painting", to: "/cabinet-painting-spokane" },
-        { label: "Commercial Painting", to: "/commercial-painting-spokane" },
-    ];
 
     return (
         <div className="min-h-screen bg-white text-brand-black selection:bg-brand-green selection:text-white pb-20 md:pb-0">
@@ -255,19 +251,6 @@ export default function AreaPage({
                 </div>
             </section>
 
-            {/* Internal Links to service pages */}
-            <section className="py-12 bg-white">
-                <div className="max-w-7xl mx-auto px-4">
-                    <h3 className="text-xl font-poppins font-bold mb-6 text-center">Explore Our Services</h3>
-                    <div className="flex flex-wrap justify-center gap-3">
-                        {otherPages.map((p, idx) => (
-                            <Link key={idx} to={p.to} className="px-5 py-2.5 border border-gray-200 rounded-full text-sm font-semibold hover:border-brand-green hover:text-brand-green transition-colors">
-                                {p.label}
-                            </Link>
-                        ))}
-                    </div>
-                </div>
-            </section>
 
             {/* Mobile Sticky Footer */}
             <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-white/95 backdrop-blur-md border-t border-gray-100 p-4 flex gap-4">

@@ -72,17 +72,6 @@ const Footer = () => {
                             <li><Link to="/painting-deer-park" className="hover:text-brand-green transition-colors">Deer Park, WA</Link></li>
                         </ul>
                     </div>
-
-                    <div className="text-center md:text-left">
-                        <h4 className="font-bold text-lg mb-4 uppercase tracking-wider text-brand-green">Local Resources</h4>
-                        <ul className="text-gray-600 text-sm space-y-3 font-semibold">
-                            <li><Link to="/house-painters-spokane" className="hover:text-brand-green transition-colors font-bold">Professional Painters in Spokane</Link></li>
-                            <li><Link to="/blog/cost-to-paint-house-spokane" className="hover:text-brand-green transition-colors">How Much Does Painting Cost in Spokane?</Link></li>
-                            <li><Link to="/blog/best-exterior-paint-spokane" className="hover:text-brand-green transition-colors">Best Exterior Paint for Spokane Weather</Link></li>
-                            <li><Link to="/blog/how-often-to-paint-house-spokane" className="hover:text-brand-green transition-colors">How Often Should You Paint?</Link></li>
-                            <li><Link to="/blog/interior-painting-tips-spokane" className="hover:text-brand-green transition-colors">Interior Painting Tips for Spokane Homes</Link></li>
-                        </ul>
-                    </div>
                 </div>
                 <div className="pt-8 border-t border-gray-200 text-center text-gray-400 text-sm">
                     <p>© 2026 Prestige Custom Painting LLC. All rights reserved.</p>

@@ -6,32 +6,17 @@
 
 const SITE_URL = 'https://prestigecustompaintingllc.com';
 
-interface FAQItem {
-    q: string;
-    a: string;
-}
-
 /**
- * Injects FAQPage JSON-LD schema into the document head.
- * Returns a cleanup function to remove it on unmount.
+ * Injects a JSON-LD schema into the document head.
+ * Returns a cleanup function.
  */
-export function injectFAQSchema(faqs: FAQItem[]): () => void {
-    const schema = {
-        '@context': 'https://schema.org',
-        '@type': 'FAQPage',
-        mainEntity: faqs.map(faq => ({
-            '@type': 'Question',
-            name: faq.q,
-            acceptedAnswer: {
-                '@type': 'Answer',
-                text: faq.a,
-            },
-        })),
-    };
+export function injectSchema(schema: object, id: string): () => void {
+    const existing = document.querySelector(`script[data-seo="${id}"]`);
+    if (existing) existing.remove();
 
     const script = document.createElement('script');
     script.type = 'application/ld+json';
-    script.setAttribute('data-seo', 'faq-schema');
+    script.setAttribute('data-seo', id);
     script.textContent = JSON.stringify(schema);
     document.head.appendChild(script);
 
@@ -45,13 +30,12 @@ export function injectFAQSchema(faqs: FAQItem[]): () => void {
  * Returns a cleanup function.
  */
 export function injectCanonical(path: string): () => void {
-    // Remove any existing canonical first
     const existing = document.querySelector('link[rel="canonical"]');
     if (existing) existing.remove();
 
     const link = document.createElement('link');
     link.rel = 'canonical';
-    link.href = `${SITE_URL}${path}`;
+    link.href = path.startsWith('http') ? path : `${SITE_URL}${path}`;
     document.head.appendChild(link);
 
     return () => {
@@ -59,51 +43,25 @@ export function injectCanonical(path: string): () => void {
     };
 }
 
-interface OGTagsOptions {
-    title: string;
-    description: string;
-    path: string;
-    image?: string;
+interface MetaTag {
+    name?: string;
+    property?: string;
+    content: string;
 }
 
 /**
- * Injects Open Graph and Twitter Card meta tags.
+ * Injects meta tags into the head.
  * Returns a cleanup function.
  */
-export function injectOGTags({ title, description, path, image }: OGTagsOptions): () => void {
-    const tags: { property: string; content: string }[] = [
-        { property: 'og:type', content: 'website' },
-        { property: 'og:site_name', content: 'Prestige Custom Painting LLC' },
-        { property: 'og:title', content: title },
-        { property: 'og:description', content: description },
-        { property: 'og:url', content: `${SITE_URL}${path}` },
-        { property: 'og:image', content: image || `${SITE_URL}/logo.png` },
-        { property: 'og:locale', content: 'en_US' },
-    ];
-
-    const twitterTags: { name: string; content: string }[] = [
-        { name: 'twitter:card', content: 'summary' },
-        { name: 'twitter:title', content: title },
-        { name: 'twitter:description', content: description },
-        { name: 'twitter:image', content: image || `${SITE_URL}/logo.png` },
-    ];
-
+export function injectMetaTags(tags: MetaTag[], category: string): () => void {
     const elements: HTMLMetaElement[] = [];
 
     tags.forEach(tag => {
         const meta = document.createElement('meta');
-        meta.setAttribute('property', tag.property);
+        if (tag.name) meta.setAttribute('name', tag.name);
+        if (tag.property) meta.setAttribute('property', tag.property);
         meta.content = tag.content;
-        meta.setAttribute('data-seo', 'og');
-        document.head.appendChild(meta);
-        elements.push(meta);
-    });
-
-    twitterTags.forEach(tag => {
-        const meta = document.createElement('meta');
-        meta.setAttribute('name', tag.name);
-        meta.content = tag.content;
-        meta.setAttribute('data-seo', 'twitter');
+        meta.setAttribute('data-seo', category);
         document.head.appendChild(meta);
         elements.push(meta);
     });
@@ -113,30 +71,66 @@ export function injectOGTags({ title, description, path, image }: OGTagsOptions)
     };
 }
 
-/**
- * Combined helper: injects canonical, OG tags, and optionally FAQ schema.
- * Use this in a page's useEffect for a single cleanup return.
- */
-export function injectPageSEO(options: {
+interface SEOOptions {
     title: string;
     description: string;
     path: string;
-    faqs?: FAQItem[];
-}): () => void {
+    ogImage?: string;
+    schemas?: { id: string; data: object }[];
+}
+
+/**
+ * Combined helper: injects title, description, canonical, OG tags, and multiple schemas.
+ */
+export function injectPageSEO(options: SEOOptions): () => void {
     const cleanups: (() => void)[] = [];
 
-    cleanups.push(injectCanonical(options.path));
-    cleanups.push(injectOGTags({
-        title: options.title,
-        description: options.description,
-        path: options.path,
-    }));
+    // Title & Description
+    document.title = options.title;
+    const descMeta = document.querySelector('meta[name="description"]');
+    if (descMeta) {
+        descMeta.setAttribute('content', options.description);
+    } else {
+        const meta = document.createElement('meta');
+        meta.setAttribute('name', 'description');
+        meta.content = options.description;
+        document.head.appendChild(meta);
+        cleanups.push(() => meta.remove());
+    }
 
-    if (options.faqs && options.faqs.length > 0) {
-        cleanups.push(injectFAQSchema(options.faqs));
+    // Canonical
+    cleanups.push(injectCanonical(options.path));
+
+    // OG & Twitter Tags
+    const ogTags: MetaTag[] = [
+        { property: 'og:type', content: 'website' },
+        { property: 'og:site_name', content: 'Prestige Custom Painting LLC' },
+        { property: 'og:title', content: options.title },
+        { property: 'og:description', content: options.description },
+        { property: 'og:url', content: options.path.startsWith('http') ? options.path : `${SITE_URL}${options.path}` },
+        { property: 'og:image', content: options.ogImage || `${SITE_URL}/logo.png` },
+        { property: 'og:locale', content: 'en_US' },
+    ];
+
+    const twitterTags: MetaTag[] = [
+        { name: 'twitter:card', content: 'summary_large_image' },
+        { name: 'twitter:title', content: options.title },
+        { name: 'twitter:description', content: options.description },
+        { name: 'twitter:image', content: options.ogImage || `${SITE_URL}/logo.png` },
+    ];
+
+    cleanups.push(injectMetaTags(ogTags, 'og'));
+    cleanups.push(injectMetaTags(twitterTags, 'twitter'));
+
+    // Schemas
+    if (options.schemas) {
+        options.schemas.forEach(schema => {
+            cleanups.push(injectSchema(schema.data, schema.id));
+        });
     }
 
     return () => {
         cleanups.forEach(fn => fn());
     };
 }
+

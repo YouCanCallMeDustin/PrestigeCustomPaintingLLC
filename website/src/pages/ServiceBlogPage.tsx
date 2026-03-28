@@ -49,16 +49,62 @@ function ServiceBlogPage() {
                 <div className="max-w-7xl mx-auto px-4 flex flex-col lg:flex-row gap-12 lg:gap-20">
                     <article className="lg:w-2/3 prose prose-lg prose-green max-w-none">
                         {data.content}
-                        
-                        <div className="not-prose mt-16 p-8 bg-brand-gray/30 rounded-3xl border border-gray-100 flex flex-col sm:flex-row items-center justify-between gap-6">
-                            <div>
-                                <h3 className="text-2xl font-poppins font-bold mb-2">Looking for more {data.parentName} services?</h3>
-                                <p className="text-gray-600 mb-0">Check out all the specific ways we can improve your property in Spokane.</p>
+
+                        {/* Additional Content to boost word count and SEO */}
+                        <div className="mt-16 pt-16 border-t border-gray-100 not-prose">
+                            <h2 className="text-2xl md:text-3xl font-poppins font-bold text-brand-black mb-8">
+                                Why Choose Prestige Custom Painting LLC?
+                            </h2>
+                            <div className="grid md:grid-cols-2 gap-8 mb-12">
+                                <div className="bg-brand-gray/30 p-8 rounded-3xl">
+                                    <h3 className="text-xl font-bold mb-4">Meticulous Surface Prep</h3>
+                                    <p className="text-gray-600 leading-relaxed text-sm">
+                                        We believe the best paint jobs are 90% preparation. Our team spends the necessary time scraping, sanding, caulking, and priming to ensure your new finish sticks perfectly and lasts for years in the Spokane climate.
+                                    </p>
+                                </div>
+                                <div className="bg-brand-gray/30 p-8 rounded-3xl">
+                                    <h3 className="text-xl font-bold mb-4">Premium Materials Only</h3>
+                                    <p className="text-gray-600 leading-relaxed text-sm">
+                                        We exclusively use top-tier products from Sherwin-Williams, Benjamin Moore, and Behr. By using higher-quality resins and pigments, we provide better coverage and superior durability for your home.
+                                    </p>
+                                </div>
                             </div>
-                            <Link to={data.parentRoute} className="shrink-0 bg-white border-2 border-brand-green text-brand-green hover:bg-brand-green hover:text-white px-8 py-4 rounded-xl font-bold transition-all shadow-sm">
-                                VIEW ALL
-                            </Link>
+
+                            <h2 className="text-2xl md:text-3xl font-poppins font-bold text-brand-black mb-8">
+                                Our Professional Process
+                            </h2>
+                            <div className="space-y-6">
+                                <div className="flex gap-6">
+                                    <div className="w-12 h-12 bg-brand-green text-white rounded-full flex items-center justify-center font-bold shrink-0">1</div>
+                                    <div>
+                                        <h4 className="font-bold text-lg mb-2">Free Detailed Estimate</h4>
+                                        <p className="text-gray-600 text-sm">We provide a transparent, written quote with no hidden fees, clearly outlining the scope of work and materials involved.</p>
+                                    </div>
+                                </div>
+                                <div className="flex gap-6">
+                                    <div className="w-12 h-12 bg-brand-green text-white rounded-full flex items-center justify-center font-bold shrink-0">2</div>
+                                    <div>
+                                        <h4 className="font-bold text-lg mb-2">Protection & Setup</h4>
+                                        <p className="text-gray-600 text-sm">We carefully cover floors, furniture, and landscaping. Our goal is to leave your property cleaner than we found it.</p>
+                                    </div>
+                                </div>
+                                <div className="flex gap-6">
+                                    <div className="w-12 h-12 bg-brand-green text-white rounded-full flex items-center justify-center font-bold shrink-0">3</div>
+                                    <div>
+                                        <h4 className="font-bold text-lg mb-2">Expert Execution</h4>
+                                        <p className="text-gray-600 text-sm">Using professional-grade sprayers, rollers, and brushes, we apply consistent coats for a flawless, high-end appearance.</p>
+                                    </div>
+                                </div>
+                                <div className="flex gap-6">
+                                    <div className="w-12 h-12 bg-brand-green text-white rounded-full flex items-center justify-center font-bold shrink-0">4</div>
+                                    <div>
+                                        <h4 className="font-bold text-lg mb-2">Quality Inspection</h4>
+                                        <p className="text-gray-600 text-sm">We perform a final walkthrough with you to ensure every detail meets our strict standards and your complete satisfaction.</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+                        
                     </article>
 
                     <aside className="lg:w-1/3">

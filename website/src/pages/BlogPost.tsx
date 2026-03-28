@@ -1,4 +1,4 @@
-import { Phone, Mail, Clock, ArrowLeft, ArrowRight, Share2, Facebook, Twitter, Linkedin, Star } from 'lucide-react';
+import { Phone, Mail, Clock, ArrowLeft, Share2, Facebook, Twitter, Linkedin } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
 import { SITE_INFO } from '../lib/constants';
@@ -112,28 +112,11 @@ export default function BlogPost({
 
                     {/* Sidebar */}
                     <aside className="space-y-12">
-                        <div className="bg-brand-gray/30 p-8 rounded-[2rem] border border-gray-100 sticky top-32">
-                            <h3 className="text-xl font-bold mb-6 flex items-center gap-2">
-                                <Star size={20} className="text-brand-green fill-brand-green" /> All Services
-                            </h3>
-                            <div className="space-y-3">
-                                <Link to="/#services" className="flex items-center justify-between group bg-white p-4 rounded-xl border border-gray-50 hover:border-brand-green transition-all shadow-sm">
-                                    <div className="flex flex-col">
-                                        <span className="font-bold text-brand-black group-hover:text-brand-green transition-colors">View Service Hub</span>
-                                        <span className="text-xs text-gray-500 mt-1">Explore all 50+ services on our homepage</span>
-                                    </div>
-                                    <ArrowRight size={16} className="text-gray-300 group-hover:text-brand-green group-hover:translate-x-1 transition-all" />
-                                </Link>
-                            </div>
-                            
-                            <hr className="my-8 border-gray-200" />
-                            
-                            <div className="text-center">
-                                <p className="text-sm text-gray-500 mb-4 font-semibold uppercase tracking-wider">Need a Professional?</p>
-                                <a href={`tel:${phoneNumber}`} className="block bg-brand-black text-white py-4 rounded-xl font-bold hover:bg-brand-green transition-all shadow-lg active:scale-95">
-                                    GET FREE ESTIMATE
-                                </a>
-                            </div>
+                        <div className="bg-brand-black p-8 rounded-[2rem] sticky top-32 text-center">
+                            <p className="text-sm text-gray-400 mb-4 font-semibold uppercase tracking-wider">Need a Professional?</p>
+                            <a href={`tel:${phoneNumber}`} className="block bg-brand-green text-white py-4 rounded-xl font-bold hover:bg-green-600 transition-all shadow-lg active:scale-95">
+                                GET FREE ESTIMATE
+                            </a>
                         </div>
                     </aside>
                 </div>

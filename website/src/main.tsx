@@ -23,6 +23,16 @@ import BlogBestExteriorPaint from './pages/blog/BlogBestExteriorPaint.tsx'
 import BlogHowOftenToPaint from './pages/blog/BlogHowOftenToPaint.tsx'
 import BlogInteriorTips from './pages/blog/BlogInteriorTips.tsx'
 import ServiceBlogPage from './pages/ServiceBlogPage.tsx'
+import CostToPaintAHouse from './pages/costs/CostToPaintAHouse.tsx'
+import ExteriorPaintingCost from './pages/costs/ExteriorPaintingCost.tsx'
+import InteriorPaintingCost from './pages/costs/InteriorPaintingCost.tsx'
+import RoomPaintingCost from './pages/costs/RoomPaintingCost.tsx'
+import PainterHourlyRates from './pages/costs/PainterHourlyRates.tsx'
+import TwoStoryHouseCost from './pages/costs/TwoStoryHouseCost.tsx'
+import DiyVsProfessionalCost from './pages/costs/DiyVsProfessionalCost.tsx'
+import PaintCalculatorPage from './pages/costs/PaintCalculatorPage.tsx'
+import CabinetPaintingCost from './pages/costs/CabinetPaintingCost.tsx'
+import BlogListPage from './pages/BlogListPage.tsx'
 import './index.css'
 import { initGA } from './lib/analytics'
 import PageTracker from './components/PageTracker'
@@ -56,7 +66,19 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
                 <Route path="/blog/best-exterior-paint-spokane" element={<BlogBestExteriorPaint />} />
                 <Route path="/blog/how-often-to-paint-house-spokane" element={<BlogHowOftenToPaint />} />
                 <Route path="/blog/interior-painting-tips-spokane" element={<BlogInteriorTips />} />
+                <Route path="/blog" element={<BlogListPage />} />
                 <Route path="/service/:serviceSlug" element={<ServiceBlogPage />} />
+                
+                {/* SEO Pillar & Spoke Routes */}
+                <Route path="/cost-to-paint-a-house" element={<CostToPaintAHouse />} />
+                <Route path="/cost-to-paint-house-exterior" element={<ExteriorPaintingCost />} />
+                <Route path="/cost-to-paint-house-interior" element={<InteriorPaintingCost />} />
+                <Route path="/cost-to-paint-a-room" element={<RoomPaintingCost />} />
+                <Route path="/how-much-do-painters-charge-per-hour" element={<PainterHourlyRates />} />
+                <Route path="/cost-to-paint-a-two-story-house" element={<TwoStoryHouseCost />} />
+                <Route path="/diy-vs-hiring-a-painter" element={<DiyVsProfessionalCost />} />
+                <Route path="/how-much-paint-do-i-need" element={<PaintCalculatorPage />} />
+                <Route path="/cost-to-paint-kitchen-cabinets" element={<CabinetPaintingCost />} />
             </Routes>
         </BrowserRouter>
     </React.StrictMode>,
