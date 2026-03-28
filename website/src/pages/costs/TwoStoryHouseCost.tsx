@@ -83,7 +83,7 @@ const TwoStoryHouseCost = () => {
                             Cost to Paint a <span className="text-brand-green">Two-Story House</span> in Spokane
                         </h1>
                         <p className="text-xl text-gray-600 leading-relaxed font-medium">
-                            If you own a larger multi-story home in Spokane Valley, Liberty Lake, or Cheney, your exterior painting bid will be significantly different from a standard rancher. For 2026, the cost for a 2-story repaint typically ranges from **$5,500 to $10,000+**. This guide explores the "Height Premium" and why safety is a major factor in your quote.
+                            If you own a larger multi-story home in Spokane Valley, Liberty Lake, or Cheney, your exterior painting bid will be significantly different from a standard rancher. For 2026, the cost for a 2-story repaint typically ranges from <strong>$5,500 to $10,000+</strong>. This guide explores the "Height Premium" and why safety is a major factor in your quote.
                         </p>
                     </header>
 
@@ -132,7 +132,7 @@ const TwoStoryHouseCost = () => {
                         <section className="my-12">
                             <h2 className="text-3xl font-bold font-poppins mb-6">Safety Compliance & You</h2>
                             <p>
-                                At Prestige Custom Painting LLC, safety isn't an option—it's the core of our brand. When we bid on a two-story home, our price includes the cost of **OSHA-compliant safety gear**. If a "cheap" painter falls off your roof without workers' compensation insurance, you as the homeowner could be held liable.
+                                At Prestige Custom Painting LLC, safety isn't an option—it's the core of our brand. When we bid on a two-story home, our price includes the cost of <strong>OSHA-compliant safety gear</strong>. If a "cheap" painter falls off your roof without workers' compensation insurance, you as the homeowner could be held liable.
                             </p>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
                                 <div className="p-6 bg-white border border-gray-100 rounded-2xl shadow-sm">

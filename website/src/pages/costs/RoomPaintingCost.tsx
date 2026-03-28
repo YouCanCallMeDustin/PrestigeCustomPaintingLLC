@@ -80,7 +80,7 @@ const RoomPaintingCost = () => {
                             How Much Does It Cost to <span className="text-brand-green">Paint a Room</span> in Spokane?
                         </h1>
                         <p className="text-xl text-gray-600 leading-relaxed font-medium">
-                            Whether you're refreshing a nursery or updating your master suite, understanding the "per-room" cost is essential for planning. In 2026, most Spokane homeowners can expect to pay between **$450 and $1,200** for a single professionally painted room, depending on the scope and trim details.
+                            Whether you're refreshing a nursery or updating your master suite, understanding the "per-room" cost is essential for planning. In 2026, most Spokane homeowners can expect to pay between <strong>$450 and $1,200</strong> for a single professionally painted room, depending on the scope and trim details.
                         </p>
                     </header>
 
@@ -129,14 +129,14 @@ const RoomPaintingCost = () => {
                         <section className="my-12">
                             <h2 className="text-3xl font-bold font-poppins mb-6">The "Room Bundle" Strategy</h2>
                             <p>
-                                At Prestige Custom Painting LLC, we often recommend that Spokane homeowners bundle multiple rooms. Why? Because the **"setup and cleanup" time** is often the same for one room or three. When we are already on-site with our zip-walls, drop cloths, and sprayers, the "per-room" efficiency increases, allowing us to pass savings on to you.
+                                At Prestige Custom Painting LLC, we often recommend that Spokane homeowners bundle multiple rooms. Why? Because the <strong>"setup and cleanup" time</strong> is often the same for one room or three. When we are already on-site with our zip-walls, drop cloths, and sprayers, the "per-room" efficiency increases, allowing us to pass savings on to you.
                             </p>
                             <div className="bg-brand-green/5 p-8 rounded-3xl border border-brand-green/10 my-10">
                                 <h4 className="text-brand-green text-xl font-bold mb-4 flex items-center gap-2 italic">
                                     <Sparkles size={20} fill="currentColor" /> Prestige Value Tip
                                 </h4>
                                 <p className="mb-0 text-gray-700">
-                                    Painting 3 rooms at once can save you up to **20%** compared to booking them as separate projects months apart. We call this "In-Home Efficiency," and it's the smartest way to leverage professional labor costs.
+                                    Painting 3 rooms at once can save you up to <strong>20%</strong> compared to booking them as separate projects months apart. We call this "In-Home Efficiency," and it's the smartest way to leverage professional labor costs.
                                 </p>
                             </div>
                         </section>

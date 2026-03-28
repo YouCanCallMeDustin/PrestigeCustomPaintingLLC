@@ -90,7 +90,7 @@ const PainterHourlyRates = () => {
                             How Much Do <span className="text-brand-green">Professional Painters</span> Charge Per Hour?
                         </h1>
                         <p className="text-xl text-gray-600 leading-relaxed font-medium">
-                            If you're comparing bids, you've likely noticed a wide variance in "hourly rates." In Spokane, 2026 rates for high-quality professional painters range from **$55 to $95 per hour**. This guide explains what goes into that number and why the cheapest rate can sometimes be the most expensive choice.
+                            If you're comparing bids, you've likely noticed a wide variance in "hourly rates." In Spokane, 2026 rates for high-quality professional painters range from <strong>$55 to $95 per hour</strong>. This guide explains what goes into that number and why the cheapest rate can sometimes be the most expensive choice.
                         </p>
                     </header>
 
@@ -129,7 +129,7 @@ const PainterHourlyRates = () => {
                         <section className="my-12">
                             <h2 className="text-3xl font-bold font-poppins mb-6">Hourly Rate vs. Fixed Bid</h2>
                             <p>
-                                At Prestige, we rarely quote by the hour for residential work. Instead, we use our historical data and surface measurements to provide a **Firm Flat-Rate Estimate**.
+                                At Prestige, we rarely quote by the hour for residential work. Instead, we use our historical data and surface measurements to provide a <strong>Firm Flat-Rate Estimate</strong>.
                             </p>
                             <ul>
                                 <li><strong>The Problem with Hourly:</strong> It creates a conflict of interest. The slower the painter works, the more you pay.</li>

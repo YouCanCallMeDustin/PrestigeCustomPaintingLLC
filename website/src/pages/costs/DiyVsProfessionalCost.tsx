@@ -125,7 +125,7 @@ const DiyVsProfessionalCost = () => {
                         <section className="my-12">
                             <h2 className="text-3xl font-bold font-poppins mb-6">The High Cost of DIY Mistakes</h2>
                             <p>
-                                In Spokane's climate, a mistake in the preparation phase can be incredibly expensive to fix. If the paint fails due to moisture trapping or poor adhesion, a professional will have to **strip the house down to the bare wood**, which often doubles the cost of a standard repaint.
+                                In Spokane's climate, a mistake in the preparation phase can be incredibly expensive to fix. If the paint fails due to moisture trapping or poor adhesion, a professional will have to <strong>strip the house down to the bare wood</strong>, which often doubles the cost of a standard repaint.
                             </p>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
                                 <div className="flex items-center gap-4 p-4 bg-gray-50 rounded-xl">

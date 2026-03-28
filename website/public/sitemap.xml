@@ -14,7 +14,39 @@
         <loc>https://prestigecustompaintingllc.com/our-work</loc>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
-        <lastmod>2026-03-21</lastmod>
+        <lastmod>2026-03-28</lastmod>
+    </url>
+
+    <!-- ========== CORE SEO PAGES ========== -->
+    <url>
+        <loc>https://prestigecustompaintingllc.com/about</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <lastmod>2026-03-28</lastmod>
+    </url>
+    <url>
+        <loc>https://prestigecustompaintingllc.com/testimonials</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+        <lastmod>2026-03-28</lastmod>
+    </url>
+    <url>
+        <loc>https://prestigecustompaintingllc.com/faq</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <lastmod>2026-03-28</lastmod>
+    </url>
+    <url>
+        <loc>https://prestigecustompaintingllc.com/service-area</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <lastmod>2026-03-28</lastmod>
+    </url>
+    <url>
+        <loc>https://prestigecustompaintingllc.com/color-consultation</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <lastmod>2026-03-28</lastmod>
     </url>
 
     <!-- ========== PRIMARY SERVICE CATEGORY PAGES ========== -->
@@ -244,6 +276,14 @@
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
         <lastmod>2026-03-27</lastmod>
+    </url>
+
+    <!-- ========== BLOG HUB ========== -->
+    <url>
+        <loc>https://prestigecustompaintingllc.com/blog</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.9</priority>
+        <lastmod>2026-03-28</lastmod>
     </url>
 
 </urlset>

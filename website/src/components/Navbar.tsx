@@ -5,7 +5,6 @@ import { SITE_INFO } from '../lib/constants';
 const Navbar = () => {
     const { phoneNumber, facebookUrl, yelpUrl } = SITE_INFO;
     const location = useLocation();
-    const isHome = location.pathname === '/';
 
     return (
         <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100 h-20">
@@ -19,10 +18,10 @@ const Navbar = () => {
 
                 <div className="hidden md:flex items-center gap-8">
                     <Link 
-                        to="/" 
-                        className={`text-sm font-bold transition-colors ${isHome ? 'border-b-2 border-brand-green text-brand-black' : 'hover:text-brand-green text-brand-black'}`}
+                        to="/about" 
+                        className={`text-sm font-bold transition-colors ${location.pathname === '/about' ? 'border-b-2 border-brand-green text-brand-black' : 'hover:text-brand-green text-brand-black'}`}
                     >
-                        HOME
+                        ABOUT
                     </Link>
 
                     {/* Services Dropdown */}
@@ -38,6 +37,7 @@ const Navbar = () => {
                                 <Link to="/interior-painting-spokane" className="px-4 py-2 hover:bg-brand-gray/50 rounded-xl text-sm font-bold transition-colors">Interior Painting</Link>
                                 <Link to="/exterior-painting-spokane" className="px-4 py-2 hover:bg-brand-gray/50 rounded-xl text-sm font-bold transition-colors">Exterior Painting</Link>
                                 <Link to="/cabinet-painting-spokane" className="px-4 py-2 hover:bg-brand-gray/50 rounded-xl text-sm font-bold transition-colors">Cabinet Painting</Link>
+                                <Link to="/color-consultation" className="px-4 py-2 hover:bg-brand-gray/50 rounded-xl text-sm font-bold transition-colors border-t border-gray-50 mt-1">Color Consultation</Link>
                                 <Link to="/drywall-contractor-spokane" className="px-4 py-2 hover:bg-brand-gray/50 rounded-xl text-sm font-bold transition-colors">Drywall Contractor</Link>
                                 <Link to="/wallpaper-installer-spokane" className="px-4 py-2 hover:bg-brand-gray/50 rounded-xl text-sm font-bold transition-colors">Wallpaper Installer</Link>
                             </div>
@@ -45,18 +45,29 @@ const Navbar = () => {
                     </div>
 
                     <Link 
-                        to="/blog" 
-                        className={`text-sm font-bold transition-colors ${location.pathname.startsWith('/blog') || location.pathname.startsWith('/cost-to-paint') || location.pathname.startsWith('/how-much-') || location.pathname.startsWith('/diy-vs-') ? 'border-b-2 border-brand-green text-brand-black' : 'hover:text-brand-green text-brand-black'}`}
+                         to="/service-area" 
+                         className={`text-sm font-bold transition-colors ${location.pathname === '/service-area' ? 'border-b-2 border-brand-green text-brand-black' : 'hover:text-brand-green text-brand-black'}`}
                     >
-                        BLOG
+                        SERVICE AREA
                     </Link>
 
-                    <Link 
-                        to="/our-work" 
-                        className={`text-sm font-bold transition-colors ${location.pathname === '/our-work' ? 'border-b-2 border-brand-green text-brand-black' : 'hover:text-brand-green text-brand-black'}`}
-                    >
-                        OUR WORK
-                    </Link>
+                    {/* Resources Dropdown */}
+                    <div className="relative group text-brand-black">
+                        <button className="text-sm font-bold hover:text-brand-green transition-colors flex items-center gap-1 py-8">
+                            RESOURCES
+                            <svg className="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div className="absolute top-full right-0 w-64 bg-white border border-gray-100 shadow-xl rounded-2xl p-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                            <div className="grid gap-2">
+                                <Link to="/faq" className="px-4 py-2 hover:bg-brand-gray/50 rounded-xl text-sm font-bold transition-colors">FAQ</Link>
+                                <Link to="/testimonials" className="px-4 py-2 hover:bg-brand-gray/50 rounded-xl text-sm font-bold transition-colors">Testimonials</Link>
+                                <Link to="/blog" className="px-4 py-2 hover:bg-brand-gray/50 rounded-xl text-sm font-bold transition-colors">Blog</Link>
+                                <Link to="/our-work" className="px-4 py-2 hover:bg-brand-gray/50 rounded-xl text-sm font-bold transition-colors">Gallery</Link>
+                            </div>
+                        </div>
+                    </div>
                     
                     <div className="flex items-center gap-4">
                         <a 

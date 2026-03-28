@@ -49,13 +49,56 @@ function App() {
     ];
 
     useEffect(() => {
-        document.title = "Professional Painters in Spokane | #1 Rated Prestige Custom Painting";
-        const meta = document.querySelector('meta[name="description"]');
-        if (meta) meta.setAttribute('content', 'Searching for professional painters in Spokane, WA? Prestige Custom Painting LLC offers premium interior, exterior, and cabinet painting services. Locally owned with 5-star results.');
+        const title = "Professional House Painters in Spokane | Prestige Custom Painting LLC";
+        const description = "Searching for professional house painters in Spokane, WA? Prestige Custom Painting LLC offers premium interior, exterior, and cabinet painting. Licensed & Insured with 5-star results. Call for a free estimate today!";
+        document.title = title;
+        const descMeta = document.querySelector('meta[name="description"]');
+        if (descMeta) descMeta.setAttribute('content', description);
+        
         return injectPageSEO({
-            title: 'Professional Painters in Spokane | #1 Rated Prestige Custom Painting',
-            description: 'Searching for professional painters in Spokane, WA? Prestige Custom Painting LLC offers premium interior, exterior, and cabinet painting services. Locally owned with 5-star results.',
+            title,
+            description,
             path: '/',
+            schemas: [
+                {
+                    id: 'local-business',
+                    data: {
+                        "@context": "https://schema.org",
+                        "@type": "HomeAndConstructionBusiness",
+                        "name": "Prestige Custom Painting LLC",
+                        "image": "https://prestigecustompaintingllc.com/logo.png",
+                        "@id": "https://prestigecustompaintingllc.com/",
+                        "url": "https://prestigecustompaintingllc.com/",
+                        "telephone": "(509) 714-9491",
+                        "priceRange": "$$",
+                        "address": {
+                            "@type": "PostalAddress",
+                            "addressLocality": "Spokane Valley",
+                            "addressRegion": "WA",
+                            "addressCountry": "US"
+                        },
+                        "geo": {
+                            "@type": "GeoCoordinates",
+                            "latitude": 47.6734,
+                            "longitude": -117.2394
+                        },
+                        "areaServed": [
+                            { "@type": "City", "name": "Spokane" },
+                            { "@type": "City", "name": "Spokane Valley" },
+                            { "@type": "City", "name": "Liberty Lake" },
+                            { "@type": "City", "name": "Cheney" },
+                            { "@type": "City", "name": "Airway Heights" },
+                            { "@type": "City", "name": "Deer Park" }
+                        ],
+                        "openingHoursSpecification": {
+                            "@type": "OpeningHoursSpecification",
+                            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+                            "opens": "07:00",
+                            "closes": "19:00"
+                        }
+                    }
+                }
+            ]
         });
     }, []);
 
@@ -72,10 +115,10 @@ function App() {
                             <Star size={14} fill="currentColor" /> SPOKANE'S TOP-RATED PAINTING COMPANY
                         </div>
                         <h1 className="text-4xl md:text-6xl lg:text-7xl font-poppins font-bold mb-8 leading-tight tracking-tight">
-                            House Painters Spokane: <br /><span className="text-brand-green italic">Prestige Custom Painting</span>
+                            House Painters Spokane: <br /><span className="text-brand-green italic">Prestige Custom Painting LLC</span>
                         </h1>
                         <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-12 max-w-2xl font-medium">
-                            Last year, a family near South Hill called us with a common problem. Their sunny exterior was starting to flake after a hot Spokane summer. We helped them choose a durable paint that handles our local weather. This is what we do as house painters Spokane residents rely on. We help you protect your biggest investment with care and skill.
+                            Looking for reliable house painters in Spokane? Prestige Custom Painting LLC provides professional interior, exterior, and cabinet painting services tailored to the unique Inland Northwest climate. We combine meticulous craftsmanship with premium materials like Benjamin Moore and Sherwin Williams to protect and beautify your home.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-5">
                             <a href={`tel:${phoneNumber}`} className="flex items-center justify-center gap-3 bg-brand-green hover:bg-green-600 text-white px-10 py-5 rounded-2xl font-extrabold text-lg transition-all transform hover:scale-105 shadow-2xl shadow-green-500/40">
@@ -166,14 +209,44 @@ function App() {
                 </div>
             </section>
 
+            {/* NEW: The Prestige Painting Process Section */}
+            <section className="py-20 md:py-24 bg-white">
+                <div className="max-w-7xl mx-auto px-4 text-center">
+                    <div className="max-w-4xl mx-auto space-y-12">
+                        <div>
+                            <h2 className="text-brand-green font-bold tracking-widest text-sm mb-4 uppercase text-center">The Prestige Standard</h2>
+                            <h3 className="text-4xl md:text-5xl font-poppins font-bold text-brand-black mb-8 leading-tight">Our Professional Painting Process</h3>
+                            <p className="text-lg md:text-xl text-gray-600 leading-relaxed text-justify">
+                                At <strong>Prestige Custom Painting LLC</strong>, we believe that a world-class result is only possible through a world-class process. Whether we're working on a residential exterior in South Hill or a cabinet refinishing project in Liberty Lake, our Spokane house painters follow a rigorous set of steps to ensure longevity, durability, and a flawless finish. 
+                                <br /><br />
+                                <strong>Phase 1: Detailed Surface Preparation</strong><br />
+                                Most painting failures happen because of poor prep. We start by thoroughly washing the surface, scraping loose paint, and sanding transitions. For exteriors, we use industrial power washing to remove Spokane's seasonal grime and mildew. For interiors, we meticulously mask every edge, patch holes, and ensure your floors and furniture are sealed under heavy-duty protective coverings.
+                                <br /><br />
+                                <strong>Phase 2: Premium Priming & Application</strong><br />
+                                We don't cut corners on materials. We partner with leaders like <strong>Benjamin Moore</strong> and <strong>Sherwin Williams</strong> to find the specific product that matches your home's needs. We apply premium primers to ensure maximum adhesion, followed by multiple coats of high-quality paint to provide a rich, deep color that stands up to the Inland Northwest's extreme temperature swings.
+                                <br /><br />
+                                <strong>Phase 3: Meticulous Final Cleanup & Inspection</strong><br />
+                                We treat your home as if it were our own. Once the painting is complete, we perform a total cleanup, removing all plastic and tape. Robert, our founder, personally inspects every project to ensure it meets our "Expect Excellence" standard. We walk you through the finished work to make sure every line is sharp and every surface is perfect.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             {/* Trust Bar */}
             <section className="py-8 md:py-12 border-y border-gray-100 bg-gray-50/50">
                 <div className="max-w-7xl mx-auto px-4">
-                    <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
-                        <div className="flex items-center justify-center font-bold text-sm md:text-lg tracking-widest text-gray-400 text-center">BENJAMIN MOORE</div>
-                        <div className="flex items-center justify-center font-bold text-sm md:text-lg tracking-widest text-gray-400 text-center">SHERWIN WILLIAMS</div>
-                        <div className="flex items-center justify-center font-bold text-sm md:text-lg tracking-widest text-gray-400 text-center">BEHR</div>
-                        <div className="flex items-center justify-center font-bold text-sm md:text-lg tracking-widest text-gray-400 text-center">PPG PAINTS</div>
+                    <div className="flex flex-col md:flex-row items-center justify-between gap-8 mb-8 text-center md:text-left">
+                        <div className="max-w-md">
+                            <h4 className="text-xl font-bold text-brand-black mb-2">Partnering with the Best</h4>
+                            <p className="text-sm text-gray-500">We utilize high-performance coatings designed for the Pacific Northwest climate.</p>
+                        </div>
+                        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 opacity-60 grayscale hover:grayscale-0 transition-all duration-500 flex-1">
+                            <div className="flex items-center justify-center font-bold text-sm md:text-lg tracking-widest text-gray-400 text-center">BENJAMIN MOORE</div>
+                            <div className="flex items-center justify-center font-bold text-sm md:text-lg tracking-widest text-gray-400 text-center">SHERWIN WILLIAMS</div>
+                            <div className="flex items-center justify-center font-bold text-sm md:text-lg tracking-widest text-gray-400 text-center">BEHR</div>
+                            <div className="flex items-center justify-center font-bold text-sm md:text-lg tracking-widest text-gray-400 text-center">PPG PAINTS</div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -196,10 +269,11 @@ function App() {
                         </div>
 
                         <div className="w-full lg:w-1/2 text-center lg:text-left mt-8 lg:mt-0">
-                            <h2 className="text-3xl md:text-4xl font-poppins font-bold mb-6 md:mb-8">Meet {ownerName}</h2>
+                            <h2 className="text-3xl md:text-4xl font-poppins font-bold mb-6 md:mb-8 text-brand-black">Why Choose Prestige House Painters in Spokane?</h2>
                             <p className="text-lg md:text-xl text-gray-600 leading-relaxed mb-8">
-                                With years of experience serving Spokane County, I founded Prestige Custom Painting LLC with a simple mission:
-                                to bring a higher standard of professional care to the local painting industry using premium materials like Benjamin Moore.
+                                As a local <strong>Spokane, WA</strong> painting company, we understand the specific environmental challenges your home faces—from harsh winter snow to scorching summer heat. We don't just "paint" your house; we provide a durable seal that increases curb appeal and home value.
+                                <br /><br />
+                                Our founder, <strong>{ownerName}</strong>, established Prestige Custom Painting LLC to bridge the gap between "standard" painting and "prestige" results. We are <strong>licensed, insured, and 5-star rated</strong> because we prioritize client satisfaction above all else. Whether it's a small interior room or a large-scale commercial property, we bring the same level of focus and professionalism to every brushstroke.
                             </p>
                             <div className="space-y-6 max-w-md mx-auto lg:mx-0 text-left">
                                 <div className="flex gap-4">
@@ -207,8 +281,8 @@ function App() {
                                         <Heart size={24} />
                                     </div>
                                     <div>
-                                        <h4 className="font-bold text-lg">Locally Owned & Operated</h4>
-                                        <p className="text-gray-500 text-sm">Born and raised right here in the Inland Northwest.</p>
+                                        <h4 className="font-bold text-lg text-brand-black">Locally Owned & Operated</h4>
+                                        <p className="text-gray-500 text-sm">Born and raised right here in the Inland Northwest. We know Spokane neighborhoods.</p>
                                     </div>
                                 </div>
                                 <div className="flex gap-4">
@@ -216,11 +290,40 @@ function App() {
                                         <Shield size={24} />
                                     </div>
                                     <div>
-                                        <h4 className="font-bold text-lg">Guaranteed Quality</h4>
-                                        <p className="text-gray-500 text-sm">We don't leave until you are 100% satisfied with the result.</p>
+                                        <h4 className="font-bold text-lg text-brand-black">Guaranteed Quality</h4>
+                                        <p className="text-gray-500 text-sm">We don't leave until you are 100% satisfied with the result. Period.</p>
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* NEW: Cabinet Painting Highlight Section */}
+            <section className="py-20 md:py-24 bg-brand-black text-white overflow-hidden relative">
+                <div className="absolute top-0 left-0 w-full h-full bg-brand-green/5 pointer-events-none" />
+                <div className="max-w-7xl mx-auto px-4 relative z-10">
+                    <div className="flex flex-col md:flex-row gap-12 items-center">
+                        <div className="md:w-1/2 text-center md:text-left">
+                            <h2 className="text-brand-green font-bold tracking-widest text-sm mb-4 uppercase text-center md:text-left">Cabinet Specialists</h2>
+                            <h3 className="text-4xl md:text-5xl font-poppins font-bold mb-8 leading-tight">Spokane Cabinet Painting & Refinishing</h3>
+                            <p className="text-lg md:text-xl text-gray-300 leading-relaxed max-w-2xl mx-auto md:mx-0 text-justify">
+                                Don't replace your cabinets—refinish them! Our <strong>Cabinet Painting Spokane</strong> services can save you thousands compared to a full kitchen remodel. We use specialized HVLP sprayers and industrial coatings (like Benjamin Moore SCUFF-X) to provide a factory-smooth, ultra-durable finish that resists chips and stains.
+                                <br /><br />
+                                Most homeowners in Spokane Valley and Liberty Lake are shocked at how a professionally painted cabinet transformation can completely modernize their kitchen. We handle the degreasing, sanding, priming, and painting with meticulous detail, ensuring your kitchen is back in service quickly with a stunning new look.
+                            </p>
+                            <div className="mt-10 flex flex-wrap gap-4 justify-center md:justify-start">
+                                <Link to="/cabinet-painting-spokane" className="bg-brand-green text-white px-8 py-4 rounded-xl font-bold hover:bg-green-600 transition-all shadow-lg shadow-green-500/20">Learn More About Cabinet Services</Link>
+                                <a href={`tel:${phoneNumber}`} className="bg-white/10 text-white border border-white/20 px-8 py-4 rounded-xl font-bold hover:bg-white/20 transition-all">Get a Free Cabinet Quote</a>
+                            </div>
+                        </div>
+                        <div className="md:w-1/2">
+                            <img 
+                                src="/finish.png" 
+                                alt="Professional cabinet painting transformation in Spokane WA" 
+                                className="rounded-[2rem] shadow-2xl border border-white/10 grayscale hover:grayscale-0 transition-all duration-700"
+                            />
                         </div>
                     </div>
                 </div>
@@ -230,11 +333,15 @@ function App() {
             <section className="py-16 md:py-20 bg-white">
                 <div className="max-w-7xl mx-auto px-4">
                     <div className="text-center mb-10">
-                        <h2 className="text-brand-green font-bold tracking-widest text-sm mb-4">OUR SERVICE AREA</h2>
-                        <h3 className="text-3xl md:text-4xl font-poppins font-bold text-brand-black mb-4">Serving the Inland Northwest</h3>
-                        <p className="text-lg text-gray-600 max-w-2xl mx-auto">From Spokane Valley to Liberty Lake, Cheney to Airway Heights — we bring premium painting results to your doorstep.</p>
+                        <h2 className="text-brand-green font-bold tracking-widest text-sm mb-4 uppercase">Where We Work</h2>
+                        <h3 className="text-4xl md:text-5xl font-poppins font-bold text-brand-black mb-6">Serving the Inland Northwest</h3>
+                        <p className="text-lg md:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed text-justify">
+                            Prestige Custom Painting LLC is proud to be a top-choice for <strong>house painters Spokane</strong> residents recommend. From the historic homes in <strong>South Hill</strong> and <strong>Manito Park</strong> to the modern developments in <strong>Liberty Lake</strong> and <strong>Spokane Valley</strong>, we bring expertise to every corner of the region. 
+                            <br /><br />
+                            Our service area includes <strong>Airway Heights</strong> (perfect for commercial and residential refreshes), <strong>Cheney</strong> (serving homeowners near EWU), and <strong>Deer Park</strong>. We understand Northern Washington architecture and we know exactly which paint formulas perform best against our harsh winters and dry summers. If you're looking for "painters near me" in Spokane County, Prestige is your local partner.
+                        </p>
                     </div>
-                    <div className="rounded-3xl overflow-hidden shadow-xl border border-gray-100" style={{ height: '400px' }}>
+                    <div className="rounded-[2.5rem] overflow-hidden shadow-2xl border border-gray-100 mb-12" style={{ height: '450px' }}>
                         <iframe
                             title="Prestige Custom Painting LLC Service Area - Spokane WA"
                             src="https://maps.google.com/maps?q=Spokane,%20WA&t=&z=10&ie=UTF8&iwloc=&output=embed"

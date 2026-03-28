@@ -80,7 +80,7 @@ const InteriorPaintingCost = () => {
                             How Much Does <span className="text-brand-green">Interior Painting</span> Cost in Spokane?
                         </h1>
                         <p className="text-xl text-gray-600 leading-relaxed font-medium">
-                            Whether you've just bought a home on the South Hill or you're preparing to sell in Spokane Valley, a fresh interior coat is the best way to add value. In 2026, Spokane homeowners are paying between **$2.50 and $5.50 per square foot** for comprehensive interior painting.
+                            Whether you've just bought a home on the South Hill or you're preparing to sell in Spokane Valley, a fresh interior coat is the best way to add value. In 2026, Spokane homeowners are paying between <strong>$2.50 and $5.50 per square foot</strong> for comprehensive interior painting.
                         </p>
                     </header>
 

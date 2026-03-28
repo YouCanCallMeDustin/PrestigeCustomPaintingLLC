@@ -83,7 +83,7 @@ const CabinetPaintingCost = () => {
                             How Much Does <span className="text-brand-green">Cabinet Painting</span> Cost in Spokane?
                         </h1>
                         <p className="text-xl text-gray-600 leading-relaxed font-medium">
-                            Kitchen cabinets are the focal point of your home. In 2026, professional cabinet refinishing is the #1 requested interior service in Spokane Valley and Liberty Lake. For a standard kitchen, homeowners are investing between **$3,500 and $6,500** to achieve a factory-new finish that lasts for years.
+                            Kitchen cabinets are the focal point of your home. In 2026, professional cabinet refinishing is the #1 requested interior service in Spokane Valley and Liberty Lake. For a standard kitchen, homeowners are investing between <strong>$3,500 and $6,500</strong> to achieve a factory-new finish that lasts for years.
                         </p>
                     </header>
 

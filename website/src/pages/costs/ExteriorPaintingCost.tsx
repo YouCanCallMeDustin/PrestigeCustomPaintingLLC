@@ -80,7 +80,7 @@ const ExteriorPaintingCost = () => {
                             Cost to Paint the <span className="text-brand-green">Exterior</span> of a House in Spokane
                         </h1>
                         <p className="text-xl text-gray-600 leading-relaxed font-medium">
-                            Protecting your home from Spokane's extreme seasonal shifts—from sub-zero winters to triple-digit summers—starts with a high-quality exterior paint job. In 2026, the average cost for an exterior repaint ranges from **$3,500 to $9,500**, depending on your siding type and the level of preparation required.
+                            Protecting your home from Spokane's extreme seasonal shifts—from sub-zero winters to triple-digit summers—starts with a high-quality exterior paint job. In 2026, the average cost for an exterior repaint ranges from <strong>$3,500 to $9,500</strong>, depending on your siding type and the level of preparation required.
                         </p>
                     </header>
 
@@ -129,7 +129,7 @@ const ExteriorPaintingCost = () => {
                         <section className="my-12">
                             <h2 className="text-3xl font-bold font-poppins mb-6">Preparation: The "Hidden" Cost of Longevity</h2>
                             <p>
-                                In the painting world, we have a saying: **"The paint is only as good as what's underneath it."** This is especially true in Spokane. Our fluctuating humidity causes wood to expand and contract, which is why "cheap" paint jobs fail so quickly—they skip the prep.
+                                In the painting world, we have a saying: <strong>"The paint is only as good as what's underneath it."</strong> This is especially true in Spokane. Our fluctuating humidity causes wood to expand and contract, which is why "cheap" paint jobs fail so quickly—they skip the prep.
                             </p>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
                                 <div className="bg-gray-50 p-6 rounded-2xl border border-gray-100">
@@ -146,7 +146,7 @@ const ExteriorPaintingCost = () => {
                         <section className="my-12">
                             <h2 className="text-3xl font-bold font-poppins mb-6">Weather Factors in the Inland Northwest</h2>
                             <p>
-                                Timing your exterior project is crucial. Spokane's "Painting Season" typically runs from **late April to early October**. High humidity in early spring or freezing temps in late fall can prevent paint from curing properly. At Prestige Custom Painting LLC, we monitor daily dew points and temperatures to ensure we never paint in conditions that compromise the warranty.
+                                Timing your exterior project is crucial. Spokane's "Painting Season" typically runs from <strong>late April to early October</strong>. High humidity in early spring or freezing temps in late fall can prevent paint from curing properly. At Prestige Custom Painting LLC, we monitor daily dew points and temperatures to ensure we never paint in conditions that compromise the warranty.
                             </p>
                         </section>
 

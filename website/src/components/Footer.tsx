@@ -63,8 +63,9 @@ const Footer = () => {
                     </div>
 
                     <div className="text-center md:text-left">
-                        <h4 className="font-bold text-lg mb-4">Service Areas</h4>
+                        <h4 className="font-bold text-lg mb-4">Our Service Area</h4>
                         <ul className="text-gray-600 text-sm space-y-2">
+                            <li><Link to="/service-area" className="hover:text-brand-green transition-colors font-bold text-brand-black">View All Areas</Link></li>
                             <li><Link to="/painting-spokane-valley" className="hover:text-brand-green transition-colors">Spokane Valley, WA</Link></li>
                             <li><Link to="/painting-liberty-lake" className="hover:text-brand-green transition-colors">Liberty Lake, WA</Link></li>
                             <li><Link to="/painting-airway-heights" className="hover:text-brand-green transition-colors">Airway Heights, WA</Link></li>

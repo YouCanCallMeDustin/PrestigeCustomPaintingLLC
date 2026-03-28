@@ -182,7 +182,7 @@ const PaintCalculatorPage = () => {
                     <div className="prose prose-lg prose-brand max-w-none">
                         <h2 className="text-3xl font-bold font-poppins mb-6">Why Surface Texture Matters in Spokane</h2>
                         <p>
-                            If you're painting a home on the South Hill with heavy stucco or a North Spokane rancher with rough T1-11 siding, your paint usage will be **20-30% higher** than a smooth-sided home. Texture creates more surface area that the paint must "get into," reducing the effective coverage of every gallon.
+                            If you're painting a home on the South Hill with heavy stucco or a North Spokane rancher with rough T1-11 siding, your paint usage will be <strong>20-30% higher</strong> than a smooth-sided home. Texture creates more surface area that the paint must "get into," reducing the effective coverage of every gallon.
                         </p>
 
                         <h2 className="text-3xl font-bold font-poppins mb-6 mt-12">How to Measure Like a Pro</h2>

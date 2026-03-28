@@ -134,7 +134,7 @@ const CostToPaintAHouse = () => {
                             When you search for "cost to paint a house," you'll see national averages from sites like Angi or HomeAdvisor. However, Spokane's market is unique. Our local weather—from scorching 100-degree summers to freezing, damp winters—demands a higher technical standard for exterior work. Cheap paint that works in San Diego will peel in two years on a house in the South Hill or Liberty Lake.
                         </p>
                         <p>
-                            At Prestige Custom Painting LLC, we focus on **Topical Authority**. We don't just "slap on paint"; we engineer a protective barrier for your home. This means our pricing includes the heavy prep work required to handle the Inland Northwest climate.
+                            At Prestige Custom Painting LLC, we focus on <strong>Topical Authority</strong>. We don't just "slap on paint"; we engineer a protective barrier for your home. This means our pricing includes the heavy prep work required to handle the Inland Northwest climate.
                         </p>
 
                         <h2 className="text-3xl font-bold font-poppins mb-6 mt-12">Average Pricing by Project Type (2026 Rankings)</h2>
@@ -216,7 +216,7 @@ const CostToPaintAHouse = () => {
                             Many Spokane homeowners consider DIY to save money. On paper, you save 70% of the cost. However, a professional painter like Prestige Custom Painting LLC brings thousands of dollars in specialized equipment (sprayers, scaffolding, high-reach ladders) and the technique to apply paint without brush marks or laps.
                         </p>
                         <p>
-                            **Pro Tip:** If you DIY, your "labor" is free, but your time isn't. An average exterior job takes a pro crew 4-6 days. A DIY homeowner might spend 4-6 *weekends* on the same task.
+                            <strong>Pro Tip:</strong> If you DIY, your "labor" is free, but your time isn't. An average exterior job takes a pro crew 4-6 days. A DIY homeowner might spend 4-6 <em>weekends</em> on the same task.
                         </p>
 
                         <h2 className="text-3xl font-bold font-poppins mb-6 mt-16">Frequently Asked Questions</h2>
