@@ -24,7 +24,9 @@ function HousePaintersPage() {
             title: 'House Painters Spokane | Prestige Custom Painting LLC',
             description: 'Looking for expert house painters in Spokane, WA? Prestige Custom Painting LLC delivers top-quality interior and exterior painting services across the Inland Northwest.',
             path: '/house-painters-spokane',
-            faqs,
+            schemas: [
+                { id: 'faq', data: { "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": faqs.map(f => ({ "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } })) } }
+            ]
         });
     }, []);
 

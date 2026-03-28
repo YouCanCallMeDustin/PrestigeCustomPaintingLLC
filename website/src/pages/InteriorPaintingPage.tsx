@@ -17,7 +17,9 @@ function InteriorPaintingPage() {
             title: 'Professional Interior Painters in Spokane | Prestige Custom Painting LLC',
             description: 'Searching for professional interior painters in Spokane? Prestige Custom Painting LLC offers high-end residential painting with modern finishes.',
             path: '/interior-painting-spokane',
-            faqs,
+            schemas: [
+                { id: 'faq', data: { "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": faqs.map(f => ({ "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } })) } }
+            ]
         });
     }, []);
 

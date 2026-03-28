@@ -17,7 +17,9 @@ function CabinetPaintingPage() {
             title: 'Professional Cabinet Painters in Spokane | Prestige Custom Painting LLC',
             description: 'Searching for professional cabinet painters in Spokane? Prestige Custom Painting LLC specializes in high-end cabinet refinishing for kitchens and bathrooms.',
             path: '/cabinet-painting-spokane',
-            faqs,
+            schemas: [
+                { id: 'faq', data: { "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": faqs.map(f => ({ "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } })) } }
+            ]
         });
     }, []);
 

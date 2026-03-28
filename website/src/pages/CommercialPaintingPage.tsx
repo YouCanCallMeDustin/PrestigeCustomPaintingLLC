@@ -17,7 +17,9 @@ function CommercialPaintingPage() {
             title: 'Professional Commercial Painters in Spokane | Prestige Custom Painting LLC',
             description: 'Searching for professional commercial painters in Spokane? Prestige Custom Painting LLC provides expert workspace transformations and durable business painting solutions.',
             path: '/commercial-painting-spokane',
-            faqs,
+            schemas: [
+                { id: 'faq', data: { "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": faqs.map(f => ({ "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } })) } }
+            ]
         });
     }, []);
 
