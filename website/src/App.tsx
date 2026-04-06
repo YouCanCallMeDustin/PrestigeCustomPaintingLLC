@@ -49,8 +49,8 @@ function App() {
     ];
 
     useEffect(() => {
-        const title = "Professional House Painters in Spokane | Prestige Custom Painting LLC";
-        const description = "Searching for professional house painters in Spokane, WA? Prestige Custom Painting LLC offers premium interior, exterior, and cabinet painting. Licensed & Insured with 5-star results. Call for a free estimate today!";
+        const title = "Top-Rated Painters in Spokane WA | Free Estimates | Prestige Custom Painting";
+        const description = "Looking for top-rated house painters in Spokane, WA? Prestige Custom Painting offers premium interior, exterior, and cabinet painting. Fully Licensed, Bonded, and Insured. Includes satisfaction warranty. Free estimates!";
         document.title = title;
         const descMeta = document.querySelector('meta[name="description"]');
         if (descMeta) descMeta.setAttribute('content', description);
@@ -71,6 +71,11 @@ function App() {
                         "url": "https://prestigecustompaintingllc.com/",
                         "telephone": "(509) 714-9491",
                         "priceRange": "$$",
+                        "makesOffer": [
+                            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Interior Painting" } },
+                            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Exterior Painting" } },
+                            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Cabinet Painting Refinishing" } }
+                        ],
                         "address": {
                             "@type": "PostalAddress",
                             "addressLocality": "Spokane Valley",
@@ -300,6 +305,45 @@ function App() {
                 </div>
             </section>
 
+            {/* Trust, Warranty, & Credibility Section */}
+            <section className="py-16 md:py-20 bg-white border-t border-gray-100">
+                <div className="max-w-7xl mx-auto px-4">
+                    <div className="bg-brand-gray/50 rounded-3xl p-8 md:p-12 border border-brand-green/10 shadow-lg">
+                        <div className="text-center mb-10">
+                            <h2 className="text-brand-green font-bold tracking-widest text-sm mb-4 uppercase">Peace of Mind Guarantee</h2>
+                            <h3 className="text-3xl md:text-4xl font-poppins font-bold text-brand-black">Fully Protected & Warrantied</h3>
+                            <p className="mt-4 text-gray-600 max-w-2xl mx-auto">We back up our flawless finishes with rock-solid protection for your property.</p>
+                        </div>
+                        <div className="grid md:grid-cols-3 gap-8">
+                            <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 flex flex-col items-center text-center hover:-translate-y-1 transition-transform relative overflow-hidden">
+                                <div className="absolute top-0 right-0 w-24 h-24 bg-brand-green/5 rounded-bl-full" />
+                                <div className="w-16 h-16 bg-brand-green/10 text-brand-green rounded-2xl flex items-center justify-center mb-6 shadow-sm">
+                                    <Shield size={32} />
+                                </div>
+                                <h4 className="text-xl font-bold text-brand-black mb-3">Licensed & Bonded</h4>
+                                <p className="text-gray-600">Registered locally in Spokane and Washington State to handle residential and commercial coating projects securely and legally.</p>
+                            </div>
+                            <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 flex flex-col items-center text-center hover:-translate-y-1 transition-transform relative overflow-hidden">
+                                <div className="absolute top-0 right-0 w-24 h-24 bg-brand-green/5 rounded-bl-full" />
+                                <div className="w-16 h-16 bg-brand-green/10 text-brand-green rounded-2xl flex items-center justify-center mb-6 shadow-sm">
+                                    <CheckCircle size={32} />
+                                </div>
+                                <h4 className="text-xl font-bold text-brand-black mb-3">Comprehensive Insurance</h4>
+                                <p className="text-gray-600">We carry extensive liability insurance. In the rare event of an issue, your property and our workers are completely covered.</p>
+                            </div>
+                            <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 flex flex-col items-center text-center hover:-translate-y-1 transition-transform relative overflow-hidden">
+                                <div className="absolute top-0 right-0 w-24 h-24 bg-brand-green/5 rounded-bl-full" />
+                                <div className="w-16 h-16 bg-brand-green/10 text-brand-green rounded-2xl flex items-center justify-center mb-6 shadow-sm">
+                                    <Star size={32} />
+                                </div>
+                                <h4 className="text-xl font-bold text-brand-black mb-3">Satisfaction Warranty</h4>
+                                <p className="text-gray-600">We offer a robust quality warranty on our exterior and interior work to protect against peeling or blistering due to unmatched prep work.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             {/* NEW: Cabinet Painting Highlight Section */}
             <section className="py-20 md:py-24 bg-brand-black text-white overflow-hidden relative">
                 <div className="absolute top-0 left-0 w-full h-full bg-brand-green/5 pointer-events-none" />
@@ -427,6 +471,36 @@ function App() {
                         >
                             <Star size={20} fill="currentColor" /> Leave Us a Google Review
                         </a>
+                    </div>
+                </div>
+            </section>
+
+            {/* SEO Structured FAQ Section */}
+            <section className="py-20 md:py-24 bg-gray-50/50">
+                <div className="max-w-4xl mx-auto px-4">
+                    <div className="text-center mb-12 flex flex-col items-center">
+                        <h2 className="text-brand-green font-bold tracking-widest text-sm mb-4 uppercase">Spokane's Painting FAQs</h2>
+                        <h3 className="text-3xl md:text-5xl font-poppins font-bold text-brand-black mb-6">Frequently Asked Questions</h3>
+                        <p className="text-lg text-gray-600 max-w-2xl text-center">Looking for a professional painter in Spokane, WA? Here are few common questions homeowners ask before starting a project.</p>
+                    </div>
+                    
+                    <div className="space-y-6">
+                        <div className="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-gray-100 hover:border-brand-green/30 transition-colors">
+                            <h4 className="text-xl font-bold text-brand-black mb-3">How do you handle Spokane's weather when painting exteriors?</h4>
+                            <p className="text-gray-600 leading-relaxed">Spokane experiences intense sun in the summer and freezing temperatures in the winter. We carefully monitor the weather and moisture levels in the substrates. We only use high-grade paints designed to stretch and breathe with the temperature swings of the Inland Northwest, ensuring your exterior paint won't crack prematurely.</p>
+                        </div>
+                        <div className="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-gray-100 hover:border-brand-green/30 transition-colors">
+                            <h4 className="text-xl font-bold text-brand-black mb-3">How much does it cost to paint a house in Spokane?</h4>
+                            <p className="text-gray-600 leading-relaxed">The cost of hiring house painters in Spokane varies based on the size of the home, the condition of the existing siding, and what prep work (such as drywall or drywall texturing) is needed. Because we prioritize exceptional prep and premium materials, we aren't the cheapest, but our finishes last significantly longer. Contact us for a free, no-obligation estimate!</p>
+                        </div>
+                        <div className="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-gray-100 hover:border-brand-green/30 transition-colors">
+                            <h4 className="text-xl font-bold text-brand-black mb-3">Do you offer warranties on your painting services?</h4>
+                            <p className="text-gray-600 leading-relaxed">Yes! Prestige Custom Painting LLC stands by our work. We offer a satisfaction warranty, ensuring our finishes hold up correctly. We are fully licensed, bonded, and insured in Washington State, offering total peace of mind for both interior wall painting and full exterior repaints.</p>
+                        </div>
+                        <div className="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-gray-100 hover:border-brand-green/30 transition-colors">
+                            <h4 className="text-xl font-bold text-brand-black mb-3">Can you just paint over my old cabinets?</h4>
+                            <p className="text-gray-600 leading-relaxed">Cabinet refinishing requires rigorous preparation. We don't just paint over grease or peeling finishes. Our cabinet painters in Spokane degrease, mechanically sand, and use specialized bonding primers before applying a factory-finish top coat (such as Benjamin Moore SCUFF-X) using professional HVLP sprayers.</p>
+                        </div>
                     </div>
                 </div>
             </section>
