@@ -1,4 +1,4 @@
-import { Phone, Mail, MapPin, Facebook, Star, CheckCircle } from 'lucide-react';
+import { Phone, Mail, MapPin, Facebook, Star, CheckCircle, Home, Globe } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { SITE_INFO } from '../lib/constants';
 
@@ -58,6 +58,22 @@ const Footer = () => {
                                 className="flex items-center gap-2 bg-white border border-gray-200 px-4 py-2 rounded-xl text-sm font-bold text-gray-700 hover:text-brand-green hover:border-brand-green transition-all shadow-sm group"
                             >
                                 <CheckCircle size={18} className="group-hover:fill-brand-green transition-colors" /> Registered Business
+                            </a>
+                            <a 
+                                href={SITE_INFO.nextdoorUrl} 
+                                target="_blank" 
+                                rel="noopener noreferrer" 
+                                className="flex items-center gap-2 bg-white border border-gray-200 px-4 py-2 rounded-xl text-sm font-bold text-gray-700 hover:text-[#00B500] hover:border-[#00B500] transition-all shadow-sm group"
+                            >
+                                <Home size={18} className="group-hover:text-[#00B500] transition-colors" /> Nextdoor
+                            </a>
+                            <a 
+                                href={SITE_INFO.liveLocalInwUrl} 
+                                target="_blank" 
+                                rel="noopener noreferrer" 
+                                className="flex items-center gap-2 bg-white border border-gray-200 px-4 py-2 rounded-xl text-sm font-bold text-gray-700 hover:text-brand-green hover:border-brand-green transition-all shadow-sm group"
+                            >
+                                <Globe size={18} className="group-hover:text-brand-green transition-colors" /> Live Local INW
                             </a>
                         </div>
                     </div>

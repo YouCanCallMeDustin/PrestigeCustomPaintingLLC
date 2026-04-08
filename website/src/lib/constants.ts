@@ -5,5 +5,7 @@ export const SITE_INFO = {
     ownerName: "Robert",
     facebookUrl: "https://www.facebook.com/509painting",
     yelpUrl: "https://www.yelp.com/biz/prestige-custom-painting-spokane-2?utm_campaign=www_business_share_popup&utm_medium=copy_link&utm_source=(direct)",
-    bizapediaUrl: "https://www.bizapedia.com/wa/prestige-custom-painting-llc.html"
+    bizapediaUrl: "https://www.bizapedia.com/wa/prestige-custom-painting-llc.html",
+    nextdoorUrl: "https://nextdoor.com/page/prestige-custom-painting-llc",
+    liveLocalInwUrl: "https://www.livelocalinw.com/business/elyzianeyez"
 };

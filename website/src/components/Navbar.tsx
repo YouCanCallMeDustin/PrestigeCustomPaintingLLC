@@ -1,9 +1,9 @@
-import { Phone, Facebook, Star } from 'lucide-react';
+import { Phone, Facebook, Star, Home, Globe } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import { SITE_INFO } from '../lib/constants';
 
 const Navbar = () => {
-    const { phoneNumber, facebookUrl, yelpUrl } = SITE_INFO;
+    const { phoneNumber, facebookUrl, yelpUrl, nextdoorUrl, liveLocalInwUrl } = SITE_INFO;
     const location = useLocation();
 
     return (
@@ -88,6 +88,24 @@ const Navbar = () => {
                         >
                             <Star size={20} fill="currentColor" />
                         </a>
+                        <a 
+                            href={nextdoorUrl} 
+                            target="_blank" 
+                            rel="noopener noreferrer" 
+                            className="text-gray-400 hover:text-[#00B500] transition-colors"
+                            title="Follow us on Nextdoor"
+                        >
+                            <Home size={20} fill="currentColor" />
+                        </a>
+                        <a 
+                            href={liveLocalInwUrl} 
+                            target="_blank" 
+                            rel="noopener noreferrer" 
+                            className="text-gray-400 hover:text-brand-green transition-colors"
+                            title="See us on Live Local INW"
+                        >
+                            <Globe size={20} fill="currentColor" />
+                        </a>
                         <a href={`tel:${phoneNumber}`} className="flex items-center gap-2 bg-brand-black text-white px-6 py-2.5 rounded-full font-bold text-sm hover:bg-gray-800 transition-all shadow-lg shadow-black/20">
                             <Phone size={16} className="text-brand-green" /> {phoneNumber}
                         </a>
@@ -110,6 +128,22 @@ const Navbar = () => {
                         className="text-gray-400 hover:text-[#FF1A1A] transition-colors"
                     >
                         <Star size={20} fill="currentColor" />
+                    </a>
+                    <a 
+                        href={nextdoorUrl} 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="text-gray-400 hover:text-[#00B500] transition-colors"
+                    >
+                        <Home size={20} fill="currentColor" />
+                    </a>
+                    <a 
+                        href={liveLocalInwUrl} 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="text-gray-400 hover:text-brand-green transition-colors"
+                    >
+                        <Globe size={20} fill="currentColor" />
                     </a>
                     <a href={`tel:${phoneNumber}`} className="bg-brand-green text-white p-3 rounded-full shadow-lg shadow-green-500/30">
                         <Phone size={20} />

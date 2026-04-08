@@ -53,7 +53,9 @@ export const generateLocalBusinessSchema = () => {
     "sameAs": [
       SITE_INFO.facebookUrl,
       SITE_INFO.yelpUrl,
-      SITE_INFO.bizapediaUrl
+      SITE_INFO.bizapediaUrl,
+      SITE_INFO.nextdoorUrl,
+      SITE_INFO.liveLocalInwUrl
     ]
   };
 };

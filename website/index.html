@@ -141,9 +141,16 @@
 
   <link rel="canonical" href="https://prestigecustompaintingllc.com/" />
   <script>
-    if (location.protocol === 'http:' && location.hostname !== 'localhost') {
-      location.href = 'https:' + window.location.href.substring(window.location.protocol.length);
-    }
+    (function() {
+      // Force HTTPS and non-www
+      var host = window.location.hostname;
+      var protocol = window.location.protocol;
+      if (host !== 'localhost' && !host.includes('railway.app') && (host.startsWith('www.') || protocol === 'http:')) {
+        var newHost = host.replace(/^www\./, '');
+        var newUrl = 'https://' + newHost + window.location.pathname + window.location.search + window.location.hash;
+        window.location.replace(newUrl);
+      }
+    })();
   </script>
 </head>
 

@@ -1,14 +1,25 @@
-const https = require('https');
+import https from 'node:https';
 
 const HOST = 'api.indexnow.org';
 const KEY = '2abfda58abd0480aa668dd43578e1700';
 const DOMAIN = 'prestigecustompaintingllc.com';
 
-// You can pass the specific URLs you want to update via command line arguments
-// Example: node scripts/indexnow.js https://prestigecustompaintingllc.com/painting-liberty-lake
-const defaultUrls = [
-  `https://${DOMAIN}/`
-];
+import fs from 'node:fs';
+import path from 'node:path';
+
+const sitemapPath = path.resolve('public', 'sitemap.xml');
+let defaultUrls = [`https://${DOMAIN}/`];
+
+try {
+  const sitemap = fs.readFileSync(sitemapPath, 'utf8');
+  // Simple regex to grab all <loc> values
+  const urlMatches = sitemap.match(/<loc>(.*?)<\/loc>/g);
+  if (urlMatches) {
+    defaultUrls = urlMatches.map(tag => tag.replace(/<\/?loc>/g, '').trim());
+  }
+} catch (e) {
+  console.log('⚠️ Could not read sitemap.xml. Falling back to homepage only.');
+}
 
 const urls = process.argv.length > 2 ? process.argv.slice(2) : defaultUrls;
 
