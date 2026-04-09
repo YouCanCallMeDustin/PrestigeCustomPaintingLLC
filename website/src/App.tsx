@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { SITE_INFO } from './lib/constants';
 import { injectPageSEO } from './lib/seo';
+import { generateWebPageSchema } from './lib/schemaGenerator';
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
 
@@ -61,47 +62,12 @@ function App() {
             path: '/',
             schemas: [
                 {
-                    id: 'local-business',
-                    data: {
-                        "@context": "https://schema.org",
-                        "@type": "HomeAndConstructionBusiness",
-                        "name": "Prestige Custom Painting LLC",
-                        "image": "https://prestigecustompaintingllc.com/logo.png",
-                        "@id": "https://prestigecustompaintingllc.com/",
-                        "url": "https://prestigecustompaintingllc.com/",
-                        "telephone": "(509) 714-9491",
-                        "priceRange": "$$",
-                        "makesOffer": [
-                            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Interior Painting" } },
-                            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Exterior Painting" } },
-                            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Cabinet Painting Refinishing" } }
-                        ],
-                        "address": {
-                            "@type": "PostalAddress",
-                            "addressLocality": "Spokane Valley",
-                            "addressRegion": "WA",
-                            "addressCountry": "US"
-                        },
-                        "geo": {
-                            "@type": "GeoCoordinates",
-                            "latitude": 47.6734,
-                            "longitude": -117.2394
-                        },
-                        "areaServed": [
-                            { "@type": "City", "name": "Spokane" },
-                            { "@type": "City", "name": "Spokane Valley" },
-                            { "@type": "City", "name": "Liberty Lake" },
-                            { "@type": "City", "name": "Cheney" },
-                            { "@type": "City", "name": "Airway Heights" },
-                            { "@type": "City", "name": "Deer Park" }
-                        ],
-                        "openingHoursSpecification": {
-                            "@type": "OpeningHoursSpecification",
-                            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-                            "opens": "07:00",
-                            "closes": "19:00"
-                        }
-                    }
+                    id: 'webpage',
+                    data: generateWebPageSchema({
+                        title,
+                        description,
+                        url: "https://prestigecustompaintingllc.com/"
+                    })
                 }
             ]
         });

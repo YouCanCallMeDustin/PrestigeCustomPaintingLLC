@@ -150,3 +150,21 @@ export const generateServiceSchema = (data: {
     }
   };
 };
+
+export const generateWebPageSchema = (data: {
+  title: string;
+  description: string;
+  url: string;
+}) => {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": data.title,
+    "description": data.description,
+    "url": data.url,
+    "publisher": {
+      "@type": "Organization",
+      "name": "Prestige Custom Painting LLC"
+    }
+  };
+};

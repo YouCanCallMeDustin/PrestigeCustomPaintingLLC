@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
 import { SITE_INFO } from '../lib/constants';
 import { injectPageSEO } from '../lib/seo';
+import { generateWebPageSchema } from '../lib/schemaGenerator';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 
@@ -25,7 +26,15 @@ function HousePaintersPage() {
             description: 'Looking for expert house painters in Spokane, WA? Prestige Custom Painting LLC delivers top-quality interior and exterior painting services across the Inland Northwest.',
             path: '/house-painters-spokane',
             schemas: [
-                { id: 'faq', data: { "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": faqs.map(f => ({ "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } })) } }
+                { id: 'faq', data: { "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": faqs.map(f => ({ "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } })) } },
+                {
+                    id: 'webpage',
+                    data: generateWebPageSchema({
+                        title: 'House Painters Spokane | Prestige Custom Painting LLC',
+                        description: 'Looking for expert house painters in Spokane, WA? Prestige Custom Painting LLC delivers top-quality interior and exterior painting services across the Inland Northwest.',
+                        url: "https://prestigecustompaintingllc.com/house-painters-spokane"
+                    })
+                }
             ]
         });
     }, []);
@@ -115,6 +124,26 @@ function HousePaintersPage() {
                                 <p className="text-gray-600 leading-relaxed">{b.desc}</p>
                             </div>
                         ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* Warranty and Guarantee Section */}
+            <section className="py-16 md:py-24 bg-brand-black text-white">
+                <div className="max-w-7xl mx-auto px-4">
+                    <div className="text-center mb-12">
+                        <h2 className="text-3xl md:text-4xl font-poppins font-bold mb-4">Our Ironclad Guarantee & Licensing</h2>
+                        <div className="h-1.5 w-20 bg-brand-green mx-auto rounded-full" />
+                    </div>
+                    <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                        <div className="p-8 border border-white/10 rounded-3xl hover:border-brand-green/30 transition-all bg-white/5">
+                            <h3 className="text-2xl font-poppins font-bold mb-4 text-brand-green">100% Satisfaction Warranty</h3>
+                            <p className="text-gray-300 leading-relaxed text-lg">We stand behind the quality of our work. Every interior and exterior painting project we complete is backed by our satisfaction warranty. If there is a problem with the application or peeling due to improper prep, we will make it right. We don't ask for final payment until you've completed a full walkthrough and are completely satisfied.</p>
+                        </div>
+                        <div className="p-8 border border-white/10 rounded-3xl hover:border-brand-green/30 transition-all bg-white/5">
+                            <h3 className="text-2xl font-poppins font-bold mb-4 text-brand-green">Fully Licensed, Bonded & Insured</h3>
+                            <p className="text-gray-300 leading-relaxed text-lg">Hiring a contractor shouldn't be a risk. Prestige Custom Painting LLC is a legally registered business in Washington state. We carry full liability insurance and a surety bond. This means your home, our painters, and your investment are protected at all times while we are working on your property.</p>
+                        </div>
                     </div>
                 </div>
             </section>

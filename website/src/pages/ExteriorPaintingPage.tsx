@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
 import { SITE_INFO } from '../lib/constants';
 import { injectPageSEO } from '../lib/seo';
+import { generateWebPageSchema } from '../lib/schemaGenerator';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 
@@ -18,7 +19,15 @@ function ExteriorPaintingPage() {
             description: 'Need professional exterior painters in Spokane? Prestige Custom Painting LLC specializes in high-quality exterior house painting built for the Inland Northwest.',
             path: '/exterior-painting-spokane',
             schemas: [
-                { id: 'faq', data: { "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": faqs.map(f => ({ "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } })) } }
+                { id: 'faq', data: { "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": faqs.map(f => ({ "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } })) } },
+                {
+                    id: 'webpage',
+                    data: generateWebPageSchema({
+                        title: 'Professional Exterior Painters in Spokane | Prestige Custom Painting LLC',
+                        description: 'Need professional exterior painters in Spokane? Prestige Custom Painting LLC specializes in high-quality exterior house painting built for the Inland Northwest.',
+                        url: "https://prestigecustompaintingllc.com/exterior-painting-spokane"
+                    })
+                }
             ]
         });
     }, []);
