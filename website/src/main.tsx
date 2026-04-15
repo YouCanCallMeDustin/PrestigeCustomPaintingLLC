@@ -22,6 +22,7 @@ import BlogPricingSpokane from './pages/blog/BlogPricingSpokane.tsx'
 import BlogBestExteriorPaint from './pages/blog/BlogBestExteriorPaint.tsx'
 import BlogHowOftenToPaint from './pages/blog/BlogHowOftenToPaint.tsx'
 import BlogInteriorTips from './pages/blog/BlogInteriorTips.tsx'
+import SpokaneHomeImprovementPage from './pages/blog/SpokaneHomeImprovementPage.tsx'
 import ServiceBlogPage from './pages/ServiceBlogPage.tsx'
 import CostToPaintAHouse from './pages/costs/CostToPaintAHouse.tsx'
 import ExteriorPaintingCost from './pages/costs/ExteriorPaintingCost.tsx'
@@ -72,6 +73,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
                 <Route path="/blog/best-exterior-paint-spokane" element={<BlogBestExteriorPaint />} />
                 <Route path="/blog/how-often-to-paint-house-spokane" element={<BlogHowOftenToPaint />} />
                 <Route path="/blog/interior-painting-tips-spokane" element={<BlogInteriorTips />} />
+                <Route path="/spokane-home-improvement-guide" element={<SpokaneHomeImprovementPage />} />
                 <Route path="/blog" element={<BlogListPage />} />
                 <Route path="/service/:serviceSlug" element={<ServiceBlogPage />} />
                 
