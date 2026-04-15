@@ -41,7 +41,7 @@ function ExteriorPaintingPage() {
     useEffect(() => {
         const title = "Professional Exterior Painters Spokane | Prestige Custom Painting";
         const description = "Expert exterior house painters in Spokane, WA. We specialize in weather-resistant coatings, siding painting, and deck staining. Get your free estimate today!";
-        
+
         return injectPageSEO({
             title,
             description,
@@ -172,7 +172,7 @@ function ExteriorPaintingPage() {
                                 "Professional exterior painting is the strategic application of protective, weather-resistant coatings to a building's outer surfaces—including siding, trim, decks, and fences. In Spokane, this process is essential to defend structural integrity against high UV exposure, winter moisture, and the region's intense freeze-thaw cycles."
                             </p>
                         </div>
-                        
+
                         {/* Table of Contents */}
                         <div className="mt-16 bg-white border border-gray-100 rounded-3xl p-8 shadow-sm">
                             <h3 className="text-xl font-bold mb-6 flex items-center gap-2">
@@ -217,9 +217,9 @@ function ExteriorPaintingPage() {
                         </div>
                         <div className="relative">
                             <div className="absolute inset-0 bg-brand-green rounded-[3rem] -rotate-3 scale-105 opacity-10" />
-                            <img 
-                                src="https://images.unsplash.com/photo-1518780664697-55e3ad937233?auto=format&fit=crop&q=80&w=1000" 
-                                alt="Professionally painted house exterior in Spokane WA" 
+                            <img
+                                src="https://images.unsplash.com/photo-1518780664697-55e3ad937233?auto=format&fit=crop&q=80&w=1000"
+                                alt="Professionally painted house exterior in Spokane WA"
                                 className="relative z-10 rounded-[3rem] shadow-2xl object-cover h-[500px] w-full"
                             />
                         </div>
@@ -260,14 +260,14 @@ function ExteriorPaintingPage() {
                         <h3 className="text-4xl md:text-5xl font-poppins font-bold mb-6">Our 6-Step Exterior Painting Process</h3>
                         <p className="text-gray-400 max-w-2xl mx-auto">Precision application built to withstand the elements.</p>
                     </div>
-                    
+
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {steps.map((step, i) => (
                             <div key={i} className="bg-white/5 border border-white/10 p-8 rounded-3xl relative overflow-hidden group hover:border-brand-green/50 transition-all">
                                 <div className="text-brand-green font-poppins font-bold text-5xl opacity-20 mb-4">{i + 1}</div>
                                 <h4 className="text-xl font-bold mb-4 text-white">{step.title}</h4>
                                 <p className="text-gray-400 mb-6 text-sm leading-relaxed">{step.desc}</p>
-                                
+
                                 <div className="space-y-4 pt-4 border-t border-white/10">
                                     <div className="flex gap-3 text-xs">
                                         <Star size={14} className="text-brand-green shrink-0 mt-0.5" />

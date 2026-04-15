@@ -43,7 +43,7 @@ function InteriorPaintingPage() {
     useEffect(() => {
         const title = "Professional Interior Painting Spokane | Prestige Custom Painting";
         const description = "Top-rated interior painters in Spokane, WA. We specialize in high-end residential painting, cabinet refinishing & modern finishes. Get your free quote today!";
-        
+
         return injectPageSEO({
             title,
             description,
@@ -180,7 +180,7 @@ function InteriorPaintingPage() {
                                 "Professional interior painting is the specialized application of high-performance coatings to internal surfaces—including walls, ceilings, trim, and cabinetry—designed to protect substrates while enhancing aesthetic value. In Spokane’s varied climate, professional application is critical to ensure durability against humidity shifts and seasonal temperature changes."
                             </p>
                         </div>
-                        
+
                         {/* Table of Contents */}
                         <div className="mt-16 bg-white border border-gray-100 rounded-3xl p-8 shadow-sm">
                             <h3 className="text-xl font-bold mb-6 flex items-center gap-2">
@@ -239,9 +239,9 @@ function InteriorPaintingPage() {
                         </div>
                         <div className="relative">
                             <div className="absolute inset-0 bg-brand-green rounded-[3rem] rotate-3 scale-105 opacity-10" />
-                            <img 
-                                src="https://images.unsplash.com/photo-1562663474-6cbb3fee4c77?auto=format&fit=crop&q=80&w=1000" 
-                                alt="Professional interior painting results in Spokane WA" 
+                            <img
+                                src="/interior.png"
+                                alt="Professional interior painting results in Spokane WA"
                                 className="relative z-10 rounded-[3rem] shadow-2xl object-cover h-[500px] w-full"
                             />
                         </div>
@@ -282,14 +282,14 @@ function InteriorPaintingPage() {
                         <h3 className="text-4xl md:text-5xl font-poppins font-bold mb-6">Our 6-Step Interior Painting Process</h3>
                         <p className="text-gray-400 max-w-2xl mx-auto">We don't just paint; we execute a meticulous system designed for longevity.</p>
                     </div>
-                    
+
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {steps.map((step, i) => (
                             <div key={i} className="bg-white/5 border border-white/10 p-8 rounded-3xl relative overflow-hidden group hover:border-brand-green/50 transition-all">
                                 <div className="text-brand-green font-poppins font-bold text-5xl opacity-20 mb-4">{i + 1}</div>
                                 <h4 className="text-xl font-bold mb-4 text-white">{step.title}</h4>
                                 <p className="text-gray-400 mb-6 text-sm leading-relaxed">{step.desc}</p>
-                                
+
                                 <div className="space-y-4 pt-4 border-t border-white/10">
                                     <div className="flex gap-3">
                                         <Star size={16} className="text-brand-green shrink-0 mt-1" />
@@ -303,7 +303,7 @@ function InteriorPaintingPage() {
                             </div>
                         ))}
                     </div>
-                    
+
                     <div className="mt-16 bg-brand-green/10 border border-brand-green/30 rounded-3xl p-8 max-w-3xl mx-auto">
                         <h4 className="text-xl font-bold mb-6 flex items-center gap-2 text-white">
                             <CheckSquare size={24} className="text-brand-green" /> Interior Prep Checklist
@@ -377,13 +377,13 @@ function InteriorPaintingPage() {
                     <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
                         <div className="space-y-4">
                             <div className="bg-white p-4 rounded-3xl shadow-sm">
-                                <img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?auto=format&fit=crop&q=80&w=600" alt="Interior painting before" className="rounded-2xl h-64 w-full object-cover grayscale" />
+                                <img src="/5.jpg" alt="Interior painting before" className="rounded-2xl h-64 w-full object-cover grayscale" />
                                 <p className="mt-4 font-bold text-gray-500 uppercase text-xs tracking-widest">Typical Builder Grade Interior</p>
                             </div>
                         </div>
                         <div className="space-y-4">
                             <div className="bg-white p-4 rounded-3xl shadow-sm border-2 border-brand-green">
-                                <img src="https://images.unsplash.com/photo-1562663474-6cbb3fee4c77?auto=format&fit=crop&q=80&w=600" alt="Interior painting after" className="rounded-2xl h-64 w-full object-cover" />
+                                <img src="/2.jpg" alt="Interior painting after" className="rounded-2xl h-64 w-full object-cover" />
                                 <p className="mt-4 font-bold text-brand-green uppercase text-xs tracking-widest underline decoration-brand-green/30 underline-offset-4">Prestige Custom Transformation</p>
                             </div>
                         </div>
@@ -528,17 +528,17 @@ function InteriorPaintingPage() {
                             </div>
                         </div>
                     </div>
-                    
+
                     {/* Sources */}
                     <div className="mt-16 pt-8 border-t border-gray-200">
                         <h4 className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-6">Expert Sources & References</h4>
                         <ul className="space-y-3">
                             <li className="text-sm text-gray-500 flex items-center gap-2">
-                                <BookOpen size={14} className="text-brand-green" /> 
+                                <BookOpen size={14} className="text-brand-green" />
                                 <a href="https://www.benjaminmoore.com/en-us/contractors/job-site-solutions/interior-painting-guide" className="hover:text-brand-green underline decoration-brand-green/20">Benjamin Moore Professional Interior Coating Guide</a>
                             </li>
                             <li className="text-sm text-gray-500 flex items-center gap-2">
-                                <BookOpen size={14} className="text-brand-green" /> 
+                                <BookOpen size={14} className="text-brand-green" />
                                 <a href="https://www.sherwin-williams.com/painting-contractors/business-builders/specs-and-standards" className="hover:text-brand-green underline decoration-brand-green/20">Sherwin-Williams Painting Specification Standards</a>
                             </li>
                         </ul>

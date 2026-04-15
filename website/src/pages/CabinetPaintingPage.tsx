@@ -40,7 +40,7 @@ function CabinetPaintingPage() {
     useEffect(() => {
         const title = "Cabinet Painting Spokane | Professional Kitchen Refinishing";
         const description = "Expert cabinet painters in Spokane, WA. Transform your kitchen with factory-grade finishes, durable coatings, and professional refinishing. Free estimates!";
-        
+
         return injectPageSEO({
             title,
             description,
@@ -171,7 +171,7 @@ function CabinetPaintingPage() {
                                 "Professional cabinet refinishing is the technical process of cleaning, sanding, and applying industrial-grade 'bonding' primers and topcoats to existing cabinetry. Unlike standard house painting, cabinet refinishing uses atomized spray technology and heat-resistant enamels to achieve a factory-smooth finish that rivals the durability of brand-new units."
                             </p>
                         </div>
-                        
+
                         {/* Table of Contents */}
                         <div className="mt-16 bg-white border border-gray-100 rounded-3xl p-8 shadow-sm">
                             <h3 className="text-xl font-bold mb-6 flex items-center gap-2">
@@ -216,9 +216,9 @@ function CabinetPaintingPage() {
                         </div>
                         <div className="relative">
                             <div className="absolute inset-0 bg-brand-green rounded-[3rem] rotate-3 scale-105 opacity-10" />
-                            <img 
-                                src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&q=80&w=1000" 
-                                alt="Modernized white kitchen cabinets in Spokane home" 
+                            <img
+                                src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&q=80&w=1000"
+                                alt="Modernized white kitchen cabinets in Spokane home"
                                 className="relative z-10 rounded-[3rem] shadow-2xl object-cover h-[500px] w-full"
                             />
                         </div>
@@ -282,14 +282,14 @@ function CabinetPaintingPage() {
                         <h3 className="text-4xl md:text-5xl font-poppins font-bold mb-6">Our 6-Step Cabinet Refinishing Process</h3>
                         <p className="text-gray-400 max-w-2xl mx-auto">Engineered to withstand the high-use environment of a Spokane kitchen.</p>
                     </div>
-                    
+
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {steps.map((step, i) => (
                             <div key={i} className="bg-white/5 border border-white/10 p-8 rounded-3xl relative overflow-hidden group hover:border-brand-green/50 transition-all">
                                 <div className="text-brand-green font-poppins font-bold text-5xl opacity-20 mb-4">{i + 1}</div>
                                 <h4 className="text-xl font-bold mb-4 text-white">{step.title}</h4>
                                 <p className="text-gray-400 mb-6 text-sm leading-relaxed">{step.desc}</p>
-                                
+
                                 <div className="space-y-4 pt-4 border-t border-white/10">
                                     <div className="flex gap-3 text-xs">
                                         <Star size={14} className="text-brand-green shrink-0 mt-0.5" />
