@@ -21,44 +21,15 @@ export interface AreaPageProps {
 export default function AreaPage({
     city,
     state,
+    slug,
     metaTitle,
     metaDesc,
     heroTagline,
     introParagraphs,
     funFact,
+    nearbyAreas,
 }: AreaPageProps) {
     const { phoneNumber, email } = SITE_INFO;
-
-    useEffect(() => {
-        document.title = metaTitle;
-        const meta = document.querySelector('meta[name="description"]');
-        if (meta) meta.setAttribute('content', metaDesc);
-        return injectPageSEO({
-            title: metaTitle,
-            description: metaDesc,
-            path: `/painting-${city.toLowerCase().replace(/ /g, '-')}`,
-            schemas: [
-                { id: 'faq', data: { "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": faqs.map(f => ({ "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } })) } }
-            ]
-        });
-    }, [metaTitle, metaDesc]);
-
-    const services = [
-        "Interior house painting",
-        "Exterior house painting",
-        "Cabinet painting & refinishing",
-        "Trim, door & baseboard painting",
-        "Deck & fence staining",
-        "Drywall repair & texture matching",
-        "Commercial painting",
-        "Pressure washing & surface prep",
-    ];
-
-    const benefits = [
-        { icon: <MapPin size={22} />, title: `Serving ${city} Locally`, desc: `We are based right here in the Inland Northwest and regularly serve homeowners and businesses throughout ${city}, ${state}.` },
-        { icon: <Shield size={22} />, title: "Licensed & Insured", desc: "Fully licensed and insured in Washington State. Hire with total confidence — your property and our team are fully protected." },
-        { icon: <Clock size={22} />, title: "On-Time & Professional", desc: "We respect your schedule. Punctual arrival, clean job sites, and clear communication from estimate to final walkthrough." },
-    ];
 
     const faqs = [
         {
@@ -79,6 +50,95 @@ export default function AreaPage({
         },
     ];
 
+    const mappedServices = [
+        "Exterior painting", "Cabinet painting", "Deck painting", "Door painting",
+        "House Painters", "Commercial Painting", "Kitchen Cabinet Painting",
+        "Ceiling Painting", "Trim and Molding Painting", "Accent Wall Painting",
+        "Exterior Siding Painting", "Stucco Painting", "Brick Painting",
+        "Fence Painting", "Fence Staining", "Deck Staining", "Surface Priming",
+        "Garage Painting", "Baseboard Painting", "Crown Molding Painting",
+        "Color Consultation", "Paint Touch-Up Services", "Wall Texture Matching",
+        "Garage Floor Epoxy Coating"
+    ];
+
+    const services = mappedServices.map(s => ({
+        name: s,
+        slug: s.toLowerCase().replace(/ /g, '-').replace(/&/g, 'and')
+    }));
+
+    const benefits = [
+        { icon: <MapPin size={22} />, title: `Serving ${city} Locally`, desc: `We are based right here in the Inland Northwest and regularly serve homeowners and businesses throughout ${city}, ${state}.` },
+        { icon: <Shield size={22} />, title: "Licensed & Insured", desc: "Fully licensed and insured in Washington State. Hire with total confidence — your property and our team are fully protected." },
+        { icon: <Clock size={22} />, title: "On-Time & Professional", desc: "We respect your schedule. Punctual arrival, clean job sites, and clear communication from estimate to final walkthrough." },
+    ];
+
+    useEffect(() => {
+        document.title = metaTitle;
+        const meta = document.querySelector('meta[name="description"]');
+        if (meta) meta.setAttribute('content', metaDesc);
+        
+        // Clean up and inject SEO
+        const cleanup = injectPageSEO({
+            title: metaTitle,
+            description: metaDesc,
+            path: `/painting-${slug}`,
+            schemas: [
+                { 
+                    id: 'local-business', 
+                    data: { 
+                        "@context": "https://schema.org", 
+                        "@type": "PaintingService", 
+                        "name": `Prestige Custom Painting LLC - ${city}`,
+                        "description": metaDesc,
+                        "url": `https://prestigecustompaintingllc.com/painting-${slug}`,
+                        "telephone": phoneNumber,
+                        "address": {
+                            "@type": "PostalAddress",
+                            "addressLocality": city,
+                            "addressRegion": "WA",
+                            "addressCountry": "US"
+                        },
+                        "geo": {
+                            "@type": "GeoCircle",
+                            "itemOffered": {
+                                "@type": "Service",
+                                "name": "Painting Services"
+                            },
+                            "geoMidpoint": {
+                                "@type": "GeoCoordinates",
+                                "address": city
+                            }
+                        },
+                        "sameAs": [
+                            SITE_INFO.facebookUrl,
+                            SITE_INFO.yelpUrl,
+                            SITE_INFO.nextdoorUrl,
+                            SITE_INFO.bizapediaUrl,
+                            SITE_INFO.liveLocalInwUrl
+                        ],
+                        "areaServed": {
+                            "@type": "City",
+                            "name": city
+                        }
+                    } 
+                },
+                { 
+                    id: 'faq', 
+                    data: { 
+                        "@context": "https://schema.org", 
+                        "@type": "FAQPage", 
+                        "mainEntity": faqs.map(f => ({ 
+                            "@type": "Question", 
+                            "name": f.q, 
+                            "acceptedAnswer": { "@type": "Answer", "text": f.a } 
+                        })) 
+                    } 
+                }
+            ]
+        });
+        
+        return cleanup;
+    }, [metaTitle, metaDesc, slug, city]);
 
     return (
         <div className="min-h-screen bg-white text-brand-black selection:bg-brand-green selection:text-white pb-20 md:pb-0">
@@ -145,10 +205,14 @@ export default function AreaPage({
                     </div>
                     <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-5xl mx-auto">
                         {services.map((item, idx) => (
-                            <div key={idx} className="flex items-center gap-3 bg-white p-4 rounded-2xl shadow-sm border border-gray-100 hover:border-brand-green transition-colors">
-                                <CheckCircle size={20} className="text-brand-green shrink-0" />
-                                <span className="text-sm font-semibold text-gray-700">{item}</span>
-                            </div>
+                            <Link 
+                                key={idx} 
+                                to={`/service/${item.slug}`}
+                                className="flex items-center gap-3 bg-white p-4 rounded-2xl shadow-sm border border-gray-100 hover:border-brand-green transition-all group cursor-pointer"
+                            >
+                                <CheckCircle size={20} className="text-brand-green shrink-0 group-hover:scale-110 transition-transform" />
+                                <span className="text-sm font-semibold text-gray-700 group-hover:text-brand-green transition-colors">{item.name}</span>
+                            </Link>
                         ))}
                     </div>
                 </div>
@@ -185,22 +249,19 @@ export default function AreaPage({
                     </h2>
                     <p className="text-gray-500 mb-8">We paint homes and businesses across the entire Inland Northwest region.</p>
                     <div className="flex flex-wrap justify-center gap-3">
-                        {[
-                            { label: "Spokane Valley", to: "/painting-spokane-valley" },
-                            { label: "Liberty Lake", to: "/painting-liberty-lake" },
-                            { label: "Airway Heights", to: "/painting-airway-heights" },
-                            { label: "Cheney", to: "/painting-cheney" },
-                            { label: "Deer Park", to: "/painting-deer-park" },
-                            { label: "Spokane", to: "/house-painters-spokane" },
-                        ].map((area, idx) => (
-                            <Link
-                                key={idx}
-                                to={area.to}
-                                className="px-5 py-2.5 bg-white border border-gray-200 rounded-full text-sm font-semibold text-gray-700 shadow-sm hover:border-brand-green hover:text-brand-green transition-all"
-                            >
-                                {area.label}
-                            </Link>
-                        ))}
+                        {nearbyAreas && nearbyAreas.map((areaName, idx) => {
+                            const areaSlug = areaName.toLowerCase().replace(/, wa/g, '').replace(/ /g, '-');
+                            const to = areaName === 'Spokane, WA' ? '/house-painters-spokane' : `/painting-${areaSlug}`;
+                            return (
+                                <Link
+                                    key={idx}
+                                    to={to}
+                                    className="px-5 py-2.5 bg-white border border-gray-200 rounded-full text-sm font-semibold text-gray-700 shadow-sm hover:border-brand-green hover:text-brand-green transition-all"
+                                >
+                                    {areaName}
+                                </Link>
+                            );
+                        })}
                     </div>
                 </div>
             </section>

@@ -1,4 +1,4 @@
-import { Phone, Mail, CheckCircle, ArrowLeft, ArrowRight, Star, Sparkles, Shield, DollarSign, ThermometerSun } from 'lucide-react';
+import { Phone, CheckCircle, ArrowLeft, ArrowRight, Star, Info, AlertTriangle, User, BookOpen, Layers, CheckSquare, Sparkles, DollarSign } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
 import { SITE_INFO } from '../lib/constants';
@@ -8,79 +8,50 @@ import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 
 function CabinetPaintingPage() {
-    const { phoneNumber, email } = SITE_INFO;
-
-    const pageTitle = 'Top-Rated Cabinet Painting Contractors in Spokane, WA | Factory Finish';
-    const pageDescription = 'Don\'t replace—refinish! Ranked as top cabinet painting contractors in Spokane. We deliver a flawless, ultra-durable factory finish that saves you thousands over remodeling. Get a Free Quote!';
+    const { phoneNumber, email, ownerName } = SITE_INFO;
 
     const faqs = [
-        { q: "Why hire local cabinet painting contractors in Spokane?", a: "Absolutely — cabinet painting takes a fraction of the time and money of a full cabinet replacement while achieving equally stunning results. In Spokane, full cabinet replacement can easily reach $15,000–$30,000+. Professional cabinet painting from Prestige Custom Painting LLC can completely transform the same kitchen layout, often saving homeowners well over $10,000." },
-        { q: "How long does professional cabinet painting take?", a: "Most kitchen cabinet refinishing projects take 4–6 days. We remove the doors and drawer fronts to spray them in a controlled environment for a flawless finish, while meticulously masking and painting the cabinet boxes in your home. We emphasize efficiency to minimize disruption to your daily routine." },
-        { q: "Will the paint peel or chip on my kitchen cabinets?", a: "Not when executed by true professionals. The key to long-lasting cabinet paint is rigorous prep: thorough degreasing, mechanical sanding, a high-adhesion bonding primer, and an ultra-durable urethane or acrylic enamel topcoat like Benjamin Moore Advance or SCUFF-X. Our factory-finish approach is formulated to bond aggressively to wood and resist chipping, peeling, and daily wear-and-tear." },
-        { q: "Can you change the color of my cabinets from dark wood to white?", a: "Yes! Going from dated, dark wood or honey oak to bright white or modern gray is our most requested cabinet service. The process relies heavily on using specialized stain-blocking primers to ensure the original wood tannins never bleed through your crisp, new bright finish." },
-        { q: "Do you spray or brush the cabinets?", a: "We exclusively use professional fine-finish sprayers (like HVLP systems) for your cabinet doors and drawer fronts. Spraying is the only way to guarantee an ultra-smooth, factory-like finish without the prominent brush strokes or orange-peel roller marks left behind by DIY methods or amateur painters." },
-        { q: "How does Spokane's climate affect cabinet painting?", a: "Spokane experiences very dry summers and highly fluctuating winter temperatures, causing interior wood cabinetry to expand and contract. If cheap, rigid paints are used, the cabinet joints will quickly develop hairline cracks. We strategically use flexible, premium coatings that can accommodate natural wood movement, drastically extending the life of your finish." }
+        {
+            q: "Is it better to paint or replace kitchen cabinets in Spokane?",
+            a: "Painting is significantly more cost-effective. Professional refinishing offers a factory-grade look for about 20-30% of the cost of new cabinets, saving you thousands while achieving a high-end aesthetic."
+        },
+        {
+            q: "How long does the cabinet painting process take?",
+            a: "A typical kitchen takes 5–7 business days. We minimize disruption by spraying doors off-site in our controlled environment, while the cabinet boxes are refinished in your home with meticulous masking."
+        },
+        {
+            q: "Will the paint chip or peel on my cabinets?",
+            a: "Not with our process. We use industrial-grade 'bonding' primers and urethane enamels (like Benjamin Moore SCUFF-X or Sherwin Williams Emerald Urethane) specifically designed for the high-wear demands of a kitchen."
+        },
+        {
+            q: "Do you spray or brush the cabinets?",
+            a: "We exclusively use HVLP (High Volume Low Pressure) spray systems for doors and drawer fronts. This ensures an ultra-smooth, glass-like finish with zero brush marks or roller texture."
+        },
+        {
+            q: "Can you change the color of dark oak cabinets?",
+            a: "Yes! Going from honey oak or dark cherry to a modern white or gray is our specialty. We use high-build primers to hide the heavy grain of woods like oak for a smoother finish."
+        },
+        {
+            q: "Can I use my kitchen while the cabinets are being painted?",
+            a: "Your kitchen will be accessible in the evenings, though we ask that major cooking be paused during the preparation and spraying phases to prevent dust and oil contamination."
+        }
     ];
 
     useEffect(() => {
-        document.title = pageTitle;
-        const meta = document.querySelector('meta[name="description"]');
-        if (meta) meta.setAttribute('content', pageDescription);
+        const title = "Cabinet Painting Spokane | Professional Kitchen Refinishing";
+        const description = "Expert cabinet painters in Spokane, WA. Transform your kitchen with factory-grade finishes, durable coatings, and professional refinishing. Free estimates!";
         
         return injectPageSEO({
-            title: pageTitle,
-            description: pageDescription,
+            title,
+            description,
             path: '/cabinet-painting-spokane',
             schemas: [
-                { 
-                    id: 'faq', 
-                    data: { 
-                        "@context": "https://schema.org", 
-                        "@type": "FAQPage", 
-                        "mainEntity": faqs.map(f => ({ 
-                            "@type": "Question", 
-                            "name": f.q, 
-                            "acceptedAnswer": { "@type": "Answer", "text": f.a } 
-                        })) 
-                    } 
-                },
-                {
-                    id: 'local-business',
-                    data: {
-                        "@context": "https://schema.org",
-                        "@type": "LocalBusiness",
-                        "name": "Prestige Custom Painting LLC",
-                        "address": {
-                            "@type": "PostalAddress",
-                            "addressLocality": "Spokane",
-                            "addressRegion": "WA"
-                        },
-                        "hasOfferCatalog": {
-                            "@type": "OfferCatalog",
-                            "name": "Painting Services",
-                            "itemListElement": [
-                                {
-                                    "@type": "Offer",
-                                    "itemOffered": {
-                                        "@type": "Service",
-                                        "name": "Cabinet Painting",
-                                        "description": "Professional high-end cabinet refinishing and painting services utilizing HVLP factory-finish techniques in Spokane, WA.",
-                                        "areaServed": [
-                                            { "@type": "City", "name": "Spokane" },
-                                            { "@type": "City", "name": "Spokane Valley" },
-                                            { "@type": "City", "name": "Liberty Lake" }
-                                        ]
-                                    }
-                                }
-                            ]
-                        }
-                    }
-                },
+                { id: 'faq', data: { "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": faqs.map(f => ({ "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } })) } },
                 {
                     id: 'webpage',
                     data: generateWebPageSchema({
-                        title: pageTitle,
-                        description: pageDescription,
+                        title,
+                        description,
                         url: "https://prestigecustompaintingllc.com/cabinet-painting-spokane"
                     })
                 }
@@ -88,182 +59,410 @@ function CabinetPaintingPage() {
         });
     }, []);
 
+    const steps = [
+        {
+            title: "Hardware Removal & Labeling",
+            desc: "We dismantle all doors, drawers, and hardware. Every hinge is meticulously cataloged so that re-installation is perfectly aligned.",
+            proTip: "Keep original hardware in labeled bags; even same-year hinges can have slight variations in wear.",
+            pitfall: "Losing track of door locations. Cabinet boxes often have unique widths that aren't perfectly interchangeable."
+        },
+        {
+            title: "Chemical Degreasing",
+            desc: "We scrub all surfaces with industrial degreasers (TSP substitute) to remove Spokane's toughest cooking oils and grease residues.",
+            proTip: "Pay extra attention to the areas around the stove and handles where skin oils and steam accumulate.",
+            pitfall: "Painting over oil. No primer—regardless of quality—will bond to a greasy surface."
+        },
+        {
+            title: "Mechanical Sanding",
+            desc: "We use HEPA-filtered dustless sanders to 'profile' the existing factory finish. This creates microscopic ridges for the new primer to bite into.",
+            proTip: "Use 220-grit sandpaper for a surface that is rough enough for adhesion but smooth enough for a fine finish.",
+            pitfall: "Under-sanding 'dead spots' or corners. These are the areas where paint typically chips first."
+        },
+        {
+            title: "Bonding Priming",
+            desc: "We spray a specialized high-adhesion primer designed to stick to non-porous surfaces like factory-finished wood and laminate.",
+            proTip: "For heavy-grain wood like Oak, we use high-build primers to fill the pores for a more modern, smooth look.",
+            pitfall: "Using standard wall primer. Cabinetry requires chemical-bonding primers to resist heat and moisture."
+        },
+        {
+            title: "Industrial Coating Spray",
+            desc: "We apply two perfectly atomized coats of premium urethane enamel using HVLP sprayers for a factory-smooth, durable finish.",
+            proTip: "Spray doors horizontally to allow the paint to 'level' perfectly, eliminating any orange peel texture.",
+            pitfall: "Applying coats too thick. This causes 'runs' and prevents the paint from curing to its full hardness."
+        },
+        {
+            title: "Re-installation & Fine Tuning",
+            desc: "We re-hang all components, install hardware, and perform a detailed alignment check to ensure everything closes perfectly.",
+            proTip: "Install small rubber 'bumpers' to prevent the newly cured finish from sticking to the frames.",
+            pitfall: "Rushing re-installation before the paint reaches its 'dry-to-handle' state."
+        }
+    ];
+
     return (
         <div className="min-h-screen bg-white text-brand-black selection:bg-brand-green selection:text-white pb-20 md:pb-0">
             <Navbar />
 
-            {/* HERO SECTION - CTR & Value Prop Focused */}
-            <section className="bg-brand-black py-16 md:py-28 text-white relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-full md:w-3/4 h-full bg-brand-green/10 -skew-x-12 transform translate-x-32" />
+            {/* Hero Section */}
+            <header className="bg-brand-black py-16 md:py-24 text-white relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-1/2 h-full bg-brand-green/10 -skew-x-12 transform translate-x-32" />
                 <div className="max-w-7xl mx-auto px-4 relative z-10">
-                    <Link to="/" className="inline-flex items-center gap-2 text-brand-green font-bold mb-6 hover:gap-3 transition-all text-sm"><ArrowLeft size={18} /> BACK TO HOME</Link>
+                    <Link to="/" className="inline-flex items-center gap-2 text-brand-green font-bold mb-6 hover:gap-3 transition-all text-sm">
+                        <ArrowLeft size={18} /> BACK TO HOME
+                    </Link>
                     <div className="max-w-4xl">
-                        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-green/20 text-brand-green text-xs md:text-sm font-bold mb-6 animate-fade-in"><Star size={14} fill="currentColor" /> SPOKANE'S TOP-RATED CABINET REFINISHING CONTRACTORS</div>
-                        <h1 className="text-4xl md:text-6xl lg:text-7xl font-poppins font-bold mb-6 leading-tight">
-                            Flawless Cabinet Painting<br /><span className="text-brand-green">in Spokane, WA</span>
+                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-green/20 text-brand-green text-xs font-bold mb-6 uppercase tracking-wider">
+                            <Star size={12} fill="currentColor" /> Factory-Grade Cabinet Refinishing
+                        </div>
+                        <h1 className="text-4xl md:text-6xl lg:text-7xl font-poppins font-bold mb-8 leading-tight">
+                            Cabinet Painting Spokane: <br />
+                            <span className="text-brand-green italic">The Smarter Remodel.</span>
                         </h1>
-                        <p className="text-lg md:text-2xl text-gray-300 leading-relaxed mb-8 max-w-3xl font-medium">Don't replace your kitchen—refinish it! Transform outdated cabinetry into a modern centerpiece with our ultra-durable, factory-smooth coating process. Save up to 70% compared to a full kitchen remodel.</p>
-                        <div className="flex flex-col sm:flex-row gap-4">
-                            <a href={`tel:${phoneNumber}`} className="flex items-center justify-center gap-3 bg-brand-green hover:bg-green-600 text-white px-8 py-5 rounded-2xl font-bold text-lg transition-all transform hover:scale-105 shadow-2xl shadow-green-500/40"><Phone size={24} /> GET A FREE QUOTE</a>
-                            <Link to="/#services" className="flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white px-8 py-5 rounded-2xl font-bold text-lg transition-all border border-white/20">ALL SERVICES <ArrowRight size={22} /></Link>
+                        <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-10 max-w-2xl font-medium">
+                            Don't replace your kitchen—refinish it. Prestige Custom Painting LLC delivers glass-smooth, industrial-strength cabinet finishes that save you $10,000+ compared to a full replacement.
+                        </p>
+                        <div className="flex flex-col sm:flex-row gap-5">
+                            <a href={`tel:${phoneNumber}`} className="flex items-center justify-center gap-3 bg-brand-green hover:bg-green-600 text-white px-10 py-5 rounded-2xl font-extrabold text-lg transition-all shadow-xl shadow-green-500/20">
+                                <Phone size={24} /> GET YOUR QUOTE
+                            </a>
+                            <Link to="/our-work" className="flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white px-10 py-5 rounded-2xl font-bold text-lg transition-all border border-white/20">
+                                SEE TRANSFORMATIONS <ArrowRight size={22} />
+                            </Link>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            {/* TL;DR Section */}
+            <section className="py-12 bg-gray-50 border-b border-gray-100">
+                <div className="max-w-7xl mx-auto px-4">
+                    <div className="bg-white rounded-3xl p-8 shadow-sm border border-gray-100">
+                        <h2 className="text-sm font-bold text-brand-green uppercase tracking-[0.2em] mb-6 flex items-center gap-2">
+                            <Layers size={18} /> Why Refinish?
+                        </h2>
+                        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                            {[
+                                "70% cheaper than new kitchen cabinet replacement.",
+                                "Rock-hard industrial coatings resistant to grease & heat.",
+                                "HVLP-sprayed finish for zero brush marks.",
+                                "Minimal downtime—kitchen back in action in 5-7 days."
+                            ].map((item, i) => (
+                                <div key={i} className="flex gap-3">
+                                    <CheckCircle size={20} className="text-brand-green shrink-0 mt-1" />
+                                    <p className="text-gray-700 font-medium text-sm leading-relaxed">{item}</p>
+                                </div>
+                            ))}
                         </div>
                     </div>
                 </div>
             </section>
 
-            {/* VALUE PROP & SEO INTRODUCTION */}
-            <section className="py-20 md:py-28 bg-white">
+            {/* Featured Snippet Section */}
+            <section className="py-16 md:py-24 bg-white">
                 <div className="max-w-7xl mx-auto px-4">
-                    <div className="flex flex-col lg:flex-row items-center gap-16">
-                        <div className="lg:w-1/2">
-                            <h2 className="text-brand-green font-bold tracking-widest text-sm mb-4 uppercase">The Prestige Standard</h2>
-                            <h3 className="text-3xl md:text-5xl font-poppins font-bold mb-8 text-brand-black leading-tight">Why Hire Professional Cabinet Painting Contractors?</h3>
-                            <p className="text-lg text-gray-600 leading-relaxed mb-6 font-medium">Your kitchen cabinets are the architectural anchor of your home. However, replacing them is notoriously expensive, messy, and time-consuming. In the Spokane market, a total kitchen cabinet replacement can quickly spiral into the tens of thousands of dollars.</p>
-                            <p className="text-lg text-gray-600 leading-relaxed mb-8">As premier <strong>cabinet painting contractors in Spokane</strong>, Prestige Custom Painting LLC offers the intelligent alternative. Our professional refinishing service delivers a rock-hard, factory-quality finish at a fraction of the cost of new cabinetry. We don’t just "paint" your doors; we utilize advanced HVLP spraying technology, chemical degreasers, and premium bonding enamels (like Benjamin Moore SCUFF-X) to completely transform your kitchen's aesthetic while preserving its structural bones.</p>
-                            
-                            <ul className="space-y-4 mb-8">
-                                <li className="flex items-start gap-4">
-                                    <CheckCircle className="text-brand-green mt-1 shrink-0" size={24} />
-                                    <span className="text-gray-700 text-lg"><strong>Cost-Effective:</strong> Save thousands compared to tearing out existing boxes.</span>
-                                </li>
-                                <li className="flex items-start gap-4">
-                                    <CheckCircle className="text-brand-green mt-1 shrink-0" size={24} />
-                                    <span className="text-gray-700 text-lg"><strong>Speed & Convenience:</strong> Kitchen updates finished in days, not months.</span>
-                                </li>
-                                <li className="flex items-start gap-4">
-                                    <CheckCircle className="text-brand-green mt-1 shrink-0" size={24} />
-                                    <span className="text-gray-700 text-lg"><strong>Limitless Colors:</strong> We can match any designer color flawlessly.</span>
-                                </li>
+                    <div className="max-w-4xl mx-auto">
+                        <div className="inline-block bg-brand-green/10 text-brand-green px-4 py-1 rounded-lg text-sm font-bold mb-6">
+                            Industry Definition
+                        </div>
+                        <h2 className="text-3xl md:text-5xl font-poppins font-bold mb-8 text-brand-black">
+                            What is Professional Cabinet Refinishing?
+                        </h2>
+                        <div className="bg-brand-gray/30 p-8 md:p-10 rounded-3xl border-l-8 border-brand-green italic">
+                            <p className="text-xl md:text-2xl text-gray-800 leading-relaxed font-medium">
+                                "Professional cabinet refinishing is the technical process of cleaning, sanding, and applying industrial-grade 'bonding' primers and topcoats to existing cabinetry. Unlike standard house painting, cabinet refinishing uses atomized spray technology and heat-resistant enamels to achieve a factory-smooth finish that rivals the durability of brand-new units."
+                            </p>
+                        </div>
+                        
+                        {/* Table of Contents */}
+                        <div className="mt-16 bg-white border border-gray-100 rounded-3xl p-8 shadow-sm">
+                            <h3 className="text-xl font-bold mb-6 flex items-center gap-2">
+                                <BookOpen size={20} className="text-brand-green" /> Table of Contents
+                            </h3>
+                            <div className="grid sm:grid-cols-2 gap-4">
+                                {[
+                                    { label: "The Intelligent Alternative to Remodeling", id: "intelligent" },
+                                    { label: "Durability vs. DIY Solutions", id: "durability" },
+                                    { label: "The 6-Step Factory Process", id: "process" },
+                                    { label: "Cabinet Painting Best Practices", id: "best-practices" },
+                                    { label: "Aftercare & Maintenance", id: "maintenance" },
+                                    { label: "Why Projects Fail", id: "fail" },
+                                    { label: "Frequently Asked Questions", id: "faq" }
+                                ].map((item, i) => (
+                                    <a key={i} href={`#${item.id}`} className="text-brand-green hover:underline font-medium flex items-center gap-2">
+                                        <div className="w-1.5 h-1.5 bg-brand-green rounded-full" /> {item.label}
+                                    </a>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Core Section 1 */}
+            <section id="intelligent" className="py-16 md:py-24 bg-gray-50 scroll-mt-24">
+                <div className="max-w-7xl mx-auto px-4">
+                    <div className="grid lg:grid-cols-2 gap-16 items-center">
+                        <div>
+                            <h2 className="text-3xl md:text-5xl font-poppins font-bold mb-8 text-brand-black">
+                                The Intelligent Alternative to Kitchen Remodeling
+                            </h2>
+                            <div className="space-y-6 text-lg text-gray-600 leading-relaxed">
+                                <p>
+                                    A full kitchen renovation in Spokane can easily exceed $30,000, with cabinets accounting for nearly 40% of that budget. If your cabinet boxes are structurally sound, tearing them out is unnecessary.
+                                </p>
+                                <p>
+                                    Our refinishing service focuses on the "aesthetic shell." By removing the doors and drawer fronts to be sprayed in our controlled facility, and expertly refinishing the boxes in your home, we provide a complete visual transformation with zero demolition.
+                                </p>
+                            </div>
+                        </div>
+                        <div className="relative">
+                            <div className="absolute inset-0 bg-brand-green rounded-[3rem] rotate-3 scale-105 opacity-10" />
+                            <img 
+                                src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&q=80&w=1000" 
+                                alt="Modernized white kitchen cabinets in Spokane home" 
+                                className="relative z-10 rounded-[3rem] shadow-2xl object-cover h-[500px] w-full"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Durability Comparison */}
+            <section id="durability" className="py-16 md:py-24 bg-white scroll-mt-24">
+                <div className="max-w-7xl mx-auto px-4">
+                    <div className="text-center mb-16">
+                        <h2 className="text-3xl md:text-5xl font-poppins font-bold text-brand-black mb-4">Professional Refinishing vs. DIY</h2>
+                        <p className="text-gray-500 max-w-2xl mx-auto">Why industrial coatings outperform hardware store kits every time.</p>
+                    </div>
+                    <div className="grid md:grid-cols-2 gap-8">
+                        <div className="bg-gray-50 p-10 rounded-[2.5rem] border border-gray-100">
+                            <h3 className="text-2xl font-bold mb-6 flex items-center gap-3">
+                                <Info size={28} className="text-gray-400" /> DIY / Amateur Results
+                            </h3>
+                            <ul className="space-y-4">
+                                {[
+                                    "Visible brush and roller marks.",
+                                    "Latex paint that feels 'gummy' or sticky.",
+                                    "Peeling around handles due to improper degreasing.",
+                                    "Finish chips after minimal impact.",
+                                    "Standard primers that won't stick to factory clear coats."
+                                ].map((item, i) => (
+                                    <li key={i} className="flex gap-3 text-gray-500 line-through decoration-red-400/50">
+                                        <AlertTriangle size={18} className="shrink-0 mt-1" /> {item}
+                                    </li>
+                                ))}
                             </ul>
                         </div>
-                        <div className="lg:w-1/2 w-full relative">
-                            <div className="absolute inset-0 bg-brand-green rounded-[2.5rem] rotate-3 scale-105 opacity-10" />
-                            <img src="/finish.png" alt="Before and after cabinet painting transformation in Spokane WA" className="relative z-10 rounded-[2.5rem] shadow-2xl object-cover w-full h-[600px]" />
+                        <div className="bg-brand-black p-10 rounded-[2.5rem] text-white ring-4 ring-brand-green/20">
+                            <h3 className="text-2xl font-bold mb-6 flex items-center gap-3">
+                                <Sparkles size={28} className="text-brand-green" /> Prestige Factory Finish
+                            </h3>
+                            <ul className="space-y-4">
+                                {[
+                                    "HVLP-atomized spray for a glass-smooth surface.",
+                                    "Industrial urethane enamels that cure rock-hard.",
+                                    "Chemical degreasing ensures a permanent bond.",
+                                    "High-build primers that mask heavy wood grain.",
+                                    "Heat-resistant coatings that won't yellow over time."
+                                ].map((item, i) => (
+                                    <li key={i} className="flex gap-3 text-brand-green">
+                                        <CheckCircle size={18} className="shrink-0 mt-1" /> <span className="text-gray-300">{item}</span>
+                                    </li>
+                                ))}
+                            </ul>
                         </div>
                     </div>
                 </div>
             </section>
 
-            {/* THE PROCESS (Detailed for SEO semantics) */}
-            <section className="py-20 md:py-28 bg-brand-black text-white relative overflow-hidden">
-                <div className="max-w-7xl mx-auto px-4 relative z-10">
+            {/* The Process Section */}
+            <section id="process" className="py-16 md:py-24 bg-brand-black text-white scroll-mt-24">
+                <div className="max-w-7xl mx-auto px-4">
                     <div className="text-center mb-16">
-                        <h2 className="text-brand-green font-bold tracking-widest text-sm mb-4 uppercase">Our Signature System</h2>
-                        <h3 className="text-3xl md:text-5xl font-poppins font-bold mb-6">The "Factory Finish" Painting Process</h3>
-                        <p className="text-gray-400 text-lg md:text-xl max-w-3xl mx-auto">We engineer our cabinet surfaces to withstand Spokane's toughest kitchens. Here is exactly how we deliver a finish that refuses to chip.</p>
+                        <h2 className="text-brand-green font-bold tracking-widest text-sm mb-4 uppercase">The Signature System</h2>
+                        <h3 className="text-4xl md:text-5xl font-poppins font-bold mb-6">Our 6-Step Cabinet Refinishing Process</h3>
+                        <p className="text-gray-400 max-w-2xl mx-auto">Engineered to withstand the high-use environment of a Spokane kitchen.</p>
                     </div>
                     
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {[
-                            { step: "01", title: "Site Prep & Dismantling", desc: "We protect your counters and floors with heavy duty masking. Doors, drawers, and hardware are meticulously labeled, removed, and transported to our controlled spray facility." },
-                            { step: "02", title: "Heavy Degreasing", desc: "Even clean-looking kitchens hover microscopic cooking oils. We scrub every inch of wood with industrial degreasers to ensure paint adhesion." },
-                            { step: "03", title: "Dustless Sanding", desc: "We mechanically sand the clear coat off the original wood using HEPA-filtered dustless systems to open the wood grain without filling your home with dust." },
-                            { step: "04", title: "High-Adhesion Priming", desc: "We spray premium, stain-blocking bonding primers. Once cured, we fine-sand the primer layer to create an ultra-smooth, glassy canvas." },
-                            { step: "05", title: "HVLP Topcoat Application", desc: "We apply two perfectly atomized coats of premium cabinet enamel (like Sherwin Williams Emerald Urethane) using professional HVLP spray stations for zero brush strokes." },
-                            { step: "06", title: "Reassembly & Alignment", desc: "Once cured, we carefully transport components back, re-hang doors, install new hardware (optional), align hinges, and perform our final quality walkthrough." },
-                        ].map((item, idx) => (
-                            <div key={idx} className="p-8 rounded-[2rem] bg-white/5 border border-white/10 hover:border-brand-green hover:bg-white/10 transition-all duration-300">
-                                <div className="text-brand-green font-poppins font-bold text-5xl mb-6 opacity-80">{item.step}</div>
-                                <h4 className="font-poppins font-bold text-2xl mb-4">{item.title}</h4>
-                                <p className="text-gray-400 text-base leading-relaxed">{item.desc}</p>
+                        {steps.map((step, i) => (
+                            <div key={i} className="bg-white/5 border border-white/10 p-8 rounded-3xl relative overflow-hidden group hover:border-brand-green/50 transition-all">
+                                <div className="text-brand-green font-poppins font-bold text-5xl opacity-20 mb-4">{i + 1}</div>
+                                <h4 className="text-xl font-bold mb-4 text-white">{step.title}</h4>
+                                <p className="text-gray-400 mb-6 text-sm leading-relaxed">{step.desc}</p>
+                                
+                                <div className="space-y-4 pt-4 border-t border-white/10">
+                                    <div className="flex gap-3 text-xs">
+                                        <Star size={14} className="text-brand-green shrink-0 mt-0.5" />
+                                        <p className="italic text-gray-300"><span className="font-bold text-brand-green not-italic uppercase tracking-tighter">Pro Tip:</span> {step.proTip}</p>
+                                    </div>
+                                    <div className="flex gap-3 text-xs">
+                                        <AlertTriangle size={14} className="text-red-400 shrink-0 mt-0.5" />
+                                        <p className="italic text-gray-300"><span className="font-bold text-red-400 not-italic uppercase tracking-tighter">Pitfall:</span> {step.pitfall}</p>
+                                    </div>
+                                </div>
                             </div>
                         ))}
                     </div>
                 </div>
             </section>
 
-            {/* TRUST SIGNALS & LOCAL INTENT */}
-            <section className="py-20 md:py-24 bg-gray-50 border-y border-gray-200">
+            {/* Best Practices */}
+            <section id="best-practices" className="py-16 md:py-24 bg-white scroll-mt-24">
                 <div className="max-w-7xl mx-auto px-4">
-                    <div className="text-center mb-16">
-                        <h2 className="text-brand-green font-bold tracking-widest text-sm mb-4 uppercase">Why Local Matters</h2>
-                        <h3 className="text-3xl md:text-5xl font-poppins font-bold mb-6 text-brand-black">Spokane's Climate Demands Better Paint</h3>
-                    </div>
-
-                    <div className="grid md:grid-cols-3 gap-8">
-                        <div className="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:-translate-y-2 transition-transform h-full">
-                            <div className="w-16 h-16 bg-brand-green/10 rounded-2xl flex items-center justify-center text-brand-green mb-6"><DollarSign size={32} /></div>
-                            <h4 className="text-xl font-bold mb-4 text-brand-black">The Cost Blueprint</h4>
-                            <ul className="space-y-3 mb-4 text-gray-600">
-                                <li className="flex justify-between border-b border-gray-100 pb-2"><span>Replace:</span> <strong>$20,000+</strong></li>
-                                <li className="flex justify-between border-b border-gray-100 pb-2"><span>Reface:</span> <strong>$8,000 - $12,000</strong></li>
-                                <li className="flex justify-between border-b border-gray-100 pb-2"><span>Refinish:</span> <strong>Highest ROI</strong></li>
-                            </ul>
-                            <p className="text-gray-600 text-sm leading-relaxed">Our professional refinishing costs a fraction of replacing while delivering an identical aesthetic update.</p>
-                        </div>
-                        <div className="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:-translate-y-2 transition-transform">
-                            <div className="w-16 h-16 bg-brand-green/10 rounded-2xl flex items-center justify-center text-brand-green mb-6"><ThermometerSun size={32} /></div>
-                            <h4 className="text-xl font-bold mb-3 text-brand-black">Inland Northwest Shifts</h4>
-                            <p className="text-gray-600 leading-relaxed">Spokane's dry summers and freezing winters cause severe expansion in wood joints. We strategically utilize highly cross-linked, flexible enamels that stretch with your wood—preventing the cracking common with cheap paints.</p>
-                        </div>
-                        <div className="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:-translate-y-2 transition-transform">
-                            <div className="w-16 h-16 bg-brand-green/10 rounded-2xl flex items-center justify-center text-brand-green mb-6"><Shield size={32} /></div>
-                            <h4 className="text-xl font-bold mb-3 text-brand-black">Locally Guaranteed</h4>
-                            <p className="text-gray-600 leading-relaxed">As local contractors, we aren't flying out after the job. We are fully licensed & bonded in Washington State. Our reputation in neighborhoods from South Hill to Liberty Lake rides on delivering flawlessly painted cabinets that last.</p>
+                    <div className="max-w-4xl mx-auto">
+                        <h2 className="text-3xl md:text-5xl font-poppins font-bold mb-10 text-brand-black">Cabinet Refinishing Best Practices</h2>
+                        <div className="space-y-8">
+                            <div className="flex gap-6">
+                                <div className="w-12 h-12 bg-brand-green/10 rounded-2xl flex items-center justify-center text-brand-green shrink-0">
+                                    <Info size={24} />
+                                </div>
+                                <div>
+                                    <h4 className="text-xl font-bold mb-2">The 'Bite' Test</h4>
+                                    <p className="text-gray-600 leading-relaxed">
+                                        We perform an adhesion test on a small interior area before the full spray. This ensures the primer 'bites' into the existing factory clear coat, preventing future peeling.
+                                    </p>
+                                </div>
+                            </div>
+                            <div className="flex gap-6">
+                                <div className="w-12 h-12 bg-brand-green/10 rounded-2xl flex items-center justify-center text-brand-green shrink-0">
+                                    <DollarSign size={24} />
+                                </div>
+                                <div>
+                                    <h4 className="text-xl font-bold mb-2">Hardware Upgrade Opportunity</h4>
+                                    <p className="text-gray-600 leading-relaxed">
+                                        Refinishing is the perfect time to upgrade to larger pulls or modern handles. We can fill existing screw holes before painting to allow for a completely new hardware layout.
+                                    </p>
+                                </div>
+                            </div>
+                            <div className="bg-brand-gray/50 border-l-4 border-brand-green p-8 rounded-r-3xl">
+                                <h4 className="font-bold text-brand-black mb-2 flex items-center gap-2 uppercase tracking-widest text-sm">
+                                    <User size={18} className="text-brand-green" /> Expert Insight
+                                </h4>
+                                <p className="text-gray-700 italic font-medium leading-relaxed">
+                                    "The most critical 5 minutes of any cabinet job is the initial degreasing. If there is a single microscopic oil print near a handle, the paint will eventually chip. We treat cleaning as the most important phase of our system." — {ownerName}, Founder
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            {/* FAQ SECTION - SEO OPTIMIZED */}
-            <section className="py-20 md:py-28 bg-white">
+            {/* Maintenance Checklist */}
+            <section id="maintenance" className="py-16 md:py-24 bg-gray-50 scroll-mt-24">
+                <div className="max-w-3xl mx-auto px-4">
+                    <div className="bg-white rounded-[2.5rem] p-8 md:p-12 shadow-sm border border-gray-100">
+                        <h3 className="text-2xl font-bold mb-8 flex items-center gap-2">
+                            <CheckSquare size={28} className="text-brand-green" /> Cabinet Care Checklist
+                        </h3>
+                        <div className="space-y-6">
+                            {[
+                                "Avoid using abrasive sponges or harsh chemicals; use mild dish soap.",
+                                "Wipe away steam or water droplets from cabinets above the stove or dishwasher.",
+                                "Allow 30 days for the finish to reach its full industrial cure before heavy cleaning.",
+                                "Keep cabinet handle screws tight to prevent wiggling and surface scratches.",
+                                "Immediately dry any accidental spills to prevent moisture from sitting on the finish."
+                            ].map((item, i) => (
+                                <div key={i} className="flex gap-4">
+                                    <div className="w-6 h-6 rounded-full bg-brand-green/10 flex items-center justify-center shrink-0 mt-0.5">
+                                        <div className="w-2 h-2 bg-brand-green rounded-full" />
+                                    </div>
+                                    <p className="text-gray-600 font-medium">{item}</p>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Why Projects Fail */}
+            <section id="fail" className="py-16 md:py-24 bg-white scroll-mt-24">
+                <div className="max-w-7xl mx-auto px-4">
+                    <h2 className="text-3xl md:text-5xl font-poppins font-bold mb-12 text-center text-brand-black">Why Most Cabinet Paint Jobs Fail</h2>
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        {[
+                            { m: "Poor Degreasing", s: "Cooking oils are invisible. If not removed with industrial degreasers, they cause 'fisheyes' and peeling." },
+                            { m: "The Wrong Primer", s: "Standard latex primer is too soft. We only use high-adhesion shellac or urethane primers." },
+                            { m: "Over-Applying Paint", s: "Thick coats sag and remain soft for weeks. We spray multiple thin, atomized layers for a hard shell." },
+                            { m: "No Sanding Between Coats", s: "For a factory finish, the primer must be fine-sanded to a glass-smooth state before the topcoat." },
+                            { m: "Inadequate Curing Time", s: "Re-hanging doors while the paint is 'sticky' causes permanent damage to the edges." }
+                        ].map((item, i) => (
+                            <div key={i} className="bg-white p-8 rounded-[2rem] shadow-sm border border-red-100 relative group overflow-hidden">
+                                <h4 className="text-xl font-bold mb-4 text-brand-black flex items-center gap-2">
+                                    <AlertTriangle size={20} className="text-red-500" /> {item.m}
+                                </h4>
+                                <p className="text-gray-600 text-sm leading-relaxed"><span className="font-bold text-brand-green">The Fix:</span> {item.s}</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* FAQ Section */}
+            <section id="faq" className="py-16 md:py-24 bg-gray-50 scroll-mt-24">
                 <div className="max-w-4xl mx-auto px-4">
                     <div className="text-center mb-16">
-                        <h2 className="text-3xl md:text-5xl font-poppins font-bold mb-6 text-brand-black">Cabinet Painting FAQ</h2>
+                        <h2 className="text-3xl md:text-5xl font-poppins font-bold mb-4">Frequently Asked Questions</h2>
                         <div className="h-1.5 w-20 bg-brand-green mx-auto rounded-full" />
-                        <p className="text-gray-500 text-lg mt-6">Expert answers about kitchen cabinet refinishing in Spokane.</p>
                     </div>
-                    
-                    <div className="space-y-6">
+                    <div className="space-y-4">
                         {faqs.map((faq, idx) => (
-                            <div key={idx} className="bg-white p-6 md:p-8 border border-gray-200 rounded-[2rem] hover:border-brand-green/50 hover:shadow-lg transition-all duration-300">
-                                <h4 className="font-poppins font-bold text-xl md:text-2xl text-brand-black mb-4">{faq.q}</h4>
-                                <p className="text-gray-600 text-lg leading-relaxed">{faq.a}</p>
+                            <div key={idx} className="p-6 md:p-8 border border-gray-100 rounded-3xl hover:border-brand-green transition-all bg-white group shadow-sm">
+                                <h3 className="font-poppins font-bold text-xl mb-4 text-brand-black group-hover:text-brand-green transition-colors">{faq.q}</h3>
+                                <p className="text-gray-600 leading-relaxed font-medium">{faq.a}</p>
                             </div>
                         ))}
                     </div>
                 </div>
             </section>
 
-            {/* HIGH CONVERSION CTA */}
-            <section className="py-20 md:py-28 bg-brand-gray/30">
+            {/* Final CTA */}
+            <section className="py-20 bg-white">
                 <div className="max-w-7xl mx-auto px-4">
-                    <div className="bg-brand-black rounded-[3rem] p-8 md:p-20 text-center relative overflow-hidden shadow-2xl">
-                        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIgZmlsbD0iIzQ4ZGU4MCIgZmlsbC1vcGFjaXR5PSIwLjEiLz48L3N2Zz4=')] opacity-30" />
-                        <div className="absolute bottom-0 left-0 w-96 h-96 bg-brand-green/20 blur-[120px] pointer-events-none" />
-                        <div className="absolute top-0 right-0 w-96 h-96 bg-brand-green/20 blur-[120px] pointer-events-none" />
-                        
+                    <div className="bg-brand-black rounded-[3rem] p-12 md:p-20 text-center relative overflow-hidden">
+                        <div className="absolute bottom-0 left-0 w-96 h-96 bg-brand-green/10 blur-[120px]" />
+                        <div className="absolute top-0 right-0 w-96 h-96 bg-brand-green/10 blur-[120px]" />
                         <div className="relative z-10">
-                            <h2 className="text-4xl md:text-6xl font-poppins font-bold text-white mb-6">Lock in Your <span className="text-brand-green">Dream Kitchen</span></h2>
-                            <p className="text-gray-300 text-xl mb-12 max-w-2xl mx-auto font-medium">Ready to see how much you could save? Get a free, no-obligation estimate from Spokane's top-rated cabinet painting contractors today.</p>
+                            <h2 className="text-3xl md:text-5xl lg:text-7xl font-poppins font-bold text-white mb-8">
+                                Transform Your Kitchen Today
+                            </h2>
+                            <p className="text-gray-400 text-xl font-medium mb-12 max-w-2xl mx-auto leading-relaxed">
+                                Why wait for a massive renovation? Get a factory-grade kitchen transformation in less than a week.
+                            </p>
                             <div className="flex flex-col sm:flex-row justify-center gap-6">
-                                <a href={`tel:${phoneNumber}`} className="bg-brand-green hover:bg-green-600 text-white px-12 py-5 rounded-2xl font-bold text-xl transition-all hover:scale-105 shadow-xl shadow-green-500/30 flex items-center justify-center gap-3"><Phone size={24} /> {phoneNumber}</a>
-                                <a href={`mailto:${email}`} className="bg-white/10 hover:bg-white/20 text-white px-12 py-5 rounded-2xl font-bold text-xl transition-all border border-white/20 flex items-center justify-center gap-3"><Mail size={24} /> GET PRICING</a>
+                                <a href={`tel:${phoneNumber}`} className="bg-brand-green hover:bg-green-600 text-white px-12 py-6 rounded-2xl font-extrabold text-2xl transition-all hover:scale-105 shadow-2xl shadow-green-500/40">
+                                    {phoneNumber}
+                                </a>
+                                <a href={`mailto:${email}`} className="bg-white/10 hover:bg-white/20 text-white px-12 py-6 rounded-2xl font-bold text-2xl backdrop-blur-md transition-all border border-white/20">
+                                    GET CABINET PRICING
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            {/* Areas We Serve Footer */}
-            <section className="py-12 bg-white">
-                <div className="max-w-7xl mx-auto px-4 text-center">
-                    <h3 className="text-sm font-bold tracking-widest text-gray-400 mb-6 uppercase">Local Service Areas</h3>
-                    <div className="flex flex-wrap justify-center gap-3">
-                        <Link to="/painting-spokane-valley" className="px-5 py-2.5 bg-gray-50 border border-gray-200 rounded-full text-sm font-semibold text-gray-600 hover:border-brand-green hover:text-brand-green transition-colors">Spokane Valley, WA</Link>
-                        <Link to="/painting-liberty-lake" className="px-5 py-2.5 bg-gray-50 border border-gray-200 rounded-full text-sm font-semibold text-gray-600 hover:border-brand-green hover:text-brand-green transition-colors">Liberty Lake, WA</Link>
-                        <Link to="/painting-airway-heights" className="px-5 py-2.5 bg-gray-50 border border-gray-200 rounded-full text-sm font-semibold text-gray-600 hover:border-brand-green hover:text-brand-green transition-colors">Airway Heights, WA</Link>
-                        <Link to="/painting-cheney" className="px-5 py-2.5 bg-gray-50 border border-gray-200 rounded-full text-sm font-semibold text-gray-600 hover:border-brand-green hover:text-brand-green transition-colors">Cheney, WA</Link>
-                        <Link to="/painting-deer-park" className="px-5 py-2.5 bg-gray-50 border border-gray-200 rounded-full text-sm font-semibold text-gray-600 hover:border-brand-green hover:text-brand-green transition-colors">Deer Park, WA</Link>
+            {/* E-E-A-T Section */}
+            <section className="py-20 bg-white border-t border-gray-100">
+                <div className="max-w-4xl mx-auto px-4 text-center md:text-left">
+                    <div className="bg-gray-50 p-8 md:p-12 rounded-[2.5rem] flex flex-col md:flex-row items-center gap-10">
+                        <div className="w-40 h-40 shrink-0 relative">
+                            <img src="/robert.jpg" alt={ownerName} className="rounded-full w-full h-full object-cover relative z-10 border-4 border-white shadow-xl" />
+                        </div>
+                        <div>
+                            <p className="text-brand-green font-bold text-sm uppercase tracking-widest mb-2">Expert Review By</p>
+                            <h3 className="text-3xl font-poppins font-bold mb-4">{ownerName}</h3>
+                            <p className="text-gray-600 leading-relaxed mb-6 font-medium">
+                                Robert specializes in high-end cabinet refinishing, utilizing HVLP spray technology to deliver factory-level results for Spokane homeowners seeking a premium kitchen transformation.
+                            </p>
+                            <div className="flex items-center justify-center md:justify-start gap-4 text-xs text-gray-400 font-bold uppercase tracking-tighter">
+                                <p>Updated: April 2026</p>
+                                <div className="w-1 h-1 bg-gray-300 rounded-full" />
+                                <p>Prestige Custom Painting LLC</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
-
-            {/* Mobile Footer CTA */}
-            <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-white/95 backdrop-blur-md border-t border-gray-100 p-4 flex gap-4 shadow-[0_-10px_30px_rgba(0,0,0,0.05)]">
-                <a href={`tel:${phoneNumber}`} className="flex-1 bg-brand-black text-white py-4 rounded-xl font-bold flex items-center justify-center gap-2"><Phone size={20} className="text-brand-green" /> CALL</a>
-                <a href={`mailto:${email}`} className="flex-1 bg-brand-green text-white py-4 rounded-xl font-bold flex items-center justify-center gap-2"><Mail size={20} /> QUOTE</a>
-            </div>
 
             <Footer />
         </div>

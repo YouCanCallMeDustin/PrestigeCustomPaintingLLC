@@ -1,0 +1,1 @@
+src/pages/CabinetPaintingPage.tsx(1,65): error TS6133: 'Sparkles' is declared but its value is never read.

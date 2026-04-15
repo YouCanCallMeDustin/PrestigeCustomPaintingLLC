@@ -38,6 +38,7 @@ import TestimonialsPage from './pages/TestimonialsPage.tsx'
 import FaqPage from './pages/FaqPage.tsx'
 import ColorConsultationPage from './pages/ColorConsultationPage.tsx'
 import ServiceAreaPage from './pages/ServiceAreaPage.tsx'
+import DynamicAreaPage from './pages/DynamicAreaPage.tsx'
 import './index.css'
 import { initGA } from './lib/analytics'
 import PageTracker from './components/PageTracker'
@@ -91,7 +92,10 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
                 <Route path="/faq" element={<FaqPage />} />
                 <Route path="/color-consultation" element={<ColorConsultationPage />} />
                 <Route path="/service-area" element={<ServiceAreaPage />} />
+                
+                {/* Catch-all for Dynamic Area Pages (painting-*) */}
+                <Route path="/:fullSlug" element={<DynamicAreaPage />} />
             </Routes>
         </BrowserRouter>
-    </React.StrictMode>,
+    </React.StrictMode>
 )
