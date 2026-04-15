@@ -3,6 +3,7 @@ import BlogPost from '../BlogPost';
 export default function BlogPricingSpokane() {
     return (
         <BlogPost
+            path="/blog/cost-to-paint-house-spokane"
             title="How Much Does It Cost to Paint a House in Spokane?"
             date="March 10, 2026"
             readTime="8 MIN"

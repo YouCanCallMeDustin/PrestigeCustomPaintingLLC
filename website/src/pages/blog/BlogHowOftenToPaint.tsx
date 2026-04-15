@@ -3,6 +3,7 @@ import BlogPost from '../BlogPost';
 export default function BlogHowOftenToPaint() {
     return (
         <BlogPost
+            path="/blog/how-often-to-paint-house-spokane"
             title="How Often Should You Paint a House in Spokane WA?"
             date="March 10, 2026"
             readTime="7 MIN"

@@ -2,8 +2,10 @@ import { Phone, Mail, Clock, ArrowLeft, Share2, Facebook, Twitter, Linkedin } fr
 import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
 import { SITE_INFO } from '../lib/constants';
-import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
+import { injectPageSEO } from '../lib/seo';
+import { generateArticleSchema, generateBreadcrumbSchema } from '../lib/schemaGenerator';
 
 export interface BlogSection {
     heading: string;
@@ -19,6 +21,8 @@ export interface BlogPostProps {
     metaDesc: string;
     intro: string;
     sections: BlogSection[];
+    path: string;
+    image?: string;
 }
 
 export default function BlogPost({
@@ -30,15 +34,40 @@ export default function BlogPost({
     metaDesc,
     intro,
     sections,
+    path,
+    image = "https://prestigecustompaintingllc.com/logo.png"
 }: BlogPostProps) {
     const { phoneNumber, email } = SITE_INFO;
 
     useEffect(() => {
-        document.title = metaTitle;
-        const meta = document.querySelector('meta[name="description"]');
-        if (meta) meta.setAttribute('content', metaDesc);
-        window.scrollTo(0, 0);
-    }, [metaTitle, metaDesc]);
+        const articleSchema = generateArticleSchema({
+            title,
+            description: metaDesc,
+            image,
+            datePublished: date,
+            dateModified: date,
+            authorName: "Prestige Painting Team",
+            url: `https://prestigecustompaintingllc.com${path}`
+        });
+
+        const breadcrumbSchema = generateBreadcrumbSchema([
+            { name: 'Home', path: '/' },
+            { name: 'Blog', path: '/blog' },
+            { name: title, path: path }
+        ]);
+
+        const cleanup = injectPageSEO({
+            title: metaTitle,
+            description: metaDesc,
+            path: path,
+            schemas: [
+                { id: 'article-schema', data: articleSchema },
+                { id: 'breadcrumb-schema', data: breadcrumbSchema }
+            ]
+        });
+
+        return cleanup;
+    }, [metaTitle, metaDesc, title, date, path, image]);
 
     return (
         <div className="min-h-screen bg-white text-brand-black selection:bg-brand-green selection:text-white pb-20 md:pb-0 font-poppins">

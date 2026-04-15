@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
 import { SITE_INFO } from '../lib/constants';
 import { injectPageSEO } from '../lib/seo';
-import { generateWebPageSchema } from '../lib/schemaGenerator';
+import { generateWebPageSchema, generateBreadcrumbSchema, generateHowToSchema } from '../lib/schemaGenerator';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 
@@ -36,28 +36,6 @@ function CommercialPaintingPage() {
             a: "Every commercial project is assigned a dedicated site lead who coordinates daily with your facility manager. We provide regular progress reports and maintain a strict timeline to ensure zero project 'creep'."
         }
     ];
-
-    useEffect(() => {
-        const title = "Commercial Painting Spokane | Professional Business & Facility Painters";
-        const description = "Spokane's leading commercial painting contractors. High-performance coatings, flexible scheduling, and professional facility restoration. Free estimates!";
-
-        return injectPageSEO({
-            title,
-            description,
-            path: '/commercial-painting-spokane',
-            schemas: [
-                { id: 'faq', data: { "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": faqs.map(f => ({ "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } })) } },
-                {
-                    id: 'webpage',
-                    data: generateWebPageSchema({
-                        title,
-                        description,
-                        url: "https://prestigecustompaintingllc.com/commercial-painting-spokane"
-                    })
-                }
-            ]
-        });
-    }, []);
 
     const steps = [
         {
@@ -97,6 +75,45 @@ function CommercialPaintingPage() {
             pitfall: "Completing the project without a signed-off walkthrough. Commercial projects need documented approval."
         }
     ];
+
+    useEffect(() => {
+        const title = "Commercial Painting Spokane | Professional Business & Facility Painters";
+        const description = "Spokane's leading commercial painting contractors. High-performance coatings, flexible scheduling, and professional facility restoration. Free estimates!";
+
+        return injectPageSEO({
+            title,
+            description,
+            path: '/commercial-painting-spokane',
+            schemas: [
+                { id: 'faq', data: { "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": faqs.map(f => ({ "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } })) } },
+                {
+                    id: 'webpage',
+                    data: generateWebPageSchema({
+                        title,
+                        description,
+                        url: "https://prestigecustompaintingllc.com/commercial-painting-spokane"
+                    })
+                },
+                {
+                    id: 'breadcrumb',
+                    data: generateBreadcrumbSchema([
+                        { name: "Home", path: "/" },
+                        { name: "Commercial Painting", path: "/commercial-painting-spokane" }
+                    ])
+                },
+                {
+                    id: 'howto',
+                    data: generateHowToSchema({
+                        name: "Commercial Painting Optimization Process",
+                        description: "Our 6-step commercial facility painting system.",
+                        steps: steps.map(s => ({ name: s.title, text: s.desc }))
+                    })
+                }
+            ]
+        });
+    }, []);
+
+
 
     return (
         <div className="min-h-screen bg-white text-brand-black selection:bg-brand-green selection:text-white pb-20 md:pb-0">

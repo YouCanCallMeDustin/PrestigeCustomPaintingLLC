@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
 import { SITE_INFO } from '../lib/constants';
 import { injectPageSEO } from '../lib/seo';
-import { generateWebPageSchema } from '../lib/schemaGenerator';
+import { generateWebPageSchema, generateBreadcrumbSchema, generateHowToSchema } from '../lib/schemaGenerator';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 
@@ -36,28 +36,6 @@ function HousePaintersPage() {
             a: "We perform a daily site cleanup. All tools are stored neatly, and drop cloths are folded. We treat your home with the same respect we would our own, ensuring your living space remains functional."
         }
     ];
-
-    useEffect(() => {
-        const title = "House Painters Spokane | Professional Interior & Exterior Residential Painting";
-        const description = "Spokane's most trusted house painters. High-quality finishes, precision detail, and durable protection for your home. Free estimates!";
-        
-        return injectPageSEO({
-            title,
-            description,
-            path: '/house-painters-spokane',
-            schemas: [
-                { id: 'faq', data: { "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": faqs.map(f => ({ "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } })) } },
-                {
-                    id: 'webpage',
-                    data: generateWebPageSchema({
-                        title,
-                        description,
-                        url: "https://prestigecustompaintingllc.com/house-painters-spokane"
-                    })
-                }
-            ]
-        });
-    }, []);
 
     const steps = [
         {
@@ -97,6 +75,45 @@ function HousePaintersPage() {
             pitfall: "Accepting a job before the final walk-through. A professional contractor always demands your 100% sign-off."
         }
     ];
+
+    useEffect(() => {
+        const title = "House Painters Spokane | Professional Interior & Exterior Residential Painting";
+        const description = "Spokane's most trusted house painters. High-quality finishes, precision detail, and durable protection for your home. Free estimates!";
+        
+        return injectPageSEO({
+            title,
+            description,
+            path: '/house-painters-spokane',
+            schemas: [
+                { id: 'faq', data: { "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": faqs.map(f => ({ "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } })) } },
+                {
+                    id: 'webpage',
+                    data: generateWebPageSchema({
+                        title,
+                        description,
+                        url: "https://prestigecustompaintingllc.com/house-painters-spokane"
+                    })
+                },
+                {
+                    id: 'breadcrumb',
+                    data: generateBreadcrumbSchema([
+                        { name: "Home", path: "/" },
+                        { name: "House Painters", path: "/house-painters-spokane" }
+                    ])
+                },
+                {
+                    id: 'howto',
+                    data: generateHowToSchema({
+                        name: "Professional House Painting Process",
+                        description: "Our comprehensive 6-step interior and exterior painting process.",
+                        steps: steps.map(s => ({ name: s.title, text: s.desc }))
+                    })
+                }
+            ]
+        });
+    }, []);
+
+
 
     return (
         <div className="min-h-screen bg-white text-brand-black selection:bg-brand-green selection:text-white pb-20 md:pb-0">

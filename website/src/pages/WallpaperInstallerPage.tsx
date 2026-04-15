@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
 import { SITE_INFO } from '../lib/constants';
 import { injectPageSEO } from '../lib/seo';
-import { generateWebPageSchema } from '../lib/schemaGenerator';
+import { generateWebPageSchema, generateBreadcrumbSchema, generateHowToSchema } from '../lib/schemaGenerator';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 
@@ -32,28 +32,6 @@ function WallpaperInstallerPage() {
             a: "We install all varieties, including traditional paper, non-woven, vinyl-coated, grasscloth, fabric, and custom-printed large-scale murals."
         }
     ];
-
-    useEffect(() => {
-        const title = "Wallpaper Installer Spokane | Professional Removal & Hanging Services";
-        const description = "Spokane's expert wallpaper installers. Precision removal, wall preparation, and perfect pattern matching. High-quality finishes. Free estimates!";
-
-        return injectPageSEO({
-            title,
-            description,
-            path: '/wallpaper-installer-spokane',
-            schemas: [
-                { id: 'faq', data: { "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": faqs.map(f => ({ "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } })) } },
-                {
-                    id: 'webpage',
-                    data: generateWebPageSchema({
-                        title,
-                        description,
-                        url: "https://prestigecustompaintingllc.com/wallpaper-installer-spokane"
-                    })
-                }
-            ]
-        });
-    }, []);
 
     const steps = [
         {
@@ -93,6 +71,45 @@ function WallpaperInstallerPage() {
             pitfall: "Over-stretching the paper during installation. As it dries, it will shrink back and leave visible gaps between panels."
         }
     ];
+
+    useEffect(() => {
+        const title = "Wallpaper Installer Spokane | Professional Removal & Hanging Services";
+        const description = "Spokane's expert wallpaper installers. Precision removal, wall preparation, and perfect pattern matching. High-quality finishes. Free estimates!";
+
+        return injectPageSEO({
+            title,
+            description,
+            path: '/wallpaper-installer-spokane',
+            schemas: [
+                { id: 'faq', data: { "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": faqs.map(f => ({ "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } })) } },
+                {
+                    id: 'webpage',
+                    data: generateWebPageSchema({
+                        title,
+                        description,
+                        url: "https://prestigecustompaintingllc.com/wallpaper-installer-spokane"
+                    })
+                },
+                {
+                    id: 'breadcrumb',
+                    data: generateBreadcrumbSchema([
+                        { name: "Home", path: "/" },
+                        { name: "Wallpaper Installer", path: "/wallpaper-installer-spokane" }
+                    ])
+                },
+                {
+                    id: 'howto',
+                    data: generateHowToSchema({
+                        name: "Professional Wallpaper Installation Process",
+                        description: "Our 6-step precision system for wallpaper installation.",
+                        steps: steps.map(s => ({ name: s.title, text: s.desc }))
+                    })
+                }
+            ]
+        });
+    }, []);
+
+
 
     return (
         <div className="min-min-h-screen bg-white text-brand-black selection:bg-brand-green selection:text-white pb-20 md:pb-0 font-sans">

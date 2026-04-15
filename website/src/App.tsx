@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { SITE_INFO } from './lib/constants';
 import { injectPageSEO } from './lib/seo';
-import { generateWebPageSchema, generateLocalBusinessSchema } from './lib/schemaGenerator';
+import { generateWebPageSchema, generateLocalBusinessSchema, generateFAQSchema, generateBreadcrumbSchema } from './lib/schemaGenerator';
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
 
@@ -52,9 +52,6 @@ function App() {
     useEffect(() => {
         const title = "Top-Rated Painters in Spokane WA | Free Estimates | Prestige Custom Painting";
         const description = "Looking for top-rated house painters in Spokane, WA? Prestige Custom Painting offers premium interior, exterior, and cabinet painting. Fully Licensed, Bonded, and Insured. Includes satisfaction warranty. Free estimates!";
-        document.title = title;
-        const descMeta = document.querySelector('meta[name="description"]');
-        if (descMeta) descMeta.setAttribute('content', description);
         
         return injectPageSEO({
             title,
@@ -72,6 +69,19 @@ function App() {
                 {
                     id: 'business',
                     data: generateLocalBusinessSchema()
+                },
+                {
+                    id: 'breadcrumb',
+                    data: generateBreadcrumbSchema([
+                        { name: "Home", path: "/" }
+                    ])
+                },
+                {
+                    id: 'faq',
+                    data: generateFAQSchema([
+                        { question: "How do you handle Spokane's weather?", answer: "We carefully monitor moisture levels and only use premium paints designed for the Inland Northwest's temperature swings." },
+                        { question: "Are you licensed and insured?", answer: "Yes, Prestige Custom Painting LLC is fully licensed, bonded, and insured in Washington State." }
+                    ])
                 }
             ]
         });
@@ -247,10 +257,14 @@ function App() {
 
                         <div className="w-full lg:w-1/2 text-center lg:text-left mt-8 lg:mt-0">
                             <h2 className="text-3xl md:text-4xl font-poppins font-bold mb-6 md:mb-8 text-brand-black">Why Choose Prestige House Painters in Spokane?</h2>
+                            <div className="bg-brand-gray/30 p-6 rounded-2xl border-l-4 border-brand-green mb-8 text-gray-800 font-medium text-left">
+                                <strong>Who is Prestige Custom Painting?</strong><br/>
+                                Prestige Custom Painting LLC is a fully licensed, bonded, and insured professional painting contractor based in Spokane, WA. Founded by {ownerName}, the company specializes in high-end cabinet refinishing, meticulous interior repaints, and weather-resistant exterior coatings engineered for the Inland Northwest.
+                            </div>
                             <p className="text-lg md:text-xl text-gray-600 leading-relaxed mb-8">
                                 As a local <strong>Spokane, WA</strong> painting company, we understand the specific environmental challenges your home faces—from harsh winter snow to scorching summer heat. We don't just "paint" your house; we provide a durable seal that increases curb appeal and home value.
                                 <br /><br />
-                                Our founder, <strong>{ownerName}</strong>, established Prestige Custom Painting LLC to bridge the gap between "standard" painting and "prestige" results. We are <strong>licensed, insured, and 5-star rated</strong> because we prioritize client satisfaction above all else. Whether it's a small interior room or a large-scale commercial property, we bring the same level of focus and professionalism to every brushstroke.
+                                We are <strong>licensed, insured, and 5-star rated</strong> because we prioritize client satisfaction above all else. Whether it's a small interior room or a large-scale commercial property, we bring the same level of focus and professionalism to every brushstroke.
                             </p>
                             <div className="space-y-6 max-w-md mx-auto lg:mx-0 text-left">
                                 <div className="flex gap-4">

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
 import { SITE_INFO } from '../lib/constants';
 import { injectPageSEO } from '../lib/seo';
-import { generateWebPageSchema } from '../lib/schemaGenerator';
+import { generateWebPageSchema, generateBreadcrumbSchema, generateHowToSchema } from '../lib/schemaGenerator';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 
@@ -39,28 +39,6 @@ function InteriorPaintingPage() {
             a: "Absolutely. Cabinet painting and refinishing is one of our specialties in Spokane, involving specialized HVLP sprayers for a factory-smooth finish."
         }
     ];
-
-    useEffect(() => {
-        const title = "Professional Interior Painting Spokane | Prestige Custom Painting";
-        const description = "Top-rated interior painters in Spokane, WA. We specialize in high-end residential painting, cabinet refinishing & modern finishes. Get your free quote today!";
-
-        return injectPageSEO({
-            title,
-            description,
-            path: '/interior-painting-spokane',
-            schemas: [
-                { id: 'faq', data: { "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": faqs.map(f => ({ "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } })) } },
-                {
-                    id: 'webpage',
-                    data: generateWebPageSchema({
-                        title,
-                        description,
-                        url: "https://prestigecustompaintingllc.com/interior-painting-spokane"
-                    })
-                }
-            ]
-        });
-    }, []);
 
     const steps = [
         {
@@ -100,6 +78,45 @@ function InteriorPaintingPage() {
             pitfall: "Leaving the site before the owner does a walkthrough. Client satisfaction is paramount."
         }
     ];
+
+    useEffect(() => {
+        const title = "Professional Interior Painting Spokane | Prestige Custom Painting";
+        const description = "Top-rated interior painters in Spokane, WA. We specialize in high-end residential painting, cabinet refinishing & modern finishes. Get your free quote today!";
+
+        return injectPageSEO({
+            title,
+            description,
+            path: '/interior-painting-spokane',
+            schemas: [
+                { id: 'faq', data: { "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": faqs.map(f => ({ "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } })) } },
+                {
+                    id: 'webpage',
+                    data: generateWebPageSchema({
+                        title,
+                        description,
+                        url: "https://prestigecustompaintingllc.com/interior-painting-spokane"
+                    })
+                },
+                {
+                    id: 'breadcrumb',
+                    data: generateBreadcrumbSchema([
+                        { name: "Home", path: "/" },
+                        { name: "Interior Painting", path: "/interior-painting-spokane" }
+                    ])
+                },
+                {
+                    id: 'howto',
+                    data: generateHowToSchema({
+                        name: "How to Professionally Paint an Interior Room",
+                        description: "The 6-step meticulous preparation and application process we use for flawless interior painting.",
+                        steps: steps.map(s => ({ name: s.title, text: s.desc }))
+                    })
+                }
+            ]
+        });
+    }, []);
+
+
 
     return (
         <div className="min-h-screen bg-white text-brand-black selection:bg-brand-green selection:text-white pb-20 md:pb-0">
@@ -177,7 +194,7 @@ function InteriorPaintingPage() {
                         </h2>
                         <div className="bg-brand-gray/30 p-8 md:p-10 rounded-3xl border-l-8 border-brand-green italic">
                             <p className="text-xl md:text-2xl text-gray-800 leading-relaxed font-medium">
-                                "Professional interior painting is the specialized application of high-performance coatings to internal surfaces—including walls, ceilings, trim, and cabinetry—designed to protect substrates while enhancing aesthetic value. In Spokane’s varied climate, professional application is critical to ensure durability against humidity shifts and seasonal temperature changes."
+                                "Prestige Custom Painting offers top-rated interior painting in Spokane, WA. A professional project includes thorough area protection, drywall patching, precision edge cutting, and the application of low-VOC paints like Benjamin Moore to ensure indoor air quality during the winter months."
                             </p>
                         </div>
 

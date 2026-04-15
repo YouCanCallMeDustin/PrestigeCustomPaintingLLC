@@ -42,6 +42,7 @@ import ServiceAreaPage from './pages/ServiceAreaPage.tsx'
 import DynamicAreaPage from './pages/DynamicAreaPage.tsx'
 import PrivacyPolicyPage from './pages/PrivacyPolicyPage.tsx'
 import TermsOfServicePage from './pages/TermsOfServicePage.tsx'
+import PaintingGlossaryPage from './pages/PaintingGlossaryPage.tsx'
 import './index.css'
 import { initGA } from './lib/analytics'
 import PageTracker from './components/PageTracker'
@@ -98,6 +99,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
                 <Route path="/service-area" element={<ServiceAreaPage />} />
                 <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
                 <Route path="/terms" element={<TermsOfServicePage />} />
+                <Route path="/spokane-painting-glossary" element={<PaintingGlossaryPage />} />
                 
                 {/* Catch-all for Dynamic Area Pages (painting-*) */}
                 <Route path="/:fullSlug" element={<DynamicAreaPage />} />

@@ -16,6 +16,7 @@ export default function Footer() {
         ],
         resources: [
             { label: "Painting Costs", to: "/cost-to-paint-a-house" },
+            { label: "Painting Glossary", to: "/spokane-painting-glossary" },
             { label: "Our Work", to: "/our-work" },
             { label: "Testimonials", to: "/testimonials" },
             { label: "About Us", to: "/about" },

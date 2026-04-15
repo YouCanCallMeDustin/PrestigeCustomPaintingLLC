@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
 import { SITE_INFO } from '../lib/constants';
 import { injectPageSEO } from '../lib/seo';
-import { generateWebPageSchema } from '../lib/schemaGenerator';
+import { generateWebPageSchema, generateBreadcrumbSchema, generateHowToSchema } from '../lib/schemaGenerator';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 
@@ -32,28 +32,6 @@ function PressureWashingPage() {
             a: "For most Spokane properties, an annual wash is ideal to prevent moss and algae from taking hold, especially on the north-facing sides of the home."
         }
     ];
-
-    useEffect(() => {
-        const title = "Pressure Washing Spokane | Professional Exterior Cleaning Services";
-        const description = "Spokane's expert pressure washing services. Professional cleaning for siding, decks, driveways, and masonry. Safe and effective. Free estimates!";
-        
-        return injectPageSEO({
-            title,
-            description,
-            path: '/pressure-washing-spokane',
-            schemas: [
-                { id: 'faq', data: { "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": faqs.map(f => ({ "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } })) } },
-                {
-                    id: 'webpage',
-                    data: generateWebPageSchema({
-                        title,
-                        description,
-                        url: "https://prestigecustompaintingllc.com/pressure-washing-spokane"
-                    })
-                }
-            ]
-        });
-    }, []);
 
     const steps = [
         {
@@ -93,6 +71,45 @@ function PressureWashingPage() {
             pitfall: "Leaving puddles of detergent in the driveway. Dried cleaning agents can leave white hazy streaks that are difficult to remove later."
         }
     ];
+
+    useEffect(() => {
+        const title = "Pressure Washing Spokane | Professional Exterior Cleaning Services";
+        const description = "Spokane's expert pressure washing services. Professional cleaning for siding, decks, driveways, and masonry. Safe and effective. Free estimates!";
+        
+        return injectPageSEO({
+            title,
+            description,
+            path: '/pressure-washing-spokane',
+            schemas: [
+                { id: 'faq', data: { "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": faqs.map(f => ({ "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } })) } },
+                {
+                    id: 'webpage',
+                    data: generateWebPageSchema({
+                        title,
+                        description,
+                        url: "https://prestigecustompaintingllc.com/pressure-washing-spokane"
+                    })
+                },
+                {
+                    id: 'breadcrumb',
+                    data: generateBreadcrumbSchema([
+                        { name: "Home", path: "/" },
+                        { name: "Pressure Washing", path: "/pressure-washing-spokane" }
+                    ])
+                },
+                {
+                    id: 'howto',
+                    data: generateHowToSchema({
+                        name: "Professional Pressure Washing Protocol",
+                        description: "Our 6-step surface system for safe and effective pressure washing.",
+                        steps: steps.map(s => ({ name: s.title, text: s.desc }))
+                    })
+                }
+            ]
+        });
+    }, []);
+
+
 
     return (
         <div className="min-h-screen bg-white text-brand-black selection:bg-brand-green selection:text-white pb-20 md:pb-0 font-sans">

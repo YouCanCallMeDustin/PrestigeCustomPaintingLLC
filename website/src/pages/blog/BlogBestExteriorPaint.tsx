@@ -3,6 +3,7 @@ import BlogPost from '../BlogPost';
 export default function BlogBestExteriorPaint() {
     return (
         <BlogPost
+            path="/blog/best-exterior-paint-spokane"
             title="Best Exterior Paint for Spokane Weather"
             date="March 10, 2026"
             readTime="10 MIN"

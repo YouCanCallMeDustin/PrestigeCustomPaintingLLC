@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
 import { SITE_INFO } from '../lib/constants';
 import { injectPageSEO } from '../lib/seo';
-import { generateWebPageSchema } from '../lib/schemaGenerator';
+import { generateWebPageSchema, generateBreadcrumbSchema, generateHowToSchema } from '../lib/schemaGenerator';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 
@@ -32,28 +32,6 @@ function ColorConsultationPage() {
             a: "Most residential consultations take 60 to 90 minutes. This allows enough time to walk the property, analyze the light, and narrow down the final palette."
         }
     ];
-
-    useEffect(() => {
-        const title = "Color Consultation Spokane | Interior & Exterior Palette Design";
-        const description = "Spokane's expert color consultation services. Professional palette design for interiors and exteriors. Personalize your home's look. Free estimates!";
-        
-        return injectPageSEO({
-            title,
-            description,
-            path: '/color-consultation',
-            schemas: [
-                { id: 'faq', data: { "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": faqs.map(f => ({ "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } })) } },
-                {
-                    id: 'webpage',
-                    data: generateWebPageSchema({
-                        title,
-                        description,
-                        url: "https://prestigecustompaintingllc.com/color-consultation"
-                    })
-                }
-            ]
-        });
-    }, []);
 
     const steps = [
         {
@@ -93,6 +71,45 @@ function ColorConsultationPage() {
             pitfall: "Relying on 'color names' alone. Different brands use the same names for different hues; always use the specific four-digit paint code."
         }
     ];
+
+    useEffect(() => {
+        const title = "Color Consultation Spokane | Interior & Exterior Palette Design";
+        const description = "Spokane's expert color consultation services. Professional palette design for interiors and exteriors. Personalize your home's look. Free estimates!";
+        
+        return injectPageSEO({
+            title,
+            description,
+            path: '/color-consultation',
+            schemas: [
+                { id: 'faq', data: { "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": faqs.map(f => ({ "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } })) } },
+                {
+                    id: 'webpage',
+                    data: generateWebPageSchema({
+                        title,
+                        description,
+                        url: "https://prestigecustompaintingllc.com/color-consultation"
+                    })
+                },
+                {
+                    id: 'breadcrumb',
+                    data: generateBreadcrumbSchema([
+                        { name: "Home", path: "/" },
+                        { name: "Color Consultation", path: "/color-consultation" }
+                    ])
+                },
+                {
+                    id: 'howto',
+                    data: generateHowToSchema({
+                        name: "Professional Color Consultation Process",
+                        description: "Our 6-step design system to find the perfect palette for your home.",
+                        steps: steps.map(s => ({ name: s.title, text: s.desc }))
+                    })
+                }
+            ]
+        });
+    }, []);
+
+
 
     return (
         <div className="min-h-screen bg-white text-brand-black selection:bg-brand-green selection:text-white pb-20 md:pb-0 font-sans">

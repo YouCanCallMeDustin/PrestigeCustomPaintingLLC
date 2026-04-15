@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
 import { SITE_INFO } from '../lib/constants';
 import { injectPageSEO } from '../lib/seo';
-import { generateWebPageSchema } from '../lib/schemaGenerator';
+import { generateWebPageSchema, generateBreadcrumbSchema, generateHowToSchema } from '../lib/schemaGenerator';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 
@@ -37,28 +37,6 @@ function ExteriorPaintingPage() {
             a: "Yes, Prestige Custom Painting LLC is fully licensed and experienced in handling the unique challenges of Spokane's historic homes, including proper surface stabilization."
         }
     ];
-
-    useEffect(() => {
-        const title = "Professional Exterior Painters Spokane | Prestige Custom Painting";
-        const description = "Expert exterior house painters in Spokane, WA. We specialize in weather-resistant coatings, siding painting, and deck staining. Get your free estimate today!";
-
-        return injectPageSEO({
-            title,
-            description,
-            path: '/exterior-painting-spokane',
-            schemas: [
-                { id: 'faq', data: { "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": faqs.map(f => ({ "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } })) } },
-                {
-                    id: 'webpage',
-                    data: generateWebPageSchema({
-                        title,
-                        description,
-                        url: "https://prestigecustompaintingllc.com/exterior-painting-spokane"
-                    })
-                }
-            ]
-        });
-    }, []);
 
     const steps = [
         {
@@ -98,6 +76,45 @@ function ExteriorPaintingPage() {
             pitfall: "Leaving paint chips in the garden. A professional site should be cleaner than when we arrived."
         }
     ];
+
+    useEffect(() => {
+        const title = "Professional Exterior Painters Spokane | Prestige Custom Painting";
+        const description = "Expert exterior house painters in Spokane, WA. We specialize in weather-resistant coatings, siding painting, and deck staining. Get your free estimate today!";
+
+        return injectPageSEO({
+            title,
+            description,
+            path: '/exterior-painting-spokane',
+            schemas: [
+                { id: 'faq', data: { "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": faqs.map(f => ({ "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } })) } },
+                {
+                    id: 'webpage',
+                    data: generateWebPageSchema({
+                        title,
+                        description,
+                        url: "https://prestigecustompaintingllc.com/exterior-painting-spokane"
+                    })
+                },
+                {
+                    id: 'breadcrumb',
+                    data: generateBreadcrumbSchema([
+                        { name: "Home", path: "/" },
+                        { name: "Exterior Painting", path: "/exterior-painting-spokane" }
+                    ])
+                },
+                {
+                    id: 'howto',
+                    data: generateHowToSchema({
+                        name: "How to Professionally Paint an Exterior Home",
+                        description: "The 6-step professional exterior painting process we use to protect homes against Spokane weather.",
+                        steps: steps.map(s => ({ name: s.title, text: s.desc }))
+                    })
+                }
+            ]
+        });
+    }, []);
+
+
 
     return (
         <div className="min-h-screen bg-white text-brand-black selection:bg-brand-green selection:text-white pb-20 md:pb-0">
@@ -167,9 +184,9 @@ function ExteriorPaintingPage() {
                         <h2 className="text-3xl md:text-5xl font-poppins font-bold mb-8 text-brand-black">
                             What is Professional Exterior Painting?
                         </h2>
-                        <div className="bg-brand-gray/30 p-8 md:p-10 rounded-3xl border-l-8 border-brand-green italic">
+                        <div className="bg-brand-gray/30 p-8 md:p-10 rounded-3xl border-l-8 border-brand-green italic space-y-4">
                             <p className="text-xl md:text-2xl text-gray-800 leading-relaxed font-medium">
-                                "Professional exterior painting is the strategic application of protective, weather-resistant coatings to a building's outer surfaces—including siding, trim, decks, and fences. In Spokane, this process is essential to defend structural integrity against high UV exposure, winter moisture, and the region's intense freeze-thaw cycles."
+                                "The best time for exterior painting in Spokane is late Spring to early Fall (May-September) when temperatures remain consistently above 50°F. Thorough prep work—including power washing to remove mildew and scraping peeling paint caused by Spokane's freeze-thaw cycle—is critical. Prestige Custom Painting uses premium flexible coatings to withstand Inland Northwest weather extremes."
                             </p>
                         </div>
 
@@ -223,6 +240,46 @@ function ExteriorPaintingPage() {
                                 className="relative z-10 rounded-[3rem] shadow-2xl object-cover h-[500px] w-full"
                             />
                         </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Explicit Spokane Pricing Table */}
+            <section className="py-16 bg-white border-t border-gray-100">
+                <div className="max-w-5xl mx-auto px-4">
+                    <h3 className="text-3xl font-bold mb-4 text-center">Spokane Exterior Painting Cost Guide</h3>
+                    <p className="text-center text-gray-600 mb-8">The average cost to paint a house in Spokane ranges from $2,500 for small exteriors to over $9,500+ for large two-story properties. Below is a baseline guide.</p>
+                    <div className="overflow-x-auto shadow-sm border border-gray-200 rounded-2xl">
+                        <table className="w-full text-left bg-white">
+                            <thead className="bg-gray-50 text-brand-black border-b border-gray-200">
+                                <tr>
+                                    <th className="p-5 font-bold">House Size</th>
+                                    <th className="p-5 font-bold">Approx. Sq Ft</th>
+                                    <th className="p-5 font-bold">Average Price Range</th>
+                                    <th className="p-5 font-bold">Included</th>
+                                </tr>
+                            </thead>
+                            <tbody className="divide-y divide-gray-100">
+                                <tr>
+                                    <td className="p-5 font-bold">Small House (1 Story)</td>
+                                    <td className="p-5">1,000 - 1,500</td>
+                                    <td className="p-5 text-brand-green font-bold">$2,500 - $4,500</td>
+                                    <td className="p-5 text-sm text-gray-600">Full wash, minor scraping, spot prime, 2 premium coats.</td>
+                                </tr>
+                                <tr>
+                                    <td className="p-5 font-bold">Medium House (1-2 Story)</td>
+                                    <td className="p-5">1,500 - 2,500</td>
+                                    <td className="p-5 text-brand-green font-bold">$4,500 - $7,500</td>
+                                    <td className="p-5 text-sm text-gray-600">Full wash, moderate prep, full trim masking, premium body paint.</td>
+                                </tr>
+                                <tr>
+                                    <td className="p-5 font-bold">Large House (2+ Stories)</td>
+                                    <td className="p-5">2,500 - 4,000+</td>
+                                    <td className="p-5 text-brand-green font-bold">$7,500 - $12,000+</td>
+                                    <td className="p-5 text-sm text-gray-600">Extensive high-ladder prep, color consultations, specialized equipment.</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </section>

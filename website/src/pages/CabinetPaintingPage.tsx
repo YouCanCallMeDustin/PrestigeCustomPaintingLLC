@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
 import { SITE_INFO } from '../lib/constants';
 import { injectPageSEO } from '../lib/seo';
-import { generateWebPageSchema } from '../lib/schemaGenerator';
+import { generateWebPageSchema, generateBreadcrumbSchema, generateHowToSchema } from '../lib/schemaGenerator';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 
@@ -36,28 +36,6 @@ function CabinetPaintingPage() {
             a: "Your kitchen will be accessible in the evenings, though we ask that major cooking be paused during the preparation and spraying phases to prevent dust and oil contamination."
         }
     ];
-
-    useEffect(() => {
-        const title = "Cabinet Painting Spokane | Professional Kitchen Refinishing";
-        const description = "Expert cabinet painters in Spokane, WA. Transform your kitchen with factory-grade finishes, durable coatings, and professional refinishing. Free estimates!";
-
-        return injectPageSEO({
-            title,
-            description,
-            path: '/cabinet-painting-spokane',
-            schemas: [
-                { id: 'faq', data: { "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": faqs.map(f => ({ "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } })) } },
-                {
-                    id: 'webpage',
-                    data: generateWebPageSchema({
-                        title,
-                        description,
-                        url: "https://prestigecustompaintingllc.com/cabinet-painting-spokane"
-                    })
-                }
-            ]
-        });
-    }, []);
 
     const steps = [
         {
@@ -97,6 +75,45 @@ function CabinetPaintingPage() {
             pitfall: "Rushing re-installation before the paint reaches its 'dry-to-handle' state."
         }
     ];
+
+    useEffect(() => {
+        const title = "Cabinet Painting Spokane | Professional Kitchen Refinishing";
+        const description = "Expert cabinet painters in Spokane, WA. Transform your kitchen with factory-grade finishes, durable coatings, and professional refinishing. Free estimates!";
+
+        return injectPageSEO({
+            title,
+            description,
+            path: '/cabinet-painting-spokane',
+            schemas: [
+                { id: 'faq', data: { "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": faqs.map(f => ({ "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } })) } },
+                {
+                    id: 'webpage',
+                    data: generateWebPageSchema({
+                        title,
+                        description,
+                        url: "https://prestigecustompaintingllc.com/cabinet-painting-spokane"
+                    })
+                },
+                {
+                    id: 'breadcrumb',
+                    data: generateBreadcrumbSchema([
+                        { name: "Home", path: "/" },
+                        { name: "Cabinet Painting", path: "/cabinet-painting-spokane" }
+                    ])
+                },
+                {
+                    id: 'howto',
+                    data: generateHowToSchema({
+                        name: "How to Professionally Refinish Kitchen Cabinets",
+                        description: "The 6-step factory finish system we use for cabinet painting and refinishing.",
+                        steps: steps.map(s => ({ name: s.title, text: s.desc }))
+                    })
+                }
+            ]
+        });
+    }, []);
+
+
 
     return (
         <div className="min-h-screen bg-white text-brand-black selection:bg-brand-green selection:text-white pb-20 md:pb-0">
@@ -212,6 +229,10 @@ function CabinetPaintingPage() {
                                 <p>
                                     Our refinishing service focuses on the "aesthetic shell." By removing the doors and drawer fronts to be sprayed in our controlled facility, and expertly refinishing the boxes in your home, we provide a complete visual transformation with zero demolition.
                                 </p>
+                                <div className="bg-white/80 p-6 rounded-2xl border-l-4 border-brand-green mt-6 font-medium text-gray-800">
+                                    <strong>How much does cabinet painting save compared to replacing?</strong><br/>
+                                    Professional cabinet refinishing in Spokane is an industrial process that saves homeowners up to 70% compared to full replacement. It involves chemical degreasing, mechanical sanding, and HVLP application of urethane enamels. This transformation typically takes 5–7 days and provides a factory-smooth finish resistant to Spokane’s seasonal humidity shifts.
+                                </div>
                             </div>
                         </div>
                         <div className="relative">
@@ -222,6 +243,45 @@ function CabinetPaintingPage() {
                                 className="relative z-10 rounded-[3rem] shadow-2xl object-cover h-[500px] w-full"
                             />
                         </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Comparison Table Section */}
+            <section className="py-16 bg-white border-t border-gray-100">
+                <div className="max-w-5xl mx-auto px-4">
+                    <h3 className="text-3xl font-bold mb-8 text-center">Refinishing vs Refacing vs Replacing</h3>
+                    <div className="overflow-x-auto shadow-sm border border-gray-200 rounded-2xl">
+                        <table className="w-full text-left bg-white">
+                            <thead className="bg-gray-50 text-brand-black">
+                                <tr>
+                                    <th className="p-5 font-bold">Method</th>
+                                    <th className="p-5 font-bold">Average Cost</th>
+                                    <th className="p-5 font-bold">Timeline</th>
+                                    <th className="p-5 font-bold">Best For</th>
+                                </tr>
+                            </thead>
+                            <tbody className="divide-y divide-gray-100">
+                                <tr>
+                                    <td className="p-5 font-bold text-brand-green">Professional Painting</td>
+                                    <td className="p-5">$3,000 - $6,000</td>
+                                    <td className="p-5">5 to 7 Days</td>
+                                    <td className="p-5">Sound cabinets needing a modern color update.</td>
+                                </tr>
+                                <tr>
+                                    <td className="p-5 font-bold text-gray-600">Cabinet Refacing</td>
+                                    <td className="p-5">$8,000 - $12,000</td>
+                                    <td className="p-5">2 to 3 Weeks</td>
+                                    <td className="p-5">Changing the physical style/design of the doors.</td>
+                                </tr>
+                                <tr>
+                                    <td className="p-5 font-bold text-gray-600">Full Replacement</td>
+                                    <td className="p-5">$20,000 - $40,000+</td>
+                                    <td className="p-5">4 to 8 Weeks</td>
+                                    <td className="p-5">Completely changing the kitchen layout or footprint.</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </section>

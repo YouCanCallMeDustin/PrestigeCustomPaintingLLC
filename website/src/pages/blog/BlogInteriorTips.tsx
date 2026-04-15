@@ -3,6 +3,7 @@ import BlogPost from '../BlogPost';
 export default function BlogInteriorTips() {
     return (
         <BlogPost
+            path="/blog/interior-painting-tips-spokane"
             title="Interior Painting Tips for Spokane Homes"
             date="March 10, 2026"
             readTime="9 MIN"

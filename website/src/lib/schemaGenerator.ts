@@ -56,7 +56,15 @@ export const generateLocalBusinessSchema = () => {
       SITE_INFO.bizapediaUrl,
       SITE_INFO.nextdoorUrl,
       SITE_INFO.liveLocalInwUrl
-    ]
+    ],
+    "founder": {
+      "@type": "Person",
+      "name": SITE_INFO.ownerName,
+      "jobTitle": "Owner & Lead Painter",
+      "sameAs": [
+        SITE_INFO.ownerLinkedInUrl
+      ]
+    }
   };
 };
 

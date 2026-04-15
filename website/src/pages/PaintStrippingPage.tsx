@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
 import { SITE_INFO } from '../lib/constants';
 import { injectPageSEO } from '../lib/seo';
-import { generateWebPageSchema } from '../lib/schemaGenerator';
+import { generateWebPageSchema, generateBreadcrumbSchema, generateHowToSchema } from '../lib/schemaGenerator';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 
@@ -32,28 +32,6 @@ function PaintStrippingPage() {
             a: "Depending on the scale, a typical porch or set of historic windows takes 3 to 5 days. Full exterior stripping of a Victorian home can take 2 to 3 weeks of meticulous work."
         }
     ];
-
-    useEffect(() => {
-        const title = "Paint Stripping Spokane | Lead-Safe Removal & Surface Restoration";
-        const description = "Spokane's expert paint stripping services. Lead-safe removal from wood, metal, and masonry. Professional surface restoration. Free estimates!";
-        
-        return injectPageSEO({
-            title,
-            description,
-            path: '/paint-stripping-spokane',
-            schemas: [
-                { id: 'faq', data: { "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": faqs.map(f => ({ "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } })) } },
-                {
-                    id: 'webpage',
-                    data: generateWebPageSchema({
-                        title,
-                        description,
-                        url: "https://prestigecustompaintingllc.com/paint-stripping-spokane"
-                    })
-                }
-            ]
-        });
-    }, []);
 
     const steps = [
         {
@@ -93,6 +71,45 @@ function PaintStrippingPage() {
             pitfall: "Skiping the primer. Bare, old-growth wood is extremely porous and will suck the life out of your topcoat if not sealed."
         }
     ];
+
+    useEffect(() => {
+        const title = "Paint Stripping Spokane | Lead-Safe Removal & Surface Restoration";
+        const description = "Spokane's expert paint stripping services. Lead-safe removal from wood, metal, and masonry. Professional surface restoration. Free estimates!";
+        
+        return injectPageSEO({
+            title,
+            description,
+            path: '/paint-stripping-spokane',
+            schemas: [
+                { id: 'faq', data: { "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": faqs.map(f => ({ "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } })) } },
+                {
+                    id: 'webpage',
+                    data: generateWebPageSchema({
+                        title,
+                        description,
+                        url: "https://prestigecustompaintingllc.com/paint-stripping-spokane"
+                    })
+                },
+                {
+                    id: 'breadcrumb',
+                    data: generateBreadcrumbSchema([
+                        { name: "Home", path: "/" },
+                        { name: "Paint Stripping", path: "/paint-stripping-spokane" }
+                    ])
+                },
+                {
+                    id: 'howto',
+                    data: generateHowToSchema({
+                        name: "Professional Paint Stripping Process",
+                        description: "Our safe and meticulous 6-step restoration process for stripping failing paint.",
+                        steps: steps.map(s => ({ name: s.title, text: s.desc }))
+                    })
+                }
+            ]
+        });
+    }, []);
+
+
 
     return (
         <div className="min-h-screen bg-white text-brand-black selection:bg-brand-green selection:text-white pb-20 md:pb-0 font-sans">

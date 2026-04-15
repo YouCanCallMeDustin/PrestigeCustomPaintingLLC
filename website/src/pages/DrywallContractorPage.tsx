@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
 import { SITE_INFO } from '../lib/constants';
 import { injectPageSEO } from '../lib/seo';
-import { generateWebPageSchema } from '../lib/schemaGenerator';
+import { generateWebPageSchema, generateBreadcrumbSchema, generateHowToSchema } from '../lib/schemaGenerator';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 
@@ -32,28 +32,6 @@ function DrywallContractorPage() {
             a: "Absolutely. We first ensure the moisture source is resolved, then remove any mold-compromised material before installing new moisture-resistant (Green Board) gypsum and finishing it to match."
         }
     ];
-
-    useEffect(() => {
-        const title = "Drywall Contractor Spokane | Professional Repair & Installation Services";
-        const description = "Spokane's expert drywall contractors. Precision repairs, seamless installations, and custom texturing. Quality you can trust. Free estimates!";
-        
-        return injectPageSEO({
-            title,
-            description,
-            path: '/drywall-contractor-spokane',
-            schemas: [
-                { id: 'faq', data: { "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": faqs.map(f => ({ "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } })) } },
-                {
-                    id: 'webpage',
-                    data: generateWebPageSchema({
-                        title,
-                        description,
-                        url: "https://prestigecustompaintingllc.com/drywall-contractor-spokane"
-                    })
-                }
-            ]
-        });
-    }, []);
 
     const steps = [
         {
@@ -93,6 +71,45 @@ function DrywallContractorPage() {
             pitfall: "Painting directly over fresh mud without a dedicated drywall primer. The mud will soak up the paint unevenly."
         }
     ];
+
+    useEffect(() => {
+        const title = "Drywall Contractor Spokane | Professional Repair & Installation Services";
+        const description = "Spokane's expert drywall contractors. Precision repairs, seamless installations, and custom texturing. Quality you can trust. Free estimates!";
+        
+        return injectPageSEO({
+            title,
+            description,
+            path: '/drywall-contractor-spokane',
+            schemas: [
+                { id: 'faq', data: { "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": faqs.map(f => ({ "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } })) } },
+                {
+                    id: 'webpage',
+                    data: generateWebPageSchema({
+                        title,
+                        description,
+                        url: "https://prestigecustompaintingllc.com/drywall-contractor-spokane"
+                    })
+                },
+                {
+                    id: 'breadcrumb',
+                    data: generateBreadcrumbSchema([
+                        { name: "Home", path: "/" },
+                        { name: "Drywall Contractor", path: "/drywall-contractor-spokane" }
+                    ])
+                },
+                {
+                    id: 'howto',
+                    data: generateHowToSchema({
+                        name: "Professional Drywall Repair Process",
+                        description: "Our 6-step system for seamless, invisible drywall repair.",
+                        steps: steps.map(s => ({ name: s.title, text: s.desc }))
+                    })
+                }
+            ]
+        });
+    }, []);
+
+
 
     return (
         <div className="min-h-screen bg-white text-brand-black selection:bg-brand-green selection:text-white pb-20 md:pb-0 font-sans">
