@@ -1,4 +1,18 @@
-export const SITE_INFO = {
+export interface SiteInfo {
+    companyName: string;
+    phoneNumber: string;
+    email: string;
+    location: string;
+    ownerName: string;
+    facebookUrl: string;
+    yelpUrl: string;
+    bizapediaUrl: string;
+    nextdoorUrl: string;
+    liveLocalInwUrl: string;
+}
+
+export const SITE_INFO: SiteInfo = {
+    companyName: "Prestige Custom Painting LLC",
     phoneNumber: "(509) 714-9491",
     email: "buddylee12091@gmail.com",
     location: "Spokane Valley, WA",
