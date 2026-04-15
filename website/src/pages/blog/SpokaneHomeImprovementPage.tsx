@@ -1,4 +1,4 @@
-import { Phone, CheckCircle, ArrowLeft, Star, AlertTriangle, Layers } from 'lucide-react';
+import { Phone, CheckCircle, ArrowLeft, Star, AlertTriangle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
 import { SITE_INFO } from '../../lib/constants';
@@ -95,12 +95,29 @@ function SpokaneHomeImprovementPage() {
             desc: "For painting, this means masking and sanding. For remodeling, it means protecting floors from dust.",
             proTip: "Meticulous prep work accounts for 70% of a professional finish.",
             pitfall: "Rushing the prep phase, which leads to peeling paint later."
+        },
+        {
+            title: "Expert Execution",
+            desc: "Applying the materials using professional techniques—HVLP sprayers for cabinets, or precision rollers for walls.",
+            proTip: "Maintain a 'wet edge' while painting to avoid visible lap marks.",
+            pitfall: "Working in direct sunlight during 90-degree Spokane summers."
+        },
+        {
+            title: "Final Walkthrough",
+            desc: "Inspect the work under different lighting conditions. Check for clean lines and uniform coverage.",
+            proTip: "Use a high-lumen flashlight to spot imperfections in wall texture.",
+            pitfall: "Signing off on the project before the paint has fully dried and cured."
         }
     ];
 
     return (
         <div className="min-h-screen bg-white text-brand-black selection:bg-brand-green selection:text-white pb-20 md:pb-0">
             <Navbar />
+
+            {/* SEO Metadata (Internal reference)
+                Estimated reading time: 8 minutes
+                Suggested featured image alt text: Modern home improvement in Spokane project showing high-end interior painting and renovated kitchen cabinets.
+            */}
 
             <header className="bg-brand-black py-16 md:py-24 text-white relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-1/2 h-full bg-brand-green/10 -skew-x-12 transform translate-x-32" />
@@ -128,30 +145,19 @@ function SpokaneHomeImprovementPage() {
                 </div>
             </header>
 
-            <section className="py-12 bg-gray-50 border-b border-gray-100">
+            <section className="py-8 bg-white border-b border-gray-50">
                 <div className="max-w-7xl mx-auto px-4">
-                    <div className="bg-white rounded-3xl p-8 shadow-sm border border-gray-100">
-                        <h2 className="text-sm font-bold text-brand-green uppercase tracking-[0.2em] mb-6 flex items-center gap-2">
-                            <Layers size={18} /> Key Takeaways
-                        </h2>
-                        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                            {[
-                                "Painting offers the highest ROI of any home improvement in Spokane.",
-                                "Kitchen & bath refreshes are the most sought-after interior renovations.",
-                                "Local climate necessitating specific, durable material choices.",
-                                "Curb appeal starts with professional exterior maintenance and finishes."
-                            ].map((item, i) => (
-                                <div key={i} className="flex gap-3">
-                                    <CheckCircle size={20} className="text-brand-green shrink-0 mt-1" />
-                                    <p className="text-gray-700 font-medium text-sm leading-relaxed">{item}</p>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
+                    <nav className="flex flex-wrap gap-4 md:gap-8 justify-center items-center py-4 bg-gray-50 rounded-2xl border border-gray-100 px-6">
+                        <span className="text-xs font-bold text-gray-400 uppercase tracking-widest mr-2">Jump To:</span>
+                        <a href="#definition" className="text-sm font-bold text-gray-600 hover:text-brand-green transition-colors">Definition</a>
+                        <a href="#process" className="text-sm font-bold text-gray-600 hover:text-brand-green transition-colors">Process</a>
+                        <a href="#comparison" className="text-sm font-bold text-gray-600 hover:text-brand-green transition-colors">ROI Comparison</a>
+                        <a href="#faq" className="text-sm font-bold text-gray-600 hover:text-brand-green transition-colors">FAQ</a>
+                    </nav>
                 </div>
             </section>
 
-            <section className="py-16 md:py-24 bg-white">
+            <section id="definition" className="py-16 md:py-24 bg-white">
                 <div className="max-w-7xl mx-auto px-4">
                     <div className="max-w-4xl mx-auto">
                         <div className="inline-block bg-brand-green/10 text-brand-green px-4 py-1 rounded-lg text-sm font-bold mb-6">
@@ -165,11 +171,24 @@ function SpokaneHomeImprovementPage() {
                                 "Home improvement in Spokane refers to the renovation, repair, or aesthetic upgrading of residential properties. These projects range from high-impact cosmetic changes, like professional painting, to structural remodeling designed to increase home equity and adapt to Spokane’s seasonal climate demands."
                             </p>
                         </div>
+                        <div className="mt-12 grid md:grid-cols-2 gap-8">
+                            <div>
+                                <h4 className="font-bold text-xl mb-4">Why It Matters</h4>
+                                <p className="text-gray-600 leading-relaxed">In a competitive real estate market like Spokane, quality improvements do more than look good—they protect your home from extreme weather and significantly increase resale value.</p>
+                            </div>
+                            <div>
+                                <h4 className="font-bold text-xl mb-4">Core Examples</h4>
+                                <ul className="space-y-3">
+                                    <li className="flex items-center gap-2 text-gray-600"><CheckCircle size={16} className="text-brand-green" /> Kitchen Cabinet Refacing</li>
+                                    <li className="flex items-center gap-2 text-gray-600"><CheckCircle size={16} className="text-brand-green" /> Weather-Shield Exterior Painting</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
 
-            <section className="py-16 md:py-24 bg-brand-black text-white">
+            <section id="process" className="py-16 md:py-24 bg-brand-black text-white">
                 <div className="max-w-7xl mx-auto px-4">
                     <div className="text-center mb-16">
                         <h2 className="text-brand-green font-bold tracking-widest text-sm mb-4 uppercase">The Spokane Roadmap</h2>
@@ -196,12 +215,50 @@ function SpokaneHomeImprovementPage() {
                             </div>
                         ))}
                     </div>
+
+                    <div className="mt-16 bg-brand-green/10 border border-brand-green/20 p-8 rounded-3xl max-w-3xl mx-auto">
+                        <h4 className="text-2xl font-bold mb-6 flex items-center gap-3">
+                            <CheckCircle className="text-brand-green" /> Homeowner Checklist
+                        </h4>
+                        <div className="grid sm:grid-cols-2 gap-4">
+                            {["Verify Contractor License", "Check Spokane References", "Define Budget Contingency", "Schedule for Weather Window", "Review Material Specs", "Insurance Verification"].map((item, i) => (
+                                <div key={i} className="flex items-center gap-3 text-gray-300">
+                                    <div className="w-5 h-5 border border-brand-green rounded flex items-center justify-center shrink-0">
+                                        <div className="w-2 h-2 bg-brand-green rounded-full opacity-50" />
+                                    </div>
+                                    <span className="text-sm font-medium">{item}</span>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
                 </div>
             </section>
 
             <section className="py-16 md:py-24 bg-white">
+                <div className="max-w-4xl mx-auto px-4">
+                    <div className="bg-gray-50 p-8 md:p-12 rounded-[2.5rem] border border-gray-100">
+                        <h2 className="text-4xl font-poppins font-bold mb-8 text-center">Project Analysis Template</h2>
+                        <p className="text-center text-gray-500 mb-10">Use this template when planning your next Spokane home improvement project.</p>
+                        <div className="bg-brand-black text-white p-8 rounded-2xl font-mono text-sm leading-relaxed relative group">
+                            <div className="absolute top-4 right-4 bg-white/10 px-3 py-1 rounded text-[10px] font-bold uppercase tracking-widest border border-white/20">COPY/PASTE</div>
+                            <p className="text-brand-green mb-4"># Project Planning Workflow</p>
+                            <p className="mb-2">PROJECT NAME: [e.g., South Hill Kitchen Refresh]</p>
+                            <p className="mb-2">PRIMARY OBJECTIVE: [Resale / Personal Comfort]</p>
+                            <p className="mb-2">BUDGET RANGE: $[X,XXX]</p>
+                            <p className="mb-2">TARGET COMPLETION: [Month/Year]</p>
+                            <p className="mb-4">SPOKANE WEATHER WINDOW: [e.g., June - August]</p>
+                            <p className="text-brand-green mb-4">## Contractor Verification</p>
+                            <p className="mb-2">- License #: ______________</p>
+                            <p className="mb-2">- Lead-Safe Certified: [Y/N]</p>
+                            <p className="mb-2">- Insured: [Y/N]</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="comparison" className="py-16 md:py-24 bg-gray-50">
                 <div className="max-w-4xl mx-auto px-4 text-center">
-                    <h2 className="text-3xl md:text-5xl font-poppins font-bold mb-12">Professional vs DIY</h2>
+                    <h2 className="text-3xl md:text-5xl font-poppins font-bold mb-12">ROI Comparison Table</h2>
                     <div className="overflow-x-auto">
                         <table className="w-full text-left border-collapse bg-white shadow-xl rounded-2xl overflow-hidden border border-gray-100">
                             <thead>
@@ -233,12 +290,12 @@ function SpokaneHomeImprovementPage() {
                 </div>
             </section>
 
-            <section className="py-16 md:py-24 bg-gray-50">
+            <section id="faq" className="py-16 md:py-24 bg-white">
                 <div className="max-w-4xl mx-auto px-4">
                     <h2 className="text-3xl md:text-5xl font-poppins font-bold text-center mb-12">Frequently Asked Questions</h2>
                     <div className="space-y-4">
                         {faqs.map((faq, idx) => (
-                            <div key={idx} className="p-6 border border-gray-100 rounded-2xl hover:border-brand-green transition-all bg-white group">
+                            <div key={idx} className="p-6 border border-gray-100 rounded-2xl hover:border-brand-green transition-all bg-white group shadow-sm">
                                 <h3 className="font-poppins font-bold text-xl mb-4 text-brand-black group-hover:text-brand-green transition-colors">{faq.q}</h3>
                                 <p className="text-gray-600 leading-relaxed font-medium">{faq.a}</p>
                             </div>
@@ -247,7 +304,7 @@ function SpokaneHomeImprovementPage() {
                 </div>
             </section>
 
-            <section className="py-20 bg-white">
+            <section className="py-20 bg-brand-gray/30 border-t border-gray-100">
                 <div className="max-w-7xl mx-auto px-4">
                     <div className="bg-brand-black rounded-[3rem] p-12 md:p-20 text-center relative overflow-hidden">
                         <div className="relative z-10">
@@ -263,6 +320,42 @@ function SpokaneHomeImprovementPage() {
                                 </a>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Author Section */}
+            <section className="py-16 bg-white border-t border-gray-50">
+                <div className="max-w-4xl mx-auto px-4">
+                    <div className="flex flex-col md:flex-row items-center gap-8 bg-gray-50 p-8 rounded-3xl border border-gray-100">
+                        <div className="w-24 h-24 bg-brand-green/20 rounded-full flex items-center justify-center text-brand-green shrink-0 overflow-hidden">
+                            <img src="/robert.jpg" alt="Robert Shoemake" className="w-full h-full object-cover grayscale" />
+                        </div>
+                        <div>
+                            <p className="text-xs font-bold text-brand-green uppercase tracking-widest mb-2">Written By</p>
+                            <h4 className="text-2xl font-bold text-brand-black mb-2">Robert Shoemake</h4>
+                            <p className="text-gray-600 text-sm leading-relaxed mb-4">Founder of Prestige Custom Painting LLC and local Spokane home improvement expert with over 15 years of industry experience. Robert specializes in high-end finishes and neighborhood-specific ROI strategies.</p>
+                            <p className="text-[10px] text-gray-400 font-bold uppercase tracking-tighter">Last Updated: April 15, 2026</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Sources Section */}
+            <section className="py-12 bg-gray-50 border-t border-gray-100">
+                <div className="max-w-4xl mx-auto px-4">
+                    <h5 className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-6">Expert Sources & References</h5>
+                    <div className="grid sm:grid-cols-2 gap-4">
+                        {[
+                            { name: "National Association of Realtors", url: "https://www.nar.realtor" },
+                            { name: "City of Spokane Building Department", url: "https://my.spokanecity.org/business/building-permits/" },
+                            { name: "Sherwin-Williams Professional", url: "https://www.sherwin-williams.com" },
+                            { name: "Spokane Home Builders Association", url: "https://shba.com" }
+                        ].map((source, i) => (
+                            <a key={i} href={source.url} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-sm text-gray-500 hover:text-brand-green transition-colors">
+                                <Star size={14} className="opacity-50" /> {source.name}
+                            </a>
+                        ))}
                     </div>
                 </div>
             </section>

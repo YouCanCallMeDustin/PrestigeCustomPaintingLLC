@@ -1,4 +1,4 @@
-const fs = require('fs');
+import fs from 'fs';
 
 const areaData = [
   { city: "Airway Heights", slug: "airway-heights" },
@@ -87,7 +87,29 @@ const staticPages = [
   "faq",
   "color-consultation",
   "service-area",
-  "blog"
+  "blog",
+  "spokane-home-improvement-guide"
+];
+
+const serviceSlugs = [
+  'exterior-painting', 'cabinet-painting', 'deck-painting', 'door-painting', 
+  'commercial-painting', 'kitchen-cabinet-painting', 'ceiling-painting', 
+  'trim-and-molding-painting', 'accent-wall-painting', 'exterior-siding-painting', 
+  'stucco-painting', 'brick-painting', 'fence-painting', 'fence-staining', 
+  'deck-staining', 'surface-priming', 'garage-painting', 'baseboard-painting', 
+  'crown-molding-painting', 'color-consultation', 'paint-touch-up-services', 
+  'wall-texture-matching', 'garage-floor-epoxy-coating', 'house-painters', 
+  'ceiling-repair', 'drywall-finishing', 'popcorn-ceiling-removal', 
+  'hole-repair-in-drywall', 'crack-repair-in-walls', 'water-damage-repair', 
+  'drywall-patching', 'texture-matching', 'wall-texture-application', 
+  'ceiling-texture-removal', 'drywall-installation-repair', 'wall-resurfacing', 
+  'wallpaper-removal', 'wallpaper-installation', 'wallpaper-repair', 
+  'wallpaper-service-preparation', 'decorative-wallpaper-installation', 
+  'paint-stripping', 'wood-paint-removal', 'metal-paint-removal', 
+  'surface-coating-removal', 'paint-removal-from-masonry', 'exterior-paint-removal', 
+  'pressure-washing', 'power-washing', 'house-washing', 'deck-cleaning', 
+  'fence-cleaning', 'driveway-pressure-washing', 'exterior-surface-cleaning', 
+  'mold-and-mildew-removal', 'patio-and-walkway-cleaning'
 ];
 
 const costPages = [
@@ -132,6 +154,16 @@ costPages.forEach(p => {
     <loc>${baseUrl}/${p}</loc>
     <lastmod>${date}</lastmod>
     <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>\n`;
+});
+
+// Service Pages
+serviceSlugs.forEach(s => {
+  xml += `  <url>
+    <loc>${baseUrl}/service/${s}</loc>
+    <lastmod>${date}</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>\n`;
 });

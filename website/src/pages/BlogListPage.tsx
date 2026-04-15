@@ -95,16 +95,23 @@ const BlogListPage = () => {
                 path="/blog"
             />
             <Navbar />
+            
+            {/* Dark Hero Section */}
+            <section className="bg-brand-black pt-32 pb-24 text-white relative overflow-hidden mb-16">
+                <div className="absolute top-0 right-0 w-1/2 h-full bg-brand-green/10 -skew-x-12 transform translate-x-32" />
+                <div className="max-w-7xl mx-auto px-4 relative z-10">
+                    <header className="max-w-3xl">
+                        <h1 className="text-5xl md:text-7xl font-poppins font-bold mb-6 italic leading-tight">
+                            Expert <span className="text-brand-green">Insights</span> & Pricing Guides
+                        </h1>
+                        <p className="text-xl text-gray-300 font-medium leading-relaxed">
+                            We believe in transparency. Whether you're researching costs on the South Hill or looking for DIY tips in Spokane Valley, our library of resources is here to help you make informed decisions.
+                        </p>
+                    </header>
+                </div>
+            </section>
 
-            <main className="max-w-7xl mx-auto px-4 pt-32 pb-24">
-                <header className="max-w-3xl mb-16">
-                    <h1 className="text-5xl md:text-7xl font-poppins font-bold mb-6 italic leading-tight">
-                        Expert <span className="text-brand-green">Insights</span> & Pricing Guides
-                    </h1>
-                    <p className="text-xl text-gray-500 font-medium leading-relaxed">
-                        We believe in transparency. Whether you're researching costs on the South Hill or looking for DIY tips in Spokane Valley, our library of resources is here to help you make informed decisions.
-                    </p>
-                </header>
+            <main className="max-w-7xl mx-auto px-4 pb-24">
 
                 <section className="mb-24">
                     <div className="flex items-center gap-4 mb-8">

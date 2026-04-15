@@ -40,7 +40,7 @@ function CommercialPaintingPage() {
     useEffect(() => {
         const title = "Commercial Painting Spokane | Professional Business & Facility Painters";
         const description = "Spokane's leading commercial painting contractors. High-performance coatings, flexible scheduling, and professional facility restoration. Free estimates!";
-        
+
         return injectPageSEO({
             title,
             description,
@@ -171,7 +171,7 @@ function CommercialPaintingPage() {
                                 "Commercial painting is the industrial-scale application of specialized coatings to business environments. It differs from residential work by utilizing high-performance chemicals (epoxies, urethanes), specialized equipment for multi-surface substrates (CMU, metal), and rigorous adherence to facility safety and operational scheduling."
                             </p>
                         </div>
-                        
+
                         {/* Table of Contents */}
                         <div className="mt-16 bg-white border border-gray-100 rounded-3xl p-8 shadow-sm">
                             <h3 className="text-xl font-bold mb-6 flex items-center gap-2">
@@ -216,9 +216,9 @@ function CommercialPaintingPage() {
                         </div>
                         <div className="relative">
                             <div className="absolute inset-0 bg-brand-green rounded-[3rem] rotate-3 scale-105 opacity-10" />
-                            <img 
-                                src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1000" 
-                                alt="Modern Spokane office building interior painting" 
+                            <img
+                                src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1000"
+                                alt="Modern Spokane office building interior painting"
                                 className="relative z-10 rounded-[3rem] shadow-2xl object-cover h-[500px] w-full"
                             />
                         </div>
@@ -282,14 +282,14 @@ function CommercialPaintingPage() {
                         <h3 className="text-4xl md:text-5xl font-poppins font-bold mb-6">Our 6-Step Commercial Painting System</h3>
                         <p className="text-gray-400 max-w-2xl mx-auto">Designed for minimum business disruption and maximum durability.</p>
                     </div>
-                    
+
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {steps.map((step, i) => (
                             <div key={i} className="bg-white/5 border border-white/10 p-8 rounded-3xl group hover:border-brand-green/50 transition-all">
                                 <div className="text-brand-green font-poppins font-bold text-5xl opacity-20 mb-4">{i + 1}</div>
                                 <h4 className="text-xl font-bold mb-4 text-white">{step.title}</h4>
                                 <p className="text-gray-400 mb-6 text-sm leading-relaxed">{step.desc}</p>
-                                
+
                                 <div className="space-y-4 pt-4 border-t border-white/10">
                                     <div className="flex gap-3 text-xs">
                                         <Star size={14} className="text-brand-green shrink-0 mt-0.5" />

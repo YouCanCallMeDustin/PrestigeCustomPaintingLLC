@@ -75,6 +75,7 @@ interface SEOOptions {
     title: string;
     description: string;
     path: string;
+    keywords?: string;
     ogImage?: string;
     schemas?: { id: string; data: object }[];
 }
@@ -96,6 +97,20 @@ export function injectPageSEO(options: SEOOptions): () => void {
         meta.content = options.description;
         document.head.appendChild(meta);
         cleanups.push(() => meta.remove());
+    }
+
+    // Keywords
+    if (options.keywords) {
+        const keyMeta = document.querySelector('meta[name="keywords"]');
+        if (keyMeta) {
+            keyMeta.setAttribute('content', options.keywords);
+        } else {
+            const meta = document.createElement('meta');
+            meta.setAttribute('name', 'keywords');
+            meta.content = options.keywords;
+            document.head.appendChild(meta);
+            cleanups.push(() => meta.remove());
+        }
     }
 
     // Canonical
@@ -133,4 +148,72 @@ export function injectPageSEO(options: SEOOptions): () => void {
         cleanups.forEach(fn => fn());
     };
 }
+/**
+ * Generates a standard WebPage schema.
+ */
+export function generateWebPageSchema(title: string, description: string, path: string) {
+    return {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": title,
+        "description": description,
+        "url": `${SITE_URL}${path}`,
+        "publisher": {
+            "@id": `${SITE_URL}/#organization`
+        }
+    };
+}
 
+/**
+ * Generates an FAQPage schema.
+ */
+export function generateFAQSchema(faqs: { q: string; a: string }[]) {
+    return {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": faqs.map(faq => ({
+            "@type": "Question",
+            "name": faq.q,
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": faq.a
+            }
+        }))
+    };
+}
+
+/**
+ * Generates an Article/BlogPosting schema.
+ */
+export function generateArticleSchema(options: {
+    title: string;
+    description: string;
+    path: string;
+    image?: string;
+    datePublished?: string;
+    dateModified?: string;
+}) {
+    return {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": options.title,
+        "description": options.description,
+        "image": options.image || `${SITE_URL}/logo.png`,
+        "author": {
+            "@type": "Organization",
+            "name": "Prestige Custom Painting LLC",
+            "url": SITE_URL
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Prestige Custom Painting LLC",
+            "logo": {
+                "@type": "ImageObject",
+                "url": `${SITE_URL}/logo.png`
+            }
+        },
+        "datePublished": options.datePublished || "2024-01-01",
+        "dateModified": options.dateModified || new Date().toISOString().split('T')[0],
+        "url": `${SITE_URL}${options.path}`
+    };
+}

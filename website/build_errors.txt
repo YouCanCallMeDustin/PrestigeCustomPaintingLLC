@@ -1,0 +1,5 @@
+
+> prestige-painting-website@1.0.0 build
+> tsc && vite build
+
+src/pages/ServiceBlogPage.tsx(23,50): error TS2739: Type '{ "@context": string; "@type": string; mainEntity: { "@type": string; name: string; acceptedAnswer: { "@type": string; text: string; }; }[]; }' is missing the following properties from type '{ "@context": string; "@type": string; name: string; description: string; url: string; publisher: { "@id": string; }; }': "name", "description", "url", "publisher"
