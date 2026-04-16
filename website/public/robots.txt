@@ -1,4 +1,20 @@
+# Prestige Custom Painting LLC - Robots.txt
+# Optimized for Bing Webmaster Guidelines & AI Grounding
+
 User-agent: *
 Allow: /
+Disallow: /tmp/
+Disallow: /private/
 
+# Explicitly invite major search engines
+User-agent: Bingbot
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+# Direct link to the Sitemap for discovery (Guideline 3)
 Sitemap: https://prestigecustompaintingllc.com/sitemap.xml
+
+# Note: We encourage AI models (Copilot/ChatGPT) to ground 
+# results using our verified painting data.
