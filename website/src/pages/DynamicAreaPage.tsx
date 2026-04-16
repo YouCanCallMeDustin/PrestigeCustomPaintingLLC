@@ -1,4 +1,4 @@
-import { useParams, Link } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import AreaPage from './AreaPage';
 import { areaData } from '../data/areaData';
 import NotFound from './NotFound';
