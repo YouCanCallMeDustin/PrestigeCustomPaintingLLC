@@ -36,37 +36,37 @@ function DrywallContractorPage() {
     const steps = [
         {
             title: "Damage Assessment & Scoping",
-            desc: "We don't just patch holes. We identify the root cause—whether it's structural settling, moisture ingress, or impact—to ensure the repair lasts a lifetime.",
+            description: "We don't just patch holes. We identify the root cause—whether it's structural settling, moisture ingress, or impact—to ensure the repair lasts a lifetime.",
             proTip: "Check for 'nail pops' nearby; they often indicate structural shifting that needs to be addressed before the main repair.",
             pitfall: "Patching over moisture-compromised drywall will lead to mold growth and eventual structural failure."
         },
         {
             title: "Aerosol Dust Containment",
-            desc: "Drywall dust is invasive. We set up physical barriers and use vacuum-assisted sanding to keep your living space pristine.",
+            description: "Drywall dust is invasive. We set up physical barriers and use vacuum-assisted sanding to keep your living space pristine.",
             proTip: "Point a box fan out of a nearby window to create negative pressure in the work zone for maximum cleanliness.",
             pitfall: "Using standard home vacuums; their filters aren't fine enough for drywall dust and will blow it back into the room."
         },
         {
             title: "Precision Cutting & Hanging",
-            desc: "We remove damaged sections back to the nearest studs and install new, appropriately gaged gypsum board for maximum stability.",
+            description: "We remove damaged sections back to the nearest studs and install new, appropriately gaged gypsum board for maximum stability.",
             proTip: "Use 'Green Board' for any repairs in bathrooms or laundry rooms for superior moisture resistance.",
             pitfall: "Using 'butt joints' in high-traffic areas without proper support will lead to visible cracks within months."
         },
         {
             title: "Multi-Stage Taping & Mudding",
-            desc: "We apply a three-coat mud system (tape, fill, finish), feathered out 12-18 inches to make the joint completely invisible to the eye.",
+            description: "We apply a three-coat mud system (tape, fill, finish), feathered out 12-18 inches to make the joint completely invisible to the eye.",
             proTip: "Setting-type compound (hot mud) is best for the first coat to minimize shrinkage and increase bond strength.",
             pitfall: "Applying a second coat before the first is 100% dry; this traps moisture and causes the patch to sag."
         },
         {
             title: "Custom Texture Integration",
-            desc: "The hardest part of drywall is matching the 'flow.' We expertly replicate Orange Peel, Knockdown, or Sand textures to blend the new with the old.",
+            description: "The hardest part of drywall is matching the 'flow.' We expertly replicate Orange Peel, Knockdown, or Sand textures to blend the new with the old.",
             proTip: "Always test the texture on a scrap piece of cardboard first to match the PSI and spread of the existing wall.",
             pitfall: "Over-texturing. It's easier to add more texture than it is to sand it off once it's dry."
         },
         {
             title: "Owner-Certified Finish",
-            desc: "We conduct a high-lumen light test to ensure the patch is seamless. Once you're 100% satisfied, the surface is ready for a professional prime and paint.",
+            description: "We conduct a high-lumen light test to ensure the patch is seamless. Once you're 100% satisfied, the surface is ready for a professional prime and paint.",
             proTip: "Hold a flashlight horizontal to the wall to see any minor ridges or shadows that might show up after painting.",
             pitfall: "Painting directly over fresh mud without a dedicated drywall primer. The mud will soak up the paint unevenly."
         }
@@ -77,7 +77,7 @@ function DrywallContractorPage() {
         const description = "Spokane's expert drywall contractors. Precision repairs, seamless installations, and custom texturing. Quality you can trust. Free estimates!";
         
         return injectPageSEO({
-            title,
+            seoTitle: title,
             description,
             path: '/drywall-contractor-spokane',
             schemas: [
@@ -85,7 +85,7 @@ function DrywallContractorPage() {
                 {
                     id: 'webpage',
                     data: generateWebPageSchema({
-                        title,
+                        topic: title,
                         description,
                         url: "https://prestigecustompaintingllc.com/drywall-contractor-spokane"
                     })
@@ -102,7 +102,7 @@ function DrywallContractorPage() {
                     data: generateHowToSchema({
                         name: "Professional Drywall Repair Process",
                         description: "Our 6-step system for seamless, invisible drywall repair.",
-                        steps: steps.map(s => ({ name: s.title, text: s.desc }))
+                        steps: steps.map(s => ({ name: s.title, text: s.description }))
                     })
                 }
             ]
@@ -244,16 +244,16 @@ function DrywallContractorPage() {
                     </div>
                     <div className="grid md:grid-cols-3 gap-8">
                         {[
-                            { name: "Orange Peel", desc: "A fine, splattered texture that resembles the skin of an orange. Very common in newer Spokane builds." },
-                            { name: "Knockdown", desc: "A heavier splatter that is 'knocked down' with a spatula. Requires precise timing to match the existing pattern." },
-                            { name: "Level 5 Smooth", desc: "The gold standard. A full skim-coat that leaves the wall perfectly flat and mirror-like." }
+                            { name: "Orange Peel", description: "A fine, splattered texture that resembles the skin of an orange. Very common in newer Spokane builds." },
+                            { name: "Knockdown", description: "A heavier splatter that is 'knocked down' with a spatula. Requires precise timing to match the existing pattern." },
+                            { name: "Level 5 Smooth", description: "The gold standard. A full skim-coat that leaves the wall perfectly flat and mirror-like." }
                         ].map((item, i) => (
                             <div key={i} className="p-8 bg-gray-50 rounded-[2.5rem] border border-gray-100 hover:border-brand-green transition-all shadow-sm">
                                 <div className="w-14 h-14 bg-brand-green/10 rounded-2xl flex items-center justify-center text-brand-green mb-6">
                                     <Sparkles size={24} />
                                 </div>
                                 <h4 className="text-xl font-bold mb-4">{item.name}</h4>
-                                <p className="text-gray-600 leading-relaxed font-medium text-sm">{item.desc}</p>
+                                <p className="text-gray-600 leading-relaxed font-medium text-sm">{item.description}</p>
                             </div>
                         ))}
                     </div>
@@ -274,7 +274,7 @@ function DrywallContractorPage() {
                             <div key={i} className="bg-white/5 border border-white/10 p-8 rounded-3xl group hover:border-brand-green/50 transition-all relative overflow-hidden">
                                 <div className="text-brand-green font-poppins font-bold text-5xl opacity-20 mb-4">{i + 1}</div>
                                 <h4 className="text-xl font-bold mb-4 text-white">{step.title}</h4>
-                                <p className="text-gray-400 mb-6 text-sm leading-relaxed">{step.desc}</p>
+                                <p className="text-gray-400 mb-6 text-sm leading-relaxed">{step.description}</p>
                                 
                                 <div className="space-y-4 pt-4 border-t border-white/10">
                                     <div className="flex gap-3 text-xs">

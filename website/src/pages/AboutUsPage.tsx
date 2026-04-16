@@ -11,11 +11,11 @@ function AboutUsPage() {
 
     useEffect(() => {
         const title = "Spokane's Expert House Painters: Our Story & Quality Promise";
-        const description = `Meet Robert and the team at ${companyName}. Discover how our Inland Northwest roots and 'Expect Excellence' philosophy redefine professional painting in Spokane.`;
+        const description = `Meet Robert and the team at ${companyName}. Discover how our Inland Northwest roots and excellence philosophy redefine professional painting in Spokane.`;
         document.title = title;
         
         return injectPageSEO({
-            title,
+            seoTitle: title,
             description,
             path: '/about',
             keywords: "about prestige custom painting, robert painting spokane, local spokane painters, professional painting company spokane, house painting philosophy",
@@ -23,7 +23,7 @@ function AboutUsPage() {
                 {
                     id: 'webpage',
                     data: generateWebPageSchema({
-                        title,
+                        topic: title,
                         description,
                         url: "https://prestigecustompaintingllc.com/about"
                     })
@@ -37,9 +37,9 @@ function AboutUsPage() {
     }, [companyName]);
 
     const values = [
-        { icon: <Heart size={24} />, title: "Local Heritage", desc: "Robert was born and raised in the Inland Northwest. We don't just work in Spokane; we live here, and we care about every street we paint." },
-        { icon: <Award size={24} />, title: "The Prestige Standard", desc: "We use only the highest-tier coatings from Benjamin Moore and Sherwin Williams, applied with precision mechanical tools." },
-        { icon: <Shield size={24} />, title: "Absolute Trust", desc: "We are fully licensed, bonded, and insured. We believe in 100% transparency from the first quote to the final walkthrough." },
+        { icon: <Heart size={24} />, title: "Local Heritage", description: "Robert was born and raised in the Inland Northwest. We don't just work in Spokane; we live here, and we care about every street we paint." },
+        { icon: <Award size={24} />, title: "The Prestige Standard", description: "We use only the highest-tier coatings from Benjamin Moore and Sherwin Williams, applied with precision mechanical tools." },
+        { icon: <Shield size={24} />, title: "Absolute Trust", description: "We are fully licensed, bonded, and insured. We believe in 100% transparency from the first quote to the final walkthrough." },
     ];
 
     const qualityChecklist = [
@@ -217,7 +217,7 @@ function AboutUsPage() {
                                     {v.icon}
                                 </div>
                                 <h4 className="text-2xl font-poppins font-bold mb-4 text-brand-black">{v.title}</h4>
-                                <p className="text-gray-500 leading-relaxed text-lg">{v.desc}</p>
+                                <p className="text-gray-500 leading-relaxed text-lg">{v.description}</p>
                             </div>
                         ))}
                     </div>

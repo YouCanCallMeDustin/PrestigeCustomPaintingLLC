@@ -36,37 +36,37 @@ function PressureWashingPage() {
     const steps = [
         {
             title: "Site Inspection & Protection",
-            desc: "We identify delicate surfaces and protect electrical outlets, door locks, and sensitive landscaping before any water starts flowing.",
+            description: "We identify delicate surfaces and protect electrical outlets, door locks, and sensitive landscaping before any water starts flowing.",
             proTip: "Taping off exterior outlets prevent GFCI trips and ensures your home's electrical system stays dry during the process.",
             pitfall: "Ignoring open windows or faulty door seals. High-pressure water can find its way into the smallest gaps, causing interior damage."
         },
         {
             title: "Detergent Pre-Soak",
-            desc: "We apply eco-friendly surfactants and algaecides to break down the molecular bond of dirt, grime, and organic biofilms.",
+            description: "We apply eco-friendly surfactants and algaecides to break down the molecular bond of dirt, grime, and organic biofilms.",
             proTip: "Allowing a 10-minute 'dwell time' for the detergent does 90% of the work, reducing the need for damaging high pressure.",
             pitfall: "Using generic bleach without buffers. Raw bleach can dry out wood fibers and damage the UV-protective coating on vinyl siding."
         },
         {
             title: "Low-Pressure Agitation",
-            desc: "For stubborn areas like textured masonry or deep oil stains, we use specialized brushes to gently loosen debris without surface abrasion.",
+            description: "For stubborn areas like textured masonry or deep oil stains, we use specialized brushes to gently loosen debris without surface abrasion.",
             proTip: "A soft-bristle brush is safer for cleaning delicate trim work than increasing the psi on your pressure washer.",
             pitfall: "Using a wire brush on wood. This tears the fibers and creates a 'fuzzy' texture that holds more dirt in the future."
         },
         {
             title: "Precision High-Pressure Rinse",
-            desc: "Using calibrated nozzles, we perform a controlled rinse of flatwork and masonry, removing all loosened debris and biofilms.",
+            description: "Using calibrated nozzles, we perform a controlled rinse of flatwork and masonry, removing all loosened debris and biofilms.",
             proTip: "The 25-degree 'green' tip is the industry standard for concrete cleaning, providing a balance of power and surface safety.",
             pitfall: "Getting too close with a zero-degree nozzle. This concentrated stream can actually cut through wood and etch concrete."
         },
         {
             title: "Substrate Verification",
-            desc: "With the surface clean, we perform a visual inspection to check for wood rot, mortar failure, or siding damage revealed by the wash.",
+            description: "With the surface clean, we perform a visual inspection to check for wood rot, mortar failure, or siding damage revealed by the wash.",
             proTip: "Washing is the best time to check for 'chalking' on old paint, which is a key indicator that a property needs repainting.",
             pitfall: "Painting over a surface immediately after washing. Materials must dry to a specific moisture level to ensure new paint adhesion."
         },
         {
             title: "Final Site Wash-Down",
-            desc: "We perform a broad rinse of the entire property, ensuring all windows, walkways, and foliage are free of any residual cleaning agents.",
+            description: "We perform a broad rinse of the entire property, ensuring all windows, walkways, and foliage are free of any residual cleaning agents.",
             proTip: "A final rinse of windows with deionized water prevents spotting, leaving the glass as clean as the siding.",
             pitfall: "Leaving puddles of detergent in the driveway. Dried cleaning agents can leave white hazy streaks that are difficult to remove later."
         }
@@ -77,7 +77,7 @@ function PressureWashingPage() {
         const description = "Spokane's expert pressure washing services. Professional cleaning for siding, decks, driveways, and masonry. Safe and effective. Free estimates!";
         
         return injectPageSEO({
-            title,
+            seoTitle: title,
             description,
             path: '/pressure-washing-spokane',
             schemas: [
@@ -85,7 +85,7 @@ function PressureWashingPage() {
                 {
                     id: 'webpage',
                     data: generateWebPageSchema({
-                        title,
+                        topic: title,
                         description,
                         url: "https://prestigecustompaintingllc.com/pressure-washing-spokane"
                     })
@@ -102,7 +102,7 @@ function PressureWashingPage() {
                     data: generateHowToSchema({
                         name: "Professional Pressure Washing Protocol",
                         description: "Our 6-step surface system for safe and effective pressure washing.",
-                        steps: steps.map(s => ({ name: s.title, text: s.desc }))
+                        steps: steps.map(s => ({ name: s.title, text: s.description }))
                     })
                 }
             ]
@@ -247,16 +247,16 @@ function PressureWashingPage() {
                     </div>
                     <div className="grid md:grid-cols-3 gap-8 text-left">
                         {[
-                            { name: "Curb Appeal", desc: "Instantly increase your property value by removing unsightly moss and dirt stains from the exterior." },
-                            { name: "Prevent Damage", desc: "Algae and mold roots can actually eat into paint and wood fibers, causing premature rot." },
-                            { name: "Healthy Environment", desc: "Removing pollen, mold, and mildew spores from around your home improves local air quality for your family." }
+                            { name: "Curb Appeal", description: "Instantly increase your property value by removing unsightly moss and dirt stains from the exterior." },
+                            { name: "Prevent Damage", description: "Algae and mold roots can actually eat into paint and wood fibers, causing premature rot." },
+                            { name: "Healthy Environment", description: "Removing pollen, mold, and mildew spores from around your home improves local air quality for your family." }
                         ].map((item, i) => (
                             <div key={i} className="p-8 bg-gray-50 rounded-[2.5rem] border border-gray-100 hover:border-brand-green transition-all shadow-sm">
                                 <div className="w-14 h-14 bg-brand-green/10 rounded-2xl flex items-center justify-center text-brand-green mb-6">
                                     <Wind size={24} />
                                 </div>
                                 <h4 className="text-xl font-bold mb-4 uppercase tracking-tight">{item.name}</h4>
-                                <p className="text-gray-600 leading-relaxed font-medium text-sm">{item.desc}</p>
+                                <p className="text-gray-600 leading-relaxed font-medium text-sm">{item.description}</p>
                             </div>
                         ))}
                     </div>
@@ -277,7 +277,7 @@ function PressureWashingPage() {
                             <div key={i} className="bg-white/5 border border-white/10 p-8 rounded-3xl group hover:border-brand-green/50 transition-all relative overflow-hidden">
                                 <div className="text-brand-green font-poppins font-bold text-5xl opacity-20 mb-4">{i + 1}</div>
                                 <h4 className="text-xl font-bold mb-4 text-white uppercase tracking-tighter leading-8">{step.title}</h4>
-                                <p className="text-gray-400 mb-6 text-sm leading-relaxed">{step.desc}</p>
+                                <p className="text-gray-400 mb-6 text-sm leading-relaxed">{step.description}</p>
                                 
                                 <div className="space-y-4 pt-4 border-t border-white/10">
                                     <div className="flex gap-3 text-xs">

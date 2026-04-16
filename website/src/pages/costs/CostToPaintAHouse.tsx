@@ -48,7 +48,7 @@ const CostToPaintAHouse = () => {
         { 
             id: 'article', 
             data: generateArticleSchema({
-                title: "How Much Does It Cost to Paint a House in 2026? (Spokane Guide)",
+                topic: "How Much Does It Cost to Paint a House in 2026? (Spokane Guide)",
                 description: "The ultimate guide to house painting costs in Spokane, WA. Compare interior and exterior pricing, hourly rates, and factors that affect your estimate.",
                 image: "https://prestigecustompaintingllc.com/exterior.png",
                 datePublished: "2026-03-27",
@@ -61,17 +61,17 @@ const CostToPaintAHouse = () => {
 
     const relatedTopics = [
         {
-            title: "Exterior Painting Costs",
+            topic: "Exterior Painting Costs",
             path: "/cost-to-paint-house-exterior",
             description: "Detailed breakdown of siding, trim, and preparation costs for Spokane exteriors."
         },
         {
-            title: "Interior Painting Costs",
+            topic: "Interior Painting Costs",
             path: "/cost-to-paint-house-interior",
             description: "How much to budget for walls, ceilings, and trim throughout your home."
         },
         {
-            title: "Cabinet Painting Pricing",
+            topic: "Cabinet Painting Pricing",
             path: "/cost-to-paint-kitchen-cabinets",
             description: "Transform your kitchen for a fraction of the cost of new cabinets."
         }
@@ -80,28 +80,34 @@ const CostToPaintAHouse = () => {
     return (
         <div className="min-h-screen bg-white text-brand-black">
             <SEOHead 
-                title="How Much Does It Cost to Paint a House in Spokane? (2026 Guide)"
-                description="Discover accurate house painting costs in Spokane, WA. Our comprehensive guide covers interior, exterior, labor rates, and square foot pricing for 2026."
+                seoTitle="How Much Does It Cost to Paint a House in Spokane? (2026 Guide)"
+                description="Discover accurate house painting costs in Spokane, WA. Our comprehensive 2026 guide covers interior, exterior, labor rates, and square foot pricing estimates."
                 path="/cost-to-paint-a-house"
                 schemas={schemas}
             />
             <Navbar />
 
-            <main className="max-w-7xl mx-auto px-4 pt-24 pb-20">
-                <Breadcrumbs items={breadcrumbItems} />
-
-                <article className="max-w-4xl">
-                    <header className="mb-12">
+            <header className="bg-brand-black pt-28 pb-16 md:pt-36 md:pb-24 text-white relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-1/2 h-full bg-brand-green/10 -skew-x-12 transform translate-x-32" />
+                <div className="max-w-7xl mx-auto px-4 relative z-10">
+                    <Breadcrumbs items={breadcrumbItems} variant="light" />
+                    
+                    <div className="max-w-4xl">
                         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-green/10 text-brand-green text-sm font-bold mb-6">
                             <DollarSign size={16} /> UPDATED FOR 2026
                         </div>
                         <h1 className="text-4xl md:text-6xl font-poppins font-bold leading-tight mb-8">
                             How Much Does It Cost to <span className="text-brand-green">Paint a House</span> in Spokane?
                         </h1>
-                        <p className="text-xl text-gray-600 leading-relaxed font-medium">
+                        <p className="text-xl text-gray-300 leading-relaxed font-medium">
                             If you're planning a home refresh in the Inland Northwest, the question isn't just "how much," but "what am I getting for my investment?" In 2026, professional painting costs in Spokane have shifted due to material innovations and labor trends. This guide breaks down every variable to help you budget accurately.
                         </p>
-                    </header>
+                    </div>
+                </div>
+            </header>
+
+            <main className="max-w-7xl mx-auto px-4 py-20">
+                <article className="max-w-4xl">
 
                     {/* Quick Answer Box */}
                     <div className="bg-brand-black text-white p-8 rounded-[2rem] mb-16 relative overflow-hidden shadow-2xl">

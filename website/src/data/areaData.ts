@@ -42,7 +42,6 @@ export const areaData: AreaData[] = [
     { city: "Rockford", slug: "rockford", heroTagline: "ROCKFORD PAINTING SERVICES", funFact: "The rolling hills of Rockford are home to some of the most beautiful properties we serve." },
     { city: "Latah", slug: "latah", heroTagline: "LATAH AREA PAINTERS", funFact: "We're proud to serve the southern reaches of Spokane County in the quiet town of Latah." },
     { city: "Waverly", slug: "waverly", heroTagline: "WAVERLY CUSTOM PAINTING", funFact: "Small town service with big city quality — that's our promise to Waverly homeowners." },
-    { city: "Colbert", slug: "colbert", heroTagline: "COLBERT PAINTING SERVICES", funFact: "The spacious yards in Colbert give us plenty of room to set up our professional spray rigs safely." },
     { city: "Elk", slug: "elk", heroTagline: "ELK AREA PAINTING EXPERTS", funFact: "Even the furthest corners of Spokane County like Elk deserve the prestige standard of care." },
     { city: "Plaza", slug: "plaza", heroTagline: "PLAZA RESIDENTIAL PAINTING", funFact: "Preserving the history of Plaza with high-quality paint is what we do best." },
     { city: "Marshall", slug: "marshall", heroTagline: "MARSHALL PAINTING CO", funFact: "The unique terrain around Marshall makes every project here a rewarding challenge." },

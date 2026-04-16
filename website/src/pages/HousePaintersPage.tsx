@@ -40,37 +40,37 @@ function HousePaintersPage() {
     const steps = [
         {
             title: "Comprehensive Home Diagnostic",
-            desc: "We perform a systematic evaluation of your home's substrate, identifying moisture traps, failing caulk, and wood rot that standard painters miss.",
+            description: "We perform a systematic evaluation of your home's substrate, identifying moisture traps, failing caulk, and wood rot that standard painters miss.",
             proTip: "Check your window sills for soft wood before we arrive; catching rot early saves thousands in future repair costs.",
             pitfall: "Painting over wet or rotten wood. The moisture will trap behind the new coat and cause immediate bubbling."
         },
         {
             title: "Exterior Clean & Interior Shielding",
-            desc: "For exteriors, we perform a deep power wash to remove oxidation. For interiors, we use 3M-grade plastic shielding to protect every inch of your furniture.",
+            description: "For exteriors, we perform a deep power wash to remove oxidation. For interiors, we use 3M-grade plastic shielding to protect every inch of your furniture.",
             proTip: "Turn off your exterior AC unit during power washing to prevent moisture from being sucked into the condenser.",
             pitfall: "Using standard drop cloths over hardwoods. Spills can seep through fabric; we always use heavy-duty floor runners."
         },
         {
             title: "Corrective Surface Repair",
-            desc: "We don't just 'paint over' problems. We sand, patch, and re-caulk every seam to ensure a durable, water-tight finish.",
+            description: "We don't just 'paint over' problems. We sand, patch, and re-caulk every seam to ensure a durable, water-tight finish.",
             proTip: "Using high-flex siliconized acrylic caulk is essential for Spokane homes to handle the seasonal expansion and contraction.",
             pitfall: "Skiping the sanding phase. New paint won't bond correctly to an old high-gloss finish without mechanical etching."
         },
         {
             title: "Bond-Building Priming",
-            desc: "We apply specialty primers tailored to your substrate—whether it's tannin-blocking for cedar or high-hide for color transitions.",
+            description: "We apply specialty primers tailored to your substrate—whether it's tannin-blocking for cedar or high-hide for color transitions.",
             proTip: "If changing from a dark to a light color, a tinted primer can reduce the number of finish coats required.",
             pitfall: "Standard 'all-in-one' paints often lack the specialized bonding agents needed for long-term adhesion."
         },
         {
             title: "Multi-Coat Finish Application",
-            desc: "We apply two full coats of premium finish using precision spray and back-rolling techniques for maximum depth and protection.",
+            description: "We apply two full coats of premium finish using precision spray and back-rolling techniques for maximum depth and protection.",
             proTip: "Back-rolling during a spray application forces the paint into the grain, doubling the lifespan of the job.",
             pitfall: "Applying a single 'heavy' coat. Two thin coats are always more durable and result in a smoother finish."
         },
         {
             title: "Owner Quality Audit",
-            desc: "We conduct a final, rigorous walk-through with you to ensure every line is crisp and every surface reflects our 'Expect Excellence' motto.",
+            description: "We conduct a final, rigorous walk-through with you to ensure every line is crisp and every surface reflects our 'Expect Excellence' motto.",
             proTip: "Inspect the paint under different lighting conditions (morning vs. afternoon) to ensure absolute uniform coverage.",
             pitfall: "Accepting a job before the final walk-through. A professional contractor always demands your 100% sign-off."
         }
@@ -81,7 +81,7 @@ function HousePaintersPage() {
         const description = "Spokane's most trusted house painters. High-quality finishes, precision detail, and durable protection for your home. Free estimates!";
         
         return injectPageSEO({
-            title,
+            seoTitle: title,
             description,
             path: '/house-painters-spokane',
             schemas: [
@@ -89,7 +89,7 @@ function HousePaintersPage() {
                 {
                     id: 'webpage',
                     data: generateWebPageSchema({
-                        title,
+                        topic: title,
                         description,
                         url: "https://prestigecustompaintingllc.com/house-painters-spokane"
                     })
@@ -106,7 +106,7 @@ function HousePaintersPage() {
                     data: generateHowToSchema({
                         name: "Professional House Painting Process",
                         description: "Our comprehensive 6-step interior and exterior painting process.",
-                        steps: steps.map(s => ({ name: s.title, text: s.desc }))
+                        steps: steps.map(s => ({ name: s.title, text: s.description }))
                     })
                 }
             ]
@@ -305,7 +305,7 @@ function HousePaintersPage() {
                             <div key={i} className="bg-white/5 border border-white/10 p-8 rounded-3xl group hover:border-brand-green/50 transition-all text-left">
                                 <div className="text-brand-green font-poppins font-bold text-5xl opacity-20 mb-4">{i + 1}</div>
                                 <h4 className="text-xl font-bold mb-4 text-white">{step.title}</h4>
-                                <p className="text-gray-400 mb-6 text-sm leading-relaxed">{step.desc}</p>
+                                <p className="text-gray-400 mb-6 text-sm leading-relaxed">{step.description}</p>
                                 
                                 <div className="space-y-4 pt-4 border-t border-white/10">
                                     <div className="flex gap-3 text-xs">

@@ -45,17 +45,17 @@ const RoomPaintingCost = () => {
 
     const relatedTopics = [
         {
-            title: "Interior Painting Costs",
+            topic: "Interior Painting Costs",
             path: "/cost-to-paint-house-interior",
             description: "How to budget for an entire floor or whole home interior project."
         },
         {
-            title: "DIY vs. Professional",
+            topic: "DIY vs. Professional",
             path: "/diy-vs-hiring-a-painter",
             description: "Comparing the costs of a weekend DIY room project vs. professional results."
         },
         {
-            title: "Painter Hourly Rates",
+            topic: "Painter Hourly Rates",
             path: "/how-much-do-painters-charge-per-hour",
             description: "Understanding labor costs for smaller interior projects in Spokane."
         }
@@ -64,25 +64,31 @@ const RoomPaintingCost = () => {
     return (
         <div className="min-h-screen bg-white text-brand-black">
             <SEOHead 
-                title="How Much Does It Cost to Paint a Room in Spokane? (2026)"
-                description="Planning to paint a bedroom, kitchen, or bathroom? Get an accurate breakdown of room painting costs from Spokane's top-rated professional team."
+                seoTitle="Room Painting Cost Guide: Spokane Interior Pricing"
+                description="What does it cost to paint a single bedroom or kitchen in Spokane? See our 2026 pricing breakdown for walls, trim, and ceilings for any small house project."
                 path="/cost-to-paint-a-room"
                 schemas={schemas}
             />
             <Navbar />
 
-            <main className="max-w-7xl mx-auto px-4 pt-24 pb-20">
-                <Breadcrumbs items={breadcrumbItems} />
-
-                <article className="max-w-4xl">
-                    <header className="mb-12">
+            <header className="bg-brand-black pt-28 pb-16 md:pt-36 md:pb-24 text-white relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-1/2 h-full bg-brand-green/10 -skew-x-12 transform translate-x-32" />
+                <div className="max-w-7xl mx-auto px-4 relative z-10">
+                    <Breadcrumbs items={breadcrumbItems} variant="light" />
+                    
+                    <div className="max-w-4xl">
                         <h1 className="text-4xl md:text-6xl font-poppins font-bold leading-tight mb-8">
                             How Much Does It Cost to <span className="text-brand-green">Paint a Room</span> in Spokane?
                         </h1>
-                        <p className="text-xl text-gray-600 leading-relaxed font-medium">
+                        <p className="text-xl text-gray-300 leading-relaxed font-medium">
                             Whether you're refreshing a nursery or updating your master suite, understanding the "per-room" cost is essential for planning. In 2026, most Spokane homeowners can expect to pay between <strong>$450 and $1,200</strong> for a single professionally painted room, depending on the scope and trim details.
                         </p>
-                    </header>
+                    </div>
+                </div>
+            </header>
+
+            <main className="max-w-7xl mx-auto px-4 py-20">
+                <article className="max-w-4xl">
 
                     <div className="prose prose-lg prose-brand max-w-none">
                         <section className="my-12">

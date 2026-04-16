@@ -14,7 +14,7 @@ export default function PrivacyPolicyPage() {
         document.title = title;
         
         return injectPageSEO({
-            title,
+            seoTitle: title,
             description,
             path: '/privacy-policy'
         });

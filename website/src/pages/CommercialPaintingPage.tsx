@@ -40,37 +40,37 @@ function CommercialPaintingPage() {
     const steps = [
         {
             title: "Industrial Site Assessment",
-            desc: "We perform a walk-through to identify high-traffic high-wear zones and determine specific substrate needs (CMU, metal, or drywall).",
+            description: "We perform a walk-through to identify high-traffic high-wear zones and determine specific substrate needs (CMU, metal, or drywall).",
             proTip: "Point out existing damage from carts or machinery; we can install scuff-resistant guards in those areas.",
             pitfall: "Using standard residential paint in a commercial corridor. It will show scuffs within weeks."
         },
         {
             title: "Safety & Zoning",
-            desc: "We establish OSHA-compliant masking and exclusion zones. All work areas are clearly cordoned off to ensure employee and customer safety.",
+            description: "We establish OSHA-compliant masking and exclusion zones. All work areas are clearly cordoned off to ensure employee and customer safety.",
             proTip: "Use blue painter's tape to mark 'off-limits' zones for employees 24 hours before the project starts.",
             pitfall: "Failing to mark wet paint areas. One customer touch can result in a costly re-do and a damaged suit."
         },
         {
             title: "Mechanical Surface Prep",
-            desc: "We use power washing, grinding, or chemical etching depending on the substrate to ensure industrial-grade adhesion.",
+            description: "We use power washing, grinding, or chemical etching depending on the substrate to ensure industrial-grade adhesion.",
             proTip: "For metal surfaces, mechanical wire brushing is essential to remove oxidation before priming.",
             pitfall: "Skiping prep on concrete floors. If not ground or etched, epoxy will peel under hot tires or pallets."
         },
         {
             title: "Specialized Multi-Surface Priming",
-            desc: "We apply substrate-specific primers, including epoxy primers for concrete or DTM (Direct-to-Metal) coatings for steel structures.",
+            description: "We apply substrate-specific primers, including epoxy primers for concrete or DTM (Direct-to-Metal) coatings for steel structures.",
             proTip: "In medical offices, use antimicrobial primers that help inhibit the growth of mold and mildew.",
             pitfall: "Using one single primer for all surfaces. Metal and drywall require fundamentally different bonding agents."
         },
         {
             title: "High-Performance Topcoat",
-            desc: "We apply industrial-grade coatings, including scuff-resistant enamels and chemical-resistant urethanes for maximum longevity.",
+            description: "We apply industrial-grade coatings, including scuff-resistant enamels and chemical-resistant urethanes for maximum longevity.",
             proTip: "Choose a satin or semi-gloss finish for high-traffic halls; they are much easier for cleaning crews to maintain.",
             pitfall: "Applying paint in low-ventilation areas without proper air scrubbers."
         },
         {
             title: "Progress Review & Final Walk",
-            desc: "We conduct a systematic inspection with your facility manager to ensure zero business disruption and absolute quality.",
+            description: "We conduct a systematic inspection with your facility manager to ensure zero business disruption and absolute quality.",
             proTip: "Keep a small 'touch-up' kit labeled by room in your maintenance closet for future repairs.",
             pitfall: "Completing the project without a signed-off walkthrough. Commercial projects need documented approval."
         }
@@ -81,7 +81,7 @@ function CommercialPaintingPage() {
         const description = "Spokane's leading commercial painting contractors. High-performance coatings, flexible scheduling, and professional facility restoration. Free estimates!";
 
         return injectPageSEO({
-            title,
+            seoTitle: title,
             description,
             path: '/commercial-painting-spokane',
             schemas: [
@@ -89,7 +89,7 @@ function CommercialPaintingPage() {
                 {
                     id: 'webpage',
                     data: generateWebPageSchema({
-                        title,
+                        topic: title,
                         description,
                         url: "https://prestigecustompaintingllc.com/commercial-painting-spokane"
                     })
@@ -106,7 +106,7 @@ function CommercialPaintingPage() {
                     data: generateHowToSchema({
                         name: "Commercial Painting Optimization Process",
                         description: "Our 6-step commercial facility painting system.",
-                        steps: steps.map(s => ({ name: s.title, text: s.desc }))
+                        steps: steps.map(s => ({ name: s.title, text: s.description }))
                     })
                 }
             ]
@@ -305,7 +305,7 @@ function CommercialPaintingPage() {
                             <div key={i} className="bg-white/5 border border-white/10 p-8 rounded-3xl group hover:border-brand-green/50 transition-all">
                                 <div className="text-brand-green font-poppins font-bold text-5xl opacity-20 mb-4">{i + 1}</div>
                                 <h4 className="text-xl font-bold mb-4 text-white">{step.title}</h4>
-                                <p className="text-gray-400 mb-6 text-sm leading-relaxed">{step.desc}</p>
+                                <p className="text-gray-400 mb-6 text-sm leading-relaxed">{step.description}</p>
 
                                 <div className="space-y-4 pt-4 border-t border-white/10">
                                     <div className="flex gap-3 text-xs">

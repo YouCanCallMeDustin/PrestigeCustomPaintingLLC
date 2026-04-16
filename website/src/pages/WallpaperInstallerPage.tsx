@@ -36,37 +36,37 @@ function WallpaperInstallerPage() {
     const steps = [
         {
             title: "Old Paper Stripping & Scrape",
-            desc: "We use a combination of enzymatic strippers and professional steam technology to gently lift old paper without gouging the drywall substrate.",
+            description: "We use a combination of enzymatic strippers and professional steam technology to gently lift old paper without gouging the drywall substrate.",
             proTip: "Never dry-scrape wallpaper; it almost always results in permanent damage to the gypsum board underneath.",
             pitfall: "Using too much water during DIY removal can soak into the drywall core, causing it to crumble and lose structural integrity."
         },
         {
             title: "Adhesive Neutralization",
-            desc: "The most critical step. We scrub the walls to remove every trace of old paste, which would otherwise cause new paper or paint to fail.",
+            description: "The most critical step. We scrub the walls to remove every trace of old paste, which would otherwise cause new paper or paint to fail.",
             proTip: "Diffused lighting helps identify clear adhesive residue that remains invisible under standard direct light.",
             pitfall: "Painting or papering over old glue. The new materials will reactivate the old glue, leading to immediate peeling."
         },
         {
             title: "Substrate Smoothing & Priming",
-            desc: "We patch all imperfections and apply a specialized 'wallpaper primer/sealer' that creates the perfect grip for the new adhesive.",
+            description: "We patch all imperfections and apply a specialized 'wallpaper primer/sealer' that creates the perfect grip for the new adhesive.",
             proTip: "Standard wall primer isn't enough; you need a high-solid sealer to prevent the paper from bonding too permanently to the drywall.",
             pitfall: "Skiping the sealing phase. This makes future removal impossible without destroying the wall."
         },
         {
             title: "Panel Measurement & Prep",
-            desc: "we meticulously calculate pattern repeats and panel heights to ensure perfect alignment and minimal material waste.",
+            description: "we meticulously calculate pattern repeats and panel heights to ensure perfect alignment and minimal material waste.",
             proTip: "Always order 10-15% more material than you think you need to account for pattern matching and intricate corner cuts.",
             pitfall: "Assuming your walls are perfectly plumb. We use laser levels to ensure the first panel is perfectly straight."
         },
         {
             title: "Precision Adhesive Application",
-            desc: "Using the specific paste required for your material (paste-the-wall or paste-the-paper), we ensure an even, bubble-free bond.",
+            description: "Using the specific paste required for your material (paste-the-wall or paste-the-paper), we ensure an even, bubble-free bond.",
             proTip: "Non-woven papers usually require the 'paste-the-wall' method, which is much cleaner and more efficient.",
             pitfall: "Under-pasting the edges. This is where 90% of wallpaper failures start—curling and lifting seams."
         },
         {
             title: "Edge-to-Edge Alignment",
-            desc: "We hand-roll every seam and use precision trimming at the ceiling and baseboards for a bespoke, built-in look.",
+            description: "We hand-roll every seam and use precision trimming at the ceiling and baseboards for a bespoke, built-in look.",
             proTip: "Use a seam roller with light pressure; too much force will squeeze out the glue and cause the seam to gap when dry.",
             pitfall: "Over-stretching the paper during installation. As it dries, it will shrink back and leave visible gaps between panels."
         }
@@ -77,7 +77,7 @@ function WallpaperInstallerPage() {
         const description = "Spokane's expert wallpaper installers. Precision removal, wall preparation, and perfect pattern matching. High-quality finishes. Free estimates!";
 
         return injectPageSEO({
-            title,
+            seoTitle: title,
             description,
             path: '/wallpaper-installer-spokane',
             schemas: [
@@ -85,7 +85,7 @@ function WallpaperInstallerPage() {
                 {
                     id: 'webpage',
                     data: generateWebPageSchema({
-                        title,
+                        topic: title,
                         description,
                         url: "https://prestigecustompaintingllc.com/wallpaper-installer-spokane"
                     })
@@ -102,7 +102,7 @@ function WallpaperInstallerPage() {
                     data: generateHowToSchema({
                         name: "Professional Wallpaper Installation Process",
                         description: "Our 6-step precision system for wallpaper installation.",
-                        steps: steps.map(s => ({ name: s.title, text: s.desc }))
+                        steps: steps.map(s => ({ name: s.title, text: s.description }))
                     })
                 }
             ]
@@ -244,16 +244,16 @@ function WallpaperInstallerPage() {
                     </div>
                     <div className="grid md:grid-cols-3 gap-8 text-left">
                         {[
-                            { name: "Vinyl & Non-Woven", desc: "Durable and washable. Ideal for bathrooms and kitchens on the South Hill." },
-                            { name: "Grasscloth & Natural", desc: "Requires extreme care. These materials cannot get wet and show every seams by design." },
-                            { name: "Large Scale Murals", desc: "Becoming very popular in Spokane Valley. Requires laser-precision to match the image across multiple panels." }
+                            { name: "Vinyl & Non-Woven", description: "Durable and washable. Ideal for bathrooms and kitchens on the South Hill." },
+                            { name: "Grasscloth & Natural", description: "Requires extreme care. These materials cannot get wet and show every seams by design." },
+                            { name: "Large Scale Murals", description: "Becoming very popular in Spokane Valley. Requires laser-precision to match the image across multiple panels." }
                         ].map((item, i) => (
                             <div key={i} className="p-8 bg-gray-50 rounded-[2.5rem] border border-gray-100 hover:border-brand-green transition-all shadow-sm">
                                 <div className="w-14 h-14 bg-brand-green/10 rounded-2xl flex items-center justify-center text-brand-green mb-6">
                                     <Scissors size={24} />
                                 </div>
                                 <h4 className="text-xl font-bold mb-4">{item.name}</h4>
-                                <p className="text-gray-600 leading-relaxed font-medium text-sm">{item.desc}</p>
+                                <p className="text-gray-600 leading-relaxed font-medium text-sm">{item.description}</p>
                             </div>
                         ))}
                     </div>
@@ -274,7 +274,7 @@ function WallpaperInstallerPage() {
                             <div key={i} className="bg-white/5 border border-white/10 p-8 rounded-3xl group hover:border-brand-green/50 transition-all relative overflow-hidden">
                                 <div className="text-brand-green font-poppins font-bold text-5xl opacity-20 mb-4">{i + 1}</div>
                                 <h4 className="text-xl font-bold mb-4 text-white uppercase tracking-tighter">{step.title}</h4>
-                                <p className="text-gray-400 mb-6 text-sm leading-relaxed">{step.desc}</p>
+                                <p className="text-gray-400 mb-6 text-sm leading-relaxed">{step.description}</p>
 
                                 <div className="space-y-4 pt-4 border-t border-white/10">
                                     <div className="flex gap-3 text-xs">

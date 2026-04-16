@@ -7,7 +7,7 @@ export default function CheneyPage() {
             state="WA"
             slug="cheney"
             metaTitle="Professional Painters in Cheney WA | Prestige Custom Painting LLC"
-            metaDesc="Searching for professional painters in Cheney, WA? Prestige Custom Painting LLC offers high-quality interior, exterior, and cabinet refinishing services. Expert craftsmanship you can trust."
+            metaDesc="Looking for expert painters in Cheney? Prestige Custom Painting LLC delivers premium interior and exterior finishes for homes in your local Spokane area."
             heroTagline="CHENEY'S LOCAL PAINTING PROFESSIONALS"
             introParagraphs={[
                 "Cheney, WA is a vibrant college town and residential community, and Prestige Custom Painting LLC is the painting company Cheney residents trust for professional interior and exterior painting results. Whether you own a home near Eastern Washington University or in one of Cheney's established residential neighborhoods, we're ready to help you transform your property.",

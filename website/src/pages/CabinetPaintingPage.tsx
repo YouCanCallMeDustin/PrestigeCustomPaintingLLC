@@ -40,37 +40,37 @@ function CabinetPaintingPage() {
     const steps = [
         {
             title: "Hardware Removal & Labeling",
-            desc: "We dismantle all doors, drawers, and hardware. Every hinge is meticulously cataloged so that re-installation is perfectly aligned.",
+            description: "We dismantle all doors, drawers, and hardware. Every hinge is meticulously cataloged so that re-installation is perfectly aligned.",
             proTip: "Keep original hardware in labeled bags; even same-year hinges can have slight variations in wear.",
             pitfall: "Losing track of door locations. Cabinet boxes often have unique widths that aren't perfectly interchangeable."
         },
         {
             title: "Chemical Degreasing",
-            desc: "We scrub all surfaces with industrial degreasers (TSP substitute) to remove Spokane's toughest cooking oils and grease residues.",
+            description: "We scrub all surfaces with industrial degreasers (TSP substitute) to remove Spokane's toughest cooking oils and grease residues.",
             proTip: "Pay extra attention to the areas around the stove and handles where skin oils and steam accumulate.",
             pitfall: "Painting over oil. No primer—regardless of quality—will bond to a greasy surface."
         },
         {
             title: "Mechanical Sanding",
-            desc: "We use HEPA-filtered dustless sanders to 'profile' the existing factory finish. This creates microscopic ridges for the new primer to bite into.",
+            description: "We use HEPA-filtered dustless sanders to 'profile' the existing factory finish. This creates microscopic ridges for the new primer to bite into.",
             proTip: "Use 220-grit sandpaper for a surface that is rough enough for adhesion but smooth enough for a fine finish.",
             pitfall: "Under-sanding 'dead spots' or corners. These are the areas where paint typically chips first."
         },
         {
             title: "Bonding Priming",
-            desc: "We spray a specialized high-adhesion primer designed to stick to non-porous surfaces like factory-finished wood and laminate.",
+            description: "We spray a specialized high-adhesion primer designed to stick to non-porous surfaces like factory-finished wood and laminate.",
             proTip: "For heavy-grain wood like Oak, we use high-build primers to fill the pores for a more modern, smooth look.",
             pitfall: "Using standard wall primer. Cabinetry requires chemical-bonding primers to resist heat and moisture."
         },
         {
             title: "Industrial Coating Spray",
-            desc: "We apply two perfectly atomized coats of premium urethane enamel using HVLP sprayers for a factory-smooth, durable finish.",
+            description: "We apply two perfectly atomized coats of premium urethane enamel using HVLP sprayers for a factory-smooth, durable finish.",
             proTip: "Spray doors horizontally to allow the paint to 'level' perfectly, eliminating any orange peel texture.",
             pitfall: "Applying coats too thick. This causes 'runs' and prevents the paint from curing to its full hardness."
         },
         {
             title: "Re-installation & Fine Tuning",
-            desc: "We re-hang all components, install hardware, and perform a detailed alignment check to ensure everything closes perfectly.",
+            description: "We re-hang all components, install hardware, and perform a detailed alignment check to ensure everything closes perfectly.",
             proTip: "Install small rubber 'bumpers' to prevent the newly cured finish from sticking to the frames.",
             pitfall: "Rushing re-installation before the paint reaches its 'dry-to-handle' state."
         }
@@ -81,7 +81,7 @@ function CabinetPaintingPage() {
         const description = "Expert cabinet painters in Spokane, WA. Transform your kitchen with factory-grade finishes, durable coatings, and professional refinishing. Free estimates!";
 
         return injectPageSEO({
-            title,
+            seoTitle: title,
             description,
             path: '/cabinet-painting-spokane',
             schemas: [
@@ -89,7 +89,7 @@ function CabinetPaintingPage() {
                 {
                     id: 'webpage',
                     data: generateWebPageSchema({
-                        title,
+                        topic: title,
                         description,
                         url: "https://prestigecustompaintingllc.com/cabinet-painting-spokane"
                     })
@@ -106,7 +106,7 @@ function CabinetPaintingPage() {
                     data: generateHowToSchema({
                         name: "How to Professionally Refinish Kitchen Cabinets",
                         description: "The 6-step factory finish system we use for cabinet painting and refinishing.",
-                        steps: steps.map(s => ({ name: s.title, text: s.desc }))
+                        steps: steps.map(s => ({ name: s.title, text: s.description }))
                     })
                 }
             ]
@@ -348,7 +348,7 @@ function CabinetPaintingPage() {
                             <div key={i} className="bg-white/5 border border-white/10 p-8 rounded-3xl relative overflow-hidden group hover:border-brand-green/50 transition-all">
                                 <div className="text-brand-green font-poppins font-bold text-5xl opacity-20 mb-4">{i + 1}</div>
                                 <h4 className="text-xl font-bold mb-4 text-white">{step.title}</h4>
-                                <p className="text-gray-400 mb-6 text-sm leading-relaxed">{step.desc}</p>
+                                <p className="text-gray-400 mb-6 text-sm leading-relaxed">{step.description}</p>
 
                                 <div className="space-y-4 pt-4 border-t border-white/10">
                                     <div className="flex gap-3 text-xs">

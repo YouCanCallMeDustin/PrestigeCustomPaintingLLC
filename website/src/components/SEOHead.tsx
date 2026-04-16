@@ -2,10 +2,12 @@ import { useEffect } from 'react';
 import { injectPageSEO } from '../lib/seo';
 
 interface SEOHeadProps {
-    title: string;
+    seoTitle: string;
     description: string;
     path: string;
+    keywords?: string;
     ogImage?: string;
+    noindex?: boolean;
     schemas?: { id: string; data: object }[];
 }
 
@@ -14,16 +16,18 @@ interface SEOHeadProps {
  * Unified component for head management: title, meta, OG, and JSON-LD schema.
  * Place this at the top of any page component.
  */
-const SEOHead = ({ title, description, path, ogImage, schemas }: SEOHeadProps) => {
+const SEOHead = ({ seoTitle, description, path, keywords, ogImage, noindex, schemas }: SEOHeadProps) => {
     useEffect(() => {
         return injectPageSEO({
-            title,
+            seoTitle,
             description,
             path,
+            keywords,
             ogImage,
+            noindex,
             schemas,
         });
-    }, [title, description, path, ogImage, schemas]);
+    }, [seoTitle, description, path, keywords, ogImage, noindex, schemas]);
 
     return null; // This component doesn't render anything to the DOM
 };

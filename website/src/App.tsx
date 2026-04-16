@@ -54,14 +54,14 @@ function App() {
         const description = "Looking for top-rated house painters in Spokane, WA? Prestige Custom Painting offers premium interior, exterior, and cabinet painting. Fully Licensed, Bonded, and Insured. Includes satisfaction warranty. Free estimates!";
         
         return injectPageSEO({
-            title,
+            seoTitle: title,
             description,
             path: '/',
             schemas: [
                 {
                     id: 'webpage',
                     data: generateWebPageSchema({
-                        title,
+                        topic: title,
                         description,
                         url: "https://prestigecustompaintingllc.com/"
                     })
@@ -244,11 +244,16 @@ function App() {
                     <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
                         <div className="w-full lg:w-1/2 relative max-w-md mx-auto lg:max-w-none">
                             <div className="absolute inset-0 bg-brand-green rounded-3xl rotate-3 scale-105 opacity-10" />
-                            <img
-                                src="/robert.jpg"
-                                alt="Robert, owner of Prestige Custom Painting LLC, professional house painter in Spokane WA"
-                                className="relative z-10 rounded-3xl shadow-2xl grayscale hover:grayscale-0 transition-all duration-700 w-full object-cover aspect-[4/5]"
-                            />
+                            <figure>
+                                <img
+                                    src="/robert.jpg"
+                                    alt="Robert, owner of Prestige Custom Painting LLC, professional house painter in Spokane WA"
+                                    className="relative z-10 rounded-3xl shadow-2xl grayscale hover:grayscale-0 transition-all duration-700 w-full object-cover aspect-[4/5]"
+                                />
+                                <figcaption className="mt-4 text-sm text-gray-500 italic text-center lg:text-left">
+                                    Robert, founder of Prestige Custom Painting, personally inspects every project to ensure excellence.
+                                </figcaption>
+                            </figure>
                             <div className="absolute -bottom-6 -right-6 z-20 bg-brand-black p-6 md:p-8 rounded-2xl shadow-xl hidden sm:block border-b-4 border-brand-green">
                                 <p className="text-white font-bold text-xl md:text-2xl italic">"Expect Excellence."</p>
                                 <p className="text-brand-green font-semibold mt-2">— {ownerName}</p>
@@ -341,7 +346,12 @@ function App() {
                             </div>
                         </div>
                         <div className="md:w-1/2">
-                            <img src="/finish.png" alt="Cabinet painting transformation in Spokane WA" className="rounded-[2rem] shadow-2xl border border-white/10" />
+                            <figure>
+                                <img src="/finish.png" alt="Cabinet painting transformation in Spokane WA" className="rounded-[2rem] shadow-2xl border border-white/10" />
+                                <figcaption className="mt-4 text-xs text-gray-400 italic text-center">
+                                    A factory-smooth cabinet finish achieving a modern, high-end look without the cost of replacement.
+                                </figcaption>
+                            </figure>
                         </div>
                     </div>
                 </div>

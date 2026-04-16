@@ -1,15 +1,15 @@
-import { useParams, Navigate, Link } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import AreaPage from './AreaPage';
 import { areaData } from '../data/areaData';
+import NotFound from './NotFound';
 
 export default function DynamicAreaPage() {
     const { fullSlug } = useParams<{ fullSlug: string }>();
     
     // Check if the slug starts with "painting-"
     if (!fullSlug || !fullSlug.startsWith('painting-')) {
-        // If it doesn't match our pattern, it's actually a 404 or needs to be handled by another route
-        // But since this is a catch-all, we should show a 404 style or redirect
-        return <Navigate to="/service-area" replace />;
+        // Guideline 9: Return NotFound instead of a redirect
+        return <NotFound />;
     }
 
     // Extract the actual town slug (strip "painting-")
@@ -22,15 +22,7 @@ export default function DynamicAreaPage() {
     const area = areaData.find(a => a.slug.toLowerCase() === normalizedSlug);
 
     if (!area) {
-        return (
-            <div className="min-h-screen flex items-center justify-center bg-white p-4">
-                <div className="text-center max-w-md">
-                    <h1 className="text-4xl font-poppins font-bold mb-4">Area Not Found</h1>
-                    <p className="text-gray-600 mb-8">We couldn't find a service page for "{townSlug}".</p>
-                    <Link to="/service-area" className="bg-brand-green text-white px-8 py-3 rounded-xl font-bold">Back to Service Areas</Link>
-                </div>
-            </div>
-        );
+        return <NotFound />;
     }
 
     const { city, heroTagline, funFact } = area;
@@ -40,8 +32,8 @@ export default function DynamicAreaPage() {
             city={city}
             state="WA"
             slug={area.slug}
-            metaTitle={`Professional House Painters in ${city} WA | Prestige Custom Painting LLC`}
-            metaDesc={`Looking for professional painters in ${city}, WA? Prestige Custom Painting LLC specializes in expert interior and exterior painting services for homeowners and businesses in ${city}. Call Today!`}
+            metaTitle={`House Painters in ${city} WA | Prestige Custom Painting`}
+            metaDesc={`Looking for expert painters in ${city}? Prestige Custom Painting LLC delivers premium interior and exterior finishes for homes and businesses in your local Spokane area.`}
             heroTagline={heroTagline}
             introParagraphs={[
                 `${city} is a key community in the Inland Northwest, and Prestige Custom Painting LLC is proud to serve its homeowners and businesses with professional painting services built to last. Whether you need a fresh interior refresh, a durable exterior repaint, or specialty cabinet refinishing, we're your local painting experts in ${city}.`,

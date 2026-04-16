@@ -41,37 +41,37 @@ function ExteriorPaintingPage() {
     const steps = [
         {
             title: "Industrial Power Wash",
-            desc: "We begin with a deep clean to remove Spokane's seasonal grime, mildew, and oxidation. This ensures the new paint bonds to the substrate, not to dirt.",
+            description: "We begin with a deep clean to remove Spokane's seasonal grime, mildew, and oxidation. This ensures the new paint bonds to the substrate, not to dirt.",
             proTip: "Allow 24–48 hours of drying time after power washing before applying any primer or paint.",
             pitfall: "Painting over damp wood. Trapped moisture causes the paint to bubble and peel within a single season."
         },
         {
             title: "Scraping & Mechanical Sanding",
-            desc: "We remove all failed coatings and sand the transitions between bare wood and solid paint. This creates a flat, smooth surface for the new finish.",
+            description: "We remove all failed coatings and sand the transitions between bare wood and solid paint. This creates a flat, smooth surface for the new finish.",
             proTip: "Focus on 'feathering' the edges of old paint so the new coat looks seamless and doesn't reveal old peel-lines.",
             pitfall: "Cutting corners on scraping. If the old paint is loose, the new paint will fail regardless of quality."
         },
         {
             title: "Caulking & Waterproofing",
-            desc: "We apply high-stretch architectural caulk to gaps around windows, doors, and corner boards. This prevents Spokane's rain and snow from entering the wall cavity.",
+            description: "We apply high-stretch architectural caulk to gaps around windows, doors, and corner boards. This prevents Spokane's rain and snow from entering the wall cavity.",
             proTip: "Use a finger or tool to 'tool' the caulk into the gap for a concave seal that sheds water.",
             pitfall: "Caulking the bottom of horizontal siding laps. Siding needs to 'breathe'—sealing the bottoms can trap moisture."
         },
         {
             title: "Targeted Priming",
-            desc: "We spot-prime bare wood and compromised areas with high-adhesion primers. This seals the surface and prevents tannin bleed from woods like cedar.",
+            description: "We spot-prime bare wood and compromised areas with high-adhesion primers. This seals the surface and prevents tannin bleed from woods like cedar.",
             proTip: "For older Spokane homes with many layers, a full coat of 'high-build' primer can even out the texture.",
             pitfall: "Using interior primer outside. Exterior primers are formulated to expand and contract with the weather."
         },
         {
             title: "Multi-Coat Painting",
-            desc: "We apply premium exterior coatings using a combination of spray and 'back-rolling' for maximum penetration into the siding grain.",
+            description: "We apply premium exterior coatings using a combination of spray and 'back-rolling' for maximum penetration into the siding grain.",
             proTip: "Wait for the first coat to fully dry before applying the second to ensure proper film build.",
             pitfall: "Applying paint in direct, high-noon sunlight. This causes the paint to dry too fast, leading to brush marks."
         },
         {
             title: "Cleanup & Final Inspection",
-            desc: "We restore your landscaping, remove all masking, and Robert performs a final detailed walkthrough to ensure perfection.",
+            description: "We restore your landscaping, remove all masking, and Robert performs a final detailed walkthrough to ensure perfection.",
             proTip: "Inspect the final result at different times of day; morning sun reveals different details than evening shade.",
             pitfall: "Leaving paint chips in the garden. A professional site should be cleaner than when we arrived."
         }
@@ -82,7 +82,7 @@ function ExteriorPaintingPage() {
         const description = "Expert exterior house painters in Spokane, WA. We specialize in weather-resistant coatings, siding painting, and deck staining. Get your free estimate today!";
 
         return injectPageSEO({
-            title,
+            seoTitle: title,
             description,
             path: '/exterior-painting-spokane',
             schemas: [
@@ -90,7 +90,7 @@ function ExteriorPaintingPage() {
                 {
                     id: 'webpage',
                     data: generateWebPageSchema({
-                        title,
+                        topic: title,
                         description,
                         url: "https://prestigecustompaintingllc.com/exterior-painting-spokane"
                     })
@@ -107,7 +107,7 @@ function ExteriorPaintingPage() {
                     data: generateHowToSchema({
                         name: "How to Professionally Paint an Exterior Home",
                         description: "The 6-step professional exterior painting process we use to protect homes against Spokane weather.",
-                        steps: steps.map(s => ({ name: s.title, text: s.desc }))
+                        steps: steps.map(s => ({ name: s.title, text: s.description }))
                     })
                 }
             ]
@@ -293,16 +293,16 @@ function ExteriorPaintingPage() {
                     </div>
                     <div className="grid md:grid-cols-3 gap-8">
                         {[
-                            { title: "Homeowners", desc: "Protecting your family's biggest asset from the harsh Pacific Northwest elements with 10-year+ finishes." },
-                            { title: "Real Estate Agents", desc: "Maximum curb appeal for listings. We help homes sell faster with clean, modern exterior aesthetics." },
-                            { title: "Commercial Property", desc: "Professional, large-scale painting for businesses requiring low-maintenance and high-durability coatings." }
+                            { title: "Homeowners", description: "Protecting your family's biggest asset from the harsh Pacific Northwest elements with 10-year+ finishes." },
+                            { title: "Real Estate Agents", description: "Maximum curb appeal for listings. We help homes sell faster with clean, modern exterior aesthetics." },
+                            { title: "Commercial Property", description: "Professional, large-scale painting for businesses requiring low-maintenance and high-durability coatings." }
                         ].map((item, i) => (
                             <div key={i} className="bg-gray-50 p-8 rounded-[2rem] border border-gray-100 hover:border-brand-green transition-all group/card">
                                 <div className="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center text-brand-green mb-6 group-hover/card:bg-brand-green group-hover/card:text-white transition-all">
                                     <Shield size={24} />
                                 </div>
                                 <h3 className="text-xl font-bold mb-4">{item.title}</h3>
-                                <p className="text-gray-600 leading-relaxed">{item.desc}</p>
+                                <p className="text-gray-600 leading-relaxed">{item.description}</p>
                             </div>
                         ))}
                     </div>
@@ -323,7 +323,7 @@ function ExteriorPaintingPage() {
                             <div key={i} className="bg-white/5 border border-white/10 p-8 rounded-3xl relative overflow-hidden group hover:border-brand-green/50 transition-all">
                                 <div className="text-brand-green font-poppins font-bold text-5xl opacity-20 mb-4">{i + 1}</div>
                                 <h4 className="text-xl font-bold mb-4 text-white">{step.title}</h4>
-                                <p className="text-gray-400 mb-6 text-sm leading-relaxed">{step.desc}</p>
+                                <p className="text-gray-400 mb-6 text-sm leading-relaxed">{step.description}</p>
 
                                 <div className="space-y-4 pt-4 border-t border-white/10">
                                     <div className="flex gap-3 text-xs">

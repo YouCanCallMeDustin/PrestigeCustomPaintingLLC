@@ -7,7 +7,7 @@ export default function SpokaneValleyPage() {
             state="WA"
             slug="spokane-valley"
             metaTitle="Professional Painters in Spokane Valley WA | Prestige Custom Painting LLC"
-            metaDesc="Looking for professional painters in Spokane Valley, WA? Prestige Custom Painting LLC offers premium interior, exterior, and cabinet painting with expert results. Call (509) 714-9491."
+            metaDesc="Looking for expert painters in Spokane Valley? Prestige Custom Painting LLC delivers premium interior and exterior finishes for homes in your Spokane area."
             heroTagline="SPOKANE VALLEY'S TRUSTED PAINTING COMPANY"
             introParagraphs={[
                 "If you're searching for a reliable, professional painting company in Spokane Valley, WA, look no further than Prestige Custom Painting LLC. We've built our reputation right here in the Inland Northwest by delivering premium-quality interior and exterior painting results that our neighbors are proud to show off.",

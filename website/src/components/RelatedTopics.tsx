@@ -2,7 +2,7 @@ import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 interface RelatedTopic {
-    title: string;
+    topic: string;
     path: string;
     description: string;
 }
@@ -28,7 +28,7 @@ const RelatedTopics = ({ topics }: RelatedTopicsProps) => {
                         className="group p-6 bg-white border border-gray-100 rounded-2xl hover:border-brand-green hover:shadow-xl hover:shadow-green-500/5 transition-all duration-300"
                     >
                         <h4 className="font-bold text-lg text-brand-black group-hover:text-brand-green transition-colors mb-2">
-                            {topic.title}
+                            {topic.topic}
                         </h4>
                         <p className="text-sm text-gray-500 mb-4 line-clamp-2">
                             {topic.description}

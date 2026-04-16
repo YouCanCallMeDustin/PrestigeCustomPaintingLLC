@@ -7,7 +7,7 @@ export default function AirwayHeightsPage() {
             state="WA"
             slug="airway-heights"
             metaTitle="Professional Painters in Airway Heights WA | Prestige Custom Painting LLC"
-            metaDesc="Need professional painters in Airway Heights, WA? Prestige Custom Painting LLC specializes in expert interior and exterior painting services for homeowners and businesses in Airway Heights."
+            metaDesc="Looking for expert painters in Airway Heights? Prestige Custom Painting LLC delivers premium interior and exterior finishes for homes in your Spokane area."
             heroTagline="AIRWAY HEIGHTS' TRUSTED PAINTING EXPERTS"
             introParagraphs={[
                 "Airway Heights is a growing community on the west side of Spokane, and Prestige Custom Painting LLC is proud to serve its homeowners and businesses with professional painting services built to last. Whether you need a fresh interior refresh, a durable exterior repaint, or specialty cabinet refinishing, we're your local painting experts.",

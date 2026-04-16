@@ -64,28 +64,34 @@ const PaintingGlossaryPage = () => {
     return (
         <div className="min-h-screen bg-white text-brand-black">
             <SEOHead 
-                title="Spokane Painting Glossary: Professional Terminology Guide"
-                description="Understand professional painting terminology with Prestige Custom Painting's glossary. Learn about Elastomeric, HVLP, Scuff-X, Low-VOC, and what they mean for your Spokane home."
+                seoTitle="Painting Glossary: Spokane Professional Terms & Definitions"
+                description="Understand professional painting terms with our glossary. Learn about Elastomeric, HVLP, Scuff-X, Low-VOC, and what they mean for your Spokane home project."
                 path="/spokane-painting-glossary"
                 schemas={schemas}
             />
             <Navbar />
 
-            <main className="max-w-7xl mx-auto px-4 pt-24 pb-20">
-                <Breadcrumbs items={breadcrumbItems} />
-
-                <article className="max-w-4xl mx-auto">
-                    <header className="mb-12 text-center md:text-left">
+            <header className="bg-brand-black pt-28 pb-16 md:pt-36 md:pb-24 text-white relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-1/2 h-full bg-brand-green/10 -skew-x-12 transform translate-x-32" />
+                <div className="max-w-7xl mx-auto px-4 relative z-10">
+                    <Breadcrumbs items={breadcrumbItems} variant="light" />
+                    
+                    <div className="max-w-4xl">
                         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-green/10 text-brand-green text-xs font-bold mb-6">
                             HOMEOWNER RESOURCE
                         </div>
                         <h1 className="text-4xl md:text-6xl font-poppins font-bold leading-tight mb-8">
                             Spokane Painting <span className="text-brand-green">Glossary</span>
                         </h1>
-                        <p className="text-xl text-gray-600 leading-relaxed font-medium">
+                        <p className="text-xl text-gray-300 leading-relaxed font-medium">
                             Clear definitions for professional painting terminology, materials, and techniques. Understand exactly what goes into protecting your Inland Northwest home.
                         </p>
-                    </header>
+                    </div>
+                </div>
+            </header>
+
+            <main className="max-w-7xl mx-auto px-4 py-20">
+                <article className="max-w-4xl mx-auto">
 
                     <div className="space-y-6">
                         {terms.map((item, index) => (

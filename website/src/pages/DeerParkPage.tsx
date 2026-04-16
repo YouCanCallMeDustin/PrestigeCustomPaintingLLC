@@ -7,7 +7,7 @@ export default function DeerParkPage() {
             state="WA"
             slug="deer-park"
             metaTitle="Professional Painters in Deer Park WA | Prestige Custom Painting LLC"
-            metaDesc="Need professional painters in Deer Park, WA? Prestige Custom Painting LLC provides premium interior and exterior painting with expert results for Deer Park homeowners and businesses."
+            metaDesc="Looking for expert painters in Deer Park? Prestige Custom Painting LLC delivers premium interior and exterior finishes for homes in your local Spokane area."
             heroTagline="DEER PARK'S TRUSTED PAINTING PROFESSIONALS"
             introParagraphs={[
                 "Deer Park, WA is a charming small city north of Spokane with a tight-knit community of homeowners who take pride in their properties. Prestige Custom Painting LLC is proud to extend our professional painting services to Deer Park and the surrounding North Spokane County area — bringing the same premium-quality work that Spokane Valley residents know and trust.",

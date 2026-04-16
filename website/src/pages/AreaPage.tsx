@@ -67,9 +67,9 @@ export default function AreaPage({
     }));
 
     const benefits = [
-        { icon: <MapPin size={22} />, title: `Serving ${city} Locally`, desc: `We are based right here in the Inland Northwest and regularly serve homeowners and businesses throughout ${city}, ${state}.` },
-        { icon: <Shield size={22} />, title: "Licensed & Insured", desc: "Fully licensed and insured in Washington State. Hire with total confidence — your property and our team are fully protected." },
-        { icon: <Clock size={22} />, title: "On-Time & Professional", desc: "We respect your schedule. Punctual arrival, clean job sites, and clear communication from estimate to final walkthrough." },
+        { icon: <MapPin size={22} />, benefit: `Serving ${city} Locally`, description: `We are based right here in the Inland Northwest and regularly serve homeowners and businesses throughout ${city}, ${state}.` },
+        { icon: <Shield size={22} />, benefit: "Licensed & Insured", description: "Fully licensed and insured in Washington State. Hire with total confidence — your property and our team are fully protected." },
+        { icon: <Clock size={22} />, benefit: "On-Time & Professional", description: "We respect your schedule. Punctual arrival, clean job sites, and clear communication from estimate to final walkthrough." },
     ];
 
     useEffect(() => {
@@ -79,7 +79,7 @@ export default function AreaPage({
         
         // Clean up and inject SEO
         const cleanup = injectPageSEO({
-            title: metaTitle,
+            seoTitle: metaTitle,
             description: metaDesc,
             path: `/painting-${slug}`,
             schemas: [
@@ -233,8 +233,8 @@ export default function AreaPage({
                                 <div className="w-14 h-14 bg-brand-green/10 rounded-2xl flex items-center justify-center text-brand-green mb-6">
                                     {b.icon}
                                 </div>
-                                <h3 className="text-xl font-poppins font-bold mb-3">{b.title}</h3>
-                                <p className="text-gray-600 leading-relaxed">{b.desc}</p>
+                                <h3 className="text-xl font-poppins font-bold mb-3">{b.benefit}</h3>
+                                <p className="text-gray-600 leading-relaxed">{b.description}</p>
                             </div>
                         ))}
                     </div>

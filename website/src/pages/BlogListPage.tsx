@@ -90,7 +90,7 @@ const BlogListPage = () => {
     return (
         <div className="min-h-screen bg-white text-brand-black">
             <SEOHead 
-                title="Painting Guides & Expert Tips | Prestige Custom Painting LLC"
+                seoTitle="Painting Guides & Expert Tips | Prestige Custom Painting LLC"
                 description="Explore our library of professional painting advice, local Spokane pricing guides, and expert tips for your next interior or exterior project."
                 path="/blog"
             />

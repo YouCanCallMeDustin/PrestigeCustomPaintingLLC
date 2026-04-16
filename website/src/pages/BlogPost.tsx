@@ -41,7 +41,7 @@ export default function BlogPost({
 
     useEffect(() => {
         const articleSchema = generateArticleSchema({
-            title,
+            topic: title,
             description: metaDesc,
             image,
             datePublished: date,
@@ -57,7 +57,7 @@ export default function BlogPost({
         ]);
 
         const cleanup = injectPageSEO({
-            title: metaTitle,
+            seoTitle: metaTitle,
             description: metaDesc,
             path: path,
             schemas: [

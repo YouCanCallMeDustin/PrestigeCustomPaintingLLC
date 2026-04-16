@@ -9,8 +9,8 @@ export interface BlogContent {
     parentName: string;
     tldr?: string[];
     definition?: string;
-    whoThisIsFor?: { title: string; desc: string }[];
-    processSteps?: { title: string; why: string; tip?: string; mistake?: string }[];
+    whoThisIsFor?: { target: string; summary: string }[];
+    processSteps?: { step: string; why: string; tip?: string; mistake?: string }[];
     comparisonTable?: {
         headers: string[];
         rows: string[][];
@@ -23,7 +23,7 @@ export const blogData: Record<string, BlogContent> = {
     // BATCH 1: PAINTER SERVICES (FIRST 6)
     'exterior-painting': {
         h1: 'Reliable Exterior Painting Spokane',
-        metaDescription: 'Need exterior painting in Spokane? Prestige Custom Painting LLC offers high-quality exterior house painting services to protect your home from bad weather.',
+        metaDescription: 'Need exterior painting in Spokane? Prestige Custom Painting LLC offers high-quality house painting. Protect your home from weather with our expert team.',
         parentRoute: '/house-painters-spokane',
         parentName: 'House Painters',
         content: (
@@ -47,7 +47,7 @@ export const blogData: Record<string, BlogContent> = {
     },
     'cabinet-painting': {
         h1: 'Expert Cabinet Painting Spokane | Professional Refinishing',
-        metaDescription: 'Update your kitchen for a fraction of the cost. Professional cabinet painting in Spokane with industrial-grade finishes and meticulous prep. Free quotes.',
+        metaDescription: 'Update your kitchen for less. Professional cabinet painting in Spokane with industrial-grade finishes and meticulous prep. Get your free quote today!',
         keywords: 'cabinet painting spokane, kitchen cabinet refinishing, cabinet painters near me, cabinet painting cost spokane',
         readingTime: '6 min read',
         parentRoute: '/house-painters-spokane',
@@ -60,32 +60,32 @@ export const blogData: Record<string, BlogContent> = {
         ],
         definition: 'Cabinet painting is a specialized technical refinishing process that involves chemically cleaning, mechanically etching, and spraying industrial-grade coatings onto existing cabinetry to achieve a durable, furniture-quality finish at a fraction of the cost of replacement.',
         whoThisIsFor: [
-            { title: 'Homeowners with Solid Wood', desc: 'If your cabinets are structurally sound but visually outdated (e.g., orange oak), painting is the highest ROI upgrade.' },
-            { title: 'Budget-Conscious Remodelers', desc: 'Save 70-80% compared to the cost of purchasing and installing new custom cabinetry.' },
-            { title: 'Real Estate Investors', desc: 'Instantly modernize a kitchen to increase property valuation before a sale or rental listing.' },
-            { title: 'Modern Clean Aesthetic Fans', desc: 'Ideal for those wanting the popular "white kitchen" or "navy island" look without the landfill waste.' }
+            { target: 'Home homeowners with Solid Wood', summary: 'If your cabinets are structurally sound but visually outdated (e.g., orange oak), painting is the highest ROI upgrade.' },
+            { target: 'Budget-Conscious Remodelers', summary: 'Save 70-80% compared to the cost of purchasing and installing new custom cabinetry.' },
+            { target: 'Real Estate Investors', summary: 'Instantly modernize a kitchen to increase property valuation before a sale or rental listing.' },
+            { target: 'Modern Clean Aesthetic Fans', summary: 'Ideal for those wanting the popular "white kitchen" or "navy island" look without the landfill waste.' }
         ],
         processSteps: [
             { 
-                title: 'Clinical Degreasing', 
+                step: 'Clinical Degreasing', 
                 why: 'Kitchen cabinets are magnets for airborne grease and oils that prevent paint from sticking.', 
                 tip: 'We use industrial-strength TSP substitutes to break down years of cooking residues.',
                 mistake: 'Painting over surface oils will cause the finish to peel within months.'
             },
             { 
-                title: 'Mechanical Abrasion (Sanding)', 
+                step: 'Mechanical Abrasion (Sanding)', 
                 why: 'The original factory clear coat is too slick for new paint to bond to.', 
                 tip: 'Fine-grit hand sanding ensures the primer has "teeth" to grab onto.',
                 mistake: 'Skipping sanding relies entirely on chemical bonding, which is less durable.'
             },
             { 
-                title: 'High-Bond Priming', 
+                step: 'High-Bond Priming', 
                 why: 'Standard wall primer will fail on wood. We use specialty stain-blocking bonding primers.', 
                 tip: 'Shellac or high-performance urethane primers stop wood tannins from bleeding through.',
                 mistake: 'Applying water-based latex primer over old oil-based finishes leads to "shivers" or cracking.'
             },
             { 
-                title: 'Fine-Finish HVLP Spraying', 
+                step: 'Fine-Finish HVLP Spraying', 
                 why: 'Brushes and rollers leave textures. Spraying creates a smooth, mirror-like factory result.', 
                 tip: 'Multiple thin coats are better than one thick coat for durability.',
                 mistake: 'Low-pressure DIY sprayers often lead to orange peel texture or runs.'
@@ -128,7 +128,7 @@ export const blogData: Record<string, BlogContent> = {
     },
     'deck-painting': {
         h1: 'Professional Deck Painting Spokane | Seal & Protect Your Outdoor Living',
-        metaDescription: 'Stop wood rot and splinters. Professional deck painting in Spokane with deep-penetrating stains and weather-resistant coatings. Durable protection for PNW winters.',
+        metaDescription: 'Stop wood rot and splinters. Professional deck painting in Spokane protects your wood from UV damage and snow while making it look brand new again now.',
         keywords: 'deck painting spokane, deck staining spokane, deck refinishing near me, wood deck sealing spokane',
         readingTime: '5 min read',
         parentRoute: '/house-painters-spokane',
@@ -141,32 +141,32 @@ export const blogData: Record<string, BlogContent> = {
         ],
         definition: 'Deck painting is a heavy-duty exterior restoration process designed to preserve horizontal wood surfaces through aggressive cleaning, surface stabilization (sanding), and the application of weather-defying coatings.',
         whoThisIsFor: [
-            { title: 'Homeowners with Gray/Faded Wood', desc: 'Ideal for decks that have lost their natural color due to intense UV exposure and winter moisture.' },
-            { title: 'Families with Kids & Pets', desc: 'Our sanding process removes hazardous splinters, making your deck safe for bare feet again.' },
-            { title: 'Property Owners Near Water', desc: 'Crucial for homes near the Spokane River or Liberty Lake where humidity is consistently higher.' },
-            { title: 'Budget-Savvy Maintainers', desc: 'Preventative sealing costs 90% less than replacing a structurally collapsed wooden deck.' }
+            { target: 'Homeowners with Gray/Faded Wood', summary: 'Ideal for decks that have lost their natural color due to intense UV exposure and winter moisture.' },
+            { target: 'Families with Kids & Pets', summary: 'Our sanding process removes hazardous splinters, making your deck safe for bare feet again.' },
+            { target: 'Property Owners Near Water', summary: 'Crucial for homes near the Spokane River or Liberty Lake where humidity is consistently higher.' },
+            { target: 'Budget-Savvy Maintainers', summary: 'Preventative sealing costs 90% less than replacing a structurally collapsed wooden deck.' }
         ],
         processSteps: [
             { 
-                title: 'High-Pressure Oxygenated Cleaning', 
+                step: 'High-Pressure Oxygenated Cleaning', 
                 why: 'Moss and algae trap moisture inside the wood, causing rapid internal rot.', 
                 tip: 'We use biodegradable cleaners that kill organic growth without harming your lawn.',
                 mistake: 'Using too much pressure can "fuzz" the wood and damage the soft fibers.'
             },
             { 
-                title: 'Surface Stabilization (Sanding)', 
+                step: 'Surface Stabilization (Sanding)', 
                 why: 'Vertical grain "pop" causes splinters and prevents paint from laying flat.', 
                 tip: 'We sand between 60-80 grit to ensure the coating can penetrate deeply.',
                 mistake: 'Painting over gray, weathered wood ensures the finish will peel in months.'
             },
             { 
-                title: 'Moisture Level Testing', 
+                step: 'Moisture Level Testing', 
                 why: 'Trapped moisture under a new coating causes immediate bubbling and failure.', 
                 tip: 'We never paint until the wood moisture content is below 15%.',
                 mistake: 'Applying stain to damp wood is the #1 cause of "milky" or peeling results.'
             },
             { 
-                title: 'Hand-Brush Application', 
+                step: 'Hand-Brush Application', 
                 why: 'Spraying only coats the surface. Brushing forces the product into the grain.', 
                 tip: 'We "back-brush" every square inch to ensure a uniform, deep-seated bond.',
                 mistake: 'Thin "one-coat" DIY products often fade and wash away in a single season.'
@@ -213,25 +213,25 @@ export const blogData: Record<string, BlogContent> = {
         ],
         definition: 'Door painting is a high-precision finishing service that restores the visual appeal and functional durability of interior and exterior doors through professional spraying and dent repair.',
         whoThisIsFor: [
-            { title: 'Homeowners with Sun-Damaged Entries', desc: 'If your front door has faded or "alligator-skinned" from the sun, it needs a UV-resistant restoration.' },
-            { title: 'Pet Owners', desc: 'Ideal for repairing and sealing deep claw marks and scratches on lower door panels.' },
-            { title: 'Modernizers', desc: 'Change the look of your entire home by switching dated wood doors to a crisp, modern black or white.' }
+            { target: 'Homeowners with Sun-Damaged Entries', summary: 'If your front door has faded or "alligator-skinned" from the sun, it needs a UV-resistant restoration.' },
+            { target: 'Pet Owners', summary: 'Ideal for repairing and sealing deep claw marks and scratches on lower door panels.' },
+            { target: 'Modernizers', summary: 'Change the look of your entire home by switching dated wood doors to a crisp, modern black or white.' }
         ],
         processSteps: [
             { 
-                title: 'Hardware Removal', 
+                step: 'Hardware Removal', 
                 why: 'Painting around knobs leads to sloppy edges and mechanical failures later.', 
                 tip: 'We remove every hinge and handle to ensure 100% coverage behind the metal.',
                 mistake: 'Tape is never as perfect as removal; paint buildup in hinges causes squeaking.'
             },
             { 
-                title: 'Surface Leveling', 
+                step: 'Surface Leveling', 
                 why: 'Doors are high-touch areas where every dent and scratch shows under light.', 
                 tip: 'We use high-performance wood fillers and sand to a 220-grit smoothness.',
                 mistake: 'Painting over a dent makes it look WORSE because the new sheen highlights flaws.'
             },
             { 
-                title: 'Fine-Finish Enamel Application', 
+                step: 'Fine-Finish Enamel Application', 
                 why: 'Standard wall paint stays soft and causes doors to "stick" in the frame.', 
                 tip: 'We use urethane-alkyd enamels that dry to an industrial-strength hard shell.',
                 mistake: 'Using regular latex paint on an exterior door will cause it to melt and jam.'
@@ -258,7 +258,7 @@ export const blogData: Record<string, BlogContent> = {
     },
     'commercial-painting': {
         h1: 'Reliable Commercial Painting Spokane | Business Property Refinishing',
-        metaDescription: 'Hire an expert commercial painting team in Spokane. Upgrade your retail store or business office without causing loud disruptions to your normal daily operations.',
+        metaDescription: 'Hire an expert commercial painter in Spokane. Prestige Custom Painting LLC delivers durable, high-visibility finishes for businesses and properties here.',
         keywords: 'commercial painting spokane, painting contractor spokane, office painting near me, business painters spokane',
         readingTime: '6 min read',
         parentRoute: '/house-painters-spokane',
@@ -271,26 +271,26 @@ export const blogData: Record<string, BlogContent> = {
         ],
         definition: 'Commercial painting is a large-scale professional finishing service specifically designed for business properties, requiring specialized scheduling, safety protocols, and high-durability coatings to handle public traffic.',
         whoThisIsFor: [
-            { title: 'Retail & Restaurant Owners', desc: 'Refresh your customer-facing areas without losing a single day of sales or disrupting foot traffic.' },
-            { title: 'Office Managers', desc: 'Modernize workspace interiors using low-odor paints so employees can work comfortably during the project.' },
-            { title: 'Industrial Facility Managers', desc: 'Protect metal structures and concrete ceilings with high-performance protective coatings.' },
-            { title: 'HOA & Property Managers', desc: 'Large-scale exterior maintenance for multi-family complexes and shared community buildings.' }
+            { target: 'Retail & Restaurant Owners', summary: 'Refresh your customer-facing areas without losing a single day of sales or disrupting foot traffic.' },
+            { target: 'Office Managers', summary: 'Modernize workspace interiors using low-odor paints so employees can work comfortably during the project.' },
+            { target: 'Industrial Facility Managers', summary: 'Protect metal structures and concrete ceilings with high-performance protective coatings.' },
+            { target: 'HOA & Property Managers', summary: 'Large-scale exterior maintenance for multi-family complexes and shared community buildings.' }
         ],
         processSteps: [
             { 
-                title: 'Operational Strategy & Phasing', 
+                step: 'Operational Strategy & Phasing', 
                 why: 'Businesses can\'t stop operating just because the walls need paint.', 
                 tip: 'We phase the project room-by-room or floor-by-floor to keep your staff productive.',
                 mistake: 'Failing to plan logistics causes bottlenecking and lost revenue for the client.'
             },
             { 
-                title: 'High-Traffic Surface Prep', 
+                step: 'High-Traffic Surface Prep', 
                 why: 'Commercial walls take significantly more abuse than residential living rooms.', 
                 tip: 'We use industrial degreasers and abrasion to bond paint to scuffed, high-use surfaces.',
                 mistake: 'Using residential-grade prep leads to rapid scuffing and failure in public areas.'
             },
             { 
-                title: 'Specialty Coating Selection', 
+                step: 'Specialty Coating Selection', 
                 why: 'Standard latex is too soft. Commercial spaces need scuff-resistant urethane-acrylics.', 
                 tip: 'Self-leveling enamels on doors and trim reduce maintenance costs over time.',
                 mistake: 'Choosing high-odor products can lead to tenant complaints and health safety issues.'
@@ -327,7 +327,7 @@ export const blogData: Record<string, BlogContent> = {
     },
     'kitchen-cabinet-painting': {
         h1: 'Kitchen Cabinet Painting Spokane | Modern Kitchen Transformation',
-        metaDescription: 'Do not pay for a massive remodel. Choose kitchen cabinet painting in Spokane to safely clean, sand, and spray brand new hard finishes on your existing wood. Fast 5-day process.',
+        metaDescription: 'Refresh your kitchen with expert cabinet painting in Spokane. Prestige Custom Painting LLC provides factory-grade finishes for a beautiful home upgrade.',
         keywords: 'kitchen cabinet painting spokane, cabinet refinishing spokane, kitchen remodel spokane, paint cabinets spokane',
         readingTime: '7 min read',
         parentRoute: '/house-painters-spokane',
@@ -340,25 +340,25 @@ export const blogData: Record<string, BlogContent> = {
         ],
         definition: 'Kitchen cabinet painting is an architectural-grade refinishing service that uses industrial spray systems and catalyzed coatings to transform outdated wood cabinetry into a durable, contemporary finish.',
         whoThisIsFor: [
-            { title: 'The "Oak-Burdened" Homeowner', desc: 'Perfect if you have high-quality 90s oak cabinets that are structurally sound but visually dated.' },
-            { title: 'The Value-Focused Homeowner', desc: 'Get a $20,000 kitchen look for a $4,000 investment.' },
-            { title: 'Home Sellers', desc: 'Instantly brighten your kitchen for photography and showings, leading to faster offers.' }
+            { target: 'The "Oak-Burdened" Homeowner', summary: 'Perfect if you have high-quality 90s oak cabinets that are structurally sound but visually dated.' },
+            { target: 'The Value-Focused Homeowner', summary: 'Get a $20,000 kitchen look for a $4,000 investment.' },
+            { target: 'Home Sellers', summary: 'Instantly brighten your kitchen for photography and showings, leading to faster offers.' }
         ],
         processSteps: [
             { 
-                title: 'Door & Drawer Labeling', 
+                step: 'Door & Drawer Labeling', 
                 why: 'Organization is key. Every door must return to its exact original location for proper alignment.', 
                 tip: 'We use hidden numbering systems inside the hinge cups so no marks are visible.',
                 mistake: 'Mixing up hinges and doors leads to sagging panels and uneven gaps later.'
             },
             { 
-                title: 'High-Bond Primer Application', 
+                step: 'High-Bond Primer Application', 
                 why: 'Grease-soaked wood rejects paint. Our primers are engineered to block oils permanently.', 
                 tip: 'We use specialty bonding primers that "melt" into the old finish for a permanent grip.',
                 mistake: 'Using standard "all-purpose" primer leads to chipping around handles within weeks.'
             },
             { 
-                title: 'Controlled Spray Environment', 
+                step: 'Controlled Spray Environment', 
                 why: 'Airborne dust in the home ruins a finish. We spray the doors in a clean, mobile paint booth.', 
                 tip: 'Dust-free spraying ensures a smooth-as-glass result that mimics a new purchase.',
                 mistake: 'Brushing or rolling cabinets in the kitchen leaves hair, lint, and texture marks.'
@@ -386,7 +386,7 @@ export const blogData: Record<string, BlogContent> = {
     // BATCH 2: PAINTER SERVICES (7-12)
     'ceiling-painting': {
         h1: 'Expert Ceiling Painting Spokane | Water Stain & Smoke Restoration',
-        metaDescription: 'Eliminate dark water stains and heavy smoke damage with professional ceiling painting in Spokane. We apply flat, light-reflecting finishes to make your rooms look taller.',
+        metaDescription: 'Brighten your home with professional interior painting in Spokane. Prestige Custom Painting LLC delivers smooth, premium finishes for every room you own.',
         keywords: 'ceiling painting spokane, water stain repair ceiling, smoke damage painting, spokane painters',
         readingTime: '5 min read',
         parentRoute: '/house-painters-spokane',
@@ -399,25 +399,25 @@ export const blogData: Record<string, BlogContent> = {
         ],
         definition: 'Ceiling painting is a specialized interior restoration service focused on overhead surfaces, utilizing high-solids stain blockers and non-reflective coatings to erase visual imperfections and improve room lighting.',
         whoThisIsFor: [
-            { title: 'Homeowners with Water Damage', desc: 'If a roof leak left a brown ring on your ceiling, standard paint won\'t fix it—you need our specialty stain blocking.' },
-            { title: 'Kitchen Remodelers', desc: 'Grease and cooking steam yellow your ceilings over time; a fresh coat of flat white instantly cleans the airspace.' },
-            { title: 'Smokers & Fire Restoration', desc: 'Nicotine and smoke odors live in the ceiling; we seal those smells in permanently with industrial primers.' }
+            { target: 'Homeowners with Water Damage', summary: 'If a roof leak left a brown ring on your ceiling, standard paint won\'t fix it—you need our specialty stain blocking.' },
+            { target: 'Kitchen Remodelers', summary: 'Grease and cooking steam yellow your ceilings over time; a fresh coat of flat white instantly cleans the airspace.' },
+            { target: 'Smokers & Fire Restoration', summary: 'Nicotine and smoke odors live in the ceiling; we seal those smells in permanently with industrial primers.' }
         ],
         processSteps: [
             { 
-                title: 'Clinical Surface Cleaning', 
+                step: 'Clinical Surface Cleaning', 
                 why: 'Dust and cobwebs prevent paint from bonding to the texture.', 
                 tip: 'We use soft-bristle sweeping to remove loose texture and dust in corners.',
                 mistake: 'Painting over dust leads to "clumping" and uneven texture patches.'
             },
             { 
-                title: 'Stain Encapsulation', 
+                step: 'Stain Encapsulation', 
                 why: 'Water stains are made of tannins that dissolve in water-based paint and bleed through.', 
                 tip: 'We use high-grade oil or shellac primers to lock the stain behind a waterproof barrier.',
                 mistake: 'Using regular latex primer on a water stain will cause it to reappear in hours.'
             },
             { 
-                title: 'Flat White Application', 
+                step: 'Flat White Application', 
                 why: 'Shiny ceilings show every single drywall mistake and joist line.', 
                 tip: 'Non-reflective "dead flat" white hides seams and bounces window light evenly.',
                 mistake: 'Using semi-gloss on a ceiling highlights wobbly drywall and looks unnatural.'
@@ -457,25 +457,25 @@ export const blogData: Record<string, BlogContent> = {
         ],
         definition: 'Trim and molding painting is a detail-oriented restoration service that protects and beautifies architectural wood features like baseboards, crown molding, and door casings using specialized high-impact enamels.',
         whoThisIsFor: [
-            { title: 'The Modern Minimalist', desc: 'Change dusty old oak trim to a crisp "Designer White" for a vastly more expensive-looking interior.' },
-            { title: 'Pet & Kid-Heavy Homes', desc: 'If your baseboards are chipped and scuffed, our hard-curing enamels are the only long-term fix.' },
-            { title: 'Craftsman Home Lovers', desc: 'Restore the dignity of original woodwork with historically accurate sheens and precision cutting-in.' }
+            { target: 'The Modern Minimalist', summary: 'Change dusty old oak trim to a crisp "Designer White" for a vastly more expensive-looking interior.' },
+            { target: 'Pet & Kid-Heavy Homes', summary: 'If your baseboards are chipped and scuffed, our hard-curing enamels are the only long-term fix.' },
+            { target: 'Craftsman Home Lovers', summary: 'Restore the dignity of original woodwork with historically accurate sheens and precision cutting-in.' }
         ],
         processSteps: [
             { 
-                title: 'Surface Decalibration (Sanding)', 
+                step: 'Surface Decalibration (Sanding)', 
                 why: 'Old varnish is chemically slick and will cause new paint to peel off in sheets.', 
                 tip: 'We use contour-sanding blocks to reach deep into the decorative wood grooves.',
                 mistake: 'Painting over shiny wood without sanding is the #1 cause of interior paint failure.'
             },
             { 
-                title: 'Dust Extraction & Tacking', 
+                step: 'Dust Extraction & Tacking', 
                 why: 'Sanding dust trapped in paint creates a "sandpaper" texture on your trim.', 
                 tip: 'We use microfiber tack cloths to remove every micro-speck of dust before the brush hits wood.',
                 mistake: 'Skipping the cleaning phase leaves tiny bumps that ruin the "silk-smooth" finish.'
             },
             { 
-                title: 'Urethane-Enamel Application', 
+                step: 'Urethane-Enamel Application', 
                 why: 'Trim takes physical abuse. Regular wall paint is too soft and will scuff instantly.', 
                 tip: 'We use hybrid oils that dry as hard as a car finish but have the low odor of water-based paint.',
                 mistake: 'Using flat wall paint on baseboards makes them impossible to clean later.'
@@ -502,7 +502,7 @@ export const blogData: Record<string, BlogContent> = {
     },
     'accent-wall-painting': {
         h1: 'Custom Accent Wall Painting Spokane | Professional Color Splash',
-        metaDescription: 'Add immediate character to any room with custom accent wall painting in Spokane. We cut perfectly straight lines and roll rich, heavy colors.',
+        metaDescription: 'Add immediate character to any room with professional accent wall painting in Spokane. Prestige Custom Painting LLC creates stunning focal points for homes.',
         keywords: 'accent wall painting spokane, focal wall painting, feature wall painters, interior design painting',
         readingTime: '4 min read',
         parentRoute: '/house-painters-spokane',
@@ -515,19 +515,19 @@ export const blogData: Record<string, BlogContent> = {
         ],
         definition: 'Accent wall painting is a strategic interior service that uses contrasting colors on a single wall to create a stylistic focal point, improve room proportions, and highlight architectural features.',
         whoThisIsFor: [
-            { title: 'Kendall Yards/Modern Apartment Dwellers', desc: 'Transform a sterile white box into a cozy, designer living space with one bold dark wall.' },
-            { title: 'Home Office Workers', desc: 'Create a professional, non-distracting video call background using calming teals or deep grays.' },
-            { title: 'Nursery & Playroom Designers', desc: 'Add a fun, energetic pop of color without overwhelming the entire bedroom.' }
+            { target: 'Kendall Yards/Modern Apartment Dwellers', summary: 'Transform a sterile white box into a cozy, designer living space with one bold dark wall.' },
+            { target: 'Home Office Workers', summary: 'Create a professional, non-distracting video call background using calming teals or deep grays.' },
+            { target: 'Nursery & Playroom Designers', summary: 'Add a fun, energetic pop of color without overwhelming the entire bedroom.' }
         ],
         processSteps: [
             { 
-                title: 'Corner Masking & Sealing', 
+                step: 'Corner Masking & Sealing', 
                 why: 'The line between dark blue and bright white must be perfect or the room looks "DIY".', 
                 tip: 'We use "caulk-locking" on the tape edge to ensure zero paint bleed.',
                 mistake: 'Standard blue tape alone often bleeds into the texture on Spokane\'s orange-peel walls.'
             },
             { 
-                title: 'High-Pigment Saturation', 
+                step: 'High-Pigment Saturation', 
                 why: 'Deep colors (navys, charcoals, forest greens) often look "patchy" if rolled thin.', 
                 tip: 'We always use two full, heavy coats to ensure a solid, "velvet" appearance.',
                 mistake: 'Trying to finish a dark accent wall in one coat leads to "lap marks" under window light.'
@@ -554,7 +554,7 @@ export const blogData: Record<string, BlogContent> = {
     },
     'exterior-siding-painting': {
         h1: 'High-Performance Exterior Siding Painting Spokane | Durable Weather Shield',
-        metaDescription: 'Protect your home from Northwest storms with professional exterior siding painting. We caulk every gap and spray heavy acrylic coatings in Spokane for long-term weatherproofing.',
+        metaDescription: 'Protect your home from the elements with expert exterior siding painting in Spokane. Prestige Custom Painting LLC ensures a durable and beautiful finish.',
         keywords: 'exterior siding painting spokane, house painting spokane, cedar siding painting, spokane exterior painters',
         readingTime: '6 min read',
         parentRoute: '/house-painters-spokane',
@@ -567,25 +567,25 @@ export const blogData: Record<string, BlogContent> = {
         ],
         definition: 'Exterior siding painting is a comprehensive structural protection service that involves chemical cleaning, full-envelope caulking, and the application of weather-resistant acrylic coatings to safeguard a home against rot and UV degradation.',
         whoThisIsFor: [
-            { title: 'Homeowners with Faded LP/Hardie', desc: 'If your siding has "chalky" dust when you touch it, the protection is gone and needs an immediate refresh.' },
-            { title: 'Homes with Peeling Cedar', desc: 'Older wooden siding requires aggressive scraping and priming to stop the cycle of winter moisture rot.' },
-            { title: 'Siding Preservationists', desc: 'Invest in painting every 7-10 years to completely avoid the $40,000 cost of full siding replacement.' }
+            { target: 'Homeowners with Faded LP/Hardie', summary: 'If your siding has "chalky" dust when you touch it, the protection is gone and needs an immediate refresh.' },
+            { target: 'Homes with Peeling Cedar', summary: 'Older wooden siding requires aggressive scraping and priming to stop the cycle of winter moisture rot.' },
+            { target: 'Siding Preservationists', summary: 'Invest in painting every 7-10 years to completely avoid the $40,000 cost of full siding replacement.' }
         ],
         processSteps: [
             { 
-                title: 'High-Volume Power Washing', 
+                step: 'High-Volume Power Washing', 
                 why: 'Northern exposures on Spokane homes grow moss that creates "micro-roots" inside the paint.', 
                 tip: 'We use a chlorine-free fungicide to kill growth at the root before painting.',
                 mistake: 'Painting over dirt or mildew is the #1 cause of "bubble" failures on siding.'
             },
             { 
-                title: 'Envelope Caulking & Sealing', 
+                step: 'Envelope Caulking & Sealing', 
                 why: 'Water enters a home at the joints and nail holes, not through the flat face of the board.', 
                 tip: 'We use 50-year elastomeric caulk that stretches as the house breathes in the cold.',
                 mistake: 'Skipping nail-hole caulking allows water to rot the board from the inside out.'
             },
             { 
-                title: 'Surface Saturating (Back-Rolling)', 
+                step: 'Surface Saturating (Back-Rolling)', 
                 why: 'Spraying only covers the surface. Back-rolling pushes the paint into the siding texture.', 
                 tip: 'We always use a high-nap roller specifically designed for rough siding surfaces.',
                 mistake: 'Spray-only jobs often leave "voids" in the texture where moisture can enter.'
@@ -625,25 +625,25 @@ export const blogData: Record<string, BlogContent> = {
         ],
         definition: 'Stucco painting is a specialized masonry protective service that uses elastomeric coatings to bridge structural expansion cracks, providing a flexible, waterproof shield that moves with the building.',
         whoThisIsFor: [
-            { title: 'Homeowners with "Spiderweb" Cracking', desc: 'If your stucco has hundreds of tiny visible lines, water is reaching the structural lath underneath.' },
-            { title: 'The Modern Stucco Homeowner', desc: 'Update dated beige or pink stucco to a modern, value-increasing "Charcoal" or "Cool White".' },
-            { title: 'Moisture-Vulnerable Properties', desc: 'Essential for homes in high-wind or high-precipitation areas of the Inland Northwest.' }
+            { target: 'Homeowners with "Spiderweb" Cracking', summary: 'If your stucco has hundreds of tiny visible lines, water is reaching the structural lath underneath.' },
+            { target: 'The Modern Stucco Homeowner', summary: 'Update dated beige or pink stucco to a modern, value-increasing "Charcoal" or "Cool White".' },
+            { target: 'Moisture-Vulnerable Properties', summary: 'Essential for homes in high-wind or high-precipitation areas of the Inland Northwest.' }
         ],
         processSteps: [
             { 
-                title: 'Masonry ConditioningWash', 
+                step: 'Masonry Conditioning Wash', 
                 why: 'Stucco is a porous cement that traps dust and loose sand deep in its texture.', 
                 tip: 'We use a low-pressure wash to clean without eroding the delicate cement finish.',
                 mistake: 'Painting dirty stucco leads to the paint "flaking" off in large sheets like old skin.'
             },
             { 
-                title: 'Elastomeric Crack Filling', 
+                step: 'Elastomeric Crack Filling', 
                 why: 'Standard caulk or mud will snap when the house shifts. Stucco needs "stretchy" filler.', 
                 tip: 'We pack V-shaped cracks with compound that stretches 300% without breaking.',
                 mistake: 'Filling cracks with rigid mortar ensures the crack will reappear within one winter.'
             },
             { 
-                title: 'High-Build Coating Application', 
+                step: 'High-Build Coating Application', 
                 why: 'Stucco needs a thick "blanket" of paint, not a thin cosmetic layer.', 
                 tip: 'We apply elastomeric paint at 15-20 mils thick—roughly 4x thicker than wall paint.',
                 mistake: 'Using regular house paint on stucco is too thin to bridge the pores and cracks.'
@@ -683,25 +683,25 @@ export const blogData: Record<string, BlogContent> = {
         ],
         definition: 'Brick painting is a decorative masonry service that uses high-adhesion mineral or silicate-based coatings to transform the color of porous brick while maintaining structural moisture permeability.',
         whoThisIsFor: [
-            { title: 'The "Orange Brick" Fireplace Owner', desc: 'Instantly brighten your living room by turning a dark, dated fireplace into a crisp white focal point.' },
-            { title: 'Modern Exterior Enthusiasts', desc: 'Perfect for homes with mixed-material exteriors that need a cohesive, contemporary color palette.' },
-            { title: 'Historical Preservationists', desc: 'Our lime-washing techniques provide protection without the "plastic" look of solid paint.' }
+            { target: 'The "Orange Brick" Fireplace Owner', summary: 'Instantly brighten your living room by turning a dark, dated fireplace into a crisp white focal point.' },
+            { target: 'Modern Exterior Enthusiasts', summary: 'Perfect for homes with mixed-material exteriors that need a cohesive, contemporary color palette.' },
+                { target: 'Historical Preservationists', summary: 'Our lime-washing techniques provide protection without the "plastic" look of solid paint.' }
         ],
         processSteps: [
             { 
-                title: 'Alkaline Surface Testing', 
+                step: 'Alkaline Surface Testing', 
                 why: 'Brick is often highly alkaline, which can "burn" and dissolve regular paint from behind.', 
                 tip: 'We test the pH of the masonry and use specialized neutralizing primers if necessary.',
                 mistake: 'Using standard latex primer on brick often leads to "blistering" within a year.'
             },
             { 
-                title: 'Deep-Pore Masonry Priming', 
+                step: 'Deep-Pore Masonry Priming', 
                 why: 'Brick is incredibly thirsty and will soak up paint unevenly without a sealer.', 
                 tip: 'We use masonry conditioners that lock into the pores and create a uniform surface.',
                 mistake: 'Skipping the primer results in a "patchy" look where the mortar joints look different than the brick face.'
             },
             { 
-                title: 'Silicate-Based Topcoating', 
+                step: 'Silicate-Based Topcoating', 
                 why: 'Brick must be able to exhale moisture. Non-breathable paint causes brick "spalling" (crumbling).', 
                 tip: 'We use mineral-based paints that chemically bond to the brick rather than just sitting on it.',
                 mistake: 'Using non-breathable oil paint on exterior brick can cause the brick to literally explode in freezing weather.'
@@ -729,7 +729,7 @@ export const blogData: Record<string, BlogContent> = {
     // BATCH 3: PAINTER SERVICES (13-18)
     'fence-painting': {
         h1: 'Durable Fence Painting Spokane | Full Weather Protection',
-        metaDescription: 'Revitalize your property line with precise fence painting in Spokane. We wash, prep, and spray wooden fences to block out rain and harmful UV rays.',
+        metaDescription: 'Revitalize your property line with expert fence painting in Spokane. Prestige Custom Painting LLC provides durable, weather-resistant finishes for wood.',
         keywords: 'fence painting spokane, wooden fence painting, paint fence spokane, exterior painters',
         readingTime: '4 min read',
         parentRoute: '/house-painters-spokane',
@@ -742,19 +742,19 @@ export const blogData: Record<string, BlogContent> = {
         ],
         definition: 'Fence painting is a heavy-duty wood preservation service that utilizes high-opacity, weather-rebound coatings to create a physical barrier against the Inland Northwest\'s extreme temperature swings.',
         whoThisIsFor: [
-            { title: 'Homeowners with Gray/Aged Fences', desc: 'If your fence has turned silver, the natural oils are gone and the wood is starting to become brittle.' },
-            { title: 'Privacy-Focused Families', desc: 'Solid paint provides a uniform look that hides knots and imperfections in lower-grade lumber.' },
-            { title: 'Investment Property Owners', desc: 'A freshly painted white or black fence is the fastest way to increase curb appeal before a sale.' }
+            { target: 'Homeowners with Gray/Aged Fences', summary: 'If your fence has turned silver, the natural oils are gone and the wood is starting to become brittle.' },
+            { target: 'Privacy-Focused Families', summary: 'Solid paint provides a uniform look that hides knots and imperfections in lower-grade lumber.' },
+            { target: 'Investment Property Owners', summary: 'A freshly painted white or black fence is the fastest way to increase curb appeal before a sale.' }
         ],
         processSteps: [
             { 
-                title: 'Oxygenated Chemical Cleaning', 
+                step: 'Oxygenated Chemical Cleaning', 
                 why: 'Fences are breeding grounds for "black mold" and green algae near sprinkler heads.', 
                 tip: 'We use biodegradable oxygen-bleach cleaners that brighten wood without killing your grass.',
                 mistake: 'Painting over algae locks moisture inside the wood, causing it to rot twice as fast.'
             },
             { 
-                title: 'Professional Spray Saturation', 
+                step: 'Professional Spray Saturation', 
                 why: 'Brushing a thousand fence slats takes too long and leaves "starvation" spots in the gaps.', 
                 tip: 'We use high-pressure sprayers to force paint into the tight cracks between boards.',
                 mistake: 'Spray-only jobs without checking the "other side" lead to neighbor complaints and uneven protection.'
@@ -781,7 +781,7 @@ export const blogData: Record<string, BlogContent> = {
     },
     'fence-staining': {
         h1: 'Natural Fence Staining Spokane | Deep Penetrating Oil Protection',
-        metaDescription: 'Protect the natural beauty of your wood with deep-penetrating fence staining in Spokane. We apply rich oil stains that stop costly water rot.',
+        metaDescription: 'Protect the natural beauty of your wood with expert fence staining in Spokane. Prestige Custom Painting LLC uses premium sealers for long-lasting results.',
         keywords: 'fence staining spokane, cedar fence stain, transparent fence stain, spokane wood staining',
         readingTime: '5 min read',
         parentRoute: '/house-painters-spokane',
@@ -794,19 +794,19 @@ export const blogData: Record<string, BlogContent> = {
         ],
         definition: 'Fence staining is a wood preservation service that utilizes transparent or semi-transparent oils to saturate the internal cells of the wood, providing internal moisture protection while showcasing the natural grain.',
         whoThisIsFor: [
-            { title: 'New Cedar Fence Owners', desc: 'Apply stain immediately after the wood "seasons" to lock in that gorgeous orange/red color forever.' },
-            { title: 'The Low-Maintenance Property Owner', desc: 'Stain doesn\'t peel, which means you never have to scrape or sand it when it\'s time for a refresh.' },
-            { title: 'Lovers of Natural Aesthetics', desc: 'Show off the high-quality grain of your lumber rather than covering it with a plastic-looking paint.' }
+            { target: 'New Cedar Fence Owners', summary: 'Apply stain immediately after the wood "seasons" to lock in that gorgeous orange/red color forever.' },
+            { target: 'The Low-Maintenance Property Owner', summary: 'Stain doesn\'t peel, which means you never have to scrape or sand it when it\'s time for a refresh.' },
+            { target: 'Lovers of Natural Aesthetics', summary: 'Show off the high-quality grain of your lumber rather than covering it with a plastic-looking paint.' }
         ],
         processSteps: [
             { 
-                title: 'Wood Restoration Wash', 
+                step: 'Wood Restoration Wash', 
                 why: 'Raw wood develops a layer of "dead" silver cells that block stain from soaking in.', 
                 tip: 'We use a citric-acid brightener to open the wood pores and reset the pH level.',
                 mistake: 'Staining dry, gray wood results in a "muddy" appearance that looks dirty rather than natural.'
             },
             { 
-                title: 'Oil-Saturation Application', 
+                step: 'Oil-Saturation Application', 
                 why: 'Stain works by filling the empty wood cells so water has no room to enter.', 
                 tip: 'We "wet-line" the boards to ensure no overlap marks are visible in the final grain.',
                 mistake: 'Applying too much stain (puddling) creates a sticky residue that attracts dirt and dust.'
@@ -833,7 +833,7 @@ export const blogData: Record<string, BlogContent> = {
     },
     'deck-staining': {
         h1: 'Professional Deck Staining Spokane | Deep-Tissue Wood Restoration',
-        metaDescription: 'Keep your outdoor living space beautiful and safe with professional deck staining in Spokane. We restore faded wood, leaving a durable, water-resistant finish.',
+        metaDescription: 'Keep your outdoor living space beautiful and safe with expert deck staining in Spokane. We restore faded wood, leaving a durable, water-resistant finish.',
         keywords: 'deck staining spokane, deck refinishing, wood deck stain near me, spokane deck painters',
         readingTime: '6 min read',
         parentRoute: '/house-painters-spokane',
@@ -846,19 +846,19 @@ export const blogData: Record<string, BlogContent> = {
         ],
         definition: 'Deck staining is a premium horizontal-wood maintenance service designed to protect walking surfaces from heavy UV exposure and standing snow by saturating them with high-resin oils.',
         whoThisIsFor: [
-            { title: 'Families with Barefoot Kids', desc: 'Our sanding process removes hazardous splinters, making your deck safe and soft for Summer play.' },
-            { title: 'The "Gray Deck" Homeowner', desc: 'Turn that weathered, silver eye-sore back into a warm, inviting mahogany or cedar destination.' },
-            { title: 'Waterfront Property Owners', desc: 'Crucial for homes near the Spokane River or Liberty Lake where humidity is consistently higher.' }
+            { target: 'Families with Barefoot Kids', summary: 'Our sanding process removes hazardous splinters, making your deck safe and soft for Summer play.' },
+            { target: 'The "Gray Deck" Homeowner', summary: 'Turn that weathered, silver eye-sore back into a warm, inviting mahogany or cedar destination.' },
+            { target: 'Waterfront Property Owners', summary: 'Crucial for homes near the Spokane River or Liberty Lake where humidity is consistently higher.' }
         ],
         processSteps: [
             { 
-                title: 'Surface Stabilizing (Sanding)', 
+                step: 'Surface Stabilizing (Sanding)', 
                 why: 'Horizontal grain "pops" up after a few years, creating splinters and trap-sites for water.', 
                 tip: 'We sand with 60-80 grit to open the wood pores without "closing" them (polishing).',
                 mistake: 'Staining over gray, weathered wood ensures the finish will peel in months.'
             },
             { 
-                title: 'Back-Brush Impregnation', 
+                step: 'Back-Brush Impregnation', 
                 why: 'Walking on a deck creates physical friction that "wipes" away surface coatings.', 
                 tip: 'We physically brush the product into the grain rather than just letting it sit on top.',
                 mistake: 'Spray-only deck staining leaves the gaps between boards unprotected, where rot starts.'
@@ -885,7 +885,7 @@ export const blogData: Record<string, BlogContent> = {
     },
     'surface-priming': {
         h1: 'High-Adhesion Surface Priming Spokane | Professional Paint Bonding',
-        metaDescription: 'Stop paint peeling and cover dark stains completely with expert surface priming in Spokane. We seal tough surfaces so new paint sticks permanently.',
+        metaDescription: 'Stop paint peeling and cover drywall cracks with expert surface priming in Spokane. Prestige Custom Painting LLC ensures a perfect bond for every project.',
         keywords: 'surface priming spokane, paint primer spokane, bonding primer, stain blocking primer',
         readingTime: '5 min read',
         parentRoute: '/house-painters-spokane',
@@ -898,19 +898,19 @@ export const blogData: Record<string, BlogContent> = {
         ],
         definition: 'Surface priming is an essential chemical preparation service that creates a "bridge" between a difficult substrate and a topcoat, ensuring permanent adhesion and preventing underlying stains from surfacing.',
         whoThisIsFor: [
-            { title: 'Homeowners with Raw Drywall', desc: 'New drywall mud is extremely absorbent; without primer, your expensive paint will look splotchy and dull.' },
-            { title: 'The "Dark to Light" Renovator', desc: 'If you\'re painting white over dark red or navy, a high-hide primer saves you three extra coats of paint.' },
-            { title: 'Owners of Water-Damaged Properties', desc: 'Essential for sealing brown water rings so they never reappear through your fresh finish.' }
+            { target: 'Homeowners with Raw Drywall', summary: 'New drywall mud is extremely absorbent; without primer, your expensive paint will look splotchy and dull.' },
+            { target: 'The "Dark to Light" Renovator', summary: 'If you\'re painting white over dark red or navy, a high-hide primer saves you three extra coats of paint.' },
+            { target: 'Owners of Water-Damaged Properties', summary: 'Essential for sealing brown water rings so they never reappear through your fresh finish.' }
         ],
         processSteps: [
             { 
-                title: 'Surface De-Greasing', 
+                step: 'Surface De-Greasing', 
                 why: 'Primers cannot bond to surface oils, kitchen grease, or waxes.', 
                 tip: 'We use a TSP-equivalent cleaner to "etch" the surface chemically before priming.',
                 mistake: 'Priming over a greasy kitchen wall will cause the paint to peel in large flakes within weeks.'
             },
             { 
-                title: 'Primer Matching', 
+                step: 'Primer Matching', 
                 why: 'Using the wrong primer is worse than using no primer at all.', 
                 tip: 'We use Shellac for stains, Urethane for bonding, and PVA for new drywall.',
                 mistake: 'Using water-based primer on a water stain will only dissolve the stain and bring it to the surface.'
@@ -950,19 +950,19 @@ export const blogData: Record<string, BlogContent> = {
         ],
         definition: 'Garage painting is a utility-focused interior finishing service that converts industrial or unfinished storage areas into clean, habitable workspaces using high-reflectivity, easy-clean coatings.',
         whoThisIsFor: [
-            { title: 'The Hobbyist Woodworker', desc: 'Reflect more light onto your projects and make sawdust cleanup 50% faster with sealed walls.' },
-            { title: 'Car Enthusiasts', desc: 'Create a clean, dust-free environment for your vehicles that mimics a professional showroom.' },
-            { title: 'Spokane Valley Families', desc: 'Stop the "dark cave" feeling and make your garage a safe, bright entry point for the whole family.' }
+            { target: 'The Hobbyist Woodworker', summary: 'Reflect more light onto your projects and make sawdust cleanup 50% faster with sealed walls.' },
+            { target: 'Car Enthusiasts', summary: 'Create a clean, dust-free environment for your vehicles that mimics a professional showroom.' },
+            { target: 'Spokane Valley Families', summary: 'Stop the "dark cave" feeling and make your garage a safe, bright entry point for the whole family.' }
         ],
         processSteps: [
             { 
-                title: 'Industrial Blow-Out & Clean', 
+                step: 'Industrial Blow-Out & Clean', 
                 why: 'Garages trap 10x more dust and spiders than the rest of the house.', 
                 tip: 'We use high-velocity blowers to clear the ceiling and walls before the first drop-cloth is laid.',
                 mistake: 'Painting over garage dust creates "mud-streaks" in the paint that never fully dry.'
             },
             { 
-                title: 'Porosity Sealing', 
+                step: 'Porosity Sealing', 
                 why: 'Unfinished garage drywall is notoriously "thirsty" and will drink two coats of paint instantly.', 
                 tip: 'We apply a high-solids PVA sealer to "close" the drywall paper before the finish coat.',
                 mistake: 'Skipping the sealer leads to a dull, "fuzzy" appearance on the wall.'
@@ -1002,19 +1002,19 @@ export const blogData: Record<string, BlogContent> = {
         ],
         definition: 'Baseboard painting is a detail-oriented wood protection service that utilizes high-impact enamels to shield floor trim from vacuums, foot traffic, and pets while providing a crisp architectural border.',
         whoThisIsFor: [
-            { title: 'The "New Carpet" Owner', desc: 'Old, dirty trim looks 10x worse next to brand new flooring; a refresh is essential for a clean look.' },
-            { title: 'Large Dog Owners', desc: 'Standard paint chips when tails hit it or claws scuff it; our urethane enamels refuse to budge.' },
-            { title: 'Property Sellers', desc: 'Bright, clean baseboards are a "subconscious" signal to buyers that the home is remarkably well-maintained.' }
+            { target: 'The "New Carpet" Owner', summary: 'Old, dirty trim looks 10x worse next to brand new flooring; a refresh is essential for a clean look.' },
+            { target: 'Large Dog Owners', summary: 'Standard paint chips when tails hit it or claws scuff it; our urethane enamels refuse to budge.' },
+            { target: 'Property Sellers', summary: 'Bright, clean baseboards are a "subconscious" signal to buyers that the home is remarkably well-maintained.' }
         ],
         processSteps: [
             { 
-                title: 'The "Seal-Tape" Prep', 
+                step: 'The "Seal-Tape" Prep', 
                 why: 'Painting near the floor results in carpet-fibers getting stuck in the brush.', 
                 tip: 'We use a specialty "tucking" tool to push our tape 1/8" under the baseboard for a perfect line.',
                 mistake: 'Painting without a floor-mask results in permanent paint stains on your expensive carpet.'
             },
             { 
-                title: 'High-Impact Enamel application', 
+                step: 'High-Impact Enamel application', 
                 why: 'Baseboards are the most physically abused part of any room.', 
                 tip: 'We use a 100% acrylic-urethane hybrid that dries as hard as a plastic shell.',
                 mistake: 'Using regular wall paint on baseboards makes them soft and "sticky" to dust forever.'
@@ -1042,7 +1042,7 @@ export const blogData: Record<string, BlogContent> = {
     // BATCH 4: PAINTER SERVICES (19-24)
     'crown-molding-painting': {
         h1: 'Precision Crown Molding Painting Spokane | Architectural Detailing',
-        metaDescription: 'Highlight the architectural elegance of your home with sharp crown molding painting in Spokane. We paint high trim cleanly without dripping on your floors.',
+        metaDescription: 'Highlight the architectural elegance of your home with sharp crown molding painting in Spokane. We paint high trim cleanly without dripping on floors.',
         keywords: 'crown molding painting spokane, ceiling trim painting, high trim painters, architectural painting spokane',
         readingTime: '5 min read',
         parentRoute: '/house-painters-spokane',
@@ -1055,19 +1055,19 @@ export const blogData: Record<string, BlogContent> = {
         ],
         definition: 'Crown molding painting is a high-level architectural refinement service that requires meticulous masking and specialized enamels to define the transition between walls and ceilings.',
         whoThisIsFor: [
-            { title: 'The High-End Homeowner', desc: 'Add "visual wealth" to your rooms by making your custom woodwork pop against colored walls.' },
-            { title: 'Historical Home Renovators', desc: 'Crucial for maintaining the integrity of Spokane\'s classic Craftsman and Tudor home interiors.' },
-            { title: 'New Construction Finishers', desc: 'Ensure your newly installed molding looks integrated rather than "nailed-on".' }
+            { target: 'The High-End Homeowner', summary: 'Add "visual wealth" to your rooms by making your custom woodwork pop against colored walls.' },
+            { target: 'Historical Home Renovators', summary: 'Crucial for maintaining the integrity of Spokane\'s classic Craftsman and Tudor home interiors.' },
+            { target: 'New Construction Finishers', summary: 'Ensure your newly installed molding looks integrated rather than "nailed-on".' }
         ],
         processSteps: [
             { 
-                title: 'Joint Consolidation', 
+                step: 'Joint Consolidation', 
                 why: 'Wood trim expands and contracts, leaving ugly gaps in the corners over time.', 
                 tip: 'We use high-elasticity trim caulk that stretches with the house to prevent cracking.',
                 mistake: 'Painting over open joints allows shadows to ruin the "luxury" feel of the trim.'
             },
             { 
-                title: 'Advanced Contrast Masking', 
+                step: 'Advanced Contrast Masking', 
                 why: 'A wobbly line on a 10-foot ceiling is extremely noticeable to guests.', 
                 tip: 'We use premium "Paint-Block" tape to ensure zero bleed onto your colored walls.',
                 mistake: 'Free-handing high trim often results in "wiggling" lines that look unprofessional.'
@@ -1094,7 +1094,7 @@ export const blogData: Record<string, BlogContent> = {
     },
     'color-consultation': {
         h1: 'Professional Color Consultation Spokane | Expert Palette Design',
-        metaDescription: 'Stop guessing which green matches your couch. Hire us for a professional color consultation in Spokane, and get the perfect mood for your home.',
+        metaDescription: 'Stop guessing which green matches! Get expert color consultation in Spokane from Prestige Custom Painting LLC to find the perfect palette for your home.',
         keywords: 'color consultation spokane, paint color expert, interior design colors, spokane color specialist',
         readingTime: '6 min read',
         parentRoute: '/house-painters-spokane',
@@ -1107,19 +1107,19 @@ export const blogData: Record<string, BlogContent> = {
         ],
         definition: 'A color consultation is a strategic advisory service that eliminates "choice paralysis" by selecting a cohesive color story based on architectural lighting and existing interior elements.',
         whoThisIsFor: [
-            { title: 'The Stressed Homeowner', desc: 'If you have 20 sample jars on your wall and still can\'t decide, we can narrow it down to the winner in 30 minutes.' },
-            { title: 'Real Estate Flippers', desc: 'We select the specific "neutral" tones proven to increase buyer offers and move properties faster.' },
-            { title: 'Commercial Office Managers', desc: 'Improve employee productivity with "biophilic" colors that reduce stress and eye-strain.' }
+            { target: 'The Stressed Homeowner', summary: 'If you have 20 sample jars on your wall and still can\'t decide, we can narrow it down to the winner in 30 minutes.' },
+            { target: 'Real Estate Flippers', summary: 'We select the specific "neutral" tones proven to increase buyer offers and move properties faster.' },
+            { target: 'Commercial Office Managers', summary: 'Improve employee productivity with "biophilic" colors that reduce stress and eye-strain.' }
         ],
         processSteps: [
             { 
-                title: 'Lumen & Hue Analysis', 
+                step: 'Lumen & Hue Analysis', 
                 why: 'Spokane\'s gray winters make colors look "blue-ish" or cold.', 
                 tip: 'We choose "warm-neutral" tones to counteract the cool Northwest light.',
                 mistake: 'Choosing a color in a bright hardware store almost always results in disappointment at home.'
             },
             { 
-                title: 'Large-Format Swatching', 
+                step: 'Large-Format Swatching', 
                 why: 'Tiny 2-inch squares hide the true character of a paint color.', 
                 tip: 'We use 12x12 "peel and stick" samples that can be moved from wall to wall.',
                 mistake: 'Painting one small test patch in a corner doesn\'t show how light hits the main wall.'
@@ -1146,7 +1146,7 @@ export const blogData: Record<string, BlogContent> = {
     },
     'paint-touch-up-services': {
         h1: 'Invisible Paint Touch-Up Services Spokane | Seamless Wall Repairs',
-        metaDescription: 'Fix annoying holes and wall scratches fast. Get clean paint touch-up services in Spokane without repainting the entire massive wall.',
+        metaDescription: 'Fix annoying holes and wall scuffs with expert paint touch-up in Spokane. Prestige Custom Painting LLC provides seamless, paint-ready patches for walls.',
         keywords: 'paint touch up spokane, wall repair spokane, fix paint scratches, tenant move out paint',
         readingTime: '4 min read',
         parentRoute: '/house-painters-spokane',
@@ -1159,19 +1159,19 @@ export const blogData: Record<string, BlogContent> = {
         ],
         definition: 'Paint touch-up services are a targeted restoration technique designed to erase localized damage using feathered brushwork and texture-replication chemicals.',
         whoThisIsFor: [
-            { title: 'Renters Losing Deposits', desc: 'We fix those TV mount holes so perfectly your landlord will never know they were there.' },
-            { title: 'Busy Parents', desc: 'Restore high-traffic hallways and corners that have been scuffed by strollers, bikes, or backpacks.' },
-            { title: 'Home Sellers', desc: 'Fix 10 small problems for 5% of the cost of one massive room repaint.' }
+            { target: 'Renters Losing Deposits', summary: 'We fix those TV mount holes so perfectly your landlord will never know they were there.' },
+            { target: 'Busy Parents', summary: 'Restore high-traffic hallways and corners that have been scuffed by strollers, bikes, or backpacks.' },
+            { target: 'Home Sellers', summary: 'Fix 10 small problems for 5% of the cost of one massive room repaint.' }
         ],
         processSteps: [
             { 
-                title: 'The "Feather-Edge" technique', 
+                step: 'The "Feather-Edge" technique', 
                 why: 'Applying a glob of new paint leaves a visible "border" where the new meets old.', 
                 tip: 'We use a damp-dry brush to "fade" the paint outward for 4 inches from the repair.',
                 mistake: 'Painting just inside the hole ensures the patch will "flash" and be visible in direct light.'
             },
             { 
-                title: 'Texture-Grain Match', 
+                step: 'Texture-Grain Match', 
                 why: 'A smooth patch on a bumpy wall stands out like a sore thumb.', 
                 tip: 'We use specialty sponge techniques to mimic "orange peel" or "knockdown" patterns.',
                 mistake: 'Sanding a patch totally smooth on a textured wall makes it impossible to hide.'
@@ -1198,11 +1198,11 @@ export const blogData: Record<string, BlogContent> = {
     },
     'wall-texture-matching': {
         h1: 'Seamless Wall Texture Matching Spokane | Invisible Patching',
-        metaDescription: 'Erase ugly plumbing repair patches forever. We perform perfect wall texture matching in Spokane to blend bald drywall spots perfectly flat.',
+        metaDescription: 'Erase ugly plumbing repair patches completely. We perform perfect wall texture matching in Spokane to blend bald drywall spots perfectly into your flat walls.',
         keywords: 'wall texture matching spokane, orange peel texture, knockdown texture repair, drywall texture spokane',
         readingTime: '5 min read',
-        parentRoute: '/house-painters-spokane',
-        parentName: 'House Painters',
+        parentRoute: '/drywall-contractor-spokane',
+        parentName: 'Drywall Contractor',
         tldr: [
             'Precision air-compressor hoppers to replicate original factory spray grains',
             'Adjustable PSI settings to match "Orange Peel", "Knockdown", or "Splatter"',
@@ -1211,19 +1211,19 @@ export const blogData: Record<string, BlogContent> = {
         ],
         definition: 'Wall texture matching is a technical restoration process that uses specialized pneumatic equipment to replicate the unique physical pattern of a drywall finish, hiding repairs and patches.',
         whoThisIsFor: [
-            { title: 'The Post-Plumbing Homeowner', desc: 'If a plumber cut a hole to fix a pipe, we make the resulting bald patch disappear into the rest of the wall.' },
-            { title: 'Remodelers Moving Outlets', desc: 'Crucial for hiding the "scars" left behind when electrical boxes or wall-mounted TVs are removed.' },
-            { title: 'Home Sellers', desc: 'Standardize the look of a room by erasing 20 years of mismatched, sloppy DIY patch jobs.' }
+            { target: 'The Post-Plumbing Homeowner', summary: 'If a plumber cut a hole to fix a pipe, we make the resulting bald patch disappear into the rest of the wall.' },
+            { target: 'Remodelers Moving Outlets', summary: 'Crucial for hiding the "scars" left behind when electrical boxes or wall-mounted TVs are removed.' },
+            { target: 'Home Sellers', summary: 'Standardize the look of a room by erasing 20 years of mismatched, sloppy DIY patch jobs.' }
         ],
         processSteps: [
             { 
-                title: 'Grain-Size Calibration', 
+                step: 'Grain-Size Calibration', 
                 why: 'Texture isn\'t "one size fits all." Every house has a slightly different spray pattern.', 
                 tip: 'We perform a test-spray on a scrap board to match the droplet size before hitting your wall.',
                 mistake: 'Using a store-bought "texture can" usually leaves huge, ugly blobs that don\'t match.'
             },
             { 
-                title: 'The Sweep-In Blend', 
+                step: 'The Sweep-In Blend', 
                 why: 'A hard line of texture looks like a frame around the repair.', 
                 tip: 'We "sweep" the sprayer outward for 12 inches past the repair to fade the new texture into the old.',
                 mistake: 'Spray-finishing only the patch area makes the repair stand out under window light.'
@@ -1250,7 +1250,7 @@ export const blogData: Record<string, BlogContent> = {
     },
     'garage-floor-epoxy-coating': {
         h1: 'Industrial Garage Floor Epoxy Coating Spokane | Armor Guard',
-        metaDescription: 'Eliminate heavy oil stains and dusty concrete forever fast. We install hard, glass-like garage floor epoxy coating in Spokane that never peels from hot tires.',
+        metaDescription: 'Transform your garage with durable epoxy flooring in Spokane. Our industrial coatings resist stains and hot-tire pickup for a long-lasting, beautiful finish.',
         keywords: 'garage floor epoxy spokane, concrete floor coating, epoxy flooring near me, spokane floor painters',
         readingTime: '7 min read',
         parentRoute: '/house-painters-spokane',
@@ -1263,25 +1263,25 @@ export const blogData: Record<string, BlogContent> = {
         ],
         definition: 'Garage floor epoxy coating is a multi-layer concrete restoration system that utilizes chemically-fused resins to create a non-porous, high-impact surface that protects against mechanical and chemical stress.',
         whoThisIsFor: [
-            { title: 'The Car Enthusiast', desc: 'Create a dust-free, oil-resistant floor that highlights your vehicles and protects your tools.' },
-            { title: 'The "Man-Cave" Visionary', desc: 'Transform a dusty, cold storage space into a comfortable, finished extension of your living home.' },
-            { title: 'Value-Minded Homeowners', desc: 'Prevent concrete "spalling" and cracking caused by Spokane\'s harsh winter de-icing salts.' }
+            { target: 'The Car Enthusiast', summary: 'Create a dust-free, oil-resistant floor that highlights your vehicles and protects your tools.' },
+            { target: 'The "Man-Cave" Visionary', summary: 'Transform a dusty, cold storage space into a comfortable, finished extension of your living home.' },
+            { target: 'Value-Minded Homeowners', summary: 'Prevent concrete "spalling" and cracking caused by Spokane\'s harsh winter de-icing salts.' }
         ],
         processSteps: [
             { 
-                title: 'Diamond Profiling', 
+                step: 'Diamond Profiling', 
                 why: 'Standard concrete is too slick for epoxy to grab. We must create a "CSP-2" sandpaper profile.', 
                 tip: 'We use 500lb planetary grinders to mechanically open the concrete surface pores.',
                 mistake: 'Acid-washing instead of grinding leads to the epoxy peeling up in "hot tire" patches within a year.'
             },
             { 
-                title: 'High-Solids Basecoat', 
+                step: 'High-Solids Basecoat', 
                 why: 'The first layer must "dive" into the concrete to lock the system in place.', 
                 tip: 'We pour 100% solids epoxy that stays flexible enough to handle thermal expansion.',
                 mistake: 'Using "water-based" epoxy from home improvement stores results in a thin, brittle finish.'
             },
             { 
-                title: 'The Full-Flake Broadcast', 
+                step: 'The Full-Flake Broadcast', 
                 why: 'Solid gray floors show every speck of dust. Flakes provide "camo" and extra grip.', 
                 tip: 'We broadcast flakes to "rejection," meaning we cover every square inch for a uniform look.',
                 mistake: 'Sparse flake distribution looks accidental and provides inconsistent slip-resistance.'
@@ -1308,7 +1308,7 @@ export const blogData: Record<string, BlogContent> = {
     },
     'house-painters': {
         h1: 'Trusted Professional House Painters Spokane | Quality & Reliability',
-        metaDescription: 'Need reliable house painters in Spokane? Call Prestige Custom Painting LLC for clean, efficient interior and exterior painting completely tailored to your schedule.',
+        metaDescription: 'Need reliable house painters in Spokane? Learn how to vet contactors, compare bids, and ensure you get the best value for your professional painting project.',
         keywords: 'house painters spokane, local painters spokane, residential painting spokane, affordable painters',
         readingTime: '6 min read',
         parentRoute: '/house-painters-spokane',
@@ -1321,19 +1321,19 @@ export const blogData: Record<string, BlogContent> = {
         ],
         definition: 'House painters are residential finishing specialists who provide full-service preparation, restoration, and aesthetic upgrades to the interior and exterior surfaces of a home.',
         whoThisIsFor: [
-            { title: 'The Busy Professional', desc: 'Get a total home transformation without spending your weekends on a ladder or dealing with a mess.' },
-            { title: 'Home Sellers and Buyers', desc: 'Instantly increase your equity or personalize your new space before moving in with a fresh color palette.' },
-            { title: 'Maintenance-Minded Owners', desc: 'Protect your building envelope from the harsh Spokane elements and avoid costly structural repairs later.' }
+            { target: 'The Busy Professional', summary: 'Get a total home transformation without spending your weekends on a ladder or dealing with a mess.' },
+            { target: 'Home Sellers and Buyers', summary: 'Instantly increase your equity or personalize your new space before moving in with a fresh color palette.' },
+            { target: 'Maintenance-Minded Owners', summary: 'Protect your building envelope from the harsh Spokane elements and avoid costly structural repairs later.' }
         ],
         processSteps: [
             { 
-                title: 'The Detail-Obsessed Prep', 
+                step: 'The Detail-Obsessed Prep', 
                 why: 'The best paint in the world will fail if applied over dust, grease, or loose flakes.', 
                 tip: 'We spend 70% of our time on preparation and 30% on the actual painting.',
                 mistake: 'Rushing into the "fun part" (painting) is why most DIY projects look sloppy after a year.'
             },
             { 
-                title: 'Daily Site Clean-Up', 
+                step: 'Daily Site Clean-Up', 
                 why: 'Living in a construction zone is stressful for families.', 
                 tip: 'We pack away all tools, vacuum the floors, and remove all trash every single day.',
                 mistake: 'Leaving wet brushes and heavy ladders in common areas is unsafe and disrespectful to the client.'
@@ -1361,7 +1361,7 @@ export const blogData: Record<string, BlogContent> = {
     // BATCH 5: DRYWALL CONTRACTOR SERVICES
     'ceiling-repair': {
         h1: 'Expert Ceiling Repair Spokane | Water Damage & Structural Fixes',
-        metaDescription: 'Fix ugly water stains and sagging drywall fast. Get perfect, invisible ceiling repair in Spokane from local professionals who know how to blend texture perfectly.',
+        metaDescription: 'Fix water stains and cracks with expert ceiling repair in Spokane. We restore your ceilings with seamless patching and texture matching for a beautiful result.',
         keywords: 'ceiling repair spokane, fix water damaged ceiling, sagging ceiling repair, spokane drywall contractor',
         readingTime: '6 min read',
         parentRoute: '/drywall-contractor-spokane',
@@ -1374,19 +1374,19 @@ export const blogData: Record<string, BlogContent> = {
         ],
         definition: 'Ceiling repair is a specialized structural service that involves correcting horizontal drywall failures caused by water infiltration, weight stress, or settlement through strategic patching and reinforcement.',
         whoThisIsFor: [
-            { title: 'Homeowners with Roof Leaks', desc: 'If your ceiling is soft or turning brown, you need an immediate excision of the wet insulation and drywall.' },
-            { title: 'The "Sagging Ceiling" Owner', desc: 'Crucial if your ceiling boards are pulling away from the joists and creating visible "waves" overhead.' },
-            { title: 'Remodelers Removing Fixtures', desc: 'Perfect for capping off old light boxes or AC vents and making the ceiling look continuous again.' }
+            { target: 'Homeowners with Roof Leaks', summary: 'If your ceiling is soft or turning brown, you need an immediate excision of the wet insulation and drywall.' },
+            { target: 'The "Sagging Ceiling" Owner', summary: 'Crucial if your ceiling boards are pulling away from the joists and creating visible "waves" overhead.' },
+            { target: 'Remodelers Removing Fixtures', summary: 'Perfect for capping off old light boxes or AC vents and making the ceiling look continuous again.' }
         ],
         processSteps: [
             { 
-                title: 'The Dust-Shield Setup', 
+                step: 'The Dust-Shield Setup', 
                 why: 'Cutting overhead drywall drops massive amounts of gypsum dust into your living space.', 
                 tip: 'We build a 360-degree plastic "clean room" to keep dust 100% away from your furniture.',
                 mistake: 'Failing to mask properly results in fine white dust inside your electronics and upholstery forever.'
             },
             { 
-                title: 'Structural Blocking', 
+                step: 'Structural Blocking', 
                 why: 'Drywall patches need solid wood to screw into, or they will crack at the seams immediately.', 
                 tip: 'We install new 2x4 "backing" wood above the hole to ensure a permanent, non-shifting base.',
                 mistake: 'Using "clip" patches without wooden backing leads to the patch failing when the house shifts.'
@@ -1413,7 +1413,7 @@ export const blogData: Record<string, BlogContent> = {
     },
     'drywall-finishing': {
         h1: 'Professional Drywall Finishing Spokane | Level 5 Smooth Surfaces',
-        metaDescription: 'Stop looking at ugly, uneven seams on your walls. Hire us for flawless drywall finishing in Spokane and get a perfectly smooth surface ready for paint.',
+        metaDescription: 'Stop looking at ugly, uneven seams on your walls. Hire us for flawless drywall finishing in Spokane and get a perfectly smooth surface that is ready for paint.',
         keywords: 'drywall finishing spokane, drywall taping and mudding, level 5 drywall finish, smooth wall texture',
         readingTime: '7 min read',
         parentRoute: '/drywall-contractor-spokane',
@@ -1426,19 +1426,19 @@ export const blogData: Record<string, BlogContent> = {
         ],
         definition: 'Drywall finishing is the technical art of taping, mudding, and sanding raw gypsum panels to create a monolithic, perfectly flat surface ready for architectural coatings.',
         whoThisIsFor: [
-            { title: 'The Modern Remodeler', desc: 'If you want the "High-Gloss" or "Matte" minimalist look, you need a Level 5 finish to hide every board joint.' },
-            { title: 'Basement Finishers', desc: 'Turn raw, hung boards into beautiful living spaces that look identical to the rest of the house.' },
-            { title: 'High-Value Property Developers', desc: 'Ensure your investment properties have the crisp, clean corners that signal "quality" to potential buyers.' }
+            { target: 'The Modern Remodeler', summary: 'If you want the "High-Gloss" or "Matte" minimalist look, you need a Level 5 finish to hide every board joint.' },
+            { target: 'Basement Finishers', summary: 'Turn raw, hung boards into beautiful living spaces that look identical to the rest of the house.' },
+            { target: 'High-Value Property Developers', summary: 'Ensure your investment properties have the crisp, clean corners that signal "quality" to potential buyers.' }
         ],
         processSteps: [
             { 
-                title: 'The Taping Bond', 
+                step: 'The Taping Bond', 
                 why: 'Without high-strength tape, drywall joints will crack at the first sign of foundation movement.', 
                 tip: 'We use high-adhesion fiberglass or paper tape bedded in specialized "setting" mud.',
                 mistake: 'Using "all-purpose" mud to bed tape leads to air bubbles and seam-popping later.'
             },
             { 
-                title: 'Halogen Quality Control', 
+                step: 'Halogen Quality Control', 
                 why: 'Many drywall flaws are invisible until the sun hits them at a specific 45-degree angle.', 
                 tip: 'We use 20,000-lumen work lights pressed against the wall to "hunt" shadows and bumps.',
                 mistake: 'Sanding under standard room lighting misses 50% of the surface imperfections.'
@@ -1465,7 +1465,7 @@ export const blogData: Record<string, BlogContent> = {
     },
     'popcorn-ceiling-removal': {
         h1: 'Clean Popcorn Ceiling Removal Spokane | Modern Surface Updates',
-        metaDescription: 'Eliminate dark, dusty textures overhead easily. We perform fast, remarkably clean popcorn ceiling removal in Spokane to modernize your home instantly.',
+        metaDescription: 'Eliminate dark, dusty textures overhead easily. We perform fast, remarkably clean popcorn ceiling removal in Spokane to modernize your entire home instantly.',
         keywords: 'popcorn ceiling removal spokane, acoustic ceiling removal, smooth ceiling conversion, spokane ceiling contractor',
         readingTime: '6 min read',
         parentRoute: '/drywall-contractor-spokane',
@@ -1478,19 +1478,19 @@ export const blogData: Record<string, BlogContent> = {
         ],
         definition: 'Popcorn ceiling removal is a modernization service that involves the chemical softening and mechanical scraping of acoustic textures, followed by the resurfacing of the ceiling to a contemporary finish.',
         whoThisIsFor: [
-            { title: 'Allergy Sufferers', desc: 'Popcorn ceilings trap decades of dust, dander, and allergens; removing it creates a much cleaner airspace.' },
-            { title: 'The Modern-Minded Buyer', desc: 'The fastest way to take 30 years off the "age" of your home and increase its resale value.' },
-            { title: 'Homeowners with Low Lighting', desc: 'Flat ceilings reflect 30% more natural light than textured ceilings, making rooms feel taller and brighter.' }
+            { target: 'Allergy Sufferers', summary: 'Popcorn ceilings trap decades of dust, dander, and allergens; removing it creates a much cleaner airspace.' },
+            { target: 'The Modern-Minded Buyer', summary: 'The fastest way to take 30 years off the "age" of your home and increase its resale value.' },
+            { target: 'Homeowners with Low Lighting', summary: 'Flat ceilings reflect 30% more natural light than textured ceilings, making rooms feel taller and brighter.' }
         ],
         processSteps: [
             { 
-                title: 'The Wet-Scrape Saturation', 
+                step: 'The Wet-Scrape Saturation', 
                 why: 'Scraping dry popcorn creates a massive, hazardous dust disaster.', 
                 tip: 'We use a pressurized warm-water mist with a wetting agent to "melt" the glue bond.',
                 mistake: 'Rushing to scrape before the material is fully softened causes the drywall paper to tear and rip.'
             },
             { 
-                title: 'The "Skim-to-Smooth" Phase', 
+                step: 'The "Skim-to-Smooth" Phase', 
                 why: 'The ceiling under popcorn is never flat; it was textured to hide ugly drywall seams.', 
                 tip: 'We apply a thin "skim coat" of joint compound over the entire ceiling to level it perfectly.',
                 mistake: 'Painting immediately after scraping results in a lumpy, "shadowy" ceiling that looks unfinished.'
@@ -1517,7 +1517,7 @@ export const blogData: Record<string, BlogContent> = {
     },
     'hole-repair-in-drywall': {
         h1: 'Expert Hole Repair in Drywall Spokane | Seamless Wall Fixes',
-        metaDescription: 'Fix punching accidents and furniture gouges perfectly. Get professional hole repair in drywall in Spokane with matching texture that hides every trace of damage.',
+        metaDescription: 'Get seamless hole repair in your drywall today. We provide professional patching in Spokane to make your walls look brand new after accidental damage.',
         keywords: 'hole repair in drywall spokane, fix drywall holes, wall patch spokane, professional drywall repair',
         readingTime: '5 min read',
         parentRoute: '/drywall-contractor-spokane',
@@ -1530,19 +1530,19 @@ export const blogData: Record<string, BlogContent> = {
         ],
         definition: 'Hole repair in drywall is a restorative service that involves cutting away damaged gypsum, installing internal structural support, and meticulously blending new compound to match the surrounding wall texture.',
         whoThisIsFor: [
-            { title: 'The "Moving Accident" Homeowner', desc: 'Crucial if you bumped a corner of a heavy dresser through the hallway drywall while relocating.' },
-            { title: 'The Frantic Renter', desc: 'Get your security deposit back with a repair that is completely invisible to property managers.' },
-            { title: 'Door Handle Victims', desc: 'Perfect for fixing that classic hole behind the door where a stopper was missing or failed.' }
+            { target: 'The "Moving Accident" Homeowner', summary: 'Crucial if you bumped a corner of a heavy dresser through the hallway drywall while relocating.' },
+            { target: 'The Frantic Renter', summary: 'Get your security deposit back with a repair that is completely invisible to property managers.' },
+            { target: 'Door Handle Victims', summary: 'Perfect for fixing that classic hole behind the door where a stopper was missing or failed.' }
         ],
         processSteps: [
             { 
-                title: 'Square-Cut Preparation', 
+                step: 'Square-Cut Preparation', 
                 why: 'Irregular, jagged holes are nearly impossible to tape and mud flat.', 
                 tip: 'We cut a perfect square around the damage to create four clean, straight edges for the new piece.',
                 mistake: 'Trying to "fill" a round hole with mud leads to a weak, lumpy repair that eventually cracks.'
             },
             { 
-                title: 'Texture Stippling', 
+                step: 'Texture Stippling', 
                 why: 'A smooth patch on an orange-peel wall sticks out like a sore thumb.', 
                 tip: 'We use specialized sponges or spray cans, dialed in to the exact PSI of your original texture.',
                 mistake: 'Failing to prime the mud before texturing causes the texture to soak in and look "flat".'
@@ -1569,7 +1569,7 @@ export const blogData: Record<string, BlogContent> = {
     },
     'crack-repair-in-walls': {
         h1: 'Foundation Crack Repair in Walls Spokane | Structural Stress Fixes',
-        metaDescription: 'Stop recurring cracks from ruining your paint. We provide specialized crack repair in walls in Spokane using mesh-reinforcement to stop the damage for good.',
+        metaDescription: 'Stop recurring wall cracks for good. We provide structural crack repair in Spokane, using mesh reinforcement to ensure your walls stay smooth for many years.',
         keywords: 'crack repair in walls spokane, fix ceiling cracks, foundation shift repair, drywall crack reinforcement',
         readingTime: '6 min read',
         parentRoute: '/drywall-contractor-spokane',
@@ -1582,19 +1582,19 @@ export const blogData: Record<string, BlogContent> = {
         ],
         definition: 'Crack repair is a technical reinforcement service aimed at correcting linear failures in drywall caused by structural settlement, seismic activity, or seasonal expansion and contraction.',
         whoThisIsFor: [
-            { title: 'The South Hill Homeowner', desc: 'Common in older homes where the foundation has settled over decades, creating diagonal cracks above door frames.' },
-            { title: 'New Construction Owners', desc: 'Essential for fixing "settling cracks" that appear within the first two years of a home being built.' },
-            { title: 'Ceiling Stress Victims', desc: 'Perfect for long, straight cracks running down the center of large vaulted ceilings.' }
+            { target: 'The South Hill Homeowner', summary: 'Common in older homes where the foundation has settled over decades, creating diagonal cracks above door frames.' },
+            { target: 'New Construction Owners', summary: 'Essential for fixing "settling cracks" that appear within the first two years of a home being built.' },
+            { target: 'Ceiling Stress Victims', summary: 'Perfect for long, straight cracks running down the center of large vaulted ceilings.' }
         ],
         processSteps: [
             { 
-                title: 'The V-Notch Cut', 
+                step: 'The V-Notch Cut', 
                 why: 'Mud sitting on top of a thin crack will simply fall out the next time the house moves.', 
                 tip: 'We use a utility knife to carve the crack into a "V" shape, allowing the mud to bite into the core of the board.',
                 mistake: 'Just painting over a crack is a 1-week fix; it will reappear as soon as the humidity changes.'
             },
             { 
-                title: 'Structural Mesh Bonding', 
+                step: 'Structural Mesh Bonding', 
                 why: 'Standard paper tape is too brittle for active structural cracks.', 
                 tip: 'We use alkaline-resistant mesh tape that has a higher tensile strength to "bridge" the shifting gap.',
                 mistake: 'Using massive amounts of mud without tape reinforcement leads to "shrinkage cracks" inside the repair.'
@@ -1621,7 +1621,7 @@ export const blogData: Record<string, BlogContent> = {
     },
     'water-damage-repair': {
         h1: 'Water Damage Drywall Repair Spokane | Mold Prevention & Restoration',
-        metaDescription: 'Is your drywall soft or turning brown? Get expert water damage repair in Spokane to remove rot and prevent mold growth before it spreads behind your walls.',
+        metaDescription: 'Is your drywall soft or turning brown? Get expert water damage repair in Spokane to remove rot and prevent mold growth before it spreads behind your home walls.',
         keywords: 'water damage repair spokane, fix wet drywall, mold prevention drywall, flooding restoration spokane',
         readingTime: '8 min read',
         parentRoute: '/drywall-contractor-spokane',
@@ -1634,19 +1634,19 @@ export const blogData: Record<string, BlogContent> = {
         ],
         definition: 'Water damage repair is a multi-phase restoration service that involves the removal of moisture-compromised drywall and the subsequent structural drying and replacement of the wall system.',
         whoThisIsFor: [
-            { title: 'The "Broken Pipe" Victim', desc: 'Critical if a bathroom leak flooded the floor below and ruined the ceiling drywall.' },
-            { title: 'Ice Dam Sufferers', desc: 'Essential for Spokane homeowners whose roof eaves backed up and leaked into the exterior wall cavities.' },
-            { title: 'Basement Flood Owners', desc: 'Perfect for replacing the bottom 2 feet of drywall ("flood cuts") after a heavy rain event.' }
+            { target: 'The "Broken Pipe" Victim', summary: 'Critical if a bathroom leak flooded the floor below and ruined the ceiling drywall.' },
+            { target: 'Ice Dam Sufferers', summary: 'Essential for Spokane homeowners whose roof eaves backed up and leaked into the exterior wall cavities.' },
+            { target: 'Basement Flood Owners', summary: 'Perfect for replacing the bottom 2 feet of drywall ("flood cuts") after a heavy rain event.' }
         ],
         processSteps: [
             { 
-                title: 'The Moisture Probe Audit', 
+                step: 'The Moisture Probe Audit', 
                 why: 'Drywall can look dry on the outside while the insulation behind it is soaking wet and growing mold.', 
                 tip: 'We use infrared cameras and moisture meters to find the "hidden" water lines before we start cutting.',
                 mistake: 'Leaving wet insulation inside a repaired wall is a recipe for a toxic mold disaster 6 months later.'
             },
             { 
-                title: 'Sanitized Flood-Cutting', 
+                step: 'Sanitized Flood-Cutting', 
                 why: 'Water wicks upward through drywall like a sponge.', 
                 tip: 'We cut 12 inches ABOVE the visible water line to ensure we have reached 100% healthy, dry material.',
                 mistake: 'Trying to "dry out" heavily saturated drywall; once gypsum loses its structural integrity, it must be replaced.'
@@ -1673,7 +1673,7 @@ export const blogData: Record<string, BlogContent> = {
     },
     'drywall-patching': {
         h1: 'Seamless Drywall Patching Spokane | Electrical & Plumbing Cut Repairs',
-        metaDescription: 'Close up those ugly holes left by local electricians. We provide rapid drywall patching in Spokane to make your heavily remodeled rooms look complete again.',
+        metaDescription: 'Close up those ugly holes left by local electricians. We provide rapid drywall patching in Spokane to make your heavily remodeled rooms look perfectly complete.',
         keywords: 'drywall patching spokane, fix electrician holes, punch list drywall repair, patch and match texture',
         readingTime: '4 min read',
         parentRoute: '/drywall-contractor-spokane',
@@ -1686,19 +1686,19 @@ export const blogData: Record<string, BlogContent> = {
         ],
         definition: 'Drywall patching is a specialized minor repair service focused on closing small-to-medium utility openings, accidental gouges, or fastener failures with a seamless aesthetic result.',
         whoThisIsFor: [
-            { title: 'Remodelers with New Wiring', desc: 'Perfect for closing the "access holes" an electrician needed to pull wires through your ceiling or walls.' },
-            { title: 'The "Scuffed Wall" Seller', desc: 'Essential for fixing corner gouges and anchor holes before putting your Spokane home on the market.' },
-            { title: 'Commercial Property Managers', desc: 'Rapid repairs for high-traffic office spaces where cart bumps and move-ins have damaged walls.' }
+            { target: 'Remodelers with New Wiring', summary: 'Perfect for closing the "access holes" an electrician needed to pull wires through your ceiling or walls.' },
+            { target: 'The "Scuffed Wall" Seller', summary: 'Essential for fixing corner gouges and anchor holes before putting your Spokane home on the market.' },
+            { target: 'Commercial Property Managers', summary: 'Rapid repairs for high-traffic office spaces where cart bumps and move-ins have damaged walls.' }
         ],
         processSteps: [
             { 
-                title: 'The "Backer Board" Lock', 
+                step: 'The "Backer Board" Lock', 
                 why: 'A patch with no support will eventually sag or push inward if touched.', 
                 tip: 'We slide a small "stay" board behind the hole and screw it into the healthy drywall to create a solid bridge.',
                 mistake: 'Using mesh tape alone on a 4-inch hole; without a solid backer, the patch will always eventually crack.'
             },
             { 
-                title: 'Feathered Sanding', 
+                step: 'Feathered Sanding', 
                 why: 'The eye can detect even a 1/16th inch height difference in a flat wall.', 
                 tip: 'We sand in wide, circular motions, extending the patch area 6 inches beyond the actual hole to vanish the edge.',
                 mistake: 'Sanding only the hole area creates a visible "hump" once the paint gets rolled on.'
@@ -1725,7 +1725,7 @@ export const blogData: Record<string, BlogContent> = {
     },
     'texture-matching': {
         h1: 'Expert Texture Matching Spokane | Invisible Drywall Repairs',
-        metaDescription: 'Erase ugly plumbing repairs perfectly. We specialize in precise texture matching in Spokane to blend totally flat patches invisibly into the original wall.',
+        metaDescription: 'Erase ugly plumbing repairs perfectly. We specialize in precise texture matching in Spokane to blend totally flat patches invisibly into the original home wall.',
         keywords: 'texture matching spokane, match drywall texture, orange peel repair, knockdown texture matching',
         readingTime: '6 min read',
         parentRoute: '/drywall-contractor-spokane',
@@ -1738,15 +1738,15 @@ export const blogData: Record<string, BlogContent> = {
         ],
         definition: 'Texture matching is the skilled process of replicating an existing wall or ceiling texture surface to ensure that a repair area is visually indistinguishable from the surrounding original surface.',
         whoThisIsFor: [
-            { title: 'Plumbing Repair Victims', desc: 'Homeowners who have large holes cut in their walls for pipe access.' },
-            { title: 'Electrical Upgrade Homeowners', desc: 'Anyone who recently had new wiring run throughout their house.' },
-            { title: 'Aesthetic Perfectionists', desc: 'People who cannot stand seeing obvious lumpy patches on their walls.' }
+            { target: 'Plumbing Repair Victims', summary: 'Homeowners who have large holes cut in their walls for pipe access.' },
+            { target: 'Electrical Upgrade Homeowners', summary: 'Anyone who recently had new wiring run throughout their house.' },
+            { target: 'Aesthetic Perfectionists', summary: 'People who cannot stand seeing obvious lumpy patches on their walls.' }
         ],
         processSteps: [
-            { title: 'Consistency Check', why: 'We match the thickness of the joint compound to the original wall.' },
-            { title: 'Edge Feathering', why: 'Sanding the edges smooth prevents a thick line at the repair site.' },
-            { title: 'Sample Spraying', why: 'We test the spray pattern on a scrap board before touching your wall.' },
-            { title: 'Prime and Blend', why: 'Specialty primer prevents the new patch from absorbing paint differently.' }
+            { step: 'Consistency Check', why: 'We match the thickness of the joint compound to the original wall.' },
+            { step: 'Edge Feathering', why: 'Sanding the edges smooth prevents a thick line at the repair site.' },
+            { step: 'Sample Spraying', why: 'We test the spray pattern on a scrap board before touching your wall.' },
+            { step: 'Prime and Blend', why: 'Specialty primer prevents the new patch from absorbing paint differently.' }
         ],
         comparisonTable: {
             headers: ['Technique', 'Best For', 'Visibility'],
@@ -1770,7 +1770,7 @@ export const blogData: Record<string, BlogContent> = {
     },
     'wall-texture-application': {
         h1: 'Wall Texture Application Spokane',
-        metaDescription: 'Hide ugly drywall flaws securely. We provide professional wall texture application in Spokane to give flat rooms character and incredible depth.',
+        metaDescription: 'Hide ugly drywall flaws securely. We provide professional wall texture application in Spokane to give flat rooms character and incredible depth to your home.',
         keywords: 'wall texture application spokane, orange peel texture, knockdown wall texture, textured walls spokane',
         readingTime: '7 min read',
         parentRoute: '/drywall-contractor-spokane',
@@ -1783,15 +1783,15 @@ export const blogData: Record<string, BlogContent> = {
         ],
         definition: 'Wall texture application is a decorative finish where a liquid joint compound is sprayed or hand-applied to create a specific pattern that adds depth and hides foundation-level drywall flaws.',
         whoThisIsFor: [
-            { title: 'New Construction Owners', desc: 'Homeowners wanting to move away from boring, sterile flat walls.' },
-            { title: 'Renovators', desc: 'Anyone hiding patches, old glue, or minor wall damage.' },
-            { title: 'Custom Home Builders', desc: 'Contractors needing a consistent, high-end finish across large properties.' }
+            { target: 'New Construction Owners', summary: 'Homeowners wanting to move away from boring, sterile flat walls.' },
+            { target: 'Renovators', summary: 'Anyone hiding patches, old glue, or minor wall damage.' },
+            { target: 'Custom Home Builders', summary: 'Contractors needing a consistent, high-end finish across large properties.' }
         ],
         processSteps: [
-            { title: 'Surface Smoothing', why: 'A clean, flat base ensures the texture adheres and looks uniform.' },
-            { title: 'Style Calibration', why: 'We adjust the spray pressure to match your preferred texture depth.' },
-            { title: 'Perimeter Masking', why: 'Heavy plastic protects every inch of your floor and window trim.' },
-            { title: 'Consistent Spraying', why: 'We walk the room with a steady pace to prevent heavy overlap marks.' }
+            { step: 'Surface Smoothing', why: 'A clean, flat base ensures the texture adheres and looks uniform.' },
+            { step: 'Style Calibration', why: 'We adjust the spray pressure to match your preferred texture depth.' },
+            { step: 'Perimeter Masking', why: 'Heavy plastic protects every inch of your floor and window trim.' },
+            { step: 'Consistent Spraying', why: 'We walk the room with a steady pace to prevent heavy overlap marks.' }
         ],
         comparisonTable: {
             headers: ['Texture Type', 'Visual Impact', 'Best Application'],
@@ -1822,7 +1822,7 @@ export const blogData: Record<string, BlogContent> = {
     },
     'ceiling-texture-removal': {
         h1: 'Ceiling Texture Removal Spokane',
-        metaDescription: 'Eliminate dark, spiky ceilings gracefully. We handle very clean ceiling texture removal in Spokane to instantly modernize your old living rooms overhead.',
+        metaDescription: 'Eliminate dark, spiky ceilings gracefully. We handle clean ceiling texture removal in Spokane to modernize your old living rooms overhead instantly.',
         keywords: 'ceiling texture removal spokane, popcorn ceiling removal, remove acoustic ceiling texture, smooth ceiling spokane',
         readingTime: '8 min read',
         parentRoute: '/drywall-contractor-spokane',
@@ -1835,15 +1835,15 @@ export const blogData: Record<string, BlogContent> = {
         ],
         definition: 'Ceiling texture removal is a restoration service that involves the safe scraping, cleanup, and refinishing of textured ceilings (like popcorn) to achieve a contemporary, smooth aesthetic.',
         whoThisIsFor: [
-            { title: 'Historic Homeowners', desc: 'People wanting to remove outdated 1970s acoustic textures.' },
-            { title: 'New Home Buyers', desc: 'Anyone looking to modernize their interior before moving in.' },
-            { title: 'Interior Designers', desc: 'Professionals seeking a clean, "gallery" look for their clients.' }
+            { target: 'Historic Homeowners', summary: 'People wanting to remove outdated 1970s acoustic textures.' },
+            { target: 'New Home Buyers', summary: 'Anyone looking to modernize their interior before moving in.' },
+            { target: 'Interior Designers', summary: 'Professionals seeking a clean, "gallery" look for their clients.' }
         ],
         processSteps: [
-            { title: 'Moisture Saturation', why: 'Softening the texture with a spray mist prevents heavy, toxic dust.' },
-            { title: 'Precision Scraping', why: 'Gentle scraping prevents gouging the soft drywall paper underneath.' },
-            { title: 'Full Skim Coat', why: 'Removing texture always reveals minor flaws that require a flat mud finish.' },
-            { title: 'HEPA Cleanup', why: 'We use industrial vacuums to ensure no residue is left in your carpets.' }
+            { step: 'Moisture Saturation', why: 'Softening the texture with a spray mist prevents heavy, toxic dust.' },
+            { step: 'Precision Scraping', why: 'Gentle scraping prevents gouging the soft drywall paper underneath.' },
+            { step: 'Full Skim Coat', why: 'Removing texture always reveals minor flaws that require a flat mud finish.' },
+            { step: 'HEPA Cleanup', why: 'We use industrial vacuums to ensure no residue is left in your carpets.' }
         ],
         comparisonTable: {
             headers: ['Service Level', 'Best For', 'Cost/Value'],
@@ -1887,15 +1887,15 @@ export const blogData: Record<string, BlogContent> = {
         ],
         definition: 'Drywall installation repair is a structural service focused on re-securing loose, sagging, or improperly anchored wall and ceiling panels to the building\'s original framing.',
         whoThisIsFor: [
-            { title: 'Homeowners with "Screw Pops"', desc: 'Anyone seeing little round bumps appearing in their paint.' },
-            { title: 'Remodelers', desc: 'People noticing gaps between their walls and ceiling moldings.' },
-            { title: 'Property Managers', desc: 'Ensuring tenant safety by fixing sagging overhead drywall.' }
+            { target: 'Homeowners with "Screw Pops"', summary: 'Anyone seeing little round bumps appearing in their paint.' },
+            { target: 'Remodelers', summary: 'People noticing gaps between their walls and ceiling moldings.' },
+            { target: 'Property Managers', summary: 'Ensuring tenant safety by fixing sagging overhead drywall.' }
         ],
         processSteps: [
-            { title: 'Stud Localization', why: 'Magnetic sensors accurately find the exact center of the wooden framing.' },
-            { title: 'Structural Re-Screwing', why: 'We drive dozens of new, coarse-thread screws to lock the board tight.' },
-            { title: 'Surgical Extraction', why: 'Severely water-damaged or warped panels are cleanly cut out and replaced.' },
-            { title: 'Seamless Mudding', why: 'Three coats of joint compound hide the new fasteners completely.' }
+            { step: 'Stud Localization', why: 'Magnetic sensors accurately find the exact center of the wooden framing.' },
+            { step: 'Structural Re-Screwing', why: 'We drive dozens of new, coarse-thread screws to lock the board tight.' },
+            { step: 'Surgical Extraction', why: 'Severely water-damaged or warped panels are cleanly cut out and replaced.' },
+            { step: 'Seamless Mudding', why: 'Three coats of joint compound hide the new fasteners completely.' }
         ],
         comparisonTable: {
             headers: ['Common Issue', 'Risk Level', 'Recommended Fix'],
@@ -1926,7 +1926,7 @@ export const blogData: Record<string, BlogContent> = {
     },
     'wall-resurfacing': {
         h1: 'Wall Resurfacing Spokane',
-        metaDescription: 'Make heavily damaged walls perfectly smooth again fast. We offer premium wall resurfacing in Spokane using full skim coats to erase years of heavy bumps.',
+        metaDescription: 'Make heavily damaged walls perfectly smooth again. We offer premium wall resurfacing in Spokane using full skim coats to erase years of heavy bumps.',
         keywords: 'wall resurfacing spokane, skim coat walls, smooth out old walls, drywall resurfacing spokane',
         readingTime: '9 min read',
         parentRoute: '/drywall-contractor-spokane',
@@ -1939,15 +1939,15 @@ export const blogData: Record<string, BlogContent> = {
         ],
         definition: 'Wall resurfacing is a high-end finishing technique where the entire surface of a damaged or uneven wall is coated in multiple layers of thinned joint compound to create a perfectly flat, new surface.',
         whoThisIsFor: [
-            { title: 'Rental Property Buyers', desc: 'Investors wanting to fix "trashed" walls without toxic demolition.' },
-            { title: 'Historic Homeowners', desc: 'Anyone restoring old plaster or heavily gouged drywall.' },
-            { title: 'Modern Minimalists', desc: 'Homeowners wanting the ultra-smooth "gallery wall" look.' }
+            { target: 'Rental Property Buyers', summary: 'Investors wanting to fix "trashed" walls without toxic demolition.' },
+            { target: 'Historic Homeowners', summary: 'Anyone restoring old plaster or heavily gouged drywall.' },
+            { target: 'Modern Minimalists', summary: 'Homeowners wanting the ultra-smooth "gallery wall" look.' }
         ],
         processSteps: [
-            { title: 'Aggressive Scraping', why: 'Removing loose paint flakes prevents the new skim coat from bubbling.' },
-            { title: 'Multi-Pass Coating', why: 'We apply two to three thin layers to fill every low spot progressively.' },
-            { title: 'Full-Width Troweling', why: 'We use professional 30-inch blades to achieve mechanical flatness.' },
-            { title: 'Detail Sanding', why: 'A light vacuum-sanded finish removes any remaining microscopic lines.' }
+            { step: 'Aggressive Scraping', why: 'Removing loose paint flakes prevents the new skim coat from bubbling.' },
+            { step: 'Multi-Pass Coating', why: 'We apply two to three thin layers to fill every low spot progressively.' },
+            { step: 'Full-Width Troweling', why: 'We use professional 30-inch blades to achieve mechanical flatness.' },
+            { step: 'Detail Sanding', why: 'A light vacuum-sanded finish removes any remaining microscopic lines.' }
         ],
         comparisonTable: {
             headers: ['Condition', 'Resurfacing Result', 'Vs. Full Replacement'],
@@ -1979,7 +1979,7 @@ export const blogData: Record<string, BlogContent> = {
     // BATCH 7: WALLPAPER INSTALLER SERVICES (1-5)
     'wallpaper-removal': {
         h1: 'Wallpaper Removal Spokane',
-        metaDescription: 'Stop tearing holes in your old walls. We provide clean, safe wallpaper removal in Spokane using professional steamers to preserve the drywall underneath.',
+        metaDescription: 'Stop tearing holes in your old walls. We provide clean, safe wallpaper removal in Spokane using professional steamers to preserve your drywall.',
         keywords: 'wallpaper removal spokane, remove old wallpaper, professional wallpaper stripping, steamer wallpaper removal',
         readingTime: '7 min read',
         parentRoute: '/wallpaper-installer-spokane',
@@ -1992,15 +1992,15 @@ export const blogData: Record<string, BlogContent> = {
         ],
         definition: 'Wallpaper removal is a professional stripping service that utilizes localized heat and moisture to safely separate decorative paper and glue from the wall surface.',
         whoThisIsFor: [
-            { title: 'New Multi-Family Buyers', desc: 'People inheriting decades of layered, outdated wallpaper designs.' },
-            { title: 'Modernizers', desc: 'Homeowners wanting to transition from patterns to smooth, flat paint.' },
-            { title: 'Historic Restorers', desc: 'Preserving delicate plaster walls by using gentle steam instead of scrapers.' }
+            { target: 'New Multi-Family Buyers', summary: 'People inheriting decades of layered, outdated wallpaper designs.' },
+            { target: 'Modernizers', summary: 'Homeowners wanting to transition from patterns to smooth, flat paint.' },
+            { target: 'Historic Restorers', summary: 'Preserving delicate plaster walls by using gentle steam instead of scrapers.' }
         ],
         processSteps: [
-            { title: 'Surface Perforation', why: 'Small holes allow steam to penetrate through vinyl into the glue layer.' },
-            { title: 'Deep Steaming', why: 'Heat physically melts the starch-based adhesives for easy peeling.' },
-            { title: 'Hydrated Peeling', why: 'Keeping the paper wet prevents it from tearing and leaving small scraps.' },
-            { title: 'Residue Scrubbing', why: 'Specialty cleaners remove the last microscopic layer of sticky glue.' }
+            { step: 'Surface Perforation', why: 'Small holes allow steam to penetrate through vinyl into the glue layer.' },
+            { step: 'Deep Steaming', why: 'Heat physically melts the starch-based adhesives for easy peeling.' },
+            { step: 'Hydrated Peeling', why: 'Keeping the paper wet prevents it from tearing and leaving small scraps.' },
+            { step: 'Residue Scrubbing', why: 'Specialty cleaners remove the last microscopic layer of sticky glue.' }
         ],
         comparisonTable: {
             headers: ['Technique', 'Speed', 'Wall Integrity'],
@@ -2031,7 +2031,7 @@ export const blogData: Record<string, BlogContent> = {
     },
     'wallpaper-installation': {
         h1: 'Wallpaper Installation Spokane',
-        metaDescription: 'Get perfectly aligned seams and stunning patterns. Hire a professional wallpaper installation team in Spokane for high-end, flawless decorative results.',
+        metaDescription: 'Get perfectly aligned seams and stunning patterns. Hire a professional wallpaper installation team in Spokane for high-end, flawless results.',
         keywords: 'wallpaper installation spokane, hang wallpaper spokane, professional wallpaper hanger, pattern matching wallpaper',
         readingTime: '8 min read',
         parentRoute: '/wallpaper-installer-spokane',
@@ -2044,15 +2044,15 @@ export const blogData: Record<string, BlogContent> = {
         ],
         definition: 'Wallpaper installation is the expert application of decorative wall coverings using specialized adhesives and precise geometric layouts to ensure durable, aesthetic results.',
         whoThisIsFor: [
-            { title: 'Luxury Homeowners', desc: 'People investing in high-end designer murals and grasscloths.' },
-            { title: 'Boutique Owners', desc: 'Commercial spaces needing a unique, branded atmosphere fast.' },
-            { title: 'Interior Designers', desc: 'Professionals who demand flawless execution for their clients.' }
+            { target: 'Luxury Homeowners', summary: 'People investing in high-end designer murals and grasscloths.' },
+            { target: 'Boutique Owners', summary: 'Commercial spaces needing a unique, branded atmosphere fast.' },
+            { target: 'Interior Designers', summary: 'Professionals who demand flawless execution for their clients.' }
         ],
         processSteps: [
-            { title: 'Laser Leveling', why: 'We check for crooked corners and calibrate our layout to avoid visual tilting.' },
-            { title: 'Roman Prime/Paste', why: 'We use premium Roman adhesives for the strongest, longest-lasting bond.' },
-            { title: 'The "Double Cut"', why: 'We cut through two sheets at once for a seam that is literally invisible.' },
-            { title: 'Micro-Detailing', why: 'Removing excess glue and rolling seams for a flat, premium finish.' }
+            { step: 'Laser Leveling', why: 'We check for crooked corners and calibrate our layout to avoid visual tilting.' },
+            { step: 'Roman Prime/Paste', why: 'We use premium Roman adhesives for the strongest, longest-lasting bond.' },
+            { step: 'The "Double Cut"', why: 'We cut through two sheets at once for a seam that is literally invisible.' },
+            { step: 'Micro-Detailing', why: 'Removing excess glue and rolling seams for a flat, premium finish.' }
         ],
         comparisonTable: {
             headers: ['Covering Type', 'Skill Required', 'Key Benefit'],
@@ -2084,7 +2084,7 @@ export const blogData: Record<string, BlogContent> = {
     },
     'wallpaper-repair': {
         h1: 'Wallpaper Repair Spokane',
-        metaDescription: 'Fix torn edges and curling seams instantly. We provide meticulous wallpaper repair in Spokane to save your expensive patterns from totally peeling off.',
+        metaDescription: 'Fix torn edges and curling seams instantly. We provide meticulous wallpaper repair in Spokane to save your expensive patterns from peeling off.',
         keywords: 'wallpaper repair spokane, fix torn wallpaper, wallpaper seam repair, patch wallpaper spokane',
         readingTime: '5 min read',
         parentRoute: '/wallpaper-installer-spokane',
@@ -2097,15 +2097,15 @@ export const blogData: Record<string, BlogContent> = {
         ],
         definition: 'Wallpaper repair is a meticulous technical service focused on re-adhering failing seams and patching physical damage in existing wall coverings using surgical precision.',
         whoThisIsFor: [
-            { title: 'Pet/Child Damage Victims', desc: 'Homeowners with physical tears at "eye level" on expensive rolls.' },
-            { title: 'Dry Heat Sufferers', desc: 'People noticing seams curling due to Spokane\'s intense winter furnace heat.' },
-            { title: 'Antique Lovers', desc: 'Anyone trying to preserve historic patterns that are no longer in print.' }
+            { target: 'Pet/Child Damage Victims', summary: 'Homeowners with physical tears at "eye level" on expensive rolls.' },
+            { target: 'Dry Heat Sufferers', summary: 'People noticing seams curling due to Spokane\'s intense winter furnace heat.' },
+            { target: 'Antique Lovers', summary: 'Anyone trying to preserve historic patterns that are no longer in print.' }
         ],
         processSteps: [
-            { title: 'Adhesive Re-Hydration', why: 'Softening old, brittle glue prevents the paper from snapping.' },
-            { title: 'Syringe Injection', why: 'We inject fresh Roman adhesive deep behind the curl without mess.' },
-            { title: 'Double-Cut Patching', why: 'Cutting a new scrap over the old hole creates a jigsaw-perfect fit.' },
-            { title: 'Pressure Seaming', why: 'Weighted rollers ensure the edges stay flush and never lift again.' }
+            { step: 'Adhesive Re-Hydration', why: 'Softening old, brittle glue prevents the paper from snapping.' },
+            { step: 'Syringe Injection', why: 'We inject fresh Roman adhesive deep behind the curl without mess.' },
+            { step: 'Double-Cut Patching', why: 'Cutting a new scrap over the old hole creates a jigsaw-perfect fit.' },
+            { step: 'Pressure Seaming', why: 'Weighted rollers ensure the edges stay flush and never lift again.' }
         ],
         comparisonTable: {
             headers: ['Damage Type', 'Repairability', 'Success Rate'],
@@ -2149,15 +2149,15 @@ export const blogData: Record<string, BlogContent> = {
         ],
         definition: 'Wallpaper service preparation is the meticulous process of smoothing and sealing drywall to create a non-porous, flat foundation for professional wall coverings.',
         whoThisIsFor: [
-            { title: 'Orange Peel Homeowners', desc: 'Anyone trying to hang wallpaper over standard "bumpy" walls.' },
-            { title: 'Fine Finish Enthusiasts', desc: 'People noticing that their paper is highlighting wall flaws underneath.' },
-            { title: 'Mural Customers', desc: 'Ensuring your $2,000 mural doesn\'t bubble and fall off after a week.' }
+            { target: 'Orange Peel Homeowners', summary: 'Anyone trying to hang wallpaper over standard "bumpy" walls.' },
+            { target: 'Fine Finish Enthusiasts', summary: 'People noticing that their paper is highlighting wall flaws underneath.' },
+            { target: 'Mural Customers', summary: 'Ensuring your $2,000 mural doesn\'t bubble and fall off after a week.' }
         ],
         processSteps: [
-            { title: 'Texture Removal', why: 'Sanding or scraping down the high points for a consistent starting point.' },
-            { title: 'Full Skim Coat', why: 'Thin layers of mud fill the low spots for a level-5 smooth finish.' },
-            { title: 'Acrylic Priming', why: 'Specialized primer protects the drywall and allows for easy paper sliding.' },
-            { title: 'Final Inspection', why: 'We use high-intensity lights to ensure no bumps remain before pasting.' }
+            { step: 'Texture Removal', why: 'Sanding or scraping down the high points for a consistent starting point.' },
+            { step: 'Full Skim Coat', why: 'Thin layers of mud fill the low spots for a level-5 smooth finish.' },
+            { step: 'Acrylic Priming', why: 'Specialized primer protects the drywall and allows for easy paper sliding.' },
+            { step: 'Final Inspection', why: 'We use high-intensity lights to ensure no bumps remain before pasting.' }
         ],
         comparisonTable: {
             headers: ['Base Surface', 'Required Prep Level', 'Fail Risk'],
@@ -2201,15 +2201,15 @@ export const blogData: Record<string, BlogContent> = {
         ],
         definition: 'Decorative wallpaper installation is a premium service specializing in the application of luxury, non-standard materials like authentic grasscloth and metallic foils that require highly specialized tools and adhesives.',
         whoThisIsFor: [
-            { title: 'Fine Dining Enthusiasts', desc: 'Homeowners wanting a rich, textured "jewelry box" room.' },
-            { title: 'Commercial Designers', desc: 'Architects specifying luxury textures for Spokane boutiques.' },
-            { title: 'Mural Lovers', desc: 'Anyone commissioning large-scale art for their living room walls.' }
+            { target: 'Fine Dining Enthusiasts', summary: 'Homeowners wanting a rich, textured "jewelry box" room.' },
+            { target: 'Commercial Designers', summary: 'Architects specifying luxury textures for Spokane boutiques.' },
+            { target: 'Mural Lovers', summary: 'Anyone commissioning large-scale art for their living room walls.' }
         ],
         processSteps: [
-            { title: 'Material Inspection', why: 'Natural fibers have variations; we pre-sort panels for the best visual flow.' },
-            { title: 'Adhesive Selection', why: 'Specialty clay or wheat pastes are used to prevent staining delicate silks.' },
-            { title: 'Micro-Troweling', why: 'Applying glue with exact pressure to avoid "squish-out" onto the face.' },
-            { title: 'Seam Shaving', why: 'Using surgical-grade blades to ensure natural fibers remain clean and sharp.' }
+            { step: 'Material Inspection', why: 'Natural fibers have variations; we pre-sort panels for the best visual flow.' },
+            { step: 'Adhesive Selection', why: 'Specialty clay or wheat pastes are used to prevent staining delicate silks.' },
+            { step: 'Micro-Troweling', why: 'Applying glue with exact pressure to avoid "squish-out" onto the face.' },
+            { step: 'Seam Shaving', why: 'Using surgical-grade blades to ensure natural fibers remain clean and sharp.' }
         ],
         comparisonTable: {
             headers: ['Luxury Material', 'Key Vulnerability', 'Maintenance Need'],
@@ -2254,15 +2254,15 @@ export const blogData: Record<string, BlogContent> = {
         ],
         definition: 'Paint stripping is a chemical or thermal restoration service that removes multiple failed layers of old paint to reveal the original substrate for refinishing.',
         whoThisIsFor: [
-            { title: 'Historic Homeowners', desc: 'People restoring old craftsman homes in the Perry District.' },
-            { title: 'DIY Fatigue Sufferers', desc: 'Anyone who realized that hand-scraping 100 years of paint is impossible.' },
-            { title: 'Lead Safety Conscious', desc: 'Families wanting old paint removed without creating airborne dust.' }
+            { target: 'Historic Homeowners', summary: 'People restoring old craftsman homes in the Perry District.' },
+            { target: 'DIY Fatigue Sufferers', summary: 'Anyone who realized that hand-scraping 100 years of paint is impossible.' },
+            { target: 'Lead Safety Conscious', summary: 'Families wanting old paint removed without creating airborne dust.' }
         ],
         processSteps: [
-            { title: 'Gel Saturation', why: 'Thick strippers physically digest the oldest, hardest paint layers.' },
-            { title: 'Encapsulated Scraping', why: 'Removing the soft paste directly into bins prevents site contamination.' },
-            { title: 'Mechanical Polish', why: 'Light sanding removes the last microscopic residue for a smooth base.' },
-            { title: 'Surface Neutralization', why: 'We chemically balance the wood so new paint bonds permanently.' }
+            { step: 'Gel Saturation', why: 'Thick strippers physically digest the oldest, hardest paint layers.' },
+            { step: 'Encapsulated Scraping', why: 'Removing the soft paste directly into bins prevents site contamination.' },
+            { step: 'Mechanical Polish', why: 'Light sanding removes the last microscopic residue for a smooth base.' },
+            { step: 'Surface Neutralization', why: 'We chemically balance the wood so new paint bonds permanently.' }
         ],
         comparisonTable: {
             headers: ['Technique', 'Best For', 'Safety Rank'],
@@ -2306,15 +2306,15 @@ export const blogData: Record<string, BlogContent> = {
         ],
         definition: 'Wood paint removal is a specialized restoration technique that meticulously strips layers of paint from historic trim and furniture to restore its original natural appearance.',
         whoThisIsFor: [
-            { title: 'Browne’s Addition Residents', desc: 'Homeowners wanting to honor their property\'s historic Craftsman roots.' },
-            { title: 'Restoration Enthusiasts', desc: 'Anyone seeking to remove "rental white" latex from high-quality wood.' },
-            { title: 'Antique Dealers', desc: 'Professionals looking to uncover the value hidden under old paint.' }
+            { target: 'Browne’s Addition Residents', summary: 'Homeowners wanting to honor their property\'s historic Craftsman roots.' },
+            { target: 'Restoration Enthusiasts', summary: 'Anyone seeking to remove "rental white" latex from high-quality wood.' },
+            { target: 'Antique Dealers', summary: 'Professionals looking to uncover the value hidden under old paint.' }
         ],
         processSteps: [
-            { title: 'Historic Profile ID', why: 'We identify the wood type to select a chemical that won\'t stain the grain.' },
-            { title: 'Fine Detail Application', why: 'Using soft brushes to push stripping gel into every carved crevice.' },
-            { title: 'Solvent Extraction', why: 'We lift the paint away without any metal blades touching the wood.' },
-            { title: 'Neutralizing Rinse', why: 'Clearing the chemistry ensures your new stain doesn\'t turn gray.' }
+            { step: 'Historic Profile ID', why: 'We identify the wood type to select a chemical that won\'t stain the grain.' },
+            { step: 'Fine Detail Application', why: 'Using soft brushes to push stripping gel into every carved crevice.' },
+            { step: 'Solvent Extraction', why: 'We lift the paint away without any metal blades touching the wood.' },
+            { step: 'Neutralizing Rinse', why: 'Clearing the chemistry ensures your new stain doesn\'t turn gray.' }
         ],
         comparisonTable: {
             headers: ['Surface Type', 'Restoration Method', 'Visual Result'],
@@ -2358,15 +2358,15 @@ export const blogData: Record<string, BlogContent> = {
         ],
         definition: 'Metal paint removal is a restorative service that strip failed paint and rust from metallic surfaces like railings and furniture to prevent long-term structural failure.',
         whoThisIsFor: [
-            { title: 'Historic Wrought-Iron Owners', desc: 'Homeowners with beautiful balconies overlooking the Spokane River.' },
-            { title: 'Property Managers', desc: 'Ensuring fire escapes and outdoor staircases remain structurally sound.' },
-            { title: 'Furniture Restorers', desc: 'Anyone bringing old cast-aluminum or steel patio sets back to life.' }
+            { target: 'Historic Wrought-Iron Owners', summary: 'Homeowners with beautiful balconies overlooking the Spokane River.' },
+            { target: 'Property Managers', summary: 'Ensuring fire escapes and outdoor staircases remain structurally sound.' },
+            { target: 'Furniture Restorers', summary: 'Anyone bringing old cast-aluminum or steel patio sets back to life.' }
         ],
         processSteps: [
-            { title: 'Mechanical De-Scaling', why: 'Compressed-air needle scalers knock loose the heaviest rust chunks.' },
-            { title: 'Precision Sanding', why: 'Opening the metal pores allows the new inhibitors to bond permanently.' },
-            { title: 'Chemical Conversion', why: 'We transform microscopic rust into a solid, black paintable base.' },
-            { title: 'Immediate Priming', why: 'We seal the bare metal before Inland Northwest humidity causes re-oxidation.' }
+            { step: 'Mechanical De-Scaling', why: 'Compressed-air needle scalers knock loose the heaviest rust chunks.' },
+            { step: 'Precision Sanding', why: 'Opening the metal pores allows the new inhibitors to bond permanently.' },
+            { step: 'Chemical Conversion', why: 'We transform microscopic rust into a solid, black paintable base.' },
+            { step: 'Immediate Priming', why: 'We seal the bare metal before Inland Northwest humidity causes re-oxidation.' }
         ],
         comparisonTable: {
             headers: ['Material Type', 'Main Threat', 'Restoration Priority'],
@@ -2410,15 +2410,15 @@ export const blogData: Record<string, BlogContent> = {
         ],
         definition: 'Surface coating removal is a specialized service that uses chemical solvents and thermal extraction to remove failed plastic sealers from porous stone and concrete.',
         whoThisIsFor: [
-            { title: 'Victims of "Cloudy" Patios', desc: 'Homeowners seeing ugly white moisture spots trapped under their sealer.' },
-            { title: 'Commercial Property Managers', desc: 'Anyone needing to strip failed safety coatings from walkways.' },
-            { title: 'New Home Buyers', desc: 'Restoring the natural look of brick or stone that was poorly painted.' }
+            { target: 'Victims of "Cloudy" Patios', summary: 'Homeowners seeing ugly white moisture spots trapped under their sealer.' },
+            { target: 'Commercial Property Managers', summary: 'Anyone needing to strip failed safety coatings from walkways.' },
+            { target: 'New Home Buyers', summary: 'Restoring the natural look of brick or stone that was poorly painted.' }
         ],
         processSteps: [
-            { title: 'Solvent Saturation', why: 'Specialty strippers chemically re-liquify the hardened plastic film.' },
-            { title: 'Thermal Extraction', why: 'Water heated to 200 degrees melts the sticky sludge for easier removal.' },
-            { title: 'Pore De-Greasing', why: 'Ensures a perfectly clean slab so your new stain can actually penetrate.' },
-            { title: 'Ph Neutralization', why: 'We balance the chemistry so your new coating bonds permanently.' }
+            { step: 'Solvent Saturation', why: 'Specialty strippers chemically re-liquify the hardened plastic film.' },
+            { step: 'Thermal Extraction', why: 'Water heated to 200 degrees melts the sticky sludge for easier removal.' },
+            { step: 'Pore De-Greasing', why: 'Ensures a perfectly clean slab so your new stain can actually penetrate.' },
+            { step: 'Ph Neutralization', why: 'We balance the chemistry so your new coating bonds permanently.' }
         ],
         comparisonTable: {
             headers: ['Failed Coating', 'Major Symptom', 'Removal Technique'],
@@ -2449,7 +2449,7 @@ export const blogData: Record<string, BlogContent> = {
     },
     'paint-removal-from-masonry': {
         h1: 'Paint Removal From Masonry Spokane',
-        metaDescription: 'Restore gorgeous antique brick fireplaces safely. We provide incredibly gentle paint removal from masonry in Spokane to clear stone without scratching.',
+        metaDescription: 'Restore gorgeous antique brick fireplaces safely. We provide gentle paint removal from masonry in Spokane to clear stone without scratching.',
         keywords: 'paint removal from masonry spokane, strip brick fireplace, remove paint from stone, restore historic brick spokane',
         readingTime: '8 min read',
         parentRoute: '/paint-stripping-spokane',
@@ -2462,15 +2462,15 @@ export const blogData: Record<string, BlogContent> = {
         ],
         definition: 'Paint removal from masonry is a restorative technical service that uses specialized chemical pastes to peel paint from porous stone and brick without damage.',
         whoThisIsFor: [
-            { title: 'Historic Fireplace Owners', desc: 'Homeowners wanting to uncover "painted over" red brick craftsmanship.' },
-            { title: 'South Hill Modernizers', desc: 'Anyone restoring a mid-century home to its original natural materials.' },
-            { title: 'Commercial Renovators', desc: 'Professionals stripping industrial paint from historic building facades.' }
+            { target: 'Historic Fireplace Owners', summary: 'Homeowners wanting to uncover "painted over" red brick craftsmanship.' },
+            { target: 'South Hill Modernizers', summary: 'Anyone restoring a mid-century home to its original natural materials.' },
+            { target: 'Commercial Renovators', summary: 'Professionals stripping industrial paint from historic building facades.' }
         ],
         processSteps: [
-            { title: 'Poultice Masking', why: 'We apply a thick paste that "eats" the paint while keeping it moist.' },
-            { title: 'Laminated Wrapping', why: 'We seal the chemical overnight to maximize its deep-cleaning power.' },
-            { title: 'Mechanical Lift', why: 'The paint peels off in solid strips without any harsh mechanical scraping.' },
-            { title: 'Neutral Rinse', why: 'We ph-balance the stone so it can breathe naturally again.' }
+            { step: 'Poultice Masking', why: 'We apply a thick paste that "eats" the paint while keeping it moist.' },
+            { step: 'Laminated Wrapping', why: 'We seal the chemical overnight to maximize its deep-cleaning power.' },
+            { step: 'Mechanical Lift', why: 'The paint peels off in solid strips without any harsh mechanical scraping.' },
+            { step: 'Neutral Rinse', why: 'We ph-balance the stone so it can breathe naturally again.' }
         ],
         comparisonTable: {
             headers: ['Method', 'Brick Safety', 'Recommended Use'],
@@ -2501,7 +2501,7 @@ export const blogData: Record<string, BlogContent> = {
     },
     'exterior-paint-removal': {
         h1: 'Exterior Paint Removal Spokane',
-        metaDescription: 'Stop the permanent peeling cycle. Get complete exterior paint removal in Spokane down to bare wood to ensure your huge new paint job finally lasts.',
+        metaDescription: 'Stop the permanent peeling cycle. Get complete exterior paint removal in Spokane down to bare wood to ensure your new paint job finally lasts.',
         keywords: 'exterior paint removal spokane, strip house paint, infrared paint stripping, remove peeling paint spokane',
         readingTime: '9 min read',
         parentRoute: '/paint-stripping-spokane',
@@ -2514,15 +2514,15 @@ export const blogData: Record<string, BlogContent> = {
         ],
         definition: 'Exterior paint removal is a full-scale restoration process that strips failing layers from siding and trim down to the original bare wood to ensure a permanent paint bond.',
         whoThisIsFor: [
-            { title: 'Sun-Baked Siding Owners', desc: 'Homeowners seeing their dark paint flake off due to intense southern exposure.' },
-            { title: 'Historic Home Lovers', desc: 'Anyone restoring old cedar shakes or craftsman siding profiles.' },
-            { title: 'Permanent Fix Seekers', desc: 'People tired of paying for "spot scraping" every three years.' }
+            { target: 'Sun-Baked Siding Owners', summary: 'Homeowners seeing their dark paint flake off due to intense southern exposure.' },
+            { target: 'Historic Home Lovers', summary: 'Anyone restoring old cedar shakes or craftsman siding profiles.' },
+            { target: 'Permanent Fix Seekers', summary: 'People tired of paying for "spot scraping" every three years.' }
         ],
         processSteps: [
-            { title: 'Thermal Softening', why: 'Infrared heat bubbles the paint without scorching the delicate cedar siding.' },
-            { title: 'Total Extraction', why: 'We physically remove 100% of the old material instead of just "spot" fixing.' },
-            { title: 'Pore Opening', why: 'Industrial sanding removes the dead wood fibers so primer can bite deep.' },
-            { title: 'Deep Pore Priming', why: 'Using slow-drying oil primers that physically soak into the center of the wood.' }
+            { step: 'Thermal Softening', why: 'Infrared heat bubbles the paint without scorching the delicate cedar siding.' },
+            { step: 'Total Extraction', why: 'We physically remove 100% of the old material instead of just "spot" fixing.' },
+            { step: 'Pore Opening', why: 'Industrial sanding removes the dead wood fibers so primer can bite deep.' },
+            { step: 'Deep Pore Priming', why: 'Using slow-drying oil primers that physically soak into the center of the wood.' }
         ],
         comparisonTable: {
             headers: ['Project Scope', 'Resulting Durability', 'Preparation Need'],
@@ -2554,7 +2554,7 @@ export const blogData: Record<string, BlogContent> = {
     // BATCH 9: PRESSURE WASHING SERVICES (1-9)
     'pressure-washing': {
         h1: 'Pressure Washing Spokane',
-        metaDescription: 'Eliminate heavy moss and winter grime safely. We provide professional pressure washing in Spokane to instantly restore your driveway, siding, and outdoor living areas.',
+        metaDescription: 'Eliminate heavy moss and winter grime safely. We provide professional pressure washing in Spokane to restore your driveway, siding, and patio.',
         keywords: 'pressure washing spokane, power washing near me, exterior house cleaning, driveway cleaning spokane',
         readingTime: '6 min read',
         parentRoute: '/pressure-washing-spokane',
@@ -2567,15 +2567,15 @@ export const blogData: Record<string, BlogContent> = {
         ],
         definition: 'Pressure washing is a high-powered exterior cleaning service that uses specialized water nozzles to extract dirt and organic growth from hard architectural surfaces.',
         whoThisIsFor: [
-            { title: 'Manito Park Area Homeowners', desc: 'People dealing with heavy moss on historic brick patios.' },
-            { title: 'Curb Appeal Focused Sellers', desc: 'Anyone wanting their driveway to look brand new before an open house.' },
-            { title: 'Safety-Conscious Residents', desc: 'Removing slick algae from walkways to prevent winter slips.' }
+            { target: 'Manito Park Area Homeowners', summary: 'People dealing with heavy moss on historic brick patios.' },
+            { target: 'Curb Appeal Focused Sellers', summary: 'Anyone wanting their driveway to look brand new before an open house.' },
+            { target: 'Safety-Conscious Residents', summary: 'Removing slick algae from walkways to prevent winter slips.' }
         ],
         processSteps: [
-            { title: 'Surface Calibration', why: 'We test every surface to ensure the pressure is high enough to clean but low enough to protect.' },
-            { title: 'Organic Pre-Spray', why: 'Biodegradable soaps physically dissolve the root structure of moss and algae.' },
-            { title: 'Rotary Extraction', why: 'Using circular cleaning tools prevents the "zebra stripes" left by handheld wands.' },
-            { title: 'Debris Flushing', why: 'A total rinse ensures no muddy runoff settles back into your clean pores.' }
+            { step: 'Surface Calibration', why: 'We test every surface to ensure the pressure is high enough to clean but low enough to protect.' },
+            { step: 'Organic Pre-Spray', why: 'Biodegradable soaps physically dissolve the root structure of moss and algae.' },
+            { step: 'Rotary Extraction', why: 'Using circular cleaning tools prevents the "zebra stripes" left by handheld wands.' },
+            { step: 'Debris Flushing', why: 'A total rinse ensures no muddy runoff settles back into your clean pores.' }
         ],
         comparisonTable: {
             headers: ['Surface', 'Pressure Limit', 'Common Danger'],
@@ -2606,7 +2606,7 @@ export const blogData: Record<string, BlogContent> = {
     },
     'power-washing': {
         h1: 'Power Washing Spokane',
-        metaDescription: 'Melt severe grease and oil stains instantly. We offer massive commercial power washing in Spokane utilizing incredibly hot water to rapidly cut industrial grime.',
+        metaDescription: 'Melt severe grease and oil stains instantly. We offer commercial power washing in Spokane using hot water to rapidly cut through industrial grime.',
         keywords: 'power washing spokane, hot water pressure washing, degreasing concrete, industrial cleaning spokane',
         readingTime: '7 min read',
         parentRoute: '/pressure-washing-spokane',
@@ -2619,15 +2619,15 @@ export const blogData: Record<string, BlogContent> = {
         ],
         definition: 'Power washing is a high-temperature cleaning service that uses water heated to near-boiling to dissolve and extract petroleum-based stains and stubborn grime from concrete.',
         whoThisIsFor: [
-            { title: 'Commercial Shop Owners', desc: 'Mechanics and industrial managers needing oil-free floors for safety.' },
-            { title: 'Restaurant Managers', desc: 'Cleaning greasy dumpster pads and heavy-traffic kitchen entrances.' },
-            { title: 'Automotive Enthusiasts', desc: 'Anyone needing to erase years of engine oil leaks from their home driveway.' }
+            { target: 'Commercial Shop Owners', summary: 'Mechanics and industrial managers needing oil-free floors for safety.' },
+            { target: 'Restaurant Managers', summary: 'Cleaning greasy dumpster pads and heavy-traffic kitchen entrances.' },
+            { target: 'Automotive Enthusiasts', summary: 'Anyone needing to erase years of engine oil leaks from their home driveway.' }
         ],
         processSteps: [
-            { title: 'Thermal Saturation', why: 'Heating the concrete pores helps the trapped oils rise to the surface.' },
-            { title: 'Adhesive Degreasing', why: 'We apply professional surfactants that physically separate oil from stone.' },
-            { title: 'Boiling Extraction', why: 'The hot water melts the grease as it is blasted away at high pressure.' },
-            { title: 'Environment Capture', why: 'We contain the oil-slicked runoff to prevent it from entering storm drains.' }
+            { step: 'Thermal Saturation', why: 'Heating the concrete pores helps the trapped oils rise to the surface.' },
+            { step: 'Adhesive Degreasing', why: 'We apply professional surfactants that physically separate oil from stone.' },
+            { step: 'Boiling Extraction', why: 'The hot water melts the grease as it is blasted away at high pressure.' },
+            { step: 'Environment Capture', why: 'We contain the oil-slicked runoff to prevent it from entering storm drains.' }
         ],
         comparisonTable: {
             headers: ['Contaminant', 'Cold Pressure Wash', 'Hot Power Wash'],
@@ -2658,7 +2658,7 @@ export const blogData: Record<string, BlogContent> = {
     },
     'house-washing': {
         h1: 'House Washing Spokane',
-        metaDescription: 'Make your siding shine safely without destroying window seals. Get extremely gentle house washing in Spokane built explicitly to kill algae on vinyl and wood.',
+        metaDescription: 'Make your siding shine safely without destroying seals. Get gentle house washing in Spokane built explicitly to kill algae on vinyl and wood surfaces.',
         keywords: 'house washing spokane, soft wash siding cleaning, vinyl siding washing near me, algae removal house',
         readingTime: '6 min read',
         parentRoute: '/pressure-washing-spokane',
@@ -2671,15 +2671,15 @@ export const blogData: Record<string, BlogContent> = {
         ],
         definition: 'House washing is a specialized low-pressure cleaning technique, also known as soft washing, that uses chemical detergents to dissolve organic stains from siding without mechanical force.',
         whoThisIsFor: [
-            { title: 'North-Side Algae Victims', desc: 'Homeowners seeing green growth on the shady sides of their house.' },
-            { title: 'Siding Preservationists', desc: 'People who want their vinyl or wood to last decades without damage.' },
-            { title: 'Real Estate Sellers', desc: 'Anyone needing an instant curb-appeal boost that looks like a new paint job.' }
+            { target: 'North-Side Algae Victims', summary: 'Homeowners seeing green growth on the shady sides of their house.' },
+            { target: 'Siding Preservationists', summary: 'People who want their vinyl or wood to last decades without damage.' },
+            { target: 'Real Estate Sellers', summary: 'Anyone needing an instant curb-appeal boost that looks like a new paint job.' }
         ],
         processSteps: [
-            { title: 'Property Pre-Soak', why: 'We saturate your plants and grass with fresh water to shield them from soaps.' },
-            { title: 'Soft Wash Application', why: 'We apply professional detergents at garden-hose pressure to kill growth.' },
-            { title: 'Organic Dwell Time', why: 'Letting the soaps sit allows them to physically digest the black mold roots.' },
-            { title: 'Total Rinse', why: 'A complete top-to-bottom rinse removes the dead algae and dirt residue.' }
+            { step: 'Property Pre-Soak', why: 'We saturate your plants and grass with fresh water to shield them from soaps.' },
+            { step: 'Soft Wash Application', why: 'We apply professional detergents at garden-hose pressure to kill growth.' },
+            { step: 'Organic Dwell Time', why: 'Letting the soaps sit allows them to physically digest the black mold roots.' },
+            { step: 'Total Rinse', why: 'A complete top-to-bottom rinse removes the dead algae and dirt residue.' }
         ],
         comparisonTable: {
             headers: ['Method', 'Risk of Water Intrusion', 'Cleaning Depth'],
@@ -2710,7 +2710,7 @@ export const blogData: Record<string, BlogContent> = {
     },
     'deck-cleaning': {
         h1: 'Deck Cleaning Spokane',
-        metaDescription: 'Eliminate dangerous green slime perfectly. We handle comprehensive deck cleaning in Spokane to strip moss from cedar and make composite decking bright again.',
+        metaDescription: 'Eliminate dangerous green slime perfectly. We handle expert deck cleaning in Spokane to strip moss from cedar and make composite decking bright again.',
         keywords: 'deck cleaning spokane, restore wood deck, clean composite deck spokane, algae removal deck',
         readingTime: '7 min read',
         parentRoute: '/pressure-washing-spokane',
@@ -2723,15 +2723,15 @@ export const blogData: Record<string, BlogContent> = {
         ],
         definition: 'Deck cleaning is a restoration service that uses enzyme-based detergents and low-pressure rinsing to safely remove organic growth and dirt from wooden or composite outdoor flooring.',
         whoThisIsFor: [
-            { title: 'Slick/Icy Deck Owners', desc: 'Anyone who feels like their deck is a "slip hazard" when it rains.' },
-            { title: 'Weathered Cedar Lovers', desc: 'Homeowners wanting to bring the original warmth back to their grayed wood.' },
-            { title: 'Composite Deck Sellers', desc: 'Ensuring your expensive high-end deck looks brand new for buyers.' }
+            { target: 'Slick/Icy Deck Owners', summary: 'Anyone who feels like their deck is a "slip hazard" when it rains.' },
+            { target: 'Weathered Cedar Lovers', summary: 'Homeowners wanting to bring the original warmth back to their grayed wood.' },
+            { target: 'Composite Deck Sellers', summary: 'Ensuring your expensive high-end deck looks brand new for buyers.' }
         ],
         processSteps: [
-            { title: 'Organic Saturation', why: 'Specialty enzyme cleaners physically soften the algae/moss bond.' },
-            { title: 'Low-Pressure Sweep', why: 'We use 45-degree fan tips to gently "push" the dirt off without shredding wood.' },
-            { title: 'Fungal Neutralizing', why: 'Killing the spores prevent the green slime from returning in weeks.' },
-            { title: 'Barefoot Inspection', why: 'We ensure no splinters or chemical residue remain for your family.' }
+            { step: 'Organic Saturation', why: 'Specialty enzyme cleaners physically soften the algae/moss bond.' },
+            { step: 'Low-Pressure Sweep', why: 'We use 45-degree fan tips to gently "push" the dirt off without shredding wood.' },
+            { step: 'Fungal Neutralizing', why: 'Killing the spores prevent the green slime from returning in weeks.' },
+            { step: 'Barefoot Inspection', why: 'We ensure no splinters or chemical residue remain for your family.' }
         ],
         comparisonTable: {
             headers: ['Material', 'Primary Maintenance Need', 'Cleaning Cycle'],
@@ -2762,7 +2762,7 @@ export const blogData: Record<string, BlogContent> = {
     },
     'fence-cleaning': {
         h1: 'Fence Cleaning Spokane',
-        metaDescription: 'Restore your property line perfectly. We provide professional fence cleaning in Spokane to remove gray oxidation from wood and green algae from vinyl.',
+        metaDescription: 'Restore your property line perfectly. We provide expert fence cleaning in Spokane to remove gray oxidation from wood and green algae from vinyl slats.',
         keywords: 'fence cleaning spokane, restore wood fence, vinyl fence washing spokane, clean backyard fence',
         readingTime: '5 min read',
         parentRoute: '/pressure-washing-spokane',
@@ -2775,15 +2775,15 @@ export const blogData: Record<string, BlogContent> = {
         ],
         definition: 'Fence cleaning is a restorative exterior service that utilizes biodegradable detergents and low-pressure rinsing to remove organic growth and weathering from fencing.',
         whoThisIsFor: [
-            { title: 'Weathered Wood Owners', desc: 'Homeowners seeing their beautiful cedar fence turn a "dead" gray color.' },
-            { title: 'Vinyl Slat Residents', desc: 'Anyone with white vinyl fences that are now covered in green algae.' },
-            { title: 'Prep Professionals', desc: 'People wanting the best possible surface before applying a new fence stain.' }
+            { target: 'Weathered Wood Owners', summary: 'Homeowners seeing their beautiful cedar fence turn a "dead" gray color.' },
+            { target: 'Vinyl Slat Residents', summary: 'Anyone with white vinyl fences that are now covered in green algae.' },
+            { target: 'Prep Professionals', summary: 'People wanting the best possible surface before applying a new fence stain.' }
         ],
         processSteps: [
-            { title: 'Landscaping Shielding', why: 'We pre-soak all nearby plants to ensure they stay hydrated and safe from cleaners.' },
-            { title: 'Algae Softening', why: 'Professional detergents physically "digest" the green growth from the slats.' },
-            { title: 'Balanced Rinsing', why: 'We use the exact PSI needed to lift dirt without splintering the soft wood grain.' },
-            { title: 'Grain Brightening', why: 'Specialty acidic rinses restore the original golden color to old cedar.' }
+            { step: 'Landscaping Shielding', why: 'We pre-soak all nearby plants to ensure they stay hydrated and safe from cleaners.' },
+            { step: 'Algae Softening', why: 'Professional detergents physically "digest" the green growth from the slats.' },
+            { step: 'Balanced Rinsing', why: 'We use the exact PSI needed to lift dirt without splintering the soft wood grain.' },
+            { step: 'Grain Brightening', why: 'Specialty acidic rinses restore the original golden color to old cedar.' }
         ],
         comparisonTable: {
             headers: ['Fence Material', 'Main Cleaning Aim', 'Key Protection'],
@@ -2827,15 +2827,15 @@ export const blogData: Record<string, BlogContent> = {
         ],
         definition: 'Driveway pressure washing is a specialized deep-cleaning service that uses high-pressure rotary spinners and industrial detergents to extract contaminants from concrete.',
         whoThisIsFor: [
-            { title: 'Tire Mark Victims', desc: 'Homeowners seeing ugly black rubber streaks on their white concrete.' },
-            { title: 'Winter Salt Sufferers', desc: 'Anyone seeing "white dust" on their driveway after the snow melts.' },
-            { title: 'Oil Spill Owners', desc: 'Removing dangerous, slippery automotive fluids from the parking area.' }
+            { target: 'Tire Mark Victims', summary: 'Homeowners seeing ugly black rubber streaks on their white concrete.' },
+            { target: 'Winter Salt Sufferers', summary: 'Anyone seeing "white dust" on their driveway after the snow melts.' },
+            { target: 'Oil Spill Owners', summary: 'Removing dangerous, slippery automotive fluids from the parking area.' }
         ],
         processSteps: [
-            { title: 'Debris Edging', why: 'We clear out the weeds and dirt from expansion joints for a 100% clean.' },
-            { title: 'Grease Saturation', why: 'Targeted solvents physically break the chemical bond of oil on the stone.' },
-            { title: 'Rotary Scrubbing', why: 'Spinning nozzles provide thousands of cleaning passes per minute.' },
-            { title: 'Total Extraction', why: 'A high-flow rinse pulls the dirty slurry out of the deep concrete pores.' }
+            { step: 'Debris Edging', why: 'We clear out the weeds and dirt from expansion joints for a 100% clean.' },
+            { step: 'Grease Saturation', why: 'Targeted solvents physically break the chemical bond of oil on the stone.' },
+            { step: 'Rotary Scrubbing', why: 'Spinning nozzles provide thousands of cleaning passes per minute.' },
+            { step: 'Total Extraction', why: 'A high-flow rinse pulls the dirty slurry out of the deep concrete pores.' }
         ],
         comparisonTable: {
             headers: ['Stain Type', 'Standard Garden Hose', 'Professional Rotary Wash'],
@@ -2866,7 +2866,7 @@ export const blogData: Record<string, BlogContent> = {
     },
     'exterior-surface-cleaning': {
         h1: 'Exterior Surface Cleaning Spokane',
-        metaDescription: 'Clean heavily stained brick walls and metal buildings rapidly. We offer incredible exterior surface cleaning in Spokane tailored to different building materials.',
+        metaDescription: 'Clean heavily stained brick walls and metal buildings rapidly. We offer expert exterior surface cleaning in Spokane tailored to every building material.',
         keywords: 'exterior surface cleaning spokane, clean stained brick, soot removal brick, building facade cleaning spokane',
         readingTime: '6 min read',
         parentRoute: '/pressure-washing-spokane',
@@ -2879,15 +2879,15 @@ export const blogData: Record<string, BlogContent> = {
         ],
         definition: 'Exterior surface cleaning is a versatile restorative service using specialized chemical agents and controlled pressure to clean non-standard building materials like brick and metal.',
         whoThisIsFor: [
-            { title: 'Downtown Commercial Owners', desc: 'Business property owners seeing soot and exhaust buildup on facades.' },
-            { title: 'Chimney/Fireplace Owners', desc: 'Property owners with dark smoke staining on their exterior masonry.' },
-            { title: 'Industrial Building Managers', desc: 'Restoring large metal-clad buildings to a professional, clean image.' }
+            { target: 'Downtown Commercial Owners', summary: 'Business property owners seeing soot and exhaust buildup on facades.' },
+            { target: 'Chimney/Fireplace Owners', summary: 'Property owners with dark smoke staining on their exterior masonry.' },
+            { target: 'Industrial Building Managers', summary: 'Restoring large metal-clad buildings to a professional, clean image.' }
         ],
         processSteps: [
-            { title: 'Surface Forensics', why: 'We identify the substrate (brick, metal, or stone) to choose the right soap.' },
-            { title: 'Chemical Dwelling', why: 'Specialty detergents physically lift soot without needing high-pressure force.' },
-            { title: 'Low-Impact Rinsing', why: 'Using high-volume water flow to flush dirt out of deep masonry pores.' },
-            { title: 'Surface Guarding', why: 'Optional application of moisture barriers to prevent future soot staining.' }
+            { step: 'Surface Forensics', why: 'We identify the substrate (brick, metal, or stone) to choose the right soap.' },
+            { step: 'Chemical Dwelling', why: 'Specialty detergents physically lift soot without needing high-pressure force.' },
+            { step: 'Low-Impact Rinsing', why: 'Using high-volume water flow to flush dirt out of deep masonry pores.' },
+            { step: 'Surface Guarding', why: 'Optional application of moisture barriers to prevent future soot staining.' }
         ],
         comparisonTable: {
             headers: ['Material', 'Primary Stain', 'Cleaning Recommendation'],
@@ -2918,7 +2918,7 @@ export const blogData: Record<string, BlogContent> = {
     },
     'mold-and-mildew-removal': {
         h1: 'Mold and Mildew Removal Spokane',
-        metaDescription: 'Erase black spots fundamentally and permanently. We deliver profound, safe mold and mildew removal in Spokane to protect your home siding and family health.',
+        metaDescription: 'Erase black spots fundamentally and permanently. We deliver safe mold and mildew removal in Spokane to protect your home siding and family health.',
         keywords: 'mold and mildew removal spokane, kill black mold siding, organic growth removal house, siding mold cleaning',
         readingTime: '7 min read',
         parentRoute: '/pressure-washing-spokane',
@@ -2931,15 +2931,15 @@ export const blogData: Record<string, BlogContent> = {
         ],
         definition: 'Mold and mildew removal is a specialized cleaning service using anti-fungal detergents to chemically eliminate hazardous organic growth from residential and commercial siding.',
         whoThisIsFor: [
-            { title: 'Shady Side Sufferers', desc: 'Homeowners seeing black spots on north-facing walls under heavy trees.' },
-            { title: 'Health-Conscious Parents', desc: 'Removing toxic allergens before they enter the home air intake.' },
-            { title: 'Property Maintenance Pros', desc: 'Property managers preserving the lifespan of expensive cedar or vinyl siding.' }
+            { target: 'Shady Side Sufferers', summary: 'Homeowners seeing black spots on north-facing walls under heavy trees.' },
+            { target: 'Health-Conscious Parents', summary: 'Removing toxic allergens before they enter the home air intake.' },
+            { target: 'Property Maintenance Pros', summary: 'Property managers preserving the lifespan of expensive cedar or vinyl siding.' }
         ],
         processSteps: [
-            { title: 'Organic Inspection', why: 'We identify the type of mold to select the correct anti-microbial agent.' },
-            { title: 'Selective Application', why: 'Flooding the siding with soaps that physically digest the black roots.' },
-            { title: 'Fungal Dwell Time', why: 'The chemistry requires several minutes to fully kill the dormant spores.' },
-            { title: 'Neutralizing Flush', why: 'A total rinse ensures no soap film remains to attract more dust.' }
+            { step: 'Organic Inspection', why: 'We identify the type of mold to select the correct anti-microbial agent.' },
+            { step: 'Selective Application', why: 'Flooding the siding with soaps that physically digest the black roots.' },
+            { step: 'Fungal Dwell Time', why: 'The chemistry requires several minutes to fully kill the dormant spores.' },
+            { step: 'Neutralizing Flush', why: 'A total rinse ensures no soap film remains to attract more dust.' }
         ],
         comparisonTable: {
             headers: ['Type of Growth', 'Danger Level', 'Removal Priority'],
@@ -2970,7 +2970,7 @@ export const blogData: Record<string, BlogContent> = {
     },
     'patio-and-walkway-cleaning': {
         h1: 'Patio and Walkway Cleaning Spokane',
-        metaDescription: 'Eliminate dangerously slippery moss. We offer deep patio and walkway cleaning in Spokane to dramatically restore your outdoor living spaces for summer barbecues.',
+        metaDescription: 'Eliminate dangerous slippery moss. We offer deep patio and walkway cleaning in Spokane to restore your outdoor living spaces for summer barbecues.',
         keywords: 'patio and walkway cleaning spokane, clean stamped concrete, moss removal patio, restore paver walkway spokane',
         readingTime: '8 min read',
         parentRoute: '/pressure-washing-spokane',
@@ -2983,15 +2983,15 @@ export const blogData: Record<string, BlogContent> = {
         ],
         definition: 'Patio and walkway cleaning is a detailed restorative service using rotary surface extractors to remove organic slippage hazards and deep-seated dirt from outdoor masonry.',
         whoThisIsFor: [
-            { title: 'Slippery Slope Owners', desc: 'Anyone with entrance walkways that become a liability when wet.' },
-            { title: 'Stamped Concrete Fans', desc: 'Homeowners seeing their expensive colored concrete turn a dull brown/green.' },
-            { title: 'Curb Appeal Collectors', desc: 'People who want their front entry to look as clean as a luxury hotel.' }
+            { target: 'Slippery Slope Owners', summary: 'Anyone with entrance walkways that become a liability when wet.' },
+            { target: 'Stamped Concrete Fans', summary: 'Homeowners seeing their expensive colored concrete turn a dull brown/green.' },
+            { target: 'Curb Appeal Collectors', summary: 'People who want their front entry to look as clean as a luxury hotel.' }
         ],
         processSteps: [
-            { title: 'Joint Clearing', why: 'We remove weeds and debris from paving cracks for a total clean.' },
-            { title: 'Surfactant Pre-Spray', why: 'Targeted soaps physically lift dirt from the deep stone texture.' },
-            { title: 'Rotary Spinner Wash', why: 'Enclosed nozzles provide even cleaning without the mess of spray wands.' },
-            { title: 'Polymer Inspection', why: 'We check joint sand levels to ensure your stones stay locked and stable.' }
+            { step: 'Joint Clearing', why: 'We remove weeds and debris from paving cracks for a total clean.' },
+            { step: 'Surfactant Pre-Spray', why: 'Targeted soaps physically lift dirt from the deep stone texture.' },
+            { step: 'Rotary Spinner Wash', why: 'Enclosed nozzles provide even cleaning without the mess of spray wands.' },
+            { step: 'Polymer Inspection', why: 'We check joint sand levels to ensure your stones stay locked and stable.' }
         ],
         comparisonTable: {
             headers: ['Walking Surface', 'Main Cleaning Need', 'Visual Result'],

@@ -36,37 +36,37 @@ function ColorConsultationPage() {
     const steps = [
         {
             title: "Initial Aesthetic Interview",
-            desc: "We discuss your personal style, the mood you wish to evoke in each space, and any fixed elements like flooring or stone that must be harmonized.",
+            description: "We discuss your personal style, the mood you wish to evoke in each space, and any fixed elements like flooring or stone that must be harmonized.",
             proTip: "Collect 3-5 'inspiration' photos before our meeting to help us quickly identify your preferred undertones and saturation levels.",
             pitfall: "Ignoring the surrounding environment. An exterior color that looks great in Arizona may look cold and gray under Spokane's winter skies."
         },
         {
             title: "Architectural & Light Audit",
-            desc: "We analyze how natural light enters your home at different times of day, as well as the 'CRI' of your interior artificial lighting.",
+            description: "We analyze how natural light enters your home at different times of day, as well as the 'CRI' of your interior artificial lighting.",
             proTip: "North-facing rooms in Spokane often need 'warmer' undertones to prevent colors from feeling flat and dingy during the gray months.",
             pitfall: "Choosing a color based on a single small swatch. Light can change a color by up to 30% depending on the time of day."
         },
         {
             title: "Palette Concept Development",
-            desc: "We curate 3 distinct color stories based on our interview and audit, providing a range from 'Safe & Timeless' to 'Modern & Bold'.",
+            description: "We curate 3 distinct color stories based on our interview and audit, providing a range from 'Safe & Timeless' to 'Modern & Bold'.",
             proTip: "Always look at your palette options on a vertical plane (the wall), not flat on a table, as light hits vertical surfaces differently.",
             pitfall: "Following trends blindly. A popular 'color of the year' might not suit your home's specific architectural era or layout."
         },
         {
             title: "Large-Scale Sample Testing",
-            desc: "We apply 9x14 adhesive samples or physical test patches to multiple walls so you can live with the choice for 24-48 hours.",
+            description: "We apply 9x14 adhesive samples or physical test patches to multiple walls so you can live with the choice for 24-48 hours.",
             proTip: "View the samples at night under your regular interior lighting; this is when you'll spend most of your time in the space.",
             pitfall: "Painting test patches directly over a dark original color. The old color will 'bleed' through the thin test coat and skew your perception."
         },
         {
             title: "Finish & Sheen Calibration",
-            desc: "We select the specific sheens (matte, satin, semi-gloss) that will maximize both the visual impact and the durability of each surface.",
+            description: "We select the specific sheens (matte, satin, semi-gloss) that will maximize both the visual impact and the durability of each surface.",
             proTip: "Matte finishes are excellent for hiding wall imperfections in high-light areas, while satins offer better washability in kitchens.",
             pitfall: "Using high-gloss on large flat walls. This highlights every bump and joint in the drywall, creating a busy, distracting look."
         },
         {
             title: "Final Specification Document",
-            desc: "You receive a detailed report with exact paint codes, sheens, and application locations to ensure your painting crew delivers perfection.",
+            description: "You receive a detailed report with exact paint codes, sheens, and application locations to ensure your painting crew delivers perfection.",
             proTip: "Keep this document in your home's digital files; it makes future touch-ups or color matching a 5-minute task.",
             pitfall: "Relying on 'color names' alone. Different brands use the same names for different hues; always use the specific four-digit paint code."
         }
@@ -77,7 +77,7 @@ function ColorConsultationPage() {
         const description = "Spokane's expert color consultation services. Professional palette design for interiors and exteriors. Personalize your home's look. Free estimates!";
         
         return injectPageSEO({
-            title,
+            seoTitle: title,
             description,
             path: '/color-consultation',
             schemas: [
@@ -85,7 +85,7 @@ function ColorConsultationPage() {
                 {
                     id: 'webpage',
                     data: generateWebPageSchema({
-                        title,
+                        topic: title,
                         description,
                         url: "https://prestigecustompaintingllc.com/color-consultation"
                     })
@@ -102,7 +102,7 @@ function ColorConsultationPage() {
                     data: generateHowToSchema({
                         name: "Professional Color Consultation Process",
                         description: "Our 6-step design system to find the perfect palette for your home.",
-                        steps: steps.map(s => ({ name: s.title, text: s.desc }))
+                        steps: steps.map(s => ({ name: s.title, text: s.description }))
                     })
                 }
             ]
@@ -244,16 +244,16 @@ function ColorConsultationPage() {
                     </div>
                     <div className="grid md:grid-cols-3 gap-8 text-left">
                         {[
-                            { name: "North-Facing Light", desc: "Cool and bluish. Requires warmer pink or yellow undertones to avoid a desaturated, 'muddy' appearance." },
-                            { name: "South-Facing Light", desc: "Warm and intense. Can handle deep, saturated colors and cool grays that might feel too cold elsewhere." },
-                            { name: "East/West Light", desc: "Shifts dramatically throughout the day. Requires a balanced hue that looks consistent from sunrise to sunset." }
+                            { name: "North-Facing Light", description: "Cool and bluish. Requires warmer pink or yellow undertones to avoid a desaturated, 'muddy' appearance." },
+                            { name: "South-Facing Light", description: "Warm and intense. Can handle deep, saturated colors and cool grays that might feel too cold elsewhere." },
+                            { name: "East/West Light", description: "Shifts dramatically throughout the day. Requires a balanced hue that looks consistent from sunrise to sunset." }
                         ].map((item, i) => (
                             <div key={i} className="p-8 bg-gray-50 rounded-[2.5rem] border border-gray-100 hover:border-brand-green transition-all shadow-sm">
                                 <div className="w-14 h-14 bg-brand-green/10 rounded-2xl flex items-center justify-center text-brand-green mb-6">
                                     <Sun size={24} />
                                 </div>
                                 <h4 className="text-xl font-bold mb-4 uppercase tracking-tight">{item.name}</h4>
-                                <p className="text-gray-600 leading-relaxed font-medium text-sm">{item.desc}</p>
+                                <p className="text-gray-600 leading-relaxed font-medium text-sm">{item.description}</p>
                             </div>
                         ))}
                     </div>
@@ -274,7 +274,7 @@ function ColorConsultationPage() {
                             <div key={i} className="bg-white/5 border border-white/10 p-8 rounded-3xl group hover:border-brand-green/50 transition-all relative overflow-hidden">
                                 <div className="text-brand-green font-poppins font-bold text-5xl opacity-20 mb-4">{i + 1}</div>
                                 <h4 className="text-xl font-bold mb-4 text-white uppercase tracking-tighter leading-8">{step.title}</h4>
-                                <p className="text-gray-400 mb-6 text-sm leading-relaxed">{step.desc}</p>
+                                <p className="text-gray-400 mb-6 text-sm leading-relaxed">{step.description}</p>
                                 
                                 <div className="space-y-4 pt-4 border-t border-white/10">
                                     <div className="flex gap-3 text-xs">

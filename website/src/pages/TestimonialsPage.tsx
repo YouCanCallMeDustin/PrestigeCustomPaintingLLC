@@ -23,7 +23,7 @@ function TestimonialsPage() {
         const description = "Read 5-star reviews from satisfied clients throughout Spokane and the Inland Northwest. See why Prestige Custom Painting LLC is the top-rated local choice.";
         document.title = title;
         return injectPageSEO({
-            title,
+            seoTitle: title,
             description,
             path: '/testimonials',
             schemas: [

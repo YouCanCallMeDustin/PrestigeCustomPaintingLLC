@@ -45,17 +45,17 @@ const CabinetPaintingCost = () => {
 
     const relatedTopics = [
         {
-            title: "Interior Painting Costs",
+            topic: "Interior Painting Costs",
             path: "/cost-to-paint-house-interior",
             description: "How cabinet pricing fits into a larger interior renovation budget."
         },
         {
-            title: "Cost to Paint a Room",
+            topic: "Cost to Paint a Room",
             path: "/cost-to-paint-a-room",
             description: "Budgeting for walls and trim alongside your cabinet project."
         },
         {
-            title: "Cost to Paint a House",
+            topic: "Cost to Paint a House",
             path: "/cost-to-paint-a-house",
             description: "The main guide for understanding all Spokane painting costs."
         }
@@ -64,28 +64,34 @@ const CabinetPaintingCost = () => {
     return (
         <div className="min-h-screen bg-white text-brand-black">
             <SEOHead 
-                title="Professional Cabinet Painting Cost Spokane (2026 Guide)"
-                description="What does it cost to paint kitchen cabinets in Spokane? Compare refinishing vs. replacement costs and learn about our factory-grade finish process."
+                seoTitle="Cost to Paint Kitchen Cabinets in Spokane | 2026 Refinising Prices"
+                description="Transform your kitchen for less. See 2026 cabinet painting costs in Spokane, including pro finishing prices for small, medium, and large luxury kitchens."
                 path="/cost-to-paint-kitchen-cabinets"
                 schemas={schemas}
             />
             <Navbar />
 
-            <main className="max-w-7xl mx-auto px-4 pt-24 pb-20">
-                <Breadcrumbs items={breadcrumbItems} />
-
-                <article className="max-w-4xl">
-                    <header className="mb-12">
+            <header className="bg-brand-black pt-28 pb-16 md:pt-36 md:pb-24 text-white relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-1/2 h-full bg-brand-green/10 -skew-x-12 transform translate-x-32" />
+                <div className="max-w-7xl mx-auto px-4 relative z-10">
+                    <Breadcrumbs items={breadcrumbItems} variant="light" />
+                    
+                    <div className="max-w-4xl">
                         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-green/10 text-brand-green text-xs font-bold mb-6">
                             HIGH-VALUE UPGRADE
                         </div>
                         <h1 className="text-4xl md:text-6xl font-poppins font-bold leading-tight mb-8">
                             How Much Does <span className="text-brand-green">Cabinet Painting</span> Cost in Spokane?
                         </h1>
-                        <p className="text-xl text-gray-600 leading-relaxed font-medium">
+                        <p className="text-xl text-gray-300 leading-relaxed font-medium">
                             Kitchen cabinets are the focal point of your home. In 2026, professional cabinet refinishing is the #1 requested interior service in Spokane Valley and Liberty Lake. For a standard kitchen, homeowners are investing between <strong>$3,500 and $6,500</strong> to achieve a factory-new finish that lasts for years.
                         </p>
-                    </header>
+                    </div>
+                </div>
+            </header>
+
+            <main className="max-w-7xl mx-auto px-4 py-20">
+                <article className="max-w-4xl">
 
                     <div className="prose prose-lg prose-brand max-w-none">
                         <section className="my-12">

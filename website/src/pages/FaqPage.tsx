@@ -59,7 +59,7 @@ function FaqPage() {
         document.title = title;
         
         return injectPageSEO({
-            title,
+            seoTitle: title,
             description,
             path: '/faq',
             keywords: "spokane painting faq, house painting costs spokane, best paint for spokane weather, licensed painters spokane, lead paint safety spokane, interior painting winter",
@@ -67,7 +67,7 @@ function FaqPage() {
                 {
                     id: 'webpage',
                     data: generateWebPageSchema({
-                        title,
+                        topic: title,
                         description,
                         url: "https://prestigecustompaintingllc.com/faq"
                     })

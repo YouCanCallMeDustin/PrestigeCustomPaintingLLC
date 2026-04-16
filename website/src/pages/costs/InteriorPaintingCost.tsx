@@ -45,17 +45,17 @@ const InteriorPaintingCost = () => {
 
     const relatedTopics = [
         {
-            title: "Cost to Paint a Room",
+            topic: "Cost to Paint a Room",
             path: "/cost-to-paint-a-room",
             description: "A detailed breakdown for single-room projects like kitchens or bedrooms."
         },
         {
-            title: "Cabinet Painting Costs",
+            topic: "Cabinet Painting Costs",
             path: "/cost-to-paint-kitchen-cabinets",
             description: "How to budget for high-impact kitchen cabinet refinishing."
         },
         {
-            title: "Painter Hourly Rates",
+            topic: "Painter Hourly Rates",
             path: "/how-much-do-painters-charge-per-hour",
             description: "Understanding the labor costs behind a professional interior bid."
         }
@@ -64,25 +64,31 @@ const InteriorPaintingCost = () => {
     return (
         <div className="min-h-screen bg-white text-brand-black">
             <SEOHead 
-                title="Interior House Painting Cost Spokane (2026 Prices)"
-                description="Planning an interior refresh? See current 2026 pricing for interior painting in Spokane. Learn about square foot rates, material costs, and prep time."
+                seoTitle="Spokane Interior Painting Cost | 2026 Room & Whole House Pricing"
+                description="Planning an interior refresh? See current 2026 pricing for house painting in Spokane including square foot rates, material costs, and preparation time."
                 path="/cost-to-paint-house-interior"
                 schemas={schemas}
             />
             <Navbar />
 
-            <main className="max-w-7xl mx-auto px-4 pt-24 pb-20">
-                <Breadcrumbs items={breadcrumbItems} />
-
-                <article className="max-w-4xl">
-                    <header className="mb-12">
+            <header className="bg-brand-black pt-28 pb-16 md:pt-36 md:pb-24 text-white relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-1/2 h-full bg-brand-green/10 -skew-x-12 transform translate-x-32" />
+                <div className="max-w-7xl mx-auto px-4 relative z-10">
+                    <Breadcrumbs items={breadcrumbItems} variant="light" />
+                    
+                    <div className="max-w-4xl">
                         <h1 className="text-4xl md:text-6xl font-poppins font-bold leading-tight mb-8">
                             How Much Does <span className="text-brand-green">Interior Painting</span> Cost in Spokane?
                         </h1>
-                        <p className="text-xl text-gray-600 leading-relaxed font-medium">
+                        <p className="text-xl text-gray-300 leading-relaxed font-medium">
                             Whether you've just bought a home on the South Hill or you're preparing to sell in Spokane Valley, a fresh interior coat is the best way to add value. In 2026, Spokane homeowners are paying between <strong>$2.50 and $5.50 per square foot</strong> for comprehensive interior painting.
                         </p>
-                    </header>
+                    </div>
+                </div>
+            </header>
+
+            <main className="max-w-7xl mx-auto px-4 py-20">
+                <article className="max-w-4xl">
 
                     <div className="prose prose-lg prose-brand max-w-none">
                         <section className="my-12">

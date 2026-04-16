@@ -47,7 +47,7 @@ export default function ServiceAreaPage() {
         const description = "Looking for professional house painters in Spokane? We serve 67+ regional areas with premium interior and exterior painting. Call (509) 596-3351 for a free quote!";
 
         return injectPageSEO({
-            title,
+            seoTitle: title,
             description,
             path: '/service-area',
             schemas: [
@@ -94,47 +94,47 @@ export default function ServiceAreaPage() {
     const steps = [
         {
             title: "Site Evaluation & Color Consultation",
-            desc: "We assess the substrate condition and help select the perfect palette.",
+            description: "We assess the substrate condition and help select the perfect palette.",
             proTip: "Test samples in both morning and evening light to see the true undertones.",
             reason: "Ensures the color matches your home's character and regional light."
         },
         {
             title: "Industrial Power Washing (Exteriors)",
-            desc: "Removing Spokane's seasonal grime, mold, and loose debris.",
+            description: "Removing Spokane's seasonal grime, mold, and loose debris.",
             pitfall: "Skipping the dry time after washing, which traps moisture under the paint.",
             reason: "Paint only sticks to what it's touching. Clean surfaces are non-negotiable."
         },
         {
             title: "Meticulous Masking & Protection",
-            desc: "Covering windows, landscaping, and floors with heavy-duty plastic and drop cloths.",
+            description: "Covering windows, landscaping, and floors with heavy-duty plastic and drop cloths.",
             reason: "Clean lines are the difference between a DIY look and a 'Prestige' finish."
         },
         {
             title: "Scraping & Sanding",
-            desc: "Mechanical removal of failing layers.",
+            description: "Mechanical removal of failing layers.",
             reason: "Prevents 'feathering' and ensures a smooth, uniform surface."
         },
         {
             title: "High-Performance Priming",
-            desc: "Applying specialized bonding primers from Sherwin Williams or Benjamin Moore.",
+            description: "Applying specialized bonding primers from Sherwin Williams or Benjamin Moore.",
             reason: "Blocks stains and creates a 'grip' for the top coat."
         },
         {
             title: "Professional Application",
-            desc: "Two coats of premium, high-build paint applied via HVLP spray or expert brush/roll.",
+            description: "Two coats of premium, high-build paint applied via HVLP spray or expert brush/roll.",
             proTip: "Using Benjamin Moore SCUFF-X for high-traffic interior halls is a game-changer for durability."
         },
         {
             title: "Detail Work (Trim & Molding)",
-            desc: "Hand-finishing edges and architectural details."
+            description: "Hand-finishing edges and architectural details."
         },
         {
             title: "Total Site Cleanup",
-            desc: "Removing all debris, tape, and equipment. We leave your home cleaner than we found it."
+            description: "Removing all debris, tape, and equipment. We leave your home cleaner than we found it."
         },
         {
             title: "Final Walkthrough with Robert",
-            desc: "A personal inspection to ensure we hit our 'Expect Excellence' standard."
+            description: "A personal inspection to ensure we hit our 'Expect Excellence' standard."
         }
     ];
 
@@ -284,7 +284,7 @@ export default function ServiceAreaPage() {
                             <div key={i} className="bg-white/5 border border-white/10 p-8 rounded-3xl group hover:border-brand-green/50 transition-all text-left">
                                 <div className="text-brand-green font-poppins font-bold text-5xl opacity-20 mb-4">{i + 1}</div>
                                 <h4 className="text-xl font-bold mb-4 text-white uppercase tracking-tighter leading-8">{step.title}</h4>
-                                <p className="text-gray-400 mb-6 text-sm leading-relaxed">{step.desc}</p>
+                                <p className="text-gray-400 mb-6 text-sm leading-relaxed">{step.description}</p>
                                 
                                 <div className="space-y-4 pt-4 border-t border-white/10">
                                     <div className="flex gap-3 text-xs">
@@ -379,15 +379,15 @@ export default function ServiceAreaPage() {
                     <h2 className="text-3xl md:text-5xl font-poppins font-bold mb-12 text-center text-brand-black uppercase tracking-tighter leading-tight">Regional Mistakes to Avoid</h2>
                     <div className="grid md:grid-cols-3 gap-8">
                         {[
-                            { title: "Painting Over Wet Siding", desc: "Always wait at least 48 hours after rain or power washing. Moisture trapped under paint causes instant bubbling." },
-                            { title: "Ignoring Humidity Shifts", desc: "Extreme Spokane dry spells (under 15%) can cause paint to flash dry, leaving marks. We use extenders for a 'wet edge'." },
-                            { title: "Cheap Caulk Failure", desc: "Generic caulk snaps in freezing winters. We use high-grade urethane sealants that stretch with your home's movement." }
+                            { title: "Painting Over Wet Siding", description: "Always wait at least 48 hours after rain or power washing. Moisture trapped under paint causes instant bubbling." },
+                            { title: "Ignoring Humidity Shifts", description: "Extreme Spokane dry spells (under 15%) can cause paint to flash dry, leaving marks. We use extenders for a 'wet edge'." },
+                            { title: "Cheap Caulk Failure", description: "Generic caulk snaps in freezing winters. We use high-grade urethane sealants that stretch with your home's movement." }
                         ].map((item, i) => (
                             <div key={i} className="bg-gray-50 p-8 rounded-[2rem] border border-red-500/10 group hover:border-red-500 transition-all">
                                 <h4 className="text-xl font-bold mb-4 text-brand-black flex items-center gap-2">
                                     <AlertTriangle size={20} className="text-red-500" /> {item.title}
                                 </h4>
-                                <p className="text-gray-600 text-sm leading-relaxed font-medium italic"><span className="font-bold text-red-500 uppercase not-italic">Avoid:</span> {item.desc}</p>
+                                <p className="text-gray-600 text-sm leading-relaxed font-medium italic"><span className="font-bold text-red-500 uppercase not-italic">Avoid:</span> {item.description}</p>
                             </div>
                         ))}
                     </div>

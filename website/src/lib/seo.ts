@@ -72,11 +72,12 @@ export function injectMetaTags(tags: MetaTag[], category: string): () => void {
 }
 
 interface SEOOptions {
-    title: string;
+    seoTitle: string;
     description: string;
     path: string;
     keywords?: string;
     ogImage?: string;
+    noindex?: boolean;
     schemas?: { id: string; data: object }[];
 }
 
@@ -87,7 +88,7 @@ export function injectPageSEO(options: SEOOptions): () => void {
     const cleanups: (() => void)[] = [];
 
     // Title & Description
-    document.title = options.title;
+    document.title = options.seoTitle;
     const descMeta = document.querySelector('meta[name="description"]');
     if (descMeta) {
         descMeta.setAttribute('content', options.description);
@@ -120,7 +121,7 @@ export function injectPageSEO(options: SEOOptions): () => void {
     const ogTags: MetaTag[] = [
         { property: 'og:type', content: 'website' },
         { property: 'og:site_name', content: 'Prestige Custom Painting LLC' },
-        { property: 'og:title', content: options.title },
+        { property: 'og:title', content: options.seoTitle },
         { property: 'og:description', content: options.description },
         { property: 'og:url', content: options.path.startsWith('http') ? options.path : `${SITE_URL}${options.path}` },
         { property: 'og:image', content: options.ogImage || `${SITE_URL}/logo.png` },
@@ -129,13 +130,21 @@ export function injectPageSEO(options: SEOOptions): () => void {
 
     const twitterTags: MetaTag[] = [
         { name: 'twitter:card', content: 'summary_large_image' },
-        { name: 'twitter:title', content: options.title },
+        { name: 'twitter:title', content: options.seoTitle },
         { name: 'twitter:description', content: options.description },
         { name: 'twitter:image', content: options.ogImage || `${SITE_URL}/logo.png` },
     ];
 
     cleanups.push(injectMetaTags(ogTags, 'og'));
     cleanups.push(injectMetaTags(twitterTags, 'twitter'));
+
+    // Robots meta tag for Guideline 9 & 10
+    if (options.noindex) {
+        const robotsTags: MetaTag[] = [
+            { name: 'robots', content: 'noindex, nofollow, noarchive' }
+        ];
+        cleanups.push(injectMetaTags(robotsTags, 'robots'));
+    }
 
     // Schemas
     if (options.schemas) {
@@ -151,13 +160,13 @@ export function injectPageSEO(options: SEOOptions): () => void {
 /**
  * Generates a standard WebPage schema.
  */
-export function generateWebPageSchema(title: string, description: string, path: string) {
+export function generateWebPageSchema(options: { topic: string; description: string; url: string }) {
     return {
         "@context": "https://schema.org",
         "@type": "WebPage",
-        "name": title,
-        "description": description,
-        "url": `${SITE_URL}${path}`,
+        "name": options.topic,
+        "description": options.description,
+        "url": options.url.startsWith('http') ? options.url : `${SITE_URL}${options.url}`,
         "publisher": {
             "@id": `${SITE_URL}/#organization`
         }
@@ -186,7 +195,7 @@ export function generateFAQSchema(faqs: { q: string; a: string }[]) {
  * Generates an Article/BlogPosting schema.
  */
 export function generateArticleSchema(options: {
-    title: string;
+    topic: string;
     description: string;
     path: string;
     image?: string;
@@ -196,7 +205,7 @@ export function generateArticleSchema(options: {
     return {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": options.title,
+        "headline": options.topic,
         "description": options.description,
         "image": options.image || `${SITE_URL}/logo.png`,
         "author": {

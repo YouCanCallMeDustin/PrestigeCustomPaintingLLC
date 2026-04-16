@@ -42,7 +42,7 @@ function SpokaneHomeImprovementPage() {
         const description = "Discover the top home improvement in Spokane strategies. Boost ROI with painting, remodeling & curb appeal. Get your free project estimate from Prestige today!";
 
         return injectPageSEO({
-            title,
+            seoTitle: title,
             description,
             path: '/spokane-home-improvement-guide',
             schemas: [
@@ -50,7 +50,7 @@ function SpokaneHomeImprovementPage() {
                 {
                     id: 'webpage',
                     data: generateWebPageSchema({
-                        title,
+                        topic: title,
                         description,
                         url: "https://prestigecustompaintingllc.com/spokane-home-improvement-guide"
                     })
@@ -62,49 +62,49 @@ function SpokaneHomeImprovementPage() {
     const steps = [
         {
             title: "Goal Setting & Budgeting",
-            desc: "Identify if your goal is personal enjoyment or market resale. Resale projects should focus on neutral, high-demand upgrades.",
+            description: "Identify if your goal is personal enjoyment or market resale. Resale projects should focus on neutral, high-demand upgrades.",
             proTip: "Always set aside a 10-15% contingency fund for unexpected issues.",
             pitfall: "Over-improving for the neighborhood, making it difficult to recoup costs."
         },
         {
             title: "High-Impact Identification",
-            desc: "Focus on the 'Big Three': Kitchens, Bathrooms, and the Exterior. These areas consistently provide the highest ROI.",
+            description: "Focus on the 'Big Three': Kitchens, Bathrooms, and the Exterior. These areas consistently provide the highest ROI.",
             proTip: "Kitchen cabinet refinishing can save you thousands compared to a full replacement.",
             pitfall: "Ignoring the exterior until the interior is perfect. Curb appeal is the first impression."
         },
         {
             title: "Professional Consultation",
-            desc: "Get at least three quotes from licensed local contractors. Ask for local Spokane references and proof of insurance.",
+            description: "Get at least three quotes from licensed local contractors. Ask for local Spokane references and proof of insurance.",
             proTip: "A reputable contractor will provide insurance and references readily.",
             pitfall: "Choosing the lowest bid without checking for quality of materials."
         },
         {
             title: "Permitting and Planning",
-            desc: "Check if your project requires City of Spokane building permits. Most cosmetic changes like painting do not.",
+            description: "Check if your project requires City of Spokane building permits. Most cosmetic changes like painting do not.",
             proTip: "Licensed contractors should handle the permitting process for you.",
             pitfall: "Starting structural work before permits are finalized."
         },
         {
             title: "Material Selection",
-            desc: "Choose materials that can withstand local conditions. From premium paints to moisture-resistant drywall.",
+            description: "Choose materials that can withstand local conditions. From premium paints to moisture-resistant drywall.",
             proTip: "Use low-VOC paints for interior work to maintain indoor air quality in the winter.",
             pitfall: "Buying 'big box' store-grade paint that requires more coats."
         },
         {
             title: "Preparation & Staging",
-            desc: "For painting, this means masking and sanding. For remodeling, it means protecting floors from dust.",
+            description: "For painting, this means masking and sanding. For remodeling, it means protecting floors from dust.",
             proTip: "Meticulous prep work accounts for 70% of a professional finish.",
             pitfall: "Rushing the prep phase, which leads to peeling paint later."
         },
         {
             title: "Expert Execution",
-            desc: "Applying the materials using professional techniques—HVLP sprayers for cabinets, or precision rollers for walls.",
+            description: "Applying the materials using professional techniques—HVLP sprayers for cabinets, or precision rollers for walls.",
             proTip: "Maintain a 'wet edge' while painting to avoid visible lap marks.",
             pitfall: "Working in direct sunlight during 90-degree Spokane summers."
         },
         {
             title: "Final Walkthrough",
-            desc: "Inspect the work under different lighting conditions. Check for clean lines and uniform coverage.",
+            description: "Inspect the work under different lighting conditions. Check for clean lines and uniform coverage.",
             proTip: "Use a high-lumen flashlight to spot imperfections in wall texture.",
             pitfall: "Signing off on the project before the paint has fully dried and cured."
         }
@@ -201,7 +201,7 @@ function SpokaneHomeImprovementPage() {
                             <div key={i} className="bg-white/5 border border-white/10 p-8 rounded-3xl relative overflow-hidden group hover:border-brand-green/50 transition-all">
                                 <div className="text-brand-green font-poppins font-bold text-5xl opacity-20 mb-4">{i + 1}</div>
                                 <h4 className="text-xl font-bold mb-4 text-white">{step.title}</h4>
-                                <p className="text-gray-400 mb-6 text-sm leading-relaxed">{step.desc}</p>
+                                <p className="text-gray-400 mb-6 text-sm leading-relaxed">{step.description}</p>
                                 <div className="space-y-4 pt-4 border-t border-white/10">
                                     <div className="flex gap-3">
                                         <Star size={16} className="text-brand-green shrink-0 mt-1" />

@@ -45,17 +45,17 @@ const ExteriorPaintingCost = () => {
 
     const relatedTopics = [
         {
-            title: "Cost to Paint a House",
+            topic: "Cost to Paint a House",
             path: "/cost-to-paint-a-house",
             description: "Our main hub for all painting costs, including national vs. local Spokane averages."
         },
         {
-            title: "Two-Story House Costs",
+            topic: "Two-Story House Costs",
             path: "/cost-to-paint-a-two-story-house",
             description: "How height and ladder work impact your exterior painting bid."
         },
         {
-            title: "DIY vs. Professional",
+            topic: "DIY vs. Professional",
             path: "/diy-vs-hiring-a-painter",
             description: "A candid look at the risks of DIY exterior painting in a harsh climate."
         }
@@ -64,25 +64,31 @@ const ExteriorPaintingCost = () => {
     return (
         <div className="min-h-screen bg-white text-brand-black">
             <SEOHead 
-                title="Cost to Paint Exterior of House in Spokane (2026) | Prestige"
-                description="What does it cost to paint your home's exterior in Spokane? Get detailed pricing for stucco, wood siding, trim, and preparation for the Inland Northwest."
+                seoTitle="Exterior House Painting Cost in Spokane | 2026 Pricing Guide"
+                description="What does it cost to paint your house exterior in Spokane? Get detailed 2026 pricing for siding, trim, and weather preparation for the Inland Northwest."
                 path="/cost-to-paint-house-exterior"
                 schemas={schemas}
             />
             <Navbar />
 
-            <main className="max-w-7xl mx-auto px-4 pt-24 pb-20">
-                <Breadcrumbs items={breadcrumbItems} />
-
-                <article className="max-w-4xl">
-                    <header className="mb-12">
-                        <h1 className="text-4xl md:text-6xl font-poppins font-bold leading-tight mb-8 text-brand-black">
+            <header className="bg-brand-black pt-28 pb-16 md:pt-36 md:pb-24 text-white relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-1/2 h-full bg-brand-green/10 -skew-x-12 transform translate-x-32" />
+                <div className="max-w-7xl mx-auto px-4 relative z-10">
+                    <Breadcrumbs items={breadcrumbItems} variant="light" />
+                    
+                    <div className="max-w-4xl">
+                        <h1 className="text-4xl md:text-6xl font-poppins font-bold leading-tight mb-8">
                             Cost to Paint the <span className="text-brand-green">Exterior</span> of a House in Spokane
                         </h1>
-                        <p className="text-xl text-gray-600 leading-relaxed font-medium">
+                        <p className="text-xl text-gray-300 leading-relaxed font-medium">
                             Protecting your home from Spokane's extreme seasonal shifts—from sub-zero winters to triple-digit summers—starts with a high-quality exterior paint job. In 2026, the average cost for an exterior repaint ranges from <strong>$3,500 to $9,500</strong>, depending on your siding type and the level of preparation required.
                         </p>
-                    </header>
+                    </div>
+                </div>
+            </header>
+
+            <main className="max-w-7xl mx-auto px-4 py-20">
+                <article className="max-w-4xl">
 
                     <div className="prose prose-lg prose-brand max-w-none">
                         <section className="my-12">
@@ -158,9 +164,16 @@ const ExteriorPaintingCost = () => {
                                     {phoneNumber}
                                 </a>
                             </div>
-                            <div className="shrink-0">
-                                <img src="/exterior.png" alt="Full exterior painting project in Spokane WA" className="w-[300px] h-auto rounded-2xl shadow-xl" />
-                            </div>
+                            <figure className="shrink-0 group">
+                                <img 
+                                    src="/exterior.png" 
+                                    alt="Full exterior painting project in Spokane WA" 
+                                    className="w-[300px] h-auto rounded-2xl shadow-xl transition-transform group-hover:scale-[1.02]" 
+                                />
+                                <figcaption className="mt-4 text-xs text-gray-400 text-center italic">
+                                    Example of a full exterior repaint project in Spokane, featuring siding and trim protection.
+                                </figcaption>
+                            </figure>
                         </section>
 
                         <RelatedTopics topics={relatedTopics} />

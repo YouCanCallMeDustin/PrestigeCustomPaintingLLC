@@ -82,7 +82,7 @@ export const generateBreadcrumbSchema = (items: { name: string; path: string }[]
 };
 
 export const generateArticleSchema = (data: {
-  title: string;
+  topic: string;
   description: string;
   image: string;
   datePublished: string;
@@ -93,7 +93,7 @@ export const generateArticleSchema = (data: {
   return {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": data.title,
+    "headline": data.topic,
     "description": data.description,
     "image": data.image,
     "datePublished": data.datePublished,
@@ -160,14 +160,14 @@ export const generateServiceSchema = (data: {
 };
 
 export const generateWebPageSchema = (data: {
-  title: string;
+  topic: string;
   description: string;
   url: string;
 }) => {
   return {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": data.title,
+    "name": data.topic,
     "description": data.description,
     "url": data.url,
     "publisher": {

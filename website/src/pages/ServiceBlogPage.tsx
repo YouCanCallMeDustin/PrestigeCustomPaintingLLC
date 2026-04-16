@@ -16,7 +16,11 @@ function ServiceBlogPage() {
     useEffect(() => {
         if (data && serviceSlug) {
             const schemas: { id: string; data: any }[] = [
-                { id: 'webpage-schema', data: generateWebPageSchema(`${data.h1} | Prestige Custom Painting LLC`, data.metaDescription, `/service/${serviceSlug}`) }
+                { id: 'webpage-schema', data: generateWebPageSchema({
+                    topic: `${data.h1} | Prestige Custom Painting LLC`,
+                    description: data.metaDescription,
+                    url: `https://prestigecustompaintingllc.com/service/${serviceSlug}`
+                }) }
             ];
 
             if (data.faqs && data.faqs.length > 0) {
@@ -24,7 +28,7 @@ function ServiceBlogPage() {
             }
 
             return injectPageSEO({
-                title: `${data.h1} | Prestige Custom Painting LLC`,
+                seoTitle: `${data.h1} | Prestige Custom Painting LLC`,
                 description: data.metaDescription,
                 keywords: data.keywords,
                 path: `/service/${serviceSlug}`,
@@ -109,9 +113,9 @@ function ServiceBlogPage() {
                               {data.whoThisIsFor.map((item, i) => (
                                 <div key={i} className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
                                   <h3 className="text-lg font-bold mb-2 flex items-center gap-2 text-brand-black">
-                                    <CheckCircle2 className="text-brand-green" size={20} /> {item.title}
+                                    <CheckCircle2 className="text-brand-green" size={20} /> {item.target}
                                   </h3>
-                                  <p className="text-gray-600 text-sm leading-relaxed">{item.desc}</p>
+                                  <p className="text-gray-600 text-sm leading-relaxed">{item.summary}</p>
                                 </div>
                               ))}
                             </div>
@@ -129,7 +133,7 @@ function ServiceBlogPage() {
                                     {i + 1}
                                   </div>
                                   <div className="flex-1">
-                                    <h3 className="font-bold text-xl mb-3">{step.title}</h3>
+                                    <h3 className="font-bold text-xl mb-3">{step.step}</h3>
                                     <div className="bg-gray-50 p-6 rounded-2xl border-l-4 border-gray-200">
                                       <p className="text-gray-700 leading-relaxed mb-4">{step.why}</p>
                                       <div className="flex flex-col md:flex-row gap-4 mt-4">

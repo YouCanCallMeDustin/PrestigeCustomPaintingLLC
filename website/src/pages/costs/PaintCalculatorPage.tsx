@@ -62,17 +62,17 @@ const PaintCalculatorPage = () => {
 
     const relatedTopics = [
         {
-            title: "Cost to Paint a House",
+            topic: "Cost to Paint a House",
             path: "/cost-to-paint-a-house",
             description: "The main guide for understanding total project costs in Spokane."
         },
         {
-            title: "DIY vs. Professional",
+            topic: "DIY vs. Professional",
             path: "/diy-vs-hiring-a-painter",
             description: "Compare the cost of materials vs. professional turnkey services."
         },
         {
-            title: "Exterior Painting Costs",
+            topic: "Exterior Painting Costs",
             path: "/cost-to-paint-house-exterior",
             description: "Budgeting for professional exterior painting results."
         }
@@ -81,28 +81,34 @@ const PaintCalculatorPage = () => {
     return (
         <div className="min-h-screen bg-white text-brand-black">
             <SEOHead 
-                title="Paint Calculator: How Much Paint Do I Need? | Prestige Cost Guide"
-                description="Use our Spokane house paint calculator to estimate how many gallons you need for your project. Learn about coverage rates for local siding and textures."
+                seoTitle="Spokane Interior Paint Calculator: Accurate Material Estimates"
+                description="Stop guessing how much paint to buy. Use our professional paint calculator to estimate gallons needed for your Spokane home project and save on materials."
                 path="/how-much-paint-do-i-need"
                 schemas={schemas}
             />
             <Navbar />
 
-            <main className="max-w-7xl mx-auto px-4 pt-24 pb-20">
-                <Breadcrumbs items={breadcrumbItems} />
-
-                <article className="max-w-4xl">
-                    <header className="mb-12 text-center md:text-left">
+            <header className="bg-brand-black pt-28 pb-16 md:pt-36 md:pb-24 text-white relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-1/2 h-full bg-brand-green/10 -skew-x-12 transform translate-x-32" />
+                <div className="max-w-7xl mx-auto px-4 relative z-10">
+                    <Breadcrumbs items={breadcrumbItems} variant="light" />
+                    
+                    <div className="max-w-4xl">
                         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-green/10 text-brand-green text-xs font-bold mb-6">
                             INTERACTIVE TOOL
                         </div>
                         <h1 className="text-4xl md:text-6xl font-poppins font-bold leading-tight mb-8">
                             How Much Paint <span className="text-brand-green">Do I Need?</span>
                         </h1>
-                        <p className="text-xl text-gray-600 leading-relaxed font-medium">
+                        <p className="text-xl text-gray-300 leading-relaxed font-medium">
                             Don't overbuy or run out mid-project. Our Spokane paint calculator helps you estimate the exact number of gallons needed for your interior or exterior walls based on local residential dimensions.
                         </p>
-                    </header>
+                    </div>
+                </div>
+            </header>
+
+            <main className="max-w-7xl mx-auto px-4 py-20">
+                <article className="max-w-4xl">
 
                     {/* Interactive Calculator */}
                     <div className="bg-gray-50 p-8 md:p-12 rounded-[3rem] border border-gray-100 mb-16 shadow-lg shadow-gray-200/50">

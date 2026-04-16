@@ -36,37 +36,37 @@ function PaintStrippingPage() {
     const steps = [
         {
             title: "Coating Analysis & Testing",
-            desc: "We analyze the number of layers and test for lead content to determine the safest and most efficient removal protocol for your specific substrate.",
+            description: "We analyze the number of layers and test for lead content to determine the safest and most efficient removal protocol for your specific substrate.",
             proTip: "Multiple layers of old oil-based paint often respond best to infrared heat, while newer acrylics may require chemical peels.",
             pitfall: "Assuming old paint isn't lead-based. Most Spokane homes built before 1978 contain lead, requiring certified handling."
         },
         {
             title: "Environmental Containment",
-            desc: "We set up 6-mil plastic shielding and utilize HEPA-filtered negative air machines to prevent any dust or fumes from migrating into your living space.",
+            description: "We set up 6-mil plastic shielding and utilize HEPA-filtered negative air machines to prevent any dust or fumes from migrating into your living space.",
             proTip: "Extend containment 10 feet beyond the work area to ensure absolute protection of your landscaping and walkways.",
             pitfall: "Failing to cover the ground properly. Lead paint chips in the soil create a long-term environmental hazard for your property."
         },
         {
             title: "Chemical or Heat Application",
-            desc: "We apply non-toxic, biodegradable strippers or infrared heat sources that soften the paint bond without generating toxic smoke or fumes.",
+            description: "We apply non-toxic, biodegradable strippers or infrared heat sources that soften the paint bond without generating toxic smoke or fumes.",
             proTip: "Infrared heat is the safest way to remove paint from wood as it doesn't reach temperatures high enough to ignite historic timber.",
             pitfall: "Using a standard heat gun. These can reach 1000°F+, which vaporizes lead and poses a significant fire risk."
         },
         {
             title: "Precision Mechanical Scraping",
-            desc: "Using handcrafted scrapers, we manually remove the softened paint layers, following the grain of the wood to prevent gouging.",
+            description: "Using handcrafted scrapers, we manually remove the softened paint layers, following the grain of the wood to prevent gouging.",
             proTip: "Keep your scraper blades razor-sharp; a dull blade requires more pressure and is more likely to damage the substrate.",
             pitfall: "Scraping across the grain. This tears the wood fibers and creates a rough surface that is difficult to sand smooth."
         },
         {
             title: "Substrate Neutralization",
-            desc: "For chemical stripping, we wash the surface with a neutralizer to balance the pH, ensuring the new paint will bond correctly.",
+            description: "For chemical stripping, we wash the surface with a neutralizer to balance the pH, ensuring the new paint will bond correctly.",
             proTip: "Use a simple pH test strip to verify the surface is neutral before moving to the sanding phase.",
             pitfall: "Painting over un-neutralized stripper. The high pH will 'cook' the new paint, causing it to peel within weeks."
         },
         {
             title: "Surface Sanding & Stabilization",
-            desc: "We perform a multi-grit sanding process to remove residual fibers, followed by a high-grade oil primer to lock in the surface.",
+            description: "We perform a multi-grit sanding process to remove residual fibers, followed by a high-grade oil primer to lock in the surface.",
             proTip: "Transition from 80-grit to 120-grit for a finish that looks like new wood yet retains its historic character.",
             pitfall: "Skiping the primer. Bare, old-growth wood is extremely porous and will suck the life out of your topcoat if not sealed."
         }
@@ -77,7 +77,7 @@ function PaintStrippingPage() {
         const description = "Spokane's expert paint stripping services. Lead-safe removal from wood, metal, and masonry. Professional surface restoration. Free estimates!";
         
         return injectPageSEO({
-            title,
+            seoTitle: title,
             description,
             path: '/paint-stripping-spokane',
             schemas: [
@@ -85,7 +85,7 @@ function PaintStrippingPage() {
                 {
                     id: 'webpage',
                     data: generateWebPageSchema({
-                        title,
+                        topic: title,
                         description,
                         url: "https://prestigecustompaintingllc.com/paint-stripping-spokane"
                     })
@@ -102,7 +102,7 @@ function PaintStrippingPage() {
                     data: generateHowToSchema({
                         name: "Professional Paint Stripping Process",
                         description: "Our safe and meticulous 6-step restoration process for stripping failing paint.",
-                        steps: steps.map(s => ({ name: s.title, text: s.desc }))
+                        steps: steps.map(s => ({ name: s.title, text: s.description }))
                     })
                 }
             ]
@@ -244,16 +244,16 @@ function PaintStrippingPage() {
                     </div>
                     <div className="grid md:grid-cols-3 gap-8 text-left">
                         {[
-                            { name: "Infrared Heat", desc: "Safely breaks the bond of historic oil paints without reaching the point of lead vaporization." },
-                            { name: "Non-Toxic Chemical Peel", desc: "A paste applied to the surface that 'eats' through 10+ layers of paint for one easy removal." },
-                            { name: "Eco-Blasting", desc: "Low-pressure media used for metal railings and intricate details that cannot be hand-scraped." }
+                            { name: "Infrared Heat", description: "Safely breaks the bond of historic oil paints without reaching the point of lead vaporization." },
+                            { name: "Non-Toxic Chemical Peel", description: "A paste applied to the surface that 'eats' through 10+ layers of paint for one easy removal." },
+                            { name: "Eco-Blasting", description: "Low-pressure media used for metal railings and intricate details that cannot be hand-scraped." }
                         ].map((item, i) => (
                             <div key={i} className="p-8 bg-gray-50 rounded-[2.5rem] border border-gray-100 hover:border-brand-green transition-all shadow-sm">
                                 <div className="w-14 h-14 bg-brand-green/10 rounded-2xl flex items-center justify-center text-brand-green mb-6">
                                     <Thermometer size={24} />
                                 </div>
                                 <h4 className="text-xl font-bold mb-4 uppercase tracking-tight">{item.name}</h4>
-                                <p className="text-gray-600 leading-relaxed font-medium text-sm">{item.desc}</p>
+                                <p className="text-gray-600 leading-relaxed font-medium text-sm">{item.description}</p>
                             </div>
                         ))}
                     </div>
@@ -274,7 +274,7 @@ function PaintStrippingPage() {
                             <div key={i} className="bg-white/5 border border-white/10 p-8 rounded-3xl group hover:border-brand-green/50 transition-all relative overflow-hidden">
                                 <div className="text-brand-green font-poppins font-bold text-5xl opacity-20 mb-4">{i + 1}</div>
                                 <h4 className="text-xl font-bold mb-4 text-white uppercase tracking-tighter leading-8">{step.title}</h4>
-                                <p className="text-gray-400 mb-6 text-sm leading-relaxed">{step.desc}</p>
+                                <p className="text-gray-400 mb-6 text-sm leading-relaxed">{step.description}</p>
                                 
                                 <div className="space-y-4 pt-4 border-t border-white/10">
                                     <div className="flex gap-3 text-xs">

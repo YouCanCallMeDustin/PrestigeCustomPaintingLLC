@@ -45,17 +45,17 @@ const TwoStoryHouseCost = () => {
 
     const relatedTopics = [
         {
-            title: "Exterior Painting Costs",
+            topic: "Exterior Painting Costs",
             path: "/cost-to-paint-house-exterior",
             description: "Standard exterior pricing for siding, trim, and weather preparation."
         },
         {
-            title: "Cost to Paint a House",
+            topic: "Cost to Paint a House",
             path: "/cost-to-paint-a-house",
             description: "The main guide for understanding total project costs in Spokane."
         },
         {
-            title: "DIY vs. Professional",
+            topic: "DIY vs. Professional",
             path: "/diy-vs-hiring-a-painter",
             description: "Why safety makes professional help essential for multi-story projects."
         }
@@ -64,28 +64,34 @@ const TwoStoryHouseCost = () => {
     return (
         <div className="min-h-screen bg-white text-brand-black">
             <SEOHead 
-                title="Cost to Paint a 2 Story House in Spokane (2026 Prices)"
-                description="What is the average cost to paint a two-story home? Learn how height, dormers, and ladder work impact labor rates for exterior painting in Spokane."
+                seoTitle="2 Story House Painting Cost: Spokane Expert Pricing Guide"
+                description="Need a price for your two-story home? See 2026 exterior painting costs for large homes in Spokane, including ladder work and safety preparation fees."
                 path="/cost-to-paint-a-two-story-house"
                 schemas={schemas}
             />
             <Navbar />
 
-            <main className="max-w-7xl mx-auto px-4 pt-24 pb-20">
-                <Breadcrumbs items={breadcrumbItems} />
-
-                <article className="max-w-4xl">
-                    <header className="mb-12">
+            <header className="bg-brand-black pt-28 pb-16 md:pt-36 md:pb-24 text-white relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-1/2 h-full bg-brand-green/10 -skew-x-12 transform translate-x-32" />
+                <div className="max-w-7xl mx-auto px-4 relative z-10">
+                    <Breadcrumbs items={breadcrumbItems} variant="light" />
+                    
+                    <div className="max-w-4xl">
                         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-green/10 text-brand-green text-xs font-bold mb-6">
                             SPECIALIZED SERVICE
                         </div>
                         <h1 className="text-4xl md:text-6xl font-poppins font-bold leading-tight mb-8">
                             Cost to Paint a <span className="text-brand-green">Two-Story House</span> in Spokane
                         </h1>
-                        <p className="text-xl text-gray-600 leading-relaxed font-medium">
+                        <p className="text-xl text-gray-300 leading-relaxed font-medium">
                             If you own a larger multi-story home in Spokane Valley, Liberty Lake, or Cheney, your exterior painting bid will be significantly different from a standard rancher. For 2026, the cost for a 2-story repaint typically ranges from <strong>$5,500 to $10,000+</strong>. This guide explores the "Height Premium" and why safety is a major factor in your quote.
                         </p>
-                    </header>
+                    </div>
+                </div>
+            </header>
+
+            <main className="max-w-7xl mx-auto px-4 py-20">
+                <article className="max-w-4xl">
 
                     <div className="prose prose-lg prose-brand max-w-none">
                         <section className="my-12">

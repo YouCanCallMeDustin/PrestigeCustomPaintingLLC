@@ -43,37 +43,37 @@ function InteriorPaintingPage() {
     const steps = [
         {
             title: "Detailed Prep & Protection",
-            desc: "The foundation of a great paint job isn't paint—it's preparation. We meticulously mask all edges, cover floors with heavy-duty drop cloths, and seal off non-painted areas.",
+            description: "The foundation of a great paint job isn't paint—it's preparation. We meticulously mask all edges, cover floors with heavy-duty drop cloths, and seal off non-painted areas.",
             proTip: "Use blue painter's tape for clean lines, but remove it at a 45-degree angle while the paint is still slightly tacky.",
             pitfall: "Skipping floor protection. Paint splatter on hardwood or carpet is extremely difficult to remove once cured."
         },
         {
             title: "Surface Repair & Sanding",
-            desc: "We patch drywall holes, fix nail pops, and sand rough transitions. This ensures the substrate is perfectly smooth before any coating is applied.",
+            description: "We patch drywall holes, fix nail pops, and sand rough transitions. This ensures the substrate is perfectly smooth before any coating is applied.",
             proTip: "Always use a light to check for wall imperfections before painting; shadows reveal what the eye misses.",
             pitfall: "Painting over dusty walls. Paint won't adhere properly to dust, leading to peeling later."
         },
         {
             title: "Precision Priming",
-            desc: "For color shifts or bare patches, we apply high-adhesion primers. This locks in the surface and ensures the topcoat color is true and vibrant.",
+            description: "For color shifts or bare patches, we apply high-adhesion primers. This locks in the surface and ensures the topcoat color is true and vibrant.",
             proTip: "Tint your primer toward your final color for better coverage on dark-to-light transitions.",
             pitfall: "Using the wrong primer. Unsealed drywall requires a different primer than previously painted surfaces."
         },
         {
             title: "Topcoat Application",
-            desc: "We apply premium paints using professional techniques (brush, roll, or spray). We focus on consistent coverage and razor-sharp cut-ins at ceilings and trim.",
+            description: "We apply premium paints using professional techniques (brush, roll, or spray). We focus on consistent coverage and razor-sharp cut-ins at ceilings and trim.",
             proTip: "Work from top to bottom (ceiling to baseboards) to catch any drips as you go.",
             pitfall: "Over-working the paint. Too much brushing leads to visible marks and an uneven texture."
         },
         {
             title: "Edge Detail & Cut-ins",
-            desc: "Our master painters hand-cut all edges around moldings, windows, and doors, ensuring high-contrast lines that define the room's architecture.",
+            description: "Our master painters hand-cut all edges around moldings, windows, and doors, ensuring high-contrast lines that define the room's architecture.",
             proTip: "A high-quality angled sash brush is essential for professional cut-ins without tape.",
             pitfall: "Relying solely on tape for edges. Paint can bleed under tape if it's not sealed correctly."
         },
         {
             title: "Final Inspection & Cleanup",
-            desc: "Robert personally inspects every wall. We perform a total cleanup, removing all debris and ensuring your home is spotless.",
+            description: "Robert personally inspects every wall. We perform a total cleanup, removing all debris and ensuring your home is spotless.",
             proTip: "Save a small, labeled jar of leftover paint for future minor touch-ups.",
             pitfall: "Leaving the site before the owner does a walkthrough. Client satisfaction is paramount."
         }
@@ -84,7 +84,7 @@ function InteriorPaintingPage() {
         const description = "Top-rated interior painters in Spokane, WA. We specialize in high-end residential painting, cabinet refinishing & modern finishes. Get your free quote today!";
 
         return injectPageSEO({
-            title,
+            seoTitle: title,
             description,
             path: '/interior-painting-spokane',
             schemas: [
@@ -92,7 +92,7 @@ function InteriorPaintingPage() {
                 {
                     id: 'webpage',
                     data: generateWebPageSchema({
-                        title,
+                        topic: title,
                         description,
                         url: "https://prestigecustompaintingllc.com/interior-painting-spokane"
                     })
@@ -109,7 +109,7 @@ function InteriorPaintingPage() {
                     data: generateHowToSchema({
                         name: "How to Professionally Paint an Interior Room",
                         description: "The 6-step meticulous preparation and application process we use for flawless interior painting.",
-                        steps: steps.map(s => ({ name: s.title, text: s.desc }))
+                        steps: steps.map(s => ({ name: s.title, text: s.description }))
                     })
                 }
             ]
@@ -275,16 +275,16 @@ function InteriorPaintingPage() {
                     </div>
                     <div className="grid md:grid-cols-3 gap-8">
                         {[
-                            { title: "Homeowners", desc: "Families looking to modernize their living space with premium, durable, and safe low-VOC finishes." },
-                            { title: "Home Sellers", desc: "Sellers wanting to maximize home value and appeal before hitting the competitive Spokane real estate market." },
-                            { title: "New Buyers", desc: "People who have just purchased a home and want to personalize it with high-quality, professional colors." }
+                            { title: "Homeowners", description: "Families looking to modernize their living space with premium, durable, and safe low-VOC finishes." },
+                            { title: "Home Sellers", description: "Sellers wanting to maximize home value and appeal before hitting the competitive Spokane real estate market." },
+                            { title: "New Buyers", description: "People who have just purchased a home and want to personalize it with high-quality, professional colors." }
                         ].map((item, i) => (
                             <div key={i} className="bg-gray-50 p-8 rounded-[2rem] border border-gray-100 hover:border-brand-green transition-all group">
                                 <div className="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center text-brand-green mb-6 group-hover:bg-brand-green group-hover:text-white transition-all">
                                     <User size={24} />
                                 </div>
                                 <h3 className="text-xl font-bold mb-4">{item.title}</h3>
-                                <p className="text-gray-600 leading-relaxed">{item.desc}</p>
+                                <p className="text-gray-600 leading-relaxed">{item.description}</p>
                             </div>
                         ))}
                     </div>
@@ -305,7 +305,7 @@ function InteriorPaintingPage() {
                             <div key={i} className="bg-white/5 border border-white/10 p-8 rounded-3xl relative overflow-hidden group hover:border-brand-green/50 transition-all">
                                 <div className="text-brand-green font-poppins font-bold text-5xl opacity-20 mb-4">{i + 1}</div>
                                 <h4 className="text-xl font-bold mb-4 text-white">{step.title}</h4>
-                                <p className="text-gray-400 mb-6 text-sm leading-relaxed">{step.desc}</p>
+                                <p className="text-gray-400 mb-6 text-sm leading-relaxed">{step.description}</p>
 
                                 <div className="space-y-4 pt-4 border-t border-white/10">
                                     <div className="flex gap-3">

@@ -14,7 +14,7 @@ export default function TermsOfServicePage() {
         document.title = title;
         
         return injectPageSEO({
-            title,
+            seoTitle: title,
             description,
             path: '/terms'
         });

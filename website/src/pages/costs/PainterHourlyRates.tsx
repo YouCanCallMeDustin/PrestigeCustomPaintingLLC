@@ -38,7 +38,7 @@ const PainterHourlyRates = () => {
         { 
             id: 'article', 
             data: generateArticleSchema({
-                title: "How Much Do Professional Painters Charge Per Hour in Spokane? (2026)",
+                topic: "How Much Do Professional Painters Charge Per Hour in Spokane? (2026)",
                 description: "Understanding the hourly labor rates for professional painters in Spokane, WA. We break down the 'hidden' costs of licensing, insurance, and expertise.",
                 image: "https://prestigecustompaintingllc.com/logo.png",
                 datePublished: "2026-03-27",
@@ -52,17 +52,17 @@ const PainterHourlyRates = () => {
 
     const relatedTopics = [
         {
-            title: "Cost to Paint a House",
+            topic: "Cost to Paint a House",
             path: "/cost-to-paint-a-house",
             description: "The main guide for understanding total project costs in Spokane."
         },
         {
-            title: "DIY vs. Professional",
+            topic: "DIY vs. Professional",
             path: "/diy-vs-hiring-a-painter",
             description: "A financial comparison of DIY labor versus professional efficiency."
         },
         {
-            title: "Cost to Paint a Room",
+            topic: "Cost to Paint a Room",
             path: "/cost-to-paint-a-room",
             description: "How hourly rates translate into per-room interior pricing."
         }
@@ -71,28 +71,34 @@ const PainterHourlyRates = () => {
     return (
         <div className="min-h-screen bg-white text-brand-black">
             <SEOHead 
-                title="How Much Do Painters Charge Per Hour in Spokane? (2026)"
-                description="What is the hourly rate for a painter? Understand labor costs, insurance overhead, and professional vs. amateur pricing in the Inland Northwest."
+                seoTitle="Painter Hourly Rates in Spokane: Professional Pricing Guide"
+                description="What do professional painters charge per hour in Spokane? Understand the labor costs, insurance, and expertise included in your painting estimate for 2024."
                 path="/how-much-do-painters-charge-per-hour"
                 schemas={schemas}
             />
             <Navbar />
 
-            <main className="max-w-7xl mx-auto px-4 pt-24 pb-20">
-                <Breadcrumbs items={breadcrumbItems} />
-
-                <article className="max-w-4xl">
-                    <header className="mb-12">
+            <header className="bg-brand-black pt-28 pb-16 md:pt-36 md:pb-24 text-white relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-1/2 h-full bg-brand-green/10 -skew-x-12 transform translate-x-32" />
+                <div className="max-w-7xl mx-auto px-4 relative z-10">
+                    <Breadcrumbs items={breadcrumbItems} variant="light" />
+                    
+                    <div className="max-w-4xl">
                         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-green/10 text-brand-green text-xs font-bold mb-6">
                             LABOR TRANSPARENCY
                         </div>
                         <h1 className="text-4xl md:text-6xl font-poppins font-bold leading-tight mb-8">
                             How Much Do <span className="text-brand-green">Professional Painters</span> Charge Per Hour?
                         </h1>
-                        <p className="text-xl text-gray-600 leading-relaxed font-medium">
+                        <p className="text-xl text-gray-300 leading-relaxed font-medium">
                             If you're comparing bids, you've likely noticed a wide variance in "hourly rates." In Spokane, 2026 rates for high-quality professional painters range from <strong>$55 to $95 per hour</strong>. This guide explains what goes into that number and why the cheapest rate can sometimes be the most expensive choice.
                         </p>
-                    </header>
+                    </div>
+                </div>
+            </header>
+
+            <main className="max-w-7xl mx-auto px-4 py-20">
+                <article className="max-w-4xl">
 
                     <div className="prose prose-lg prose-brand max-w-none">
                         <section className="my-12">

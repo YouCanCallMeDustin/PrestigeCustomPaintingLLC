@@ -51,17 +51,17 @@ const DiyVsProfessionalCost = () => {
 
     const relatedTopics = [
         {
-            title: "Cost to Paint a House",
+            topic: "Cost to Paint a House",
             path: "/cost-to-paint-a-house",
             description: "Total project averages for various home sizes in Spokane."
         },
         {
-            title: "Painter Hourly Rates",
+            topic: "Painter Hourly Rates",
             path: "/how-much-do-painters-charge-per-hour",
             description: "Breakdown of the labor costs included in a professional bid."
         },
         {
-            title: "Exterior Painting Cost",
+            topic: "Exterior Painting Cost",
             path: "/cost-to-paint-house-exterior",
             description: "Detailed pricing for exterior-specific challenges in our local climate."
         }
@@ -70,28 +70,34 @@ const DiyVsProfessionalCost = () => {
     return (
         <div className="min-h-screen bg-white text-brand-black">
             <SEOHead 
-                title="DIY House Painting vs. Hiring a Professional (Cost Comparison)"
-                description="Is DIY painting worth it? We compare material costs, labor hours, and the 'hidden' expenses of DIY house painting for Spokane homeowners."
+                seoTitle="DIY House Painting vs. Professional Cost Comparison | Spokane Guide"
+                description="Is DIY painting worth it? We compare material costs, labor hours, and the hidden expenses of DIY vs. professional house painting for every Spokane homeowner."
                 path="/diy-vs-hiring-a-painter"
                 schemas={schemas}
             />
             <Navbar />
 
-            <main className="max-w-7xl mx-auto px-4 pt-24 pb-20">
-                <Breadcrumbs items={breadcrumbItems} />
-
-                <article className="max-w-4xl">
-                    <header className="mb-12">
+            <header className="bg-brand-black pt-28 pb-16 md:pt-36 md:pb-24 text-white relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-1/2 h-full bg-brand-green/10 -skew-x-12 transform translate-x-32" />
+                <div className="max-w-7xl mx-auto px-4 relative z-10">
+                    <Breadcrumbs items={breadcrumbItems} variant="light" />
+                    
+                    <div className="max-w-4xl">
                         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-green/10 text-brand-green text-xs font-bold mb-6">
                             FINANCIAL ANALYSIS
                         </div>
                         <h1 className="text-4xl md:text-6xl font-poppins font-bold leading-tight mb-8">
                             DIY vs. Professional Painting: <span className="text-brand-green">The Real Cost</span>
                         </h1>
-                        <p className="text-xl text-gray-600 leading-relaxed font-medium">
+                        <p className="text-xl text-gray-300 leading-relaxed font-medium">
                             It's tempting to think that "doing it yourself" saves 50% or more. But when you factor in professional-grade equipment, premium materials, and the value of your weekends, the gap narrows significantly. This guide breaks down the math for Spokane residents.
                         </p>
-                    </header>
+                    </div>
+                </div>
+            </header>
+
+            <main className="max-w-7xl mx-auto px-4 py-20">
+                <article className="max-w-4xl">
 
                     <div className="prose prose-lg prose-brand max-w-none">
                         <section className="my-12">
