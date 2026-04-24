@@ -88,7 +88,10 @@ const staticPages = [
   "color-consultation",
   "service-area",
   "blog",
-  "spokane-home-improvement-guide"
+  "spokane-home-improvement-guide",
+  "spokane-painting-glossary",
+  "privacy-policy",
+  "terms"
 ];
 
 const serviceSlugs = [

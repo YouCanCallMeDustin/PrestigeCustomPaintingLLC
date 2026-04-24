@@ -6,25 +6,30 @@ import StickyMobileCTA from '../../components/StickyMobileCTA';
 import RelatedTopics from '../../components/RelatedTopics';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
-import { generateFAQSchema, generateBreadcrumbSchema, generateServiceSchema } from '../../lib/schemaGenerator';
-import { Shield, CheckCircle } from 'lucide-react';
+import { generateFAQSchema, generateBreadcrumbSchema, generateServiceSchema, generateArticleSchema } from '../../lib/schemaGenerator';
+import { CheckCircle, Sun, ThermometerSnowflake, DollarSign, AlertTriangle } from 'lucide-react';
+import React from 'react';
 
-const ExteriorPaintingCost = () => {
-    const { phoneNumber } = SITE_INFO;
+const ExteriorPaintingCost: React.FC = () => {
+    const { phoneNumber, ownerName } = SITE_INFO;
     
     // Schema Data
     const faqs = [
         {
             question: "How much does it cost to paint a stucco house in Spokane?",
-            answer: "Painting a stucco home typically costs 15-25% more than wood siding due to the high absorption rate and the need for specialized elastomeric coatings. Expect to pay between $4,500 and $7,500 for a standard rancher."
+            answer: "Painting a stucco home typically costs 15-25% more than wood siding due to the high absorption rate and the need for specialized elastomeric coatings. Expect to pay between $5,000 and $9,000 for a standard rancher in 2026."
         },
         {
             question: "How long does exterior paint last in the Inland Northwest?",
-            answer: "In Spokane's climate, a professional exterior paint job with premium materials lasts 7 to 10 years. Homes on the South Hill often see more moisture, while North Spokane homes deal with more sun exposure, both of which affect longevity."
+            answer: "In Spokane's climate, a professional exterior paint job with premium elastic materials lasts 7 to 10 years. Homes exposed to heavy UV on the South Hill may fade faster, while shaded North Spokane homes deal with moisture issues."
         },
         {
             question: "Should I power wash my house before painting?",
-            answer: "Yes, power washing is non-negotiable. It removes dirt, mold, and oxidation that prevent paint from bonding. We include a professional-grade house wash in every exterior estimate."
+            answer: "Yes, power washing is entirely non-negotiable. It removes dirt, mold, and oxidation that prevent paint from chemically bonding to the substrate. We include a professional-grade house wash in every exterior estimate."
+        },
+        {
+            question: "What is the best time of year to paint a house in Spokane?",
+            answer: "The ideal painting window in Spokane is late May through early October. Temperatures must remain consistently above 35-50°F (depending on the specific paint formulation) during application and curing, and there should be no rain or heavy dew forecasted."
         }
     ];
 
@@ -37,10 +42,19 @@ const ExteriorPaintingCost = () => {
         { id: 'faq', data: generateFAQSchema(faqs) },
         { id: 'service', data: generateServiceSchema({
             name: "Exterior Home Painting",
-            description: "Professional exterior painting services in Spokane, WA. Specialized in siding, trim, and weather-resistant coatings.",
+            description: "Professional exterior painting services in Spokane, WA. Specialized in siding, trim, and weather-resistant coatings to combat freeze-thaw cycles.",
             serviceType: "Exterior House Painting"
         }) },
-        { id: 'breadcrumbs', data: generateBreadcrumbSchema(breadcrumbItems) }
+        { id: 'breadcrumbs', data: generateBreadcrumbSchema(breadcrumbItems) },
+        { id: 'article', data: generateArticleSchema({
+            topic: "Exterior House Painting Cost in Spokane (2026 Guide)",
+            description: "Detailed breakdown of exterior house painting costs in Spokane for 2026. Discover pricing by siding type, the impact of local weather, and DIY constraints.",
+            image: "https://prestigecustompaintingllc.com/exterior.png",
+            datePublished: "2026-04-10",
+            dateModified: "2026-04-24",
+            authorName: ownerName,
+            url: "https://prestigecustompaintingllc.com/cost-to-paint-house-exterior"
+        })}
     ];
 
     const relatedTopics = [
@@ -50,22 +64,22 @@ const ExteriorPaintingCost = () => {
             description: "Our main hub for all painting costs, including national vs. local Spokane averages."
         },
         {
-            topic: "Two-Story House Costs",
-            path: "/cost-to-paint-a-two-story-house",
-            description: "How height and ladder work impact your exterior painting bid."
+            topic: "DIY vs. Hiring a Painter",
+            path: "/diy-vs-hiring-a-painter",
+            description: "A candid look at the real costs and risks of DIY exterior painting in a harsh climate."
         },
         {
-            topic: "DIY vs. Professional",
-            path: "/diy-vs-hiring-a-painter",
-            description: "A candid look at the risks of DIY exterior painting in a harsh climate."
+            topic: "How Often To Paint",
+            path: "/blog/how-often-to-paint-house-spokane",
+            description: "Learn the specific timelines and warning signs indicating your home needs a repaint."
         }
     ];
 
     return (
-        <div className="min-h-screen bg-white text-brand-black">
+        <div className="min-h-screen bg-white text-brand-black font-sans">
             <SEOHead 
-                seoTitle="Exterior House Painting Cost in Spokane | 2026 Pricing Guide"
-                description="What does it cost to paint your house exterior in Spokane? Get detailed 2026 pricing for siding, trim, and weather preparation for the Inland Northwest."
+                seoTitle="Exterior House Painting Cost Spokane | 2026 Pricing Guide"
+                description="What does it cost to paint your house exterior in Spokane? Get our deep-dive 2026 pricing for siding, trim, and weather preparation for the Inland Northwest."
                 path="/cost-to-paint-house-exterior"
                 schemas={schemas}
             />
@@ -76,108 +90,169 @@ const ExteriorPaintingCost = () => {
                 <div className="max-w-7xl mx-auto px-4 relative z-10">
                     <Breadcrumbs items={breadcrumbItems} variant="light" />
                     
-                    <div className="max-w-4xl">
+                    <div className="max-w-4xl mt-6">
+                        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-green/10 text-brand-green text-sm font-bold mb-6 border border-brand-green/20">
+                            <DollarSign size={16} /> 2026 PRICING DATA
+                        </div>
                         <h1 className="text-4xl md:text-6xl font-poppins font-bold leading-tight mb-8">
-                            Cost to Paint the <span className="text-brand-green">Exterior</span> of a House in Spokane
+                            Cost to Paint the <span className="text-brand-green italic">Exterior</span> of a House in Spokane
                         </h1>
                         <p className="text-xl text-gray-300 leading-relaxed font-medium">
-                            Protecting your home from Spokane's extreme seasonal shifts—from sub-zero winters to triple-digit summers—starts with a high-quality exterior paint job. In 2026, the average cost for an exterior repaint ranges from <strong>$3,500 to $9,500</strong>, depending on your siding type and the level of preparation required.
+                            Protecting your home from Spokane's extreme seasonal shifts—from sub-zero winters to triple-digit summers—starts with a resilient exterior paint system. In 2026, the local cost for an exterior repaint ranges from <strong>$3,500 to $9,500+</strong>. This guide demystifies exactly where every dollar goes.
                         </p>
                     </div>
                 </div>
             </header>
 
             <main className="max-w-7xl mx-auto px-4 py-20">
-                <article className="max-w-4xl">
+                <article className="max-w-4xl mx-auto">
+                    
+                    {/* Executive Summary */}
+                    <div className="bg-brand-gray/30 border-l-8 border-brand-green p-8 rounded-r-3xl mb-16">
+                        <h2 className="text-2xl font-bold font-poppins mb-4">The Quick Estimate (2026 Averages)</h2>
+                        <ul className="space-y-3 m-0 pl-0 list-none">
+                            <li className="flex items-center gap-3"><CheckCircle className="text-brand-green w-5 h-5 shrink-0" /> <strong>Single-Story Rancher:</strong> $3,500 – $5,500</li>
+                            <li className="flex items-center gap-3"><CheckCircle className="text-brand-green w-5 h-5 shrink-0" /> <strong>Two-Story Home:</strong> $6,000 – $9,500</li>
+                            <li className="flex items-center gap-3"><CheckCircle className="text-brand-green w-5 h-5 shrink-0" /> <strong>Historic/Complex Architecture:</strong> $8,000 – $15,000+</li>
+                        </ul>
+                        <p className="mt-4 text-sm text-gray-600 italic">Prices vary heavily based on siding condition, lead paint presence, and accessibility.</p>
+                    </div>
 
                     <div className="prose prose-lg prose-brand max-w-none">
-                        <section className="my-12">
-                            <h2 className="text-3xl font-bold font-poppins mb-6">Exterior Pricing Breakdown by Siding Type</h2>
-                            <p>
-                                Every home in Spokane is a different puzzle. A cedar-shake home in the historic Rockwood area requires vastly different steps than a modern vinyl-sided home in North Spokane.
-                            </p>
-                            
-                            <div className="overflow-x-auto my-8 rounded-2xl border border-gray-100 shadow-sm">
-                                <table className="w-full text-left">
-                                    <thead className="bg-gray-50">
-                                        <tr>
-                                            <th className="p-4 border-b">Siding Type</th>
-                                            <th className="p-4 border-b">Average Cost</th>
-                                            <th className="p-4 border-b">Longevity</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td className="p-4 border-b">Wood / Cedar</td>
-                                            <td className="p-4 border-b font-bold">$4,500 – $8,500</td>
-                                            <td className="p-4 border-b">7-10 Years</td>
-                                        </tr>
-                                        <tr>
-                                            <td className="p-4 border-b">Stucco</td>
-                                            <td className="p-4 border-b font-bold">$5,000 – $9,000</td>
-                                            <td className="p-4 border-b">10-12 Years</td>
-                                        </tr>
-                                        <tr>
-                                            <td className="p-4 border-b">Vinyl (Color Change)</td>
-                                            <td className="p-4 border-b font-bold">$3,500 – $5,500</td>
-                                            <td className="p-4 border-b">10+ Years</td>
-                                        </tr>
-                                        <tr>
-                                            <td className="p-4 border-b">Brick (Painted)</td>
-                                            <td className="p-4 border-b font-bold">$4,000 – $7,000</td>
-                                            <td className="p-4 border-b">15+ Years</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                        
+                        <h2 className="text-3xl font-bold font-poppins mb-6">Why Spokane's Climate Demands a Premium Paint Job</h2>
+                        <p>
+                            If you lived in mild Southern California, a standard coat of builder-grade paint might last over a decade. But the <strong>Inland Northwest is a stress-test for exterior coatings</strong>. 
+                        </p>
+                        <p>
+                            Spokane experiences severe freeze-thaw cycles. During winter, moisture penetrates tiny cracks in older paint. When temperatures drop below freezing, that moisture turns to ice and expands, literally pushing the paint off the siding. In the summer, intense UV radiation breaks down the chemical binders in the paint, leading to chalking and severe fading on south and west-facing walls.
+                        </p>
+                        <div className="grid md:grid-cols-2 gap-6 my-8">
+                            <div className="bg-blue-50/50 border border-blue-100 p-6 rounded-2xl">
+                                <ThermometerSnowflake className="text-blue-500 w-10 h-10 mb-4" />
+                                <h4 className="font-bold text-lg mb-2">Winter: Freeze-Thaw</h4>
+                                <p className="text-sm text-gray-600 m-0">Requires highly elastic, breathable acrylic paints that can flex with the siding as it expands and shrinks.</p>
                             </div>
-                        </section>
-
-                        <section className="my-12">
-                            <h2 className="text-3xl font-bold font-poppins mb-6">Preparation: The "Hidden" Cost of Longevity</h2>
-                            <p>
-                                In the painting world, we have a saying: <strong>"The paint is only as good as what's underneath it."</strong> This is especially true in Spokane. Our fluctuating humidity causes wood to expand and contract, which is why "cheap" paint jobs fail so quickly—they skip the prep.
-                            </p>
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
-                                <div className="bg-gray-50 p-6 rounded-2xl border border-gray-100">
-                                    <h4 className="font-bold mb-3 flex items-center gap-2"><CheckCircle size={18} className="text-brand-green" /> Masking & Protection</h4>
-                                    <p className="text-sm text-gray-600 text-balance">We spend a full day masking windows, roofs, and landscaping. Overspray on a Spokane homeowner's garden or driveway is unacceptable.</p>
-                                </div>
-                                <div className="bg-gray-50 p-6 rounded-2xl border border-gray-100">
-                                    <h4 className="font-bold mb-3 flex items-center gap-2"><Shield size={18} className="text-brand-green" /> Scraping & Sanding</h4>
-                                    <p className="text-sm text-gray-600 text-balance">Removing old, failing paint is labor-intensive. We use professional-grade scrapers and HEPA-filtered sanders to ensure a smooth, bondable surface.</p>
-                                </div>
+                            <div className="bg-orange-50/50 border border-orange-100 p-6 rounded-2xl">
+                                <Sun className="text-orange-500 w-10 h-10 mb-4" />
+                                <h4 className="font-bold text-lg mb-2">Summer: UV Degradation</h4>
+                                <p className="text-sm text-gray-600 m-0">Requires premium UV-blocking pigments, especially for darker 2026 color trends like charcoal or forest green.</p>
                             </div>
-                        </section>
+                        </div>
 
-                        <section className="my-12">
-                            <h2 className="text-3xl font-bold font-poppins mb-6">Weather Factors in the Inland Northwest</h2>
-                            <p>
-                                Timing your exterior project is crucial. Spokane's "Painting Season" typically runs from <strong>late April to early October</strong>. High humidity in early spring or freezing temps in late fall can prevent paint from curing properly. At Prestige Custom Painting LLC, we monitor daily dew points and temperatures to ensure we never paint in conditions that compromise the warranty.
-                            </p>
-                        </section>
+                        <h2 className="text-3xl font-bold font-poppins mb-6 mt-16">Exterior Pricing Breakdown by Siding Type</h2>
+                        <p>
+                            Every neighborhood in Spokane presents a different siding footprint. A cedar-shake craftsman on the South Hill requires vastly different preparation and coatings than a vinyl-sided build in Airway Heights. Here is how your siding material dictates your estimate.
+                        </p>
+                        
+                        <div className="overflow-x-auto my-8 rounded-2xl border border-gray-200 shadow-sm">
+                            <table className="w-full text-left m-0">
+                                <thead className="bg-gray-50 border-b border-gray-200">
+                                    <tr>
+                                        <th className="p-5 font-bold">Siding Material</th>
+                                        <th className="p-5 font-bold">2026 Average Cost</th>
+                                        <th className="p-5 font-bold">Lifespan Expectancy</th>
+                                    </tr>
+                                </thead>
+                                <tbody className="divide-y divide-gray-100">
+                                    <tr className="hover:bg-gray-50 transition-colors">
+                                        <td className="p-5 font-medium">Wood / Cedar</td>
+                                        <td className="p-5 font-bold text-brand-green">$4,500 – $8,500</td>
+                                        <td className="p-5 text-gray-600">7-10 Years</td>
+                                    </tr>
+                                    <tr className="hover:bg-gray-50 transition-colors">
+                                        <td className="p-5 font-medium">Stucco</td>
+                                        <td className="p-5 font-bold text-brand-green">$5,000 – $9,000</td>
+                                        <td className="p-5 text-gray-600">10-12 Years</td>
+                                    </tr>
+                                    <tr className="hover:bg-gray-50 transition-colors">
+                                        <td className="p-5 font-medium">Vinyl (Refresh)</td>
+                                        <td className="p-5 font-bold text-brand-green">$3,500 – $5,500</td>
+                                        <td className="p-5 text-gray-600">10+ Years</td>
+                                    </tr>
+                                    <tr className="hover:bg-gray-50 transition-colors">
+                                        <td className="p-5 font-medium">Fiber Cement (Hardie)</td>
+                                        <td className="p-5 font-bold text-brand-green">$4,000 – $7,500</td>
+                                        <td className="p-5 text-gray-600">10-15 Years</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p className="text-sm text-gray-500 italic mt-2">Note: Stucco commands a higher price because its porous nature requires specialized, high-build elastomeric coatings to bridge hairline cracks.</p>
 
-                        <section className="my-16 flex flex-col md:flex-row gap-8 items-center bg-brand-black text-white p-8 md:p-12 rounded-[2.5rem]">
-                            <div className="flex-1">
-                                <h3 className="text-3xl font-bold mb-4">Want a Precise Exterior Bid?</h3>
-                                <p className="text-gray-400 mb-6">We provide a firm, written price within 24 hours of our visit. No hidden fees, just professional results.</p>
-                                <a href={`tel:${phoneNumber}`} className="inline-flex items-center gap-2 bg-brand-green text-white px-8 py-4 rounded-xl font-bold hover:scale-105 transition-all">
-                                    {phoneNumber}
+                        <h2 className="text-3xl font-bold font-poppins mb-6 mt-16">The "Hidden" Costs: Preparation and Accessibility</h2>
+                        <p>
+                            When homeowners receive wildly varying quotes—say, one for $3,500 and one for $7,500—the difference rarely lies in the paint brand. The difference is <strong>preparation</strong>.
+                        </p>
+                        <p>
+                             In the industry, we say, "The paint is only as good as what's underneath it." If a contractor paints over failing, flaking lead paint without scraping and neutralizing the surface, the new paint will fail within 18 months.
+                        </p>
+
+                        <h3 className="text-2xl font-bold mt-8 mb-4">1. Extensive Scraping and Sanding</h3>
+                        <p>
+                            Older Spokane homes often have layers of failing oil-based paints. Safely scraping this away, capturing the hazardous chips, and using HEPA-filtered sanders to feather out the harsh transitions is incredibly labor-intensive. It can comprise 50% to 70% of the total labor cost.
+                        </p>
+
+                        <h3 className="text-2xl font-bold mt-8 mb-4">2. Accessibility and Height Limitations</h3>
+                        <p>
+                            Painting a sprawling single-story rancher in Spokane Valley is straightforward because it can mostly be painted from the ground. Conversely, a tall two-story home built into a steep hill in the Rockwood neighborhood requires significant ladder work, staging, or even mechanical lifts. Working at heights safely slows down production by roughly 40%, directly increasing labor costs.
+                        </p>
+
+                        <h3 className="text-2xl font-bold mt-8 mb-4">3. Lead Paint Compliance (Pre-1978 Homes)</h3>
+                        <div className="bg-red-50 border border-red-100 p-6 rounded-2xl flex gap-4 my-6">
+                            <AlertTriangle className="text-red-500 shrink-0 mt-1" />
+                            <div>
+                                <h4 className="font-bold text-red-800 mb-1">EPA RRP Rule Impact</h4>
+                                <p className="text-sm text-red-900 m-0">If your home was built before 1978, federal law dictates strict lead-safe practices. Contractors must set up specialized plastic containment, wear protective tyvek suits, and meticulously dispose of debris. This mandatory safety protocol adds an average of 15-25% to the total project cost.</p>
+                            </div>
+                        </div>
+
+                        <h2 className="text-3xl font-bold font-poppins mb-6 mt-16">Top 2026 Exterior Paint Color Trends in Spokane</h2>
+                        <p>
+                            If you are investing in an exterior repaint, you want a color scheme that enhances your curb appeal and property value. In 2026, the Pacific Northwest design aesthetic is heavily shifting toward nature-inspired, grounded tones:
+                        </p>
+                        <ul className="space-y-3">
+                            <li><strong>Warm, Earthy Neutrals:</strong> We are seeing a mass exodus from cold, sterile grays. Homeowners are requesting warm creamy whites (like Alabaster), mushroom tones, and soft khakis that pair beautifully with natural wood accents.</li>
+                            <li><strong>Deep, Moody Greens & Blues:</strong> Forest green, sage, and deep navy are exceptionally popular for Craftsman homes. These colors make white trim pop aggressively and harmonize with surrounding pine trees.</li>
+                            <li><strong>High-Contrast Trim:</strong> While white trim remains classic, many modern remodels are utilizing matte black or charcoal gray trim around windows and fascia to achieve a sharp, architectural look.</li>
+                        </ul>
+
+                        <h2 className="text-3xl font-bold font-poppins mb-6 mt-16">Frequently Asked Questions</h2>
+                        <div className="space-y-6 mb-16" id="faq">
+                            {faqs.map((faq, index) => (
+                                <div key={index} className="p-6 bg-gray-50 rounded-2xl border border-gray-100 hover:border-brand-green/30 transition-colors">
+                                    <h4 className="font-bold text-lg mb-3 flex items-start gap-3">
+                                        <span className="w-6 h-6 rounded-full bg-brand-green text-white flex items-center justify-center text-xs shrink-0 mt-0.5">Q</span>
+                                        {faq.question}
+                                    </h4>
+                                    <p className="text-gray-600 pl-9 font-medium mb-0">{faq.answer}</p>
+                                </div>
+                            ))}
+                        </div>
+                        
+                        <AuthorBio />
+
+                        <section className="my-16 flex flex-col md:flex-row gap-0 items-stretch bg-brand-black text-white rounded-[3rem] overflow-hidden shadow-2xl">
+                            <div className="flex-1 p-10 md:p-14 flex flex-col justify-center relative">
+                                <div className="absolute top-0 right-0 w-64 h-64 bg-brand-green/10 blur-[100px]" />
+                                <h3 className="text-3xl font-bold mb-4 relative z-10">Want an Exact Bid for Your Exterior?</h3>
+                                <p className="text-gray-400 mb-8 relative z-10 text-lg leading-relaxed">
+                                    Stop relying on national averages. We evaluate your specific siding condition, measure the exact square footage, and provide a firm, iron-clad estimate within 24 hours of our site visit.
+                                </p>
+                                <a href={`tel:${phoneNumber}`} className="inline-flex items-center justify-center gap-2 bg-brand-green text-white px-8 py-5 rounded-2xl font-bold text-lg hover:bg-green-600 transition-all self-start shadow-xl shadow-green-500/20 relative z-10">
+                                    <PhoneIcon /> CALL {phoneNumber}
                                 </a>
                             </div>
-                            <figure className="shrink-0 group">
+                            <div className="hidden md:block w-2/5 relative">
                                 <img 
                                     src="/exterior.png" 
                                     alt="Full exterior painting project in Spokane WA" 
-                                    className="w-[300px] h-auto rounded-2xl shadow-xl transition-transform group-hover:scale-[1.02]" 
+                                    className="absolute inset-0 w-full h-full object-cover" 
                                 />
-                                <figcaption className="mt-4 text-xs text-gray-400 text-center italic">
-                                    Example of a full exterior repaint project in Spokane, featuring siding and trim protection.
-                                </figcaption>
-                            </figure>
+                            </div>
                         </section>
 
                         <RelatedTopics topics={relatedTopics} />
-                        <AuthorBio />
                     </div>
                 </article>
             </main>
@@ -187,5 +262,10 @@ const ExteriorPaintingCost = () => {
         </div>
     );
 };
+
+// Quick inline component to fix import ease 
+const PhoneIcon = () => (
+   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+);
 
 export default ExteriorPaintingCost;

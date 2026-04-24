@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
 import { SITE_INFO } from '../lib/constants';
 import { injectPageSEO } from '../lib/seo';
-import { generateWebPageSchema, generateBreadcrumbSchema, generateHowToSchema } from '../lib/schemaGenerator';
+import { generateArticleSchema, generateBreadcrumbSchema, generateHowToSchema } from '../lib/schemaGenerator';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 
@@ -83,10 +83,14 @@ function ColorConsultationPage() {
             schemas: [
                 { id: 'faq', data: { "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": faqs.map(f => ({ "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } })) } },
                 {
-                    id: 'webpage',
-                    data: generateWebPageSchema({
+                    id: 'article',
+                    data: generateArticleSchema({
                         topic: title,
                         description,
+                        image: "https://prestigecustompaintingllc.com/exterior.png",
+                        datePublished: "2026-03-01",
+                        dateModified: "2026-04-24",
+                        authorName: ownerName,
                         url: "https://prestigecustompaintingllc.com/color-consultation"
                     })
                 },

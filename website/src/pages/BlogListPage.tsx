@@ -4,6 +4,7 @@ import Footer from '../components/Footer';
 import { Link } from 'react-router-dom';
 import { Clock, Tag, ArrowRight, Calculator, DollarSign, Home, PaintBucket, Ruler } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
+import { generateCollectionPageSchema } from '../lib/schemaGenerator';
 
 const BlogListPage = () => {
     const { phoneNumber } = SITE_INFO;
@@ -93,6 +94,16 @@ const BlogListPage = () => {
                 seoTitle="Painting Guides & Expert Tips | Prestige Custom Painting LLC"
                 description="Explore our library of professional painting advice, local Spokane pricing guides, and expert tips for your next interior or exterior project."
                 path="/blog"
+                schemas={[
+                    {
+                        id: 'collection',
+                        data: generateCollectionPageSchema({
+                            name: "Painting Cost Guides & Spokane Regional Expert Tips",
+                            description: "Comprehensive painting guides including pricing breakdowns for Spokane, interior/exterior tips, and professional contractor advice.",
+                            url: "https://prestigecustompaintingllc.com/blog"
+                        })
+                    }
+                ]}
             />
             <Navbar />
             

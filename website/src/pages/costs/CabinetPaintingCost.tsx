@@ -6,7 +6,7 @@ import StickyMobileCTA from '../../components/StickyMobileCTA';
 import RelatedTopics from '../../components/RelatedTopics';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
-import { generateFAQSchema, generateBreadcrumbSchema, generateServiceSchema } from '../../lib/schemaGenerator';
+import { generateFAQSchema, generateBreadcrumbSchema, generateServiceSchema, generateArticleSchema } from '../../lib/schemaGenerator';
 import { Palette, CheckCircle, Sparkles, Shield, DollarSign } from 'lucide-react';
 
 const CabinetPaintingCost = () => {
@@ -40,7 +40,16 @@ const CabinetPaintingCost = () => {
             description: "High-end cabinet painting and refinishing in Spokane, WA. We use factory-grade coatings for a durable, smooth finish.",
             serviceType: "Cabinet Refinishing"
         }) },
-        { id: 'breadcrumbs', data: generateBreadcrumbSchema(breadcrumbItems) }
+        { id: 'breadcrumbs', data: generateBreadcrumbSchema(breadcrumbItems) },
+        { id: 'article', data: generateArticleSchema({
+            topic: "Cabinet Painting Cost in Spokane (2026 Prices)",
+            description: "Learn the 2026 costs to professionally paint kitchen cabinets in Spokane, including comparisons between painting and complete replacement.",
+            image: "https://prestigecustompaintingllc.com/interior.png",
+            datePublished: "2026-03-01",
+            dateModified: "2026-04-24",
+            authorName: "Prestige Custom Painting",
+            url: "https://prestigecustompaintingllc.com/cost-to-paint-kitchen-cabinets"
+        }) }
     ];
 
     const relatedTopics = [

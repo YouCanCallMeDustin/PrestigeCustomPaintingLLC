@@ -139,12 +139,12 @@ export function injectPageSEO(options: SEOOptions): () => void {
     cleanups.push(injectMetaTags(twitterTags, 'twitter'));
 
     // Robots meta tag for Guideline 9 & 10
-    if (options.noindex) {
-        const robotsTags: MetaTag[] = [
-            { name: 'robots', content: 'noindex, nofollow, noarchive' }
-        ];
-        cleanups.push(injectMetaTags(robotsTags, 'robots'));
-    }
+    const robotsTags: MetaTag[] = options.noindex ? [
+        { name: 'robots', content: 'noindex, nofollow, noarchive' }
+    ] : [
+        { name: 'robots', content: 'index, follow' }
+    ];
+    cleanups.push(injectMetaTags(robotsTags, 'robots'));
 
     // Schemas
     if (options.schemas) {
