@@ -12,7 +12,20 @@ const PORT = 4173;
 // --------------------------------------------------------------------------
 // Detect the user's installed Chrome/Edge browser
 // --------------------------------------------------------------------------
+import { execSync } from 'child_process';
+
 function findBrowser() {
+  // 1. Check system PATH first (most reliable on modern Linux/CI)
+  const commands = ['chromium', 'chromium-browser', 'google-chrome-stable', 'google-chrome', 'msedge'];
+  for (const cmd of commands) {
+    try {
+      const path = execSync(`which ${cmd}`, { stdio: ['ignore', 'pipe', 'ignore'] }).toString().trim();
+      if (path && fs.existsSync(path)) return path;
+    } catch (e) {
+      // ignore errors from 'which'
+    }
+  }
+
   const candidates = [
     // Windows paths
     process.env['PROGRAMFILES(X86)'] + '\\Microsoft\\Edge\\Application\\msedge.exe',
