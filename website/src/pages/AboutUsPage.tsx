@@ -37,7 +37,7 @@ function AboutUsPage() {
                     data: generateArticleSchema({
                         topic: "About Prestige Custom Painting: Our Philosophy and Inland Northwest Heritage",
                         description: "An in-depth look at the history, values, and exacting standards of Prestige Custom Painting LLC in Spokane, Washington.",
-                        image: "https://prestigecustompaintingllc.com/robert.jpg",
+                        image: "https://prestigecustompaintingllc.com/robert.webp",
                         datePublished: "2024-01-01",
                         dateModified: "2026-04-24",
                         authorName: ownerName,
@@ -133,7 +133,7 @@ function AboutUsPage() {
                         <div className="w-full lg:w-1/2 relative">
                             <div className="absolute -inset-4 bg-brand-green/5 rounded-[3rem] -rotate-2" />
                             <img
-                                src="/robert.jpg"
+                                src="/robert.webp"
                                 alt="Robert, owner of Prestige Custom Painting LLC and professional painter in Spokane WA"
                                 className="relative z-10 rounded-[2.5rem] shadow-2xl w-full object-cover aspect-[4/5] hover:scale-[1.02] transition-transform duration-700"
                             />

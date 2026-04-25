@@ -257,7 +257,7 @@ function InteriorPaintingPage() {
                         <div className="relative">
                             <div className="absolute inset-0 bg-brand-green rounded-[3rem] rotate-3 scale-105 opacity-10" />
                             <img
-                                src="/interior.png"
+                                src="/interior.webp"
                                 alt="Professional interior painting results in Spokane WA"
                                 className="relative z-10 rounded-[3rem] shadow-2xl object-cover h-[500px] w-full"
                             />
@@ -530,7 +530,7 @@ function InteriorPaintingPage() {
                     <div className="bg-white p-8 md:p-12 rounded-[2.5rem] shadow-sm border border-gray-100 flex flex-col md:flex-row items-center gap-10">
                         <div className="w-40 h-40 shrink-0 relative">
                             <div className="absolute inset-0 bg-brand-green rounded-full rotate-6 opacity-10" />
-                            <img src="/robert.jpg" alt={ownerName} className="rounded-full w-full h-full object-cover relative z-10 border-4 border-white shadow-xl" />
+                            <img src="/robert.webp" alt={ownerName} className="rounded-full w-full h-full object-cover relative z-10 border-4 border-white shadow-xl" />
                         </div>
                         <div>
                             <p className="text-brand-green font-bold text-sm uppercase tracking-widest mb-2">Written By</p>

@@ -56,7 +56,7 @@ const DiyVsProfessionalCost: React.FC = () => {
         { id: 'article', data: generateArticleSchema({
             topic: "DIY vs. Hiring a Professional Painter: The Real 2026 Cost",
             description: "Is DIY painting worth the money? We compare material costs, labor hours, and the hidden expenses of DIY vs. professional painting for Spokane homeowners.",
-            image: "https://prestigecustompaintingllc.com/exterior.png",
+            image: "https://prestigecustompaintingllc.com/exterior.webp",
             datePublished: "2026-04-10",
             dateModified: "2026-04-24",
             authorName: ownerName,

@@ -47,7 +47,7 @@ const BlogInteriorTips: React.FC = () => {
             data: generateArticleSchema({
                 topic: "5 Professional Interior Painting Tips for Spokane Homeowners",
                 description: "Want to paint your house like a pro? Follow these 5 essential interior painting tips, from cutting in to maintaining a wet edge, straight from the experts.",
-                image: "https://prestigecustompaintingllc.com/interior.png",
+                image: "https://prestigecustompaintingllc.com/interior.webp",
                 datePublished: "2026-03-27",
                 dateModified: "2026-04-20",
                 authorName: ownerName,

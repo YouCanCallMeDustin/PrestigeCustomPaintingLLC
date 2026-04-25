@@ -49,7 +49,7 @@ const InteriorPaintingCost: React.FC = () => {
         { id: 'article', data: generateArticleSchema({
             topic: "Cost to Paint a House Interior in Spokane (2026 Guide)",
             description: "Discover accurate interior house painting costs in Spokane. Learn how room size, trim complexity, and 2026 design trends affect your final estimate.",
-            image: "https://prestigecustompaintingllc.com/interior.png",
+            image: "https://prestigecustompaintingllc.com/interior.webp",
             datePublished: "2026-04-10",
             dateModified: "2026-04-24",
             authorName: ownerName,

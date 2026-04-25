@@ -13,7 +13,7 @@ const AuthorBio = () => {
             <div className="shrink-0">
                 <div className="w-24 h-24 md:w-32 md:h-32 rounded-2xl overflow-hidden shadow-lg border-4 border-white">
                     <img 
-                        src="/robert.jpg" 
+                        src="/robert.webp" 
                         alt={`${ownerName}, Owner and Professional Painter`} 
                         className="w-full h-full object-cover"
                     />

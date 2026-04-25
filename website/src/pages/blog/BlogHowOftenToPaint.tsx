@@ -47,7 +47,7 @@ const BlogHowOftenToPaint: React.FC = () => {
             data: generateArticleSchema({
                 topic: "How Often Should You Paint a House in Spokane WA?",
                 description: "Discover how often you should repaint your Spokane home. In 2026, climate patterns and siding materials dictate a 5 to 7 year timeline. Learn the warning signs.",
-                image: "https://prestigecustompaintingllc.com/exterior.png",
+                image: "https://prestigecustompaintingllc.com/exterior.webp",
                 datePublished: "2026-03-27",
                 dateModified: "2026-04-20",
                 authorName: ownerName,

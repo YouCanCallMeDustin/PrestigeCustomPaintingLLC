@@ -443,7 +443,7 @@ export default function ServiceAreaPage() {
                 <div className="max-w-4xl mx-auto px-4">
                     <div className="bg-white p-8 md:p-12 rounded-[2.5rem] flex flex-col md:flex-row items-center gap-10 shadow-sm border border-gray-100">
                         <div className="w-32 h-32 md:w-40 md:h-40 shrink-0 relative">
-                            <img src="/robert.jpg" alt={ownerName} className="rounded-full w-full h-full object-cover relative z-10 border-4 border-white shadow-xl" />
+                            <img src="/robert.webp" alt={ownerName} className="rounded-full w-full h-full object-cover relative z-10 border-4 border-white shadow-xl" />
                         </div>
                         <div className="text-left">
                             <p className="text-brand-green font-bold text-sm uppercase tracking-widest mb-2">Regional Specialist</p>

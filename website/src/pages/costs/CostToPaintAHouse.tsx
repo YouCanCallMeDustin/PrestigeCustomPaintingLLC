@@ -50,7 +50,7 @@ const CostToPaintAHouse = () => {
             data: generateArticleSchema({
                 topic: "How Much Does It Cost to Paint a House in 2026? (Spokane Guide)",
                 description: "The ultimate guide to house painting costs in Spokane, WA. Compare interior and exterior pricing, hourly rates, and factors that affect your estimate.",
-                image: "https://prestigecustompaintingllc.com/exterior.png",
+                image: "https://prestigecustompaintingllc.com/exterior.webp",
                 datePublished: "2026-03-27",
                 dateModified: "2026-03-27",
                 authorName: ownerName,

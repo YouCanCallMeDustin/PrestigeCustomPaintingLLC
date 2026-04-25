@@ -246,7 +246,7 @@ function App() {
                             <div className="absolute inset-0 bg-brand-green rounded-3xl rotate-3 scale-105 opacity-10" />
                             <figure>
                                 <img
-                                    src="/robert.jpg"
+                                    src="/robert.webp"
                                     alt="Robert, owner of Prestige Custom Painting LLC, professional house painter in Spokane WA"
                                     className="relative z-10 rounded-3xl shadow-2xl grayscale hover:grayscale-0 transition-all duration-700 w-full object-cover aspect-[4/5]"
                                 />
@@ -347,7 +347,7 @@ function App() {
                         </div>
                         <div className="md:w-1/2">
                             <figure>
-                                <img src="/finish.png" alt="Cabinet painting transformation in Spokane WA" className="rounded-[2rem] shadow-2xl border border-white/10" />
+                                <img src="/finish.webp" alt="Cabinet painting transformation in Spokane WA" className="rounded-[2rem] shadow-2xl border border-white/10" />
                                 <figcaption className="mt-4 text-xs text-gray-400 italic text-center">
                                     A factory-smooth cabinet finish achieving a modern, high-end look without the cost of replacement.
                                 </figcaption>

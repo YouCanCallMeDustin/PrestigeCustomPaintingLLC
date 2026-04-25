@@ -44,7 +44,7 @@ const CabinetPaintingCost = () => {
         { id: 'article', data: generateArticleSchema({
             topic: "Cabinet Painting Cost in Spokane (2026 Prices)",
             description: "Learn the 2026 costs to professionally paint kitchen cabinets in Spokane, including comparisons between painting and complete replacement.",
-            image: "https://prestigecustompaintingllc.com/interior.png",
+            image: "https://prestigecustompaintingllc.com/interior.webp",
             datePublished: "2026-03-01",
             dateModified: "2026-04-24",
             authorName: "Prestige Custom Painting",

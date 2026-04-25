@@ -51,7 +51,8 @@ import PageTracker from './components/PageTracker'
 // Initialize GA4
 initGA();
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
+const root = ReactDOM.createRoot(document.getElementById('root')!);
+root.render(
     <React.StrictMode>
         <BrowserRouter>
             <ScrollToTop />
@@ -110,4 +111,10 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
             </Routes>
         </BrowserRouter>
     </React.StrictMode>
-)
+);
+
+// Dispatch event for pre-rendering
+setTimeout(() => {
+    document.dispatchEvent(new Event('render-event'));
+}, 500);
+

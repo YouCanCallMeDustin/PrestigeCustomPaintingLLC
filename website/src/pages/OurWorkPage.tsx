@@ -142,7 +142,7 @@ function OurWorkPage() {
                         <div className="relative">
                             <div className="absolute inset-0 bg-brand-green rounded-3xl rotate-3 scale-105 opacity-10" />
                             <img 
-                                src="/exterior.png" 
+                                src="/exterior.webp" 
                                 alt="Professional exterior painting results" 
                                 className="relative z-10 rounded-3xl shadow-2xl grayscale hover:grayscale-0 transition-all duration-700 aspect-[16/9] object-cover"
                             />

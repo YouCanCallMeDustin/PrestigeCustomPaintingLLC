@@ -329,7 +329,7 @@ function SpokaneHomeImprovementPage() {
                 <div className="max-w-4xl mx-auto px-4">
                     <div className="flex flex-col md:flex-row items-center gap-8 bg-gray-50 p-8 rounded-3xl border border-gray-100">
                         <div className="w-24 h-24 bg-brand-green/20 rounded-full flex items-center justify-center text-brand-green shrink-0 overflow-hidden">
-                            <img src="/robert.jpg" alt="Robert Shoemake" className="w-full h-full object-cover grayscale" />
+                            <img src="/robert.webp" alt="Robert Shoemake" className="w-full h-full object-cover grayscale" />
                         </div>
                         <div>
                             <p className="text-xs font-bold text-brand-green uppercase tracking-widest mb-2">Written By</p>

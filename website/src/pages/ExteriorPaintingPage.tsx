@@ -481,7 +481,7 @@ function ExteriorPaintingPage() {
                 <div className="max-w-4xl mx-auto px-4 text-center md:text-left">
                     <div className="bg-gray-50 p-8 md:p-12 rounded-[2.5rem] flex flex-col md:flex-row items-center gap-10">
                         <div className="w-40 h-40 shrink-0 relative">
-                            <img src="/robert.jpg" alt={ownerName} className="rounded-full w-full h-full object-cover relative z-10 border-4 border-white shadow-xl" />
+                            <img src="/robert.webp" alt={ownerName} className="rounded-full w-full h-full object-cover relative z-10 border-4 border-white shadow-xl" />
                         </div>
                         <div>
                             <p className="text-brand-green font-bold text-sm uppercase tracking-widest mb-2">Expert Review By</p>
