@@ -230,7 +230,7 @@ function CabinetPaintingPage() {
                                     Our refinishing service focuses on the "aesthetic shell." By removing the doors and drawer fronts to be sprayed in our controlled facility, and expertly refinishing the boxes in your home, we provide a complete visual transformation with zero demolition.
                                 </p>
                                 <div className="bg-white/80 p-6 rounded-2xl border-l-4 border-brand-green mt-6 font-medium text-gray-800">
-                                    <strong>How much does cabinet painting save compared to replacing?</strong><br/>
+                                    <strong>How much does cabinet painting save compared to replacing?</strong><br />
                                     Professional cabinet refinishing in Spokane is an industrial process that saves homeowners up to 70% compared to full replacement. It involves chemical degreasing, mechanical sanding, and HVLP application of urethane enamels. This transformation typically takes 5–7 days and provides a factory-smooth finish resistant to Spokane’s seasonal humidity shifts.
                                 </div>
                             </div>

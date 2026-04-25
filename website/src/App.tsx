@@ -52,7 +52,7 @@ function App() {
     useEffect(() => {
         const title = "Top-Rated Painters in Spokane WA | Free Estimates | Prestige Custom Painting";
         const description = "Looking for top-rated house painters in Spokane, WA? Prestige Custom Painting offers premium interior, exterior, and cabinet painting. Fully Licensed, Bonded, and Insured. Includes satisfaction warranty. Free estimates!";
-        
+
         return injectPageSEO({
             seoTitle: title,
             description,
@@ -152,8 +152,8 @@ function App() {
                     {/* Tab Content */}
                     <div className="relative">
                         {serviceCategories.map((cat) => (
-                            <div 
-                                key={cat.id} 
+                            <div
+                                key={cat.id}
                                 className={`transition-all duration-500 w-full ${activeTab === cat.id ? 'opacity-100 translate-y-0 block' : 'opacity-0 translate-y-8 hidden'}`}
                             >
                                 <div className="bg-white rounded-[2.5rem] p-8 md:p-12 shadow-[0_8px_30px_rgba(0,0,0,0.04)] border border-gray-100">
@@ -169,9 +169,9 @@ function App() {
 
                                     <div className="grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4">
                                         {cat.services.map((service, idx) => (
-                                            <Link 
-                                                to={`/service/${service.toLowerCase().replace(/ /g, '-').replace(/&/g, 'and')}`} 
-                                                key={idx} 
+                                            <Link
+                                                to={`/service/${service.toLowerCase().replace(/ /g, '-').replace(/&/g, 'and')}`}
+                                                key={idx}
                                                 className="group flex items-center gap-3 p-4 bg-gray-50/50 hover:bg-white border border-transparent hover:border-brand-green rounded-2xl transition-all duration-300 hover:shadow-[0_8px_20px_rgba(74,222,128,0.15)] hover:-translate-y-0.5"
                                             >
                                                 <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center shrink-0 shadow-sm border border-gray-100 group-hover:border-transparent group-hover:bg-brand-green transition-all duration-300">
@@ -263,7 +263,7 @@ function App() {
                         <div className="w-full lg:w-1/2 text-center lg:text-left mt-8 lg:mt-0">
                             <h2 className="text-3xl md:text-4xl font-poppins font-bold mb-6 md:mb-8 text-brand-black">Why Choose Prestige House Painters in Spokane?</h2>
                             <div className="bg-brand-gray/30 p-6 rounded-2xl border-l-4 border-brand-green mb-8 text-gray-800 font-medium text-left">
-                                <strong>Who is Prestige Custom Painting?</strong><br/>
+                                <strong>Who is Prestige Custom Painting?</strong><br />
                                 Prestige Custom Painting LLC is a fully licensed, bonded, and insured professional painting contractor based in Spokane, WA. Founded by {ownerName}, the company specializes in high-end cabinet refinishing, meticulous interior repaints, and weather-resistant exterior coatings engineered for the Inland Northwest.
                             </div>
                             <p className="text-lg md:text-xl text-gray-600 leading-relaxed mb-8">

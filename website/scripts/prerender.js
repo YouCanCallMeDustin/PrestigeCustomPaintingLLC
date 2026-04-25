@@ -14,11 +14,17 @@ const PORT = 4173;
 // --------------------------------------------------------------------------
 function findBrowser() {
   const candidates = [
+    // Windows paths
     process.env['PROGRAMFILES(X86)'] + '\\Microsoft\\Edge\\Application\\msedge.exe',
     process.env['PROGRAMFILES'] + '\\Microsoft\\Edge\\Application\\msedge.exe',
     process.env['PROGRAMFILES'] + '\\Google\\Chrome\\Application\\chrome.exe',
     process.env['PROGRAMFILES(X86)'] + '\\Google\\Chrome\\Application\\chrome.exe',
     process.env['LOCALAPPDATA'] + '\\Google\\Chrome\\Application\\chrome.exe',
+    // Linux paths
+    '/usr/bin/google-chrome',
+    '/usr/bin/google-chrome-stable',
+    '/usr/bin/chromium',
+    '/usr/bin/chromium-browser'
   ];
   for (const p of candidates) {
     if (p && fs.existsSync(p)) return p;
