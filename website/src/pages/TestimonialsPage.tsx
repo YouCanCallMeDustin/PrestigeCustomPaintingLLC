@@ -37,6 +37,10 @@ function TestimonialsPage() {
                             "position": i + 1,
                             "item": {
                                 "@type": "Review",
+                                "itemReviewed": {
+                                    "@type": "HomeAndConstructionBusiness",
+                                    "name": "Prestige Custom Painting LLC"
+                                },
                                 "author": { "@type": "Person", "name": r.name },
                                 "reviewBody": r.text,
                                 "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }

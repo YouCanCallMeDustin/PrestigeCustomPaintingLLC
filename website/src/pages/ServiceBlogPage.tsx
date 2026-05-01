@@ -1,10 +1,11 @@
-import { useParams, Link, Navigate } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, Star, Phone, CheckCircle2, AlertCircle, Lightbulb, ChevronRight, ListChecks } from 'lucide-react';
 import { useEffect } from 'react';
 import { SITE_INFO } from '../lib/constants';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 import { blogData } from '../data/blogContent';
+import NotFound from './NotFound';
 import { injectPageSEO, generateWebPageSchema, generateFAQSchema } from '../lib/seo';
 
 function ServiceBlogPage() {
@@ -38,7 +39,7 @@ function ServiceBlogPage() {
     }, [data, serviceSlug]);
 
     if (!data) {
-        return <Navigate to="/" replace />;
+        return <NotFound />;
     }
 
     return (

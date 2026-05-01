@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import App from './App.tsx'
 import ScrollToTop from './components/ScrollToTop.tsx'
 import InteriorPaintingPage from './pages/InteriorPaintingPage.tsx'
@@ -105,6 +105,17 @@ root.render(
                 
                 {/* Dynamic Area Pages (painting-*) */}
                 <Route path="/:fullSlug" element={<DynamicAreaPage />} />
+                <Route path="/services" element={<Navigate to="/#services" replace />} />
+                
+                {/* SEO Redirects for obsolete paths */}
+                <Route path="/service/accent-wall-wallpaper" element={<Navigate to="/service/accent-wall-painting" replace />} />
+                <Route path="/service/chemical-paint-stripping" element={<Navigate to="/paint-stripping-spokane" replace />} />
+                <Route path="/service/full-house-painting" element={<Navigate to="/house-painters-spokane" replace />} />
+                <Route path="/service/concrete-cleaning" element={<Navigate to="/pressure-washing-spokane" replace />} />
+                <Route path="/service/roof-washing" element={<Navigate to="/pressure-washing-spokane" replace />} />
+                <Route path="/service/driveway-cleaning" element={<Navigate to="/service/driveway-pressure-washing" replace />} />
+                <Route path="/service/surface-preparation" element={<Navigate to="/service/surface-priming" replace />} />
+                <Route path="/contact" element={<Navigate to="/" replace />} />
 
                 {/* Catch-all for other non-existent pages */}
                 <Route path="*" element={<NotFound />} />

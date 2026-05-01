@@ -1,0 +1,608 @@
+[
+    {
+        "city": "Spokane",
+        "slug": "spokane",
+        "heroTagline": "SPOKANE'S TOP-RATED PAINTERS",
+        "funFact": "We love painting the historic homes near Manito Park and the unique architecture of the South Hill."
+    },
+    {
+        "city": "Spokane Valley",
+        "slug": "spokane-valley",
+        "heroTagline": "SPOKANE VALLEY PAINTING EXPERTS",
+        "funFact": "Spokane Valley's diverse range of modern developments and established neighborhoods keeps our crews busy year-round."
+    },
+    {
+        "city": "Liberty Lake",
+        "slug": "liberty-lake",
+        "heroTagline": "PREMIUM LIBERTY LAKE PAINTERS",
+        "funFact": "Liberty Lake's stunning lakeside properties demand the high-durability finishes we specialize in."
+    },
+    {
+        "city": "Airway Heights",
+        "slug": "airway-heights",
+        "heroTagline": "AIRWAY HEIGHTS PAINTING CO",
+        "funFact": "The rapid growth in Airway Heights means we're often nearby working on new residential and commercial projects."
+    },
+    {
+        "city": "Cheney",
+        "slug": "cheney",
+        "heroTagline": "CHENEY'S NEIGHBORHOOD PAINTERS",
+        "funFact": "From the University district to the quiet residential outskirts, we've been painting Cheney homes for years."
+    },
+    {
+        "city": "Deer Park",
+        "slug": "deer-park",
+        "heroTagline": "DEER PARK CUSTOM PAINTING",
+        "funFact": "We enjoy the scenic drives out to Deer Park to help homeowners protect their properties from the elements."
+    },
+    {
+        "city": "Medical Lake",
+        "slug": "medical-lake",
+        "heroTagline": "MEDICAL LAKE PAINTING SERVICES",
+        "funFact": "Medical Lake's historic charm is something we strive to preserve with every exterior project."
+    },
+    {
+        "city": "Millwood",
+        "slug": "millwood",
+        "heroTagline": "MILLWOOD VILLAGE PAINTERS",
+        "funFact": "The close-knit community of Millwood is one of our favorite areas to work in."
+    },
+    {
+        "city": "Fairfield",
+        "slug": "fairfield",
+        "heroTagline": "FAIRFIELD RESIDENTIAL PAINTING",
+        "funFact": "We serve the agricultural heart of Spokane County with durable farm and residential coatings."
+    },
+    {
+        "city": "Mead",
+        "slug": "mead",
+        "heroTagline": "MEAD AREA PAINTING EXPERTS",
+        "funFact": "Mead's beautiful foothills provide a great backdrop for the custom home finishes we deliver."
+    },
+    {
+        "city": "Nine Mile Falls",
+        "slug": "nine-mile-falls",
+        "heroTagline": "NINE MILE FALLS PAINTERS",
+        "funFact": "Working near the Spokane River at Nine Mile Falls is always a scenic highlight for our team."
+    },
+    {
+        "city": "Colbert",
+        "slug": "colbert",
+        "heroTagline": "COLBERT CUSTOM PAINTING",
+        "funFact": "Colbert's spacious properties often require the large-scale exterior expertise our team provides."
+    },
+    {
+        "city": "Chattaroy",
+        "slug": "chattaroy",
+        "heroTagline": "CHATTAROY PAINTING CO",
+        "funFact": "We bring the prestige standard to the beautiful rural properties of Chattaroy."
+    },
+    {
+        "city": "Otis Orchards",
+        "slug": "otis-orchards",
+        "heroTagline": "OTIS ORCHARDS PAINTERS",
+        "funFact": "Otis Orchards homeowners trust us for long-lasting weather protection on their siding and decks."
+    },
+    {
+        "city": "Newman Lake",
+        "slug": "newman-lake",
+        "heroTagline": "NEWMAN LAKE PAINTING SERVICES",
+        "funFact": "Moore heat and moisture near the lake means homes here need our premium sealant processes."
+    },
+    {
+        "city": "Greenacres",
+        "slug": "greenacres",
+        "heroTagline": "GREENACRES EXTERIOR EXPERTS",
+        "funFact": "Greenacres is a hub of residential activity where our 'Now Booking' signs are a common sight."
+    },
+    {
+        "city": "Veradale",
+        "slug": "veradale",
+        "heroTagline": "VERADALE PAINTING SERVICES",
+        "funFact": "The established neighborhoods of Veradale are perfect for the interior refreshes we offer."
+    },
+    {
+        "city": "South Hill",
+        "slug": "south-hill",
+        "heroTagline": "SOUTH HILL HISTORIC PAINTERS",
+        "funFact": "The South Hill's unique character requires the specialized historic prep work we excel at."
+    },
+    {
+        "city": "North Hill",
+        "slug": "north-hill",
+        "heroTagline": "NORTH HILL HOME PAINTERS",
+        "funFact": "We've refreshed hundreds of bungalows and mid-century homes across Spokane's North Hill."
+    },
+    {
+        "city": "Five Mile Prairie",
+        "slug": "five-mile-prairie",
+        "heroTagline": "FIVE MILE PRAIRIE PAINTERS",
+        "funFact": "The high winds on the prairie mean exterior paint needs to be applied with the exact precision we provide."
+    },
+    {
+        "city": "Shadle Park",
+        "slug": "shadle-park",
+        "heroTagline": "SHADLE PARK NEIGHBORHOOD PAINTERS",
+        "funFact": "We love working in the vibrant Shadle Park area, helping families update their forever homes."
+    },
+    {
+        "city": "Garland District",
+        "slug": "garland-district",
+        "heroTagline": "GARLAND DISTRICT CUSTOM PAINTING",
+        "funFact": "Keeping the Garland District colorful and protected is a point of pride for our local crew."
+    },
+    {
+        "city": "Perry District",
+        "slug": "perry-district",
+        "heroTagline": "PERRY DISTRICT PAINTING CO",
+        "funFact": "The artistic spirit of the South Perry District is reflected in the bold accent walls we paint here."
+    },
+    {
+        "city": "Audubon-Downriver",
+        "slug": "audubon",
+        "heroTagline": "AUDUBON AREA PAINTERS",
+        "funFact": "Painting near the Downriver Golf Course provides some of the best views in the city for our painters."
+    },
+    {
+        "city": "Browne's Addition",
+        "slug": "brownes-addition",
+        "heroTagline": "BROWNE'S ADDITION HISTORIC PAINTERS",
+        "funFact": "The grand mansions of Browne's Addition require the master-level craftsmanship of Prestige Custom Painting."
+    },
+    {
+        "city": "Kendall Yards",
+        "slug": "kendall-yards",
+        "heroTagline": "KENDALL YARDS MODERN PAINTING",
+        "funFact": "The clean lines of Kendall Yards architecture are perfect for the modern color palettes we offer."
+    },
+    {
+        "city": "Hillyard",
+        "slug": "hillyard",
+        "heroTagline": "HILLYARD AREA PAINTING SERVICES",
+        "funFact": "Hillyard's railroad history is built into its architecture, and we're here to keep it protected."
+    },
+    {
+        "city": "Indian Trail",
+        "slug": "indian-trail",
+        "heroTagline": "INDIAN TRAIL HOME PAINTERS",
+        "funFact": "The beautiful pine-filled scenery of Indian Trail is a great place to showcase our natural stain work."
+    },
+    {
+        "city": "Eagle Ridge",
+        "slug": "eagle-ridge",
+        "heroTagline": "EAGLE RIDGE EXTERIOR EXPERTS",
+        "funFact": "We help Eagle Ridge homeowners maintain their curb appeal with premium, HOA-approved colors."
+    },
+    {
+        "city": "Fairwood",
+        "slug": "fairwood",
+        "heroTagline": "FAIRWOOD PAINTING SERVICES",
+        "funFact": "The classic family homes in Fairwood are a staple of our interior painting schedule."
+    },
+    {
+        "city": "Town and Country",
+        "slug": "town-and-country",
+        "heroTagline": "TOWN AND COUNTRY PAINTERS",
+        "funFact": "We bring the prestige standard to the quiet streets of the Town and Country area."
+    },
+    {
+        "city": "Seven Mile",
+        "slug": "seven-mile",
+        "heroTagline": "SEVEN MILE PAINTING CO",
+        "funFact": "Serving the growing communities near the Spokane River in Seven Mile is always a pleasure."
+    },
+    {
+        "city": "Spangle",
+        "slug": "spangle",
+        "heroTagline": "SPANGLE RESIDENTIAL PAINTING",
+        "funFact": "Spangle's rural charm is worth protecting with our heavy-duty weather coatings."
+    },
+    {
+        "city": "Rockford",
+        "slug": "rockford",
+        "heroTagline": "ROCKFORD PAINTING SERVICES",
+        "funFact": "The rolling hills of Rockford are home to some of the most beautiful properties we serve."
+    },
+    {
+        "city": "Latah",
+        "slug": "latah",
+        "heroTagline": "LATAH AREA PAINTERS",
+        "funFact": "We're proud to serve the southern reaches of Spokane County in the quiet town of Latah."
+    },
+    {
+        "city": "Waverly",
+        "slug": "waverly",
+        "heroTagline": "WAVERLY CUSTOM PAINTING",
+        "funFact": "Small town service with big city quality — that's our promise to Waverly homeowners."
+    },
+    {
+        "city": "Elk",
+        "slug": "elk",
+        "heroTagline": "ELK AREA PAINTING EXPERTS",
+        "funFact": "Even the furthest corners of Spokane County like Elk deserve the prestige standard of care."
+    },
+    {
+        "city": "Plaza",
+        "slug": "plaza",
+        "heroTagline": "PLAZA RESIDENTIAL PAINTING",
+        "funFact": "Preserving the history of Plaza with high-quality paint is what we do best."
+    },
+    {
+        "city": "Marshall",
+        "slug": "marshall",
+        "heroTagline": "MARSHALL PAINTING CO",
+        "funFact": "The unique terrain around Marshall makes every project here a rewarding challenge."
+    },
+    {
+        "city": "Moab",
+        "slug": "moab",
+        "heroTagline": "MOAB AREA PAINTERS",
+        "funFact": "Serving the communities near the Idaho border with top-tier Washington craftsmanship."
+    },
+    {
+        "city": "Michaud",
+        "slug": "michaud",
+        "heroTagline": "MICHAUD PAINTING SERVICES",
+        "funFact": "We keep the homes in Michaud looking their best year-round with durable finishes."
+    },
+    {
+        "city": "Geiger Heights",
+        "slug": "geiger-heights",
+        "heroTagline": "GEIGER HEIGHTS PAINTERS",
+        "funFact": "The industrial and residential mix in Geiger Heights needs the versatile coatings we provide."
+    },
+    {
+        "city": "Glenrose",
+        "slug": "glenrose",
+        "heroTagline": "GLENROSE EXTERIOR EXPERTS",
+        "funFact": "Glenrose's scenic vistas are the perfect backdrop for our precision painting work."
+    },
+    {
+        "city": "Moran Prairie",
+        "slug": "moran-prairie",
+        "heroTagline": "MORAN PRAIRIE PAINTING",
+        "funFact": "Moran Prairie's modern estates are a showcase for our high-end interior finishes."
+    },
+    {
+        "city": "Peone Prairie",
+        "slug": "peone-prairie",
+        "heroTagline": "PEONE PRAIRIE PAINTERS",
+        "funFact": "From farmhouses to modern builds, we serve all of Peone Prairie."
+    },
+    {
+        "city": "Pleasant Prairie",
+        "slug": "pleasant-prairie",
+        "heroTagline": "PLEASANT PRAIRIE PAINTING CO",
+        "funFact": "Making Pleasant Prairie even more pleasant, one house at a time."
+    },
+    {
+        "city": "Green Bluff",
+        "slug": "green-bluff",
+        "heroTagline": "GREEN BLUFF CUSTOM PAINTING",
+        "funFact": "We love serving the orchards and homes of Green Bluff during the beautiful autumn season."
+    },
+    {
+        "city": "Valleyford",
+        "slug": "valleyford",
+        "heroTagline": "VALLEYFORD PAINTING SERVICES",
+        "funFact": "Valleyford homeowners trust us for honest pricing and exceptional results."
+    },
+    {
+        "city": "Mica",
+        "slug": "mica",
+        "heroTagline": "MICA AREA PAINTERS",
+        "funFact": "Small but strong — the Mica community knows they can count on Prestige."
+    },
+    {
+        "city": "Duncan",
+        "slug": "duncan",
+        "heroTagline": "DUNCAN RESIDENTIAL PAINTING",
+        "funFact": "Quality paint and professional service are what we bring to Duncan every time."
+    },
+    {
+        "city": "Four Lakes",
+        "slug": "four-lakes",
+        "heroTagline": "FOUR LAKES PAINTING CO",
+        "funFact": "Conveniently located near the highway, we're always ready to serve Four Lakes."
+    },
+    {
+        "city": "Deep Creek",
+        "slug": "deep-creek",
+        "heroTagline": "DEEP CREEK PAINTING SERVICES",
+        "funFact": "Protecting the rural homes of Deep Creek from the elements is our mission."
+    },
+    {
+        "city": "Lyons",
+        "slug": "lyons",
+        "heroTagline": "LYONS AREA PAINTERS",
+        "funFact": "Bringing fresh color to the established homes in the Lyons area."
+    },
+    {
+        "city": "Denison",
+        "slug": "denison",
+        "heroTagline": "DENISON CUSTOM PAINTING",
+        "funFact": "Denison's unique architecture is always a pleasure for our detailed-oriented crew."
+    },
+    {
+        "city": "Milan",
+        "slug": "milan",
+        "heroTagline": "MILAN AREA PAINTING EXPERTS",
+        "funFact": "Serving the northern reaches of the county with unwavering professional standards."
+    },
+    {
+        "city": "Buckeye",
+        "slug": "buckeye",
+        "heroTagline": "BUCKEYE PAINTING SERVICES",
+        "funFact": "Building a better Buckeye one professional paint job at a time."
+    },
+    {
+        "city": "Waysat",
+        "slug": "waysat",
+        "heroTagline": "WAYSAT RESIDENTIAL PAINTING",
+        "funFact": "Quality and integrity are the foundation of our work in the Waysat community."
+    },
+    {
+        "city": "Irvin",
+        "slug": "irvin",
+        "heroTagline": "IRVIN PAINTING CO",
+        "funFact": "We help Irvin homeowners increase their property value with expert finishes."
+    },
+    {
+        "city": "Pasadena Park",
+        "slug": "pasadena-park",
+        "heroTagline": "PASADENA PARK PAINTERS",
+        "funFact": "The quiet streets of Pasadena Park are the perfect place for a Prestige refresh."
+    },
+    {
+        "city": "Trentwood",
+        "slug": "trentwood",
+        "heroTagline": "TRENTWOOD CUSTOM PAINTING",
+        "funFact": "Serving the industrial and residential heart of the Valley in Trentwood."
+    },
+    {
+        "city": "East Farms",
+        "slug": "east-farms",
+        "heroTagline": "EAST FARMS PAINTING CO",
+        "funFact": "East Farms homeowners appreciate our clean job sites and professional conduct."
+    },
+    {
+        "city": "Skilsaw",
+        "slug": "skilsaw",
+        "heroTagline": "SKILSAW AREA PAINTERS",
+        "funFact": "No job is too big or too small for our dedicated team in the Skilsaw area."
+    },
+    {
+        "city": "Grapeland",
+        "slug": "grapeland",
+        "heroTagline": "GRAPELAND RESIDENTIAL PAINTING",
+        "funFact": "Fresh paint for fresh beginnings in the Grapeland community."
+    },
+    {
+        "city": "Saltese",
+        "slug": "saltese",
+        "heroTagline": "SALTESE PAINTING SERVICES",
+        "funFact": "The beautiful hills of Saltese are the perfect setting for our natural wood staining."
+    },
+    {
+        "city": "Liberty Quarter",
+        "slug": "liberty-quarter",
+        "heroTagline": "LIBERTY QUARTER PAINTERS",
+        "funFact": "Premium service for the premium homes of the Liberty Quarter."
+    },
+    {
+        "city": "Shields Park",
+        "slug": "shields-park",
+        "heroTagline": "SHIELDS PARK PAINTING EXPERTS",
+        "funFact": "We love refreshing the family homes around Shields Park for long-lasting curb appeal."
+    },
+    {
+        "city": "Reardan",
+        "slug": "reardan",
+        "heroTagline": "REARDAN COMMUNITY PAINTERS",
+        "funFact": "Serving the Reardan community with reliable, weather-resistant coatings for any season."
+    },
+    {
+        "city": "Tyler",
+        "slug": "tyler",
+        "heroTagline": "TYLER AREA PAINTING SERVICES",
+        "funFact": "From rural farmhouses to modern builds, we bring our 'Prestige' standard to Tyler."
+    },
+    {
+        "city": "Coeur d'Alene",
+        "slug": "coeur-d-alene-id",
+        "heroTagline": "COEUR D'ALENE PAINTING CO",
+        "funFact": "While we're Spokane-based, we're happy to handle high-end projects in beautiful CDA."
+    },
+    {
+        "city": "Dishman",
+        "slug": "dishman",
+        "heroTagline": "DISHMAN AREA PAINTERS",
+        "funFact": "Dishman's hilly terrain is no match for our experienced painting crews."
+    },
+    {
+        "city": "Whitworth",
+        "slug": "whitworth",
+        "heroTagline": "WHITWORTH UNIVERSITY AREA PAINTERS",
+        "funFact": "We enjoy helping keep the neighborhoods around Whitworth looking their collegiate best."
+    },
+    {
+        "city": "Northwest Spokane",
+        "slug": "northwest-spokane",
+        "heroTagline": "NORTHWEST SPOKANE PAINTING",
+        "funFact": "From Five Mile to Joe Albi, we've painted hundreds of homes in Northwest Spokane."
+    },
+    {
+        "city": "Lincoln Heights",
+        "slug": "lincoln-heights",
+        "heroTagline": "LINCOLN HEIGHTS CUSTOM PAINTING",
+        "funFact": "Lincoln Heights' beautiful views deserve a home that looks just as good."
+    },
+    {
+        "city": "Highland",
+        "slug": "highland",
+        "heroTagline": "HIGHLAND AREA PAINTERS",
+        "funFact": "Quality and integrity are the foundation of our work in the Highland community."
+    },
+    {
+        "city": "Antelope",
+        "slug": "antelope",
+        "heroTagline": "ANTELOPE AREA PAINTING",
+        "funFact": "Serving the growing Antelope community with professional-grade finishes."
+    },
+    {
+        "city": "Blossom",
+        "slug": "blossom",
+        "heroTagline": "BLOSSOM NEIGHBORHOOD PAINTERS",
+        "funFact": "Helping the Blossom neighborhood stay bright and beautiful with fresh paint."
+    },
+    {
+        "city": "Cliff Cannon",
+        "slug": "cliff-cannon",
+        "heroTagline": "CLIFF CANNON HISTORIC PAINTERS",
+        "funFact": "The historic architecture of Cliff Cannon is a favorite challenge for our detail-oriented team."
+    },
+    {
+        "city": "Comstock",
+        "slug": "comstock",
+        "heroTagline": "COMSTOCK PARK PAINTERS",
+        "funFact": "We love working near Comstock Park and keeping the local homes protected."
+    },
+    {
+        "city": "Country Homes",
+        "slug": "country-homes",
+        "heroTagline": "COUNTRY HOMES PAINTING CO",
+        "funFact": "Country Homes residents trust us for meticulous interior and exterior work."
+    },
+    {
+        "city": "Darty",
+        "slug": "darty",
+        "heroTagline": "DARTY AREA PAINTERS",
+        "funFact": "Bringing a fresh look to the Darty community with premium paint applications."
+    },
+    {
+        "city": "East Central",
+        "slug": "east-central",
+        "heroTagline": "EAST CENTRAL SPOKANE PAINTERS",
+        "funFact": "We take pride in refreshing the diverse neighborhoods of East Central Spokane."
+    },
+    {
+        "city": "Fairbank",
+        "slug": "fairbank",
+        "heroTagline": "FAIRBANK PAINTING SERVICES",
+        "funFact": "Fairbank homeowners count on us for reliable and beautiful painting results."
+    },
+    {
+        "city": "Freeman",
+        "slug": "freeman",
+        "heroTagline": "FREEMAN AREA PAINTING EXPERTS",
+        "funFact": "The rural beauty of Freeman is the perfect setting for our quality exterior work."
+    },
+    {
+        "city": "Grandview",
+        "slug": "grandview",
+        "heroTagline": "GRANDVIEW CUSTOM PAINTING",
+        "funFact": "Grandview homes deserve a grand finish, and that's exactly what we deliver."
+    },
+    {
+        "city": "Hayford",
+        "slug": "hayford",
+        "heroTagline": "HAYFORD AREA PAINTERS",
+        "funFact": "Serving the Hayford community with durable, long-lasting paint solutions."
+    },
+    {
+        "city": "Hazard",
+        "slug": "hazard",
+        "heroTagline": "HAZARD AREA PAINTING CO",
+        "funFact": "Bringing the prestige standard to every home in the Hazard community."
+    },
+    {
+        "city": "Indian Canyon",
+        "slug": "indian-canyon",
+        "heroTagline": "INDIAN CANYON PAINTERS",
+        "funFact": "The natural beauty of Indian Canyon inspires our meticulous color matching."
+    },
+    {
+        "city": "Latah Junction",
+        "slug": "latah-junction",
+        "heroTagline": "LATAH JUNCTION PAINTING SERVICES",
+        "funFact": "We're proud to serve the Latah Junction area with top-tier craftsmanship."
+    },
+    {
+        "city": "Latah Valley",
+        "slug": "latah-valley",
+        "heroTagline": "LATAH VALLEY PAINTERS",
+        "funFact": "The scenic Latah Valley is a wonderful place for our team to showcase their work."
+    },
+    {
+        "city": "Logan",
+        "slug": "logan",
+        "heroTagline": "LOGAN NEIGHBORHOOD PAINTERS",
+        "funFact": "Helping the Logan neighborhood maintain its historic charm one house at a time."
+    },
+    {
+        "city": "Minnehaha",
+        "slug": "minnehaha",
+        "heroTagline": "MINNEHAHA AREA PAINTING",
+        "funFact": "Minnehaha residents trust us for high-quality, professional painting services."
+    },
+    {
+        "city": "Morgan Acres",
+        "slug": "morgan-acres",
+        "heroTagline": "MORGAN ACRES PAINTERS",
+        "funFact": "Morgan Acres homes stay beautiful longer with our expert paint applications."
+    },
+    {
+        "city": "North Indian Trail",
+        "slug": "north-indian-trail",
+        "heroTagline": "NORTH INDIAN TRAIL PAINTING",
+        "funFact": "Serving the North Indian Trail community with dedicated and careful work."
+    },
+    {
+        "city": "Peaceful Valley",
+        "slug": "peaceful-valley",
+        "heroTagline": "PEACEFUL VALLEY PAINTERS",
+        "funFact": "We bring peace of mind to Peaceful Valley homeowners with our quality guarantee."
+    },
+    {
+        "city": "Peone",
+        "slug": "peone",
+        "heroTagline": "PEONE AREA PAINTING EXPERTS",
+        "funFact": "The beautiful Peone area is a great place to showcase our precision work."
+    },
+    {
+        "city": "Post Falls",
+        "slug": "post-falls",
+        "heroTagline": "POST FALLS PAINTING CO",
+        "funFact": "Bringing the prestige standard across the border to our friends in Post Falls."
+    },
+    {
+        "city": "Rockwood",
+        "slug": "rockwood",
+        "heroTagline": "ROCKWOOD HISTORIC PAINTERS",
+        "funFact": "Rockwood's classic homes are a perfect fit for our master-level craftsmanship."
+    },
+    {
+        "city": "Shiloh",
+        "slug": "shiloh",
+        "heroTagline": "SHILOH AREA PAINTERS",
+        "funFact": "Serving the Shiloh community with professional, high-end painting results."
+    },
+    {
+        "city": "Suncrest",
+        "slug": "suncrest",
+        "heroTagline": "SUNCREST PAINTING SERVICES",
+        "funFact": "Suncrest homes stay protected and beautiful with our premium coatings."
+    },
+    {
+        "city": "Sunset Hill",
+        "slug": "sunset-hill",
+        "heroTagline": "SUNSET HILL PAINTERS",
+        "funFact": "We love helping Sunset Hill homeowners enhance their home's curb appeal."
+    },
+    {
+        "city": "West Central",
+        "slug": "west-central",
+        "heroTagline": "WEST CENTRAL SPOKANE PAINTERS",
+        "funFact": "The historic homes of West Central Spokane deserve our dedicated attention to detail."
+    }
+]
