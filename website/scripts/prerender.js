@@ -141,20 +141,8 @@ const staticRoutes = [
   '/spokane-painting-glossary'
 ];
 
-const areas = [
-  "spokane", "spokane-valley", "liberty-lake", "airway-heights", "cheney",
-  "deer-park", "medical-lake", "millwood", "fairfield", "mead",
-  "nine-mile-falls", "colbert", "chattaroy", "otis-orchards", "newman-lake",
-  "greenacres", "veradale", "south-hill", "north-hill", "five-mile-prairie",
-  "shadle-park", "garland-district", "perry-district", "audubon", "brownes-addition",
-  "kendall-yards", "hillyard", "indian-trail", "eagle-ridge", "fairwood",
-  "town-and-country", "seven-mile", "spangle", "rockford", "latah", "waverly",
-  "elk", "plaza", "marshall", "moab", "michaud", "geiger-heights", "glenrose",
-  "moran-prairie", "peone-prairie", "pleasant-prairie", "green-bluff", "valleyford",
-  "mica", "duncan", "four-lakes", "deep-creek", "lyons", "denison", "milan",
-  "buckeye", "waysat", "irvin", "pasadena-park", "trentwood", "east-farms",
-  "skilsaw", "grapeland", "saltese", "liberty-quarter"
-];
+const areaData = JSON.parse(fs.readFileSync(path.join(__dirname, '../src/data/areaData.json'), 'utf8'));
+const areas = areaData.map(a => a.slug);
 
 const services = [
   "Exterior painting", "Cabinet painting", "Deck painting", "Door painting",
