@@ -37,7 +37,7 @@ function AboutUsPage() {
                     data: generateArticleSchema({
                         topic: "About Prestige Custom Painting: Our Philosophy and Inland Northwest Heritage",
                         description: "An in-depth look at the history, values, and exacting standards of Prestige Custom Painting LLC in Spokane, Washington.",
-                        image: "https://prestigecustompaintingllc.com/robert.webp",
+                        image: "https://prestigecustompaintingllc.com/robert.jpg",
                         datePublished: "2024-01-01",
                         dateModified: "2026-04-24",
                         authorName: ownerName,
@@ -49,7 +49,7 @@ function AboutUsPage() {
     }, [companyName, ownerName]);
 
     const values = [
-        { icon: <Mountain size={24} />, title: "Local Heritage", description: "Robert was born and raised in the Inland Northwest. We don't just work in Spokane; we live here, and we care about every street we paint. We understand the specific weather challenges our homes face." },
+        { icon: <Mountain size={24} />, title: "Local Heritage", description: "Robert is a longtime resident of the Inland Northwest. We don't just work in Spokane; we live here, and we care about every street we paint. We understand the specific weather challenges our homes face." },
         { icon: <Award size={24} />, title: "The Prestige Standard", description: "We use only the highest-tier coatings from Benjamin Moore and Sherwin Williams, applied with precision mechanical tools to ensure absolute perfection and longevity." },
         { icon: <Shield size={24} />, title: "Absolute Trust", description: "We are fully licensed, bonded, and insured. We believe in 100% transparency from the first quote to the final walkthrough. No hidden fees. No cut corners." },
         { icon: <Clock size={24} />, title: "Time-Tested Execution", description: "Every project strictly adheres to our comprehensive sequencing protocol. We don't rush. Proper curing times and systematic preparation are non-negotiable." },
@@ -133,7 +133,7 @@ function AboutUsPage() {
                         <div className="w-full lg:w-1/2 relative">
                             <div className="absolute -inset-4 bg-brand-green/5 rounded-[3rem] -rotate-2" />
                             <img
-                                src="/robert.webp"
+                                src="/robert.jpg"
                                 alt="Robert, owner of Prestige Custom Painting LLC and professional painter in Spokane WA"
                                 className="relative z-10 rounded-[2.5rem] shadow-2xl w-full object-cover aspect-[4/5] hover:scale-[1.02] transition-transform duration-700"
                             />
@@ -150,10 +150,10 @@ function AboutUsPage() {
                                     The painting industry in Spokane is often plagued by 'chuck-in-a-truck' operations—uninsured, untrained laborers who cut corners and disappear when the paint inevitably fails after the first winter. 
                                 </p>
                                 <p>
-                                    <strong>{companyName}</strong> was founded by <strong>{ownerName}</strong> to aggressively oppose that low-standard norm. As a lifelong resident of the Inland Northwest, Robert saw firsthand how our unique climate—featuring scorching 100°F Augusts and brutal sub-zero December freeze-thaw cycles—destroys standard, builder-grade paint jobs.
+                                    <strong>{companyName}</strong> was founded by <strong>{ownerName}</strong> to aggressively oppose that low-standard norm. As a longtime resident of the Inland Northwest, Robert saw firsthand how our unique climate—featuring scorching 100°F Augusts and brutal sub-zero December freeze-thaw cycles—destroys standard, builder-grade paint jobs.
                                 </p>
                                 <p>
-                                    We don't build our business model on massive volume. We build it on <strong>retention and referrals</strong>. This means we treat every single South Hill Victorian restoration, every Liberty Lake new build, and every Spokane Valley rancher remodel as if it were our own personal property.
+                                    We don't build our business model on massive volume. We build it on <strong>quality and personal attention</strong>. This means we treat every project—from detailed interior transformations to full-scale exterior restorations—with the same meticulous care as if it were our own personal property.
                                 </p>
                                 <div className="bg-brand-green/5 border-l-4 border-brand-green p-8 my-10 rounded-r-3xl">
                                     <p className="text-brand-black font-bold mb-3 flex items-center gap-2 uppercase tracking-widest text-xs">

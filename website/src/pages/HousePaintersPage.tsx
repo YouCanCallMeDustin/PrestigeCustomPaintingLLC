@@ -443,7 +443,7 @@ function HousePaintersPage() {
                                 Ready for a Clean, <br />Professional Finish?
                             </h2>
                             <p className="text-gray-400 text-xl font-medium mb-12 max-w-2xl mx-auto leading-relaxed">
-                                Join hundreds of satisfied Spokane homeowners. Get your free, professional house painting estimate today.
+                                Join our growing list of satisfied Spokane homeowners. Get your free, professional house painting estimate today.
                             </p>
                             <div className="flex flex-col sm:flex-row justify-center gap-6">
                                 <a href={`tel:${phoneNumber}`} className="bg-brand-green hover:bg-green-600 text-white px-12 py-6 rounded-2xl font-extrabold text-2xl transition-all hover:scale-105 shadow-2xl shadow-green-500/40">
@@ -463,13 +463,13 @@ function HousePaintersPage() {
                 <div className="max-w-4xl mx-auto px-4 text-center md:text-left">
                     <div className="bg-gray-50 p-8 md:p-12 rounded-[2.5rem] flex flex-col md:flex-row items-center gap-10">
                         <div className="w-40 h-40 shrink-0 relative">
-                            <img src="/robert.webp" alt={ownerName} className="rounded-full w-full h-full object-cover relative z-10 border-4 border-white shadow-xl" />
+                            <img src="/robert.jpg" alt={ownerName} className="rounded-full w-full h-full object-cover relative z-10 border-4 border-white shadow-xl" />
                         </div>
                         <div>
                             <p className="text-brand-green font-bold text-sm uppercase tracking-widest mb-2">Expert Review By</p>
                             <h3 className="text-3xl font-poppins font-bold mb-4">{ownerName}</h3>
                             <p className="text-gray-600 leading-relaxed mb-6 font-medium">
-                                With over a decade of residential painting experience in the Spokane area, Robert specializes in high-durability coatings and meticulous surface restoration techniques.
+                                With extensive residential painting experience in the Spokane area, Robert specializes in high-durability coatings and meticulous surface restoration techniques.
                             </p>
                             <div className="flex items-center justify-center md:justify-start gap-4 text-xs text-gray-400 font-bold uppercase tracking-tighter">
                                 <p>Updated: April 2026</p>

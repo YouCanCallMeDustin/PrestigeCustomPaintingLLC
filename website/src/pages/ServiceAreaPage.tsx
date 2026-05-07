@@ -443,13 +443,13 @@ export default function ServiceAreaPage() {
                 <div className="max-w-4xl mx-auto px-4">
                     <div className="bg-white p-8 md:p-12 rounded-[2.5rem] flex flex-col md:flex-row items-center gap-10 shadow-sm border border-gray-100">
                         <div className="w-32 h-32 md:w-40 md:h-40 shrink-0 relative">
-                            <img src="/robert.webp" alt={ownerName} className="rounded-full w-full h-full object-cover relative z-10 border-4 border-white shadow-xl" />
+                            <img src="/robert.jpg" alt={ownerName} className="rounded-full w-full h-full object-cover relative z-10 border-4 border-white shadow-xl" />
                         </div>
                         <div className="text-left">
                             <p className="text-brand-green font-bold text-sm uppercase tracking-widest mb-2">Regional Specialist</p>
                             <h3 className="text-3xl font-poppins font-bold mb-4">{ownerName}</h3>
                             <p className="text-gray-600 leading-relaxed mb-6 font-medium">
-                                With over 15 years of painting expertise in the Inland Northwest, Robert ensures every project—from the South Hill to Airway Heights—meets the "Expect Excellence" standard.
+                                With extensive painting expertise in the Inland Northwest, Robert ensures every project—from the South Hill to Airway Heights—meets the "Expect Excellence" standard.
                             </p>
                             <div className="flex items-center justify-start gap-4 text-xs text-gray-400 font-bold uppercase tracking-tighter">
                                 <p>Updated: April 2026</p>

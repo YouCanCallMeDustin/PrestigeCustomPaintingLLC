@@ -49,7 +49,7 @@ const ExteriorPaintingCost: React.FC = () => {
         { id: 'article', data: generateArticleSchema({
             topic: "Exterior House Painting Cost in Spokane (2026 Guide)",
             description: "Detailed breakdown of exterior house painting costs in Spokane for 2026. Discover pricing by siding type, the impact of local weather, and DIY constraints.",
-            image: "https://prestigecustompaintingllc.com/exterior.webp",
+            image: "https://prestigecustompaintingllc.com/23.jpg",
             datePublished: "2026-04-10",
             dateModified: "2026-04-24",
             authorName: ownerName,
@@ -245,7 +245,7 @@ const ExteriorPaintingCost: React.FC = () => {
                             </div>
                             <div className="hidden md:block w-2/5 relative">
                                 <img 
-                                    src="/exterior.webp" 
+                                    src="/23.jpg" 
                                     alt="Full exterior painting project in Spokane WA" 
                                     className="absolute inset-0 w-full h-full object-cover" 
                                 />

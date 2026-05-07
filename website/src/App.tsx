@@ -246,7 +246,7 @@ function App() {
                             <div className="absolute inset-0 bg-brand-green rounded-3xl rotate-3 scale-105 opacity-10" />
                             <figure>
                                 <img
-                                    src="/robert.webp"
+                                    src="/robert.jpg"
                                     alt="Robert, owner of Prestige Custom Painting LLC, professional house painter in Spokane WA"
                                     className="relative z-10 rounded-3xl shadow-2xl grayscale hover:grayscale-0 transition-all duration-700 w-full object-cover aspect-[4/5]"
                                 />
@@ -278,7 +278,7 @@ function App() {
                                     </div>
                                     <div>
                                         <h4 className="font-bold text-lg text-brand-black">Locally Owned & Operated</h4>
-                                        <p className="text-gray-500 text-sm">Born and raised right here in the Inland Northwest. We know Spokane neighborhoods.</p>
+                                        <p className="text-gray-500 text-sm">Robert is a longtime resident of the Inland Northwest. We know Spokane neighborhoods.</p>
                                     </div>
                                 </div>
                                 <div className="flex gap-4">
@@ -347,7 +347,7 @@ function App() {
                         </div>
                         <div className="md:w-1/2">
                             <figure>
-                                <img src="/finish.webp" alt="Cabinet painting transformation in Spokane WA" className="rounded-[2rem] shadow-2xl border border-white/10" />
+                                <img src="/2.jpg" alt="Cabinet painting transformation in Spokane WA" className="rounded-[2rem] shadow-2xl border border-white/10" />
                                 <figcaption className="mt-4 text-xs text-gray-400 italic text-center">
                                     A factory-smooth cabinet finish achieving a modern, high-end look without the cost of replacement.
                                 </figcaption>
@@ -392,16 +392,18 @@ function App() {
                         <span className="text-xl font-bold">5.0 Rating</span>
                     </div>
                     <div className="flex flex-wrap justify-center gap-6 mb-12">
-                        {/* Simplified review list for brevity */}
-                        {["Dustin Shoemake", "After Words", "Touch Flow Pro"].map((name, i) => (
-                            <div key={i} className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 w-[300px]">
-                                <p className="font-bold text-brand-black mb-2">{name}</p>
-                                <div className="flex text-yellow-400 mb-2">
-                                    {[...Array(5)].map((_, j) => <Star key={j} size={12} fill="currentColor" />)}
+                        <div className="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 max-w-2xl">
+                            <p className="text-gray-600 italic mb-6">"Our goal is to provide every client with a 5-star experience. We are currently building our portfolio of local Spokane projects and look forward to adding your home to our list of success stories."</p>
+                            <div className="flex items-center justify-center gap-4">
+                                <div className="w-12 h-12 bg-brand-green/10 rounded-full flex items-center justify-center text-brand-green">
+                                    <Star size={20} fill="currentColor" />
                                 </div>
-                                <p className="text-sm text-gray-500">Verified Google Review</p>
+                                <div className="text-left">
+                                    <p className="font-bold text-brand-black">Commitment to Excellence</p>
+                                    <p className="text-sm text-gray-500">The Prestige Promise</p>
+                                </div>
                             </div>
-                        ))}
+                        </div>
                     </div>
                     <a href="https://g.page/r/CaeovOje_oP7EAE/review" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-brand-green text-white px-8 py-4 rounded-full font-bold transition-all hover:scale-105">
                         <Star size={20} fill="currentColor" /> Leave a Review

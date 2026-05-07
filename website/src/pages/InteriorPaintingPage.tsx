@@ -257,7 +257,7 @@ function InteriorPaintingPage() {
                         <div className="relative">
                             <div className="absolute inset-0 bg-brand-green rounded-[3rem] rotate-3 scale-105 opacity-10" />
                             <img
-                                src="/interior.webp"
+                                src="/5.jpg"
                                 alt="Professional interior painting results in Spokane WA"
                                 className="relative z-10 rounded-[3rem] shadow-2xl object-cover h-[500px] w-full"
                             />
@@ -509,7 +509,7 @@ function InteriorPaintingPage() {
                                 Ready for a Master-Level Transformation?
                             </h2>
                             <p className="text-gray-400 text-xl mb-12 max-w-2xl mx-auto leading-relaxed font-medium">
-                                Contact Prestige Custom Painting LLC today for your free, no-obligation interior painting estimate. Join hundreds of satisfied Spokane homeowners.
+                                Contact Prestige Custom Painting LLC today for your free, no-obligation interior painting estimate. Join our growing list of satisfied Spokane homeowners.
                             </p>
                             <div className="flex flex-col sm:flex-row justify-center gap-6">
                                 <a href={`tel:${phoneNumber}`} className="bg-brand-green hover:bg-green-600 text-white px-12 py-6 rounded-2xl font-extrabold text-2xl transition-all hover:scale-105 shadow-2xl shadow-green-500/40">
@@ -530,13 +530,13 @@ function InteriorPaintingPage() {
                     <div className="bg-white p-8 md:p-12 rounded-[2.5rem] shadow-sm border border-gray-100 flex flex-col md:flex-row items-center gap-10">
                         <div className="w-40 h-40 shrink-0 relative">
                             <div className="absolute inset-0 bg-brand-green rounded-full rotate-6 opacity-10" />
-                            <img src="/robert.webp" alt={ownerName} className="rounded-full w-full h-full object-cover relative z-10 border-4 border-white shadow-xl" />
+                            <img src="/robert.jpg" alt={ownerName} className="rounded-full w-full h-full object-cover relative z-10 border-4 border-white shadow-xl" />
                         </div>
                         <div>
                             <p className="text-brand-green font-bold text-sm uppercase tracking-widest mb-2">Written By</p>
                             <h3 className="text-3xl font-poppins font-bold mb-4">{ownerName}</h3>
                             <p className="text-gray-600 leading-relaxed mb-6 font-medium">
-                                Founder of Prestige Custom Painting LLC and a veteran of the Spokane painting industry. With over 15 years of hands-on experience in high-end residential and commercial finishes, Robert oversees every project to ensure the "Expect Excellence" standard is met.
+                                Founder of Prestige Custom Painting LLC and a professional in the Spokane painting industry. With extensive hands-on experience in high-end residential and commercial finishes, Robert oversees every project to ensure the "Expect Excellence" standard is met.
                             </p>
                             <div className="flex items-center gap-4 text-xs text-gray-400 font-bold uppercase tracking-tighter">
                                 <p>Last Updated: April 2026</p>
