@@ -339,6 +339,7 @@
     {
         "city": "Coeur d'Alene",
         "slug": "coeur-d-alene-id",
+        "state": "ID",
         "heroTagline": "COEUR D'ALENE PAINTING CO",
         "funFact": "While we're Spokane-based, we're happy to handle high-end projects in beautiful CDA."
     },
@@ -471,6 +472,7 @@
     {
         "city": "Post Falls",
         "slug": "post-falls",
+        "state": "ID",
         "heroTagline": "POST FALLS PAINTING CO",
         "funFact": "Bringing the prestige standard across the border to our friends in Post Falls."
     },

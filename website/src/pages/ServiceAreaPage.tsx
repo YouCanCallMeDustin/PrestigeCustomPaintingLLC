@@ -66,7 +66,7 @@ export default function ServiceAreaPage() {
                         "areaServed": areaData.map(a => ({
                             "@type": "City",
                             "name": a.city,
-                            "addressRegion": "WA"
+                            "addressRegion": a.state || "WA"
                         })),
                         "description": "Premium interior, exterior, and cabinet painting services across 60+ communities in the Spokane metro area."
                     }
@@ -265,7 +265,7 @@ export default function ServiceAreaPage() {
                                         <ArrowRight size={18} className="text-gray-300 group-hover:text-brand-green transform group-hover:translate-x-1 transition-all" />
                                     </div>
                                     <h3 className="font-poppins font-bold text-gray-900 group-hover:text-brand-green transition-colors">{area.city}</h3>
-                                    <p className="text-xs text-gray-400 mt-1 font-bold uppercase tracking-[0.1em]">Washington State</p>
+                                    <p className="text-xs text-gray-400 mt-1 font-bold uppercase tracking-[0.1em]">{area.state === 'ID' ? 'Idaho' : 'Washington State'}</p>
                                 </Link>
                             ))}
                         </div>
