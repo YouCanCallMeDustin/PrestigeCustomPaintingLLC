@@ -175,6 +175,32 @@ const routes = [...staticRoutes, ...areaRoutes, ...serviceRoutes];
 // --------------------------------------------------------------------------
 // Pre-render
 // --------------------------------------------------------------------------
+const CONCURRENCY = 5; // Number of pages to render simultaneously
+
+async function renderRoute(browser, route, distDir, port) {
+  const url = `http://localhost:${port}${route}`;
+  const page = await browser.newPage();
+  try {
+    await page.goto(url, { waitUntil: 'networkidle0', timeout: 20000 });
+    // Wait for useEffect SEO injection to complete
+    await new Promise(r => setTimeout(r, 800));
+
+    const html = await page.content();
+
+    const outFile = route === '/'
+      ? path.join(distDir, 'index.html')
+      : path.join(distDir, route, 'index.html');
+
+    fs.mkdirSync(path.dirname(outFile), { recursive: true });
+    fs.writeFileSync(outFile, html);
+    return { success: true };
+  } catch (err) {
+    return { success: false, error: err.message };
+  } finally {
+    await page.close();
+  }
+}
+
 async function prerender() {
   const browserPath = findBrowser();
   if (!browserPath) {
@@ -182,7 +208,7 @@ async function prerender() {
     process.exit(1);
   }
   console.log(`Using browser: ${browserPath}`);
-  console.log(`Pre-rendering ${routes.length} routes...\n`);
+  console.log(`Pre-rendering ${routes.length} routes with concurrency=${CONCURRENCY}...\n`);
 
   const server = await startServer();
 
@@ -194,39 +220,38 @@ async function prerender() {
 
   let rendered = 0;
   let failed = 0;
+  const startTime = Date.now();
 
-  for (const route of routes) {
-    const url = `http://localhost:${PORT}${route}`;
-    const page = await browser.newPage();
+  // Process routes in parallel batches using a concurrency pool
+  const queue = [...routes];
+  const workers = Array.from({ length: CONCURRENCY }, async () => {
+    while (queue.length > 0) {
+      const route = queue.shift();
+      if (!route) break;
 
-    try {
-      await page.goto(url, { waitUntil: 'networkidle0', timeout: 15000 });
-      // Wait for useEffect SEO injection to complete
-      await new Promise(r => setTimeout(r, 800));
+      const result = await renderRoute(browser, route, DIST_DIR, PORT);
+      if (result.success) {
+        rendered++;
+      } else {
+        failed++;
+        console.warn(`  WARN: Failed ${route}: ${result.error}`);
+      }
 
-      const html = await page.content();
-
-      const outFile = route === '/'
-        ? path.join(DIST_DIR, 'index.html')
-        : path.join(DIST_DIR, route, 'index.html');
-
-      fs.mkdirSync(path.dirname(outFile), { recursive: true });
-      fs.writeFileSync(outFile, html);
-
-      rendered++;
-      if (rendered % 25 === 0) console.log(`  Progress: ${rendered}/${routes.length}`);
-    } catch (err) {
-      failed++;
-      console.warn(`  WARN: Failed ${route}: ${err.message}`);
-    } finally {
-      await page.close();
+      const total = rendered + failed;
+      if (total % 25 === 0) {
+        const elapsed = ((Date.now() - startTime) / 1000).toFixed(1);
+        console.log(`  Progress: ${total}/${routes.length} (${elapsed}s elapsed)`);
+      }
     }
-  }
+  });
+
+  await Promise.all(workers);
 
   await browser.close();
   server.close();
 
-  console.log(`\n✓ Done! Rendered: ${rendered}, Failed: ${failed}, Total: ${routes.length}`);
+  const totalTime = ((Date.now() - startTime) / 1000).toFixed(1);
+  console.log(`\n✓ Done! Rendered: ${rendered}, Failed: ${failed}, Total: ${routes.length} in ${totalTime}s`);
   process.exit(0);
 }
 
