@@ -26,7 +26,7 @@ export default function ServiceAreaPage() {
     const faqs = [
         {
             q: "How many towns do you serve in the Spokane region?",
-            a: "We serve over 60 specific regional areas, including the entire Spokane Valley, Liberty Lake, Cheney, and Airway Heights."
+            a: "We serve 60+ specific regional areas, including the entire Spokane Valley, Liberty Lake, Cheney, and Airway Heights — all within the greater Spokane metro area."
         },
         {
             q: "Do you charge more for travel to outlying areas like Deer Park?",
@@ -37,14 +37,14 @@ export default function ServiceAreaPage() {
             a: "Exterior season typically runs from late April through October. Interior painting can be done year-round with low-VOC, eco-friendly products."
         },
         {
-            q: "Are you licensed to work in Post Falls and Idaho?",
-            a: "Yes, we are fully registered and insured to provide professional painting services across the border in Post Falls and the broader Kootenai County area."
+            q: "Do you serve communities outside of Spokane city limits?",
+            a: "Absolutely. We serve the full Spokane metro area plus Coeur d'Alene and Post Falls, including Spokane Valley, Liberty Lake, Cheney, Airway Heights, Deer Park, Millwood, Mead, and dozens of surrounding neighborhoods."
         }
     ];
 
     useEffect(() => {
         const title = "House Painters Spokane Service Areas | Prestige Custom Painting";
-        const description = "Looking for professional house painters in Spokane? We serve 67+ regional areas with premium interior and exterior painting. Call (509) 596-3351 for a free quote!";
+        const description = "Looking for professional house painters in Spokane? We serve 60+ communities in the Spokane metro area with premium interior and exterior painting. Call (509) 596-3351 for a free quote!";
 
         return injectPageSEO({
             seoTitle: title,
@@ -68,7 +68,7 @@ export default function ServiceAreaPage() {
                             "name": a.city,
                             "addressRegion": "WA"
                         })),
-                        "description": "Premium interior, exterior, and cabinet painting services across 60+ areas in the Spokane region."
+                        "description": "Premium interior, exterior, and cabinet painting services across 60+ communities in the Spokane metro area."
                     }
                 },
                 {
@@ -155,7 +155,7 @@ export default function ServiceAreaPage() {
                             <span className="text-brand-green italic uppercase tracking-tighter text-shadow-sm">Regional Excellence.</span>
                         </h1>
                         <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-10 max-w-2xl font-medium">
-                            Premium painting across the Inland Northwest. We serve 67+ regional areas with meticulous interior and exterior transformations.
+                            Premium painting across the Spokane metro area. We serve 60+ regional communities with meticulous interior and exterior transformations.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-5">
                             <a href={`tel:${phoneNumber}`} className="flex items-center justify-center gap-3 bg-brand-green hover:bg-green-600 text-white px-10 py-5 rounded-2xl font-extrabold text-lg transition-all shadow-xl shadow-green-500/20">
@@ -431,7 +431,7 @@ export default function ServiceAreaPage() {
                                 House Painting Done <br />Right. Every Time.
                             </h2>
                             <p className="text-gray-400 text-xl font-medium mb-12 max-w-2xl mx-auto leading-relaxed">
-                                Whether you're in Spokane, Liberty Lake, or Post Falls, choose the team that understands regional demands. Request your free estimate today.
+                            Whether you're in Spokane, Liberty Lake, Coeur d'Alene, or Post Falls, choose the team that understands regional demands. Request your free estimate today.
                             </p>
                             <div className="flex flex-col sm:flex-row justify-center gap-6">
                                 <a href={`tel:${phoneNumber}`} className="bg-brand-green hover:bg-green-600 text-white px-12 py-6 rounded-2xl font-extrabold text-2xl transition-all hover:shadow-2xl shadow-green-500/30">
