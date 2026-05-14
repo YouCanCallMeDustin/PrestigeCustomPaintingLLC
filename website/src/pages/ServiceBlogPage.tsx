@@ -32,7 +32,7 @@ function ServiceBlogPage() {
                 seoTitle: `${data.h1} | Prestige Custom Painting LLC`,
                 description: data.metaDescription,
                 keywords: data.keywords,
-                path: `/service/${serviceSlug}`,
+                path: data.canonicalPath || `/service/${serviceSlug}`,
                 schemas
             });
         }

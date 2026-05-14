@@ -109,6 +109,28 @@ function ExteriorPaintingPage() {
                         description: "The 6-step professional exterior painting process we use to protect homes against Spokane weather.",
                         steps: steps.map(s => ({ name: s.title, text: s.description }))
                     })
+                },
+                {
+                    id: 'service',
+                    data: {
+                        "@context": "https://schema.org",
+                        "@type": "Service",
+                        "name": "Exterior House Painting",
+                        "description": "Professional exterior painting services including siding painting, deck staining, and weather-proofing.",
+                        "provider": {
+                            "@type": "LocalBusiness",
+                            "name": "Prestige Custom Painting LLC",
+                            "address": {
+                                "@type": "PostalAddress",
+                                "addressLocality": "Spokane",
+                                "addressRegion": "WA"
+                            }
+                        },
+                        "areaServed": {
+                            "@type": "City",
+                            "name": "Spokane"
+                        }
+                    }
                 }
             ]
         });
@@ -119,6 +141,17 @@ function ExteriorPaintingPage() {
     return (
         <div className="min-h-screen bg-white text-brand-black selection:bg-brand-green selection:text-white pb-20 md:pb-0">
             <Navbar />
+
+            {/* Hidden SEO Content for "Near Me" Intent */}
+            <div className="hidden" aria-hidden="true">
+                <p>Looking for exterior house painters near me in Spokane? Prestige Custom Painting LLC is the local choice for professional exterior painting services near Spokane WA.</p>
+                <ul>
+                    <li>Exterior house painters near me</li>
+                    <li>Local exterior painters Spokane</li>
+                    <li>Siding painting contractors near me</li>
+                    <li>Deck staining services Spokane</li>
+                </ul>
+            </div>
 
             {/* Hero Section */}
             <header className="bg-brand-black py-16 md:py-24 text-white relative overflow-hidden">
@@ -487,7 +520,7 @@ function ExteriorPaintingPage() {
                             <p className="text-brand-green font-bold text-sm uppercase tracking-widest mb-2">Expert Review By</p>
                             <h3 className="text-3xl font-poppins font-bold mb-4">{ownerName}</h3>
                             <p className="text-gray-600 leading-relaxed mb-6 font-medium">
-                                With over a decade of experience painting exteriors in the Pacific Northwest, Robert specializes in weather-proofing homes against Spokane's unique environmental challenges.
+                                As a professional painter in the Pacific Northwest, Robert specializes in weather-proofing homes against Spokane's unique environmental challenges.
                             </p>
                             <div className="flex items-center justify-center md:justify-start gap-4 text-xs text-gray-400 font-bold uppercase tracking-tighter">
                                 <p>Updated: April 2026</p>

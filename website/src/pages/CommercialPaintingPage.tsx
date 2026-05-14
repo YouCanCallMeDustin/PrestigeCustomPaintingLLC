@@ -108,6 +108,37 @@ function CommercialPaintingPage() {
                         description: "Our 6-step commercial facility painting system.",
                         steps: steps.map(s => ({ name: s.title, text: s.description }))
                     })
+                },
+                {
+                    id: 'service-schema',
+                    data: {
+                        "@context": "https://schema.org",
+                        "@type": "Service",
+                        "name": "Commercial Painting Spokane",
+                        "description": "Professional commercial and industrial painting services in Spokane, WA.",
+                        "provider": {
+                            "@type": "LocalBusiness",
+                            "name": "Prestige Custom Painting LLC",
+                            "image": "https://prestigecustompaintingllc.com/logo.png",
+                            "address": {
+                                "@type": "PostalAddress",
+                                "addressLocality": "Spokane",
+                                "addressRegion": "WA",
+                                "addressCountry": "US"
+                            }
+                        },
+                        "areaServed": "Spokane, WA",
+                        "hasOfferCatalog": {
+                            "@type": "OfferCatalog",
+                            "name": "Commercial Painting Services",
+                            "itemListElement": [
+                                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Commercial Interior Painting" } },
+                                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Industrial Exterior Painting" } },
+                                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Retail Space Painting" } },
+                                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Facility Maintenance Painting" } }
+                            ]
+                        }
+                    }
                 }
             ]
         });
@@ -480,6 +511,26 @@ function CommercialPaintingPage() {
                     </div>
                 </div>
             </section>
+
+            {/* Semantic SEO Block - AEO Optimization */}
+            <div className="sr-only" aria-hidden="true">
+                <h2>Commercial Painters Near Me in Spokane WA</h2>
+                <p>
+                    Looking for professional commercial painters near me? Prestige Custom Painting LLC is Spokane's leading 
+                    commercial painting contractor, specializing in industrial coatings, office painting, and business 
+                    property restoration. Our industrial painting contractors in Spokane provide scuff-resistant finishes 
+                    and flexible scheduling for retail spaces, warehouses, and medical facilities. Whether you need 
+                    business painters in Spokane or facility maintenance painting, we deliver high-performance results 
+                    that protect your investment.
+                </p>
+                <ul>
+                    <li>Commercial painting contractors Spokane</li>
+                    <li>Industrial painters near me</li>
+                    <li>Office painting Spokane WA</li>
+                    <li>Commercial exterior painters</li>
+                    <li>Warehouse painting services</li>
+                </ul>
+            </div>
 
             <Footer />
         </div>

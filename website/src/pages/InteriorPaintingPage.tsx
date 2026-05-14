@@ -11,7 +11,7 @@ function InteriorPaintingPage() {
     const { phoneNumber, email, ownerName } = SITE_INFO;
 
     const primaryKeyword = "Interior Painting Spokane";
-    const secondaryKeywords = ["House Painters Spokane", "Cabinet Painting Spokane", "Professional Painters", "Residential Painting", "Wall Painting", "Ceiling Painting", "Trim Painting", "Spokane Painting Services", "Kitchen Cabinet Refinishing"];
+    const secondaryKeywords = ["Interior House Painters Spokane", "Inside Painting Services", "Room Painters Spokane", "Cabinet Painting Spokane", "Wall Painting", "Ceiling Painting", "Trim Painting", "Spokane Painting Services", "Kitchen Cabinet Refinishing"];
 
     const faqs = [
         {

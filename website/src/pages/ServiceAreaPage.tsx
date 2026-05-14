@@ -249,23 +249,31 @@ export default function ServiceAreaPage() {
                         <h2 className="text-3xl md:text-4xl font-poppins font-bold text-brand-black mb-4 uppercase tracking-tighter">Cities & Communities We Serve</h2>
                         <div className="h-1.5 w-20 bg-brand-green mx-auto rounded-full" />
                     </div>
-                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                        {areaData.map((area, idx) => (
-                            <Link
-                                key={idx}
-                                to={area.slug === 'spokane' ? '/house-painters-spokane' : `/painting-${area.slug}`}
-                                className="group p-6 bg-white border border-gray-100 rounded-2xl hover:border-brand-green hover:shadow-xl hover:shadow-green-500/5 transition-all text-left"
-                            >
-                                <div className="flex items-center justify-between mb-4">
-                                    <div className="w-10 h-10 bg-brand-green/10 rounded-xl flex items-center justify-center text-brand-green group-hover:bg-brand-green group-hover:text-white transition-colors">
-                                        <MapPin size={20} />
+                    <div className="relative">
+                        {/* Horizontal Scroll for Mobile, Grid for Desktop */}
+                        <div className="flex overflow-x-auto pb-8 scrollbar-hide snap-x snap-mandatory -mx-4 px-4 md:mx-0 md:px-0 md:pb-0 md:grid md:grid-cols-3 lg:grid-cols-4 md:gap-4 md:overflow-visible md:snap-none">
+                            {areaData.map((area, idx) => (
+                                <Link
+                                    key={idx}
+                                    to={area.slug === 'spokane' ? '/house-painters-spokane' : `/painting-${area.slug}`}
+                                    className="shrink-0 w-[280px] snap-start mr-4 md:mr-0 group p-6 bg-white border border-gray-100 rounded-2xl hover:border-brand-green hover:shadow-xl hover:shadow-green-500/5 transition-all text-left md:w-auto md:shrink md:snap-align-none"
+                                >
+                                    <div className="flex items-center justify-between mb-4">
+                                        <div className="w-10 h-10 bg-brand-green/10 rounded-xl flex items-center justify-center text-brand-green group-hover:bg-brand-green group-hover:text-white transition-colors">
+                                            <MapPin size={20} />
+                                        </div>
+                                        <ArrowRight size={18} className="text-gray-300 group-hover:text-brand-green transform group-hover:translate-x-1 transition-all" />
                                     </div>
-                                    <ArrowRight size={18} className="text-gray-300 group-hover:text-brand-green transform group-hover:translate-x-1 transition-all" />
-                                </div>
-                                <h3 className="font-poppins font-bold text-gray-900 group-hover:text-brand-green transition-colors">{area.city}</h3>
-                                <p className="text-xs text-gray-400 mt-1 font-bold uppercase tracking-[0.1em]">Washington State</p>
-                            </Link>
-                        ))}
+                                    <h3 className="font-poppins font-bold text-gray-900 group-hover:text-brand-green transition-colors">{area.city}</h3>
+                                    <p className="text-xs text-gray-400 mt-1 font-bold uppercase tracking-[0.1em]">Washington State</p>
+                                </Link>
+                            ))}
+                        </div>
+                        
+                        {/* Mobile Scroll Hint */}
+                        <div className="md:hidden flex items-center justify-center gap-2 -mt-4 mb-4 text-gray-400 font-bold text-[10px] uppercase tracking-widest animate-pulse">
+                            <ArrowRight size={12} className="rotate-180" /> Swipe to explore areas <ArrowRight size={12} />
+                        </div>
                     </div>
                 </div>
             </section>

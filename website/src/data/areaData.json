@@ -48,12 +48,6 @@
         "funFact": "The close-knit community of Millwood is one of our favorite areas to work in."
     },
     {
-        "city": "Fairfield",
-        "slug": "fairfield",
-        "heroTagline": "FAIRFIELD RESIDENTIAL PAINTING",
-        "funFact": "We serve the agricultural heart of Spokane County with durable farm and residential coatings."
-    },
-    {
         "city": "Mead",
         "slug": "mead",
         "heroTagline": "MEAD AREA PAINTING EXPERTS",
@@ -204,30 +198,6 @@
         "funFact": "The rolling hills of Rockford are home to some of the most beautiful properties we serve."
     },
     {
-        "city": "Latah",
-        "slug": "latah",
-        "heroTagline": "LATAH AREA PAINTERS",
-        "funFact": "We're proud to serve the southern reaches of Spokane County in the quiet town of Latah."
-    },
-    {
-        "city": "Waverly",
-        "slug": "waverly",
-        "heroTagline": "WAVERLY CUSTOM PAINTING",
-        "funFact": "Small town service with big city quality — that's our promise to Waverly homeowners."
-    },
-    {
-        "city": "Elk",
-        "slug": "elk",
-        "heroTagline": "ELK AREA PAINTING EXPERTS",
-        "funFact": "Even the furthest corners of Spokane County like Elk deserve the prestige standard of care."
-    },
-    {
-        "city": "Plaza",
-        "slug": "plaza",
-        "heroTagline": "PLAZA RESIDENTIAL PAINTING",
-        "funFact": "Preserving the history of Plaza with high-quality paint is what we do best."
-    },
-    {
         "city": "Marshall",
         "slug": "marshall",
         "heroTagline": "MARSHALL PAINTING CO",
@@ -238,12 +208,6 @@
         "slug": "moab",
         "heroTagline": "MOAB AREA PAINTERS",
         "funFact": "Serving the communities near the Idaho border with top-tier Washington craftsmanship."
-    },
-    {
-        "city": "Michaud",
-        "slug": "michaud",
-        "heroTagline": "MICHAUD PAINTING SERVICES",
-        "funFact": "We keep the homes in Michaud looking their best year-round with durable finishes."
     },
     {
         "city": "Geiger Heights",
@@ -291,7 +255,7 @@
         "city": "Mica",
         "slug": "mica",
         "heroTagline": "MICA AREA PAINTERS",
-        "funFact": "Small but strong — the Mica community knows they can count on Prestige."
+        "funFact": "Small but strong \u2014 the Mica community knows they can count on Prestige."
     },
     {
         "city": "Duncan",
@@ -336,12 +300,6 @@
         "funFact": "Building a better Buckeye one professional paint job at a time."
     },
     {
-        "city": "Waysat",
-        "slug": "waysat",
-        "heroTagline": "WAYSAT RESIDENTIAL PAINTING",
-        "funFact": "Quality and integrity are the foundation of our work in the Waysat community."
-    },
-    {
         "city": "Irvin",
         "slug": "irvin",
         "heroTagline": "IRVIN PAINTING CO",
@@ -366,28 +324,10 @@
         "funFact": "East Farms homeowners appreciate our clean job sites and professional conduct."
     },
     {
-        "city": "Skilsaw",
-        "slug": "skilsaw",
-        "heroTagline": "SKILSAW AREA PAINTERS",
-        "funFact": "No job is too big or too small for our dedicated team in the Skilsaw area."
-    },
-    {
-        "city": "Grapeland",
-        "slug": "grapeland",
-        "heroTagline": "GRAPELAND RESIDENTIAL PAINTING",
-        "funFact": "Fresh paint for fresh beginnings in the Grapeland community."
-    },
-    {
         "city": "Saltese",
         "slug": "saltese",
         "heroTagline": "SALTESE PAINTING SERVICES",
         "funFact": "The beautiful hills of Saltese are the perfect setting for our natural wood staining."
-    },
-    {
-        "city": "Liberty Quarter",
-        "slug": "liberty-quarter",
-        "heroTagline": "LIBERTY QUARTER PAINTERS",
-        "funFact": "Premium service for the premium homes of the Liberty Quarter."
     },
     {
         "city": "Shields Park",
@@ -400,12 +340,6 @@
         "slug": "reardan",
         "heroTagline": "REARDAN COMMUNITY PAINTERS",
         "funFact": "Serving the Reardan community with reliable, weather-resistant coatings for any season."
-    },
-    {
-        "city": "Tyler",
-        "slug": "tyler",
-        "heroTagline": "TYLER AREA PAINTING SERVICES",
-        "funFact": "From rural farmhouses to modern builds, we bring our 'Prestige' standard to Tyler."
     },
     {
         "city": "Coeur d'Alene",
@@ -444,18 +378,6 @@
         "funFact": "Quality and integrity are the foundation of our work in the Highland community."
     },
     {
-        "city": "Antelope",
-        "slug": "antelope",
-        "heroTagline": "ANTELOPE AREA PAINTING",
-        "funFact": "Serving the growing Antelope community with professional-grade finishes."
-    },
-    {
-        "city": "Blossom",
-        "slug": "blossom",
-        "heroTagline": "BLOSSOM NEIGHBORHOOD PAINTERS",
-        "funFact": "Helping the Blossom neighborhood stay bright and beautiful with fresh paint."
-    },
-    {
         "city": "Cliff Cannon",
         "slug": "cliff-cannon",
         "heroTagline": "CLIFF CANNON HISTORIC PAINTERS",
@@ -474,34 +396,16 @@
         "funFact": "Country Homes residents trust us for meticulous interior and exterior work."
     },
     {
-        "city": "Darty",
-        "slug": "darty",
-        "heroTagline": "DARTY AREA PAINTERS",
-        "funFact": "Bringing a fresh look to the Darty community with premium paint applications."
-    },
-    {
         "city": "East Central",
         "slug": "east-central",
         "heroTagline": "EAST CENTRAL SPOKANE PAINTERS",
         "funFact": "We take pride in refreshing the diverse neighborhoods of East Central Spokane."
     },
     {
-        "city": "Fairbank",
-        "slug": "fairbank",
-        "heroTagline": "FAIRBANK PAINTING SERVICES",
-        "funFact": "Fairbank homeowners count on us for reliable and beautiful painting results."
-    },
-    {
         "city": "Freeman",
         "slug": "freeman",
         "heroTagline": "FREEMAN AREA PAINTING EXPERTS",
         "funFact": "The rural beauty of Freeman is the perfect setting for our quality exterior work."
-    },
-    {
-        "city": "Grandview",
-        "slug": "grandview",
-        "heroTagline": "GRANDVIEW CUSTOM PAINTING",
-        "funFact": "Grandview homes deserve a grand finish, and that's exactly what we deliver."
     },
     {
         "city": "Hayford",

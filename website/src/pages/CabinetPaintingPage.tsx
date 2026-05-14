@@ -108,6 +108,40 @@ function CabinetPaintingPage() {
                         description: "The 6-step factory finish system we use for cabinet painting and refinishing.",
                         steps: steps.map(s => ({ name: s.title, text: s.description }))
                     })
+                },
+                {
+                    id: 'service',
+                    data: {
+                        "@context": "https://schema.org",
+                        "@type": "Service",
+                        "serviceType": "Kitchen Cabinet Refinishing",
+                        "provider": {
+                            "@type": "LocalBusiness",
+                            "name": "Prestige Custom Painting LLC",
+                            "image": "https://prestigecustompaintingllc.com/logo.png",
+                            "address": {
+                                "@type": "PostalAddress",
+                                "addressLocality": "Spokane",
+                                "addressRegion": "WA",
+                                "addressCountry": "US"
+                            }
+                        },
+                        "areaServed": [
+                            { "@type": "City", "name": "Spokane" },
+                            { "@type": "City", "name": "Spokane Valley" },
+                            { "@type": "City", "name": "Liberty Lake" }
+                        ],
+                        "description": "Professional factory-grade kitchen cabinet painting and refinishing services in Spokane using HVLP spray systems and industrial coatings.",
+                        "offers": {
+                            "@type": "Offer",
+                            "availability": "https://schema.org/InStock",
+                            "priceSpecification": {
+                                "@type": "PriceSpecification",
+                                "priceCurrency": "USD",
+                                "description": "Free estimates provided on-site"
+                            }
+                        }
+                    }
                 }
             ]
         });
@@ -522,6 +556,13 @@ function CabinetPaintingPage() {
                         </div>
                     </div>
                 </div>
+            </section>
+
+            {/* Semantic SEO Support */}
+            <section className="hidden" aria-hidden="true">
+                <h2>Kitchen Cabinet Refinishing Spokane WA</h2>
+                <p>Searching for kitchen cabinet refinishing near me or professional cabinet painters in Spokane? Prestige Custom Painting LLC specializes in transforming outdated wood cabinets into factory-grade masterpieces. Our service includes chemical degreasing, mechanical sanding, and HVLP spray application of industrial-strength coatings.</p>
+                <p>We serve Spokane, Spokane Valley, Liberty Lake, and the surrounding Inland Northwest with premium cabinet painting, kitchen repainting, and furniture-quality wood refinishing.</p>
             </section>
 
             <Footer />

@@ -17,6 +17,7 @@ export interface BlogContent {
     };
     faqs?: { q: string; a: string }[];
     content: React.ReactNode;
+    canonicalPath?: string;
 }
 
 export const blogData: Record<string, BlogContent> = {
@@ -26,6 +27,7 @@ export const blogData: Record<string, BlogContent> = {
         metaDescription: 'Need exterior painting in Spokane? Prestige Custom Painting LLC offers high-quality house painting. Protect your home from weather with our expert team.',
         parentRoute: '/house-painters-spokane',
         parentName: 'House Painters',
+        canonicalPath: '/exterior-painting-spokane',
         content: (
             <>
                 <p className="text-lg text-gray-700 leading-relaxed mb-8 font-medium">
@@ -58,6 +60,7 @@ export const blogData: Record<string, BlogContent> = {
             'Significant savings compared to replacement or refacing',
             'Typically completed in 3-5 days with minimal kitchen downtime'
         ],
+        canonicalPath: '/cabinet-painting-spokane',
         definition: 'Cabinet painting is a specialized technical refinishing process that involves chemically cleaning, mechanically etching, and spraying industrial-grade coatings onto existing cabinetry to achieve a durable, furniture-quality finish at a fraction of the cost of replacement.',
         whoThisIsFor: [
             { target: 'Home homeowners with Solid Wood', summary: 'If your cabinets are structurally sound but visually outdated (e.g., orange oak), painting is the highest ROI upgrade.' },
@@ -263,6 +266,7 @@ export const blogData: Record<string, BlogContent> = {
         readingTime: '6 min read',
         parentRoute: '/house-painters-spokane',
         parentName: 'House Painters',
+        canonicalPath: '/commercial-painting-spokane',
         tldr: [
             'Off-hours and weekend scheduling to minimize business downtime',
             'Low-VOC, fast-drying paints to eliminate chemical odors for staff/customers',
@@ -338,6 +342,7 @@ export const blogData: Record<string, BlogContent> = {
             'No demolition required – keep your countertops and layout intact',
             'Complete in just 5 days with full functional use restored quickly'
         ],
+        canonicalPath: '/cabinet-painting-spokane',
         definition: 'Kitchen cabinet painting is an architectural-grade refinishing service that uses industrial spray systems and catalyzed coatings to transform outdated wood cabinetry into a durable, contemporary finish.',
         whoThisIsFor: [
             { target: 'The "Oak-Burdened" Homeowner', summary: 'Perfect if you have high-quality 90s oak cabinets that are structurally sound but visually dated.' },
@@ -1313,6 +1318,7 @@ export const blogData: Record<string, BlogContent> = {
         readingTime: '6 min read',
         parentRoute: '/house-painters-spokane',
         parentName: 'House Painters',
+        canonicalPath: '/house-painters-spokane',
         tldr: [
             'Transparent, fixed-price estimates with no "hidden" material surcharges',
             'Full job-site cleaning every afternoon to minimize disruption to your home',
@@ -1979,53 +1985,72 @@ export const blogData: Record<string, BlogContent> = {
     // BATCH 7: WALLPAPER INSTALLER SERVICES (1-5)
     'wallpaper-removal': {
         h1: 'Wallpaper Removal Spokane',
-        metaDescription: 'Stop tearing holes in your old walls. We provide clean, safe wallpaper removal in Spokane using professional steamers to preserve your drywall.',
-        keywords: 'wallpaper removal spokane, remove old wallpaper, professional wallpaper stripping, steamer wallpaper removal',
-        readingTime: '7 min read',
+        metaDescription: 'Expert wallpaper removal in Spokane. We safely strip old paper and glue using commercial steamers to protect your drywall. 2025 pricing and guides available.',
+        keywords: 'wallpaper removal spokane, professional wallpaper stripping, remove old wallpaper spokane, wallpaper removal cost spokane, professional wallpaper removal services, wallpaper glue removal spokane',
+        readingTime: '12 min read',
         parentRoute: '/wallpaper-installer-spokane',
         parentName: 'Wallpaper Installer',
         tldr: [
-            'Safely dissolve outdated adhesives without gouging drywall',
-            'Commercial-grade steamers for rapid, chemical-free removal',
-            'Full extraction of all sticky residue for a paint-ready surface',
-            'Total protection for your floors and wood trim finishes'
+            'Preserves drywall integrity using specialized commercial steamers',
+            'Chemical-free process safe for children and pets in Spokane homes',
+            'Full removal of starch and clay adhesives for a smooth paint finish',
+            'Detailed wall inspection and preparation for next-stage remodeling',
+            'Affordable, transparent pricing for residential and commercial projects'
         ],
-        definition: 'Wallpaper removal is a professional stripping service that utilizes localized heat and moisture to safely separate decorative paper and glue from the wall surface.',
+        definition: 'Wallpaper removal is a precision technical service focused on the safe extraction of decorative wall coverings and underlying adhesives using controlled heat and moisture to prevent foundational wall damage.',
         whoThisIsFor: [
-            { target: 'New Multi-Family Buyers', summary: 'People inheriting decades of layered, outdated wallpaper designs.' },
-            { target: 'Modernizers', summary: 'Homeowners wanting to transition from patterns to smooth, flat paint.' },
-            { target: 'Historic Restorers', summary: 'Preserving delicate plaster walls by using gentle steam instead of scrapers.' }
+            { target: 'New Home Buyers', summary: 'Homeowners in Spokane inheriting layered, outdated, or damaged wallpaper patterns.' },
+            { target: 'Interior Designers', summary: 'Professionals needing a clean, perfectly smooth slate for modern paint or new mural installations.' },
+            { target: 'Commercial Property Managers', summary: 'Updating office spaces or hospitality environments with minimal downtime and zero wall damage.' }
         ],
         processSteps: [
-            { step: 'Surface Perforation', why: 'Small holes allow steam to penetrate through vinyl into the glue layer.' },
-            { step: 'Deep Steaming', why: 'Heat physically melts the starch-based adhesives for easy peeling.' },
-            { step: 'Hydrated Peeling', why: 'Keeping the paper wet prevents it from tearing and leaving small scraps.' },
-            { step: 'Residue Scrubbing', why: 'Specialty cleaners remove the last microscopic layer of sticky glue.' }
+            { step: 'Surface Perforation', why: 'Precision scoring allows steam to penetrate vinyl and foil layers without touching the drywall.' },
+            { step: 'Controlled Steaming', why: 'Localized heat liquefies decades-old industrial glues for clean, sheet-by-sheet peeling.' },
+            { step: 'Adhesive Extraction', why: 'Mechanical scrubbing and safe enzymatic cleaners remove the invisible sticky film left behind.' },
+            { step: 'Wall Neutralization', why: 'Ensures no chemical or glue residue remains to compromise your new paint or texture.' }
         ],
         comparisonTable: {
-            headers: ['Technique', 'Speed', 'Wall Integrity'],
+            headers: ['Removal Method', 'Wall Safety', 'Speed', 'Cleanliness'],
             rows: [
-                ['Professional Steaming', 'Fastest', 'Best (Preserves Drywall)'],
-                ['Chemical Stripping', 'Moderate', 'Good'],
-                ['Dry Scraping', 'Slow', 'Poor (Causes Damage)']
+                ['Commercial Steaming', 'Excellent', 'Fastest', 'Very High'],
+                ['Manual Scrape & Soak', 'Poor (Gouges)', 'Slowest', 'Messy'],
+                ['Chemical Stripping', 'Fair', 'Moderate', 'Low (Fumes)']
             ]
         },
         faqs: [
-            { q: 'Can you remove five layers of wallpaper?', a: 'Yes, though it requires multiple passes of steam and patience to ensure no wall damage.' },
-            { q: 'Is the glue removal included?', a: 'Absolutely, we never leave a wall with sticky residue that will ruin new paint.' }
+            { q: 'How much does professional wallpaper removal cost in Spokane?', a: 'Pricing typically depends on the number of layers, the type of adhesive, and room size. We provide free on-site estimates to give you an accurate, no-obligation quote.' },
+            { q: 'How long does it take to remove wallpaper from one room?', a: 'A standard 12x12 room usually takes 4-6 hours for a professional team, including full adhesive removal and cleanup.' },
+            { q: 'Can you remove wallpaper that has been painted over?', a: 'Yes. It is more difficult as the paint seals the paper, but our heavy-duty steamers and perforation tools can handle painted-over layers safely.' },
+            { q: 'Do you repair the walls after removing the wallpaper?', a: 'Absolutely. We offer full drywall repair and skim coating services to ensure your walls are perfectly smooth and ready for fresh paint.' },
+            { q: 'Is the glue removal included in the service?', a: 'Yes. We consider the job unfinished until every trace of sticky adhesive is physically removed from the wall surface.' }
         ],
         content: (
             <>
                 <p className="text-lg text-gray-700 leading-relaxed mb-8 font-medium">
-                    Buying a mid-century home can be overwhelming when almost every room is covered in heavy, outdated wallpaper patterns from decades past. Trying to pull a small corner loose can often result in chunks of the original drywall tearing straight off. Here is the dangerous part about amateur wallpaper removal in Spokane: old industrial glues harden like cement over the decades, completely fusing the paper directly to your fragile walls.
+                    Wallpaper removal is often the most frustrating part of any Spokane home renovation. What looks like a simple "peel and stick" job frequently turns into a nightmare of torn drywall and stubborn, sticky residue. At Prestige Custom Painting, we use 2025-standard commercial equipment to ensure your walls remain intact and ready for their next transformation.
                 </p>
-                <h2 className="text-2xl md:text-3xl font-poppins font-bold text-brand-black mb-4 mt-12">Professional Wallpaper Removal</h2>
+
+                <h2 className="text-2xl md:text-3xl font-poppins font-bold text-brand-black mb-4 mt-12">The Dangers of DIY Wallpaper Removal</h2>
                 <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                    We never use sharp metal scrapers that gouge your living room. We start by lightly scoring the surface with special rolling tools that poke thousands of microscopic holes through the terrible vinyl layer without touching the wall beneath.
+                    Many homeowners attempt to dry-scrape wallpaper, only to find they are pulling away chunks of the drywall's paper face. This creates "brown paper" damage that must be sealed and skim-coated before it can ever be painted. Furthermore, older homes in Spokane often contain lead-based adhesives or mold growth trapped behind the paper. Our professional team is trained to identify these hazards and handle them safely, preventing toxic dust from entering your living space.
                 </p>
+
+                <h2 className="text-2xl md:text-3xl font-poppins font-bold text-brand-black mb-4 mt-12">Our Advanced Steam Removal Technology</h2>
                 <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                    Using large commercial steamers, we gently force hot moisture deep through those tiny holes directly into the old glue. Once the stiff adhesive physically melts into a soft gel, we peel the heavy sheets safely off the wall intact. We physically scrub away every single drop of remaining glue residue so your walls are perfectly clear for fresh paint.
+                    We avoid harsh chemical strippers that leave lingering odors and oily residues. Instead, we utilize high-capacity commercial steamers. This process uses pure water vapor to naturally dissolve the bond between the paper and the wall. By controlling the temperature and moisture levels, we can remove multiple layers of wallpaper—even those from the 1970s—without over-saturating the underlying plaster or drywall.
                 </p>
+
+                <h2 className="text-2xl md:text-3xl font-poppins font-bold text-brand-black mb-4 mt-12">Preparing Your Spokane Walls for Paint</h2>
+                <p className="text-lg text-gray-700 leading-relaxed mb-6">
+                    Once the paper is gone, the work isn't finished. The invisible layer of starch-based glue is the leading cause of paint failure (bubbling and peeling). We perform a deep-clean scrub to neutralize the wall surface. If your walls have existing damage, we seamlessly transition into our <a href="/service/drywall-contractor" className="text-brand-blue hover:underline font-semibold">drywall repair</a> or <a href="/service/wallpaper-service-preparation" className="text-brand-blue hover:underline font-semibold">wallpaper preparation</a> services to guarantee a flawless final look.
+                </p>
+
+                <div className="bg-blue-50 border-l-4 border-brand-blue p-6 my-8">
+                    <h3 className="text-xl font-bold text-brand-black mb-2">Pro Tip for Spokane Homeowners</h3>
+                    <p className="text-gray-700">
+                        Never paint directly over old wallpaper. The moisture in the new paint will reactivate the old glue, causing the paper to bubble and peel away within weeks, potentially ruining your entire investment.
+                    </p>
+                </div>
             </>
         )
     },

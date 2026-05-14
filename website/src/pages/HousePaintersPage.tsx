@@ -77,7 +77,7 @@ function HousePaintersPage() {
     ];
 
     useEffect(() => {
-        const title = "House Painters Spokane | Professional Interior & Exterior Residential Painting";
+        const title = "House Painters Spokane | Professional Residential Painting Services";
         const description = "Spokane's most trusted house painters. High-quality finishes, precision detail, and durable protection for your home. Free estimates!";
 
         return injectPageSEO({

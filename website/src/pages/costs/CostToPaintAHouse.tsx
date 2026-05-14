@@ -212,7 +212,7 @@ const CostToPaintAHouse = () => {
                                 <Clock className="text-brand-green shrink-0" size={24} />
                                 <div>
                                     <h4 className="font-bold mb-2">Labor & Expertise</h4>
-                                    <p className="text-sm text-gray-600">In Spokane, skilled labor rates reflect the cost of living and insurance. You are paying for a crew that is licensed, bonded, and has decades of local experience.</p>
+                                    <p className="text-sm text-gray-600">In Spokane, skilled labor rates reflect the cost of living and insurance. You are paying for a professional crew that is licensed, bonded, and local to the Inland Northwest.</p>
                                 </div>
                             </div>
                         </div>

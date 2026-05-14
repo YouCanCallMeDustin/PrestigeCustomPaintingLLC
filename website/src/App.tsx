@@ -15,7 +15,7 @@ function App() {
         {
             id: "painting",
             title: "Expert Painting Services",
-            description: "Our primary work is house painters. We do everything from exterior painting to cabinet painting with meticulous care.",
+            description: "We are professional house painters. We do everything from exterior painting to cabinet painting with meticulous care.",
             link: "/house-painters-spokane",
             services: ["Exterior painting", "Cabinet painting", "Deck painting", "Door painting", "House Painters", "Commercial Painting", "Kitchen Cabinet Painting", "Ceiling Painting", "Trim and Molding Painting", "Accent Wall Painting", "Exterior Siding Painting", "Stucco Painting", "Brick Painting", "Fence Painting", "Fence Staining", "Deck Staining", "Surface Priming", "Garage Painting", "Baseboard Painting", "Crown Molding Painting", "Color Consultation", "Paint Touch-Up Services", "Wall Texture Matching", "Garage Floor Epoxy Coating"]
         },

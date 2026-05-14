@@ -27,7 +27,7 @@ const AuthorBio = () => {
                     </div>
                 </div>
                 <p className="text-gray-600 leading-relaxed mb-6">
-                    With over a decade of hands-on experience in the Spokane painting industry, {ownerName} founded Prestige Custom Painting LLC to bring a higher standard of care and premium craftsmanship to the Inland Northwest. Every pricing guide and tutorial we publish is based on real-world projects, current local material costs, and years of professional expertise.
+                    As a professional in the Spokane painting industry, {ownerName} founded Prestige Custom Painting LLC to bring a higher standard of care and premium craftsmanship to the Inland Northwest. Every pricing guide and tutorial we publish is based on real-world projects, current local material costs, and professional expertise.
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-lg mx-auto md:mx-0">
                     <div className="flex items-center gap-2 text-sm font-bold text-brand-black/80">

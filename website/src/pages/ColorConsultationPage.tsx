@@ -415,7 +415,7 @@ function ColorConsultationPage() {
                             <p className="text-brand-green font-bold text-sm uppercase tracking-widest mb-2">Expert Review By</p>
                             <h3 className="text-3xl font-poppins font-bold mb-4">{ownerName}</h3>
                             <p className="text-gray-600 leading-relaxed mb-6 font-medium">
-                                With over two decades of experience in high-end residential painting, Robert provides personal color consultations that bridge the gap between architectural theory and practical application.
+                                As a professional in high-end residential painting, Robert provides personal color consultations that bridge the gap between architectural theory and practical application.
                             </p>
                             <div className="flex items-center justify-start gap-4 text-xs text-gray-400 font-bold uppercase tracking-tighter">
                                 <p>Updated: April 2026</p>
