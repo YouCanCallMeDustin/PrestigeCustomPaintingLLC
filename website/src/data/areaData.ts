@@ -5,6 +5,7 @@ export interface AreaData {
     slug: string;
     heroTagline: string;
     funFact: string;
+    state?: string;
 }
 
 export const areaData: AreaData[] = data;
