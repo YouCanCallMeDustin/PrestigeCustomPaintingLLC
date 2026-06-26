@@ -40,7 +40,7 @@ function CommercialPaintingPage() {
     const steps = [
         {
             title: "Industrial Site Assessment",
-            description: "We perform a walk-through to identify high-traffic high-wear zones and determine specific substrate needs (CMU, metal, or drywall).",
+            description: "We perform a walk-through to identify high-traffic high-wear zones and determine specific substrate needs (CMU, metal, or walls).",
             proTip: "Point out existing damage from carts or machinery; we can install scuff-resistant guards in those areas.",
             pitfall: "Using standard residential paint in a commercial corridor. It will show scuffs within weeks."
         },
@@ -60,7 +60,7 @@ function CommercialPaintingPage() {
             title: "Specialized Multi-Surface Priming",
             description: "We apply substrate-specific primers, including epoxy primers for concrete or DTM (Direct-to-Metal) coatings for steel structures.",
             proTip: "In medical offices, use antimicrobial primers that help inhibit the growth of mold and mildew.",
-            pitfall: "Using one single primer for all surfaces. Metal and drywall require fundamentally different bonding agents."
+            pitfall: "Using one single primer for all surfaces. Metal and walls require fundamentally different bonding agents."
         },
         {
             title: "High-Performance Topcoat",
@@ -258,7 +258,7 @@ function CommercialPaintingPage() {
                                     In a commercial environment, paint isn't just decoration—it's protection. For Spokane warehouses and retail spaces, exterior coatings must withstand heavy UV exposure and extreme freeze-thaw cycles.
                                 </p>
                                 <p>
-                                    We utilize high-performance coatings that protect metal structures from corrosion, CMU blocks from moisture intrusion, and drywall from the daily abuse of foot traffic and industrial carts. Our system is designed to extend the life of your facility.
+                                    We utilize high-performance coatings that protect metal structures from corrosion, CMU blocks from moisture intrusion, and walls from the daily abuse of foot traffic and industrial carts. Our system is designed to extend the life of your facility.
                                 </p>
                             </div>
                         </div>
@@ -408,7 +408,7 @@ function CommercialPaintingPage() {
                                 "Touch up black scuffs immediately with a foam brush to prevent layer build-up.",
                                 "Inspect exterior metal flashing every spring for signs of rust or oxidation.",
                                 "Ensure door closers are properly adjusted to prevent handles from slamming into walls.",
-                                "Maintain air humidity to prevent joint separation in large drywall spans."
+                                "Maintain air humidity to prevent joint separation in large wall surfaces."
                             ].map((item, i) => (
                                 <div key={i} className="flex gap-4">
                                     <div className="w-6 h-6 rounded-full bg-brand-green/10 flex items-center justify-center shrink-0 mt-0.5">

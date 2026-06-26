@@ -164,7 +164,7 @@ function AboutUsPage() {
                                     </p>
                                 </div>
                                 <p>
-                                    Whether it's a meticulous interior room transformation involving flawless 'Level 5' drywall finishing, or a large-scale exterior restoration requiring aerial lifts and lead-safe compliance, we execute with military precision. We do not hire 'seasonal' collegiate laborers; our crews are composed of vetted, career professionals who treat your home with absolute respect.
+                                    Whether it's a meticulous interior room transformation involving flawless surface preparation and paint finishing, or a large-scale exterior restoration requiring aerial lifts and lead-safe compliance, we execute with military precision. We do not hire 'seasonal' collegiate laborers; our crews are composed of vetted, career professionals who treat your home with absolute respect.
                                 </p>
                             </div>
                         </div>

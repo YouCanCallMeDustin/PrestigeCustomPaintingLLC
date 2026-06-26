@@ -25,7 +25,7 @@ const BlogInteriorTips: React.FC = () => {
         },
         {
             question: "Do I really need to use primer?",
-            answer: "Primer is essential when painting new drywall, making major spackle repairs, or painting over a dark color with a lighter one. It seals the surface and provides a uniform base for the topcoat to adhere to."
+            answer: "Primer is essential when painting raw walls, making major spackle repairs, or painting over a dark color with a lighter one. It seals the surface and provides a uniform base for the topcoat to adhere to."
         },
         {
             question: "What is 'cutting in' when painting a room?",

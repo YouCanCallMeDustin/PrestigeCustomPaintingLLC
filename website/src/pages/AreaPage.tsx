@@ -42,7 +42,7 @@ export default function AreaPage({
         },
         {
             q: `What painting services do you offer in ${city}?`,
-            a: `We offer a full range of residential and commercial painting services in ${city} including interior painting, exterior painting, cabinet refinishing, trim painting, deck staining, and drywall repair. We also serve local businesses with commercial painting and maintenance.`,
+            a: `We offer a full range of residential and commercial painting services in ${city} including interior painting, exterior painting, cabinet refinishing, trim painting, deck staining, and wall surface preparation. We also serve local businesses with commercial painting and maintenance.`,
         },
         {
             q: `How do I get a painting estimate in ${city}?`,
@@ -57,7 +57,7 @@ export default function AreaPage({
         "Exterior Siding Painting", "Stucco Painting", "Brick Painting",
         "Fence Painting", "Fence Staining", "Deck Staining", "Surface Priming",
         "Garage Painting", "Baseboard Painting", "Crown Molding Painting",
-        "Color Consultation", "Paint Touch-Up Services", "Wall Texture Matching",
+        "Color Consultation", "Paint Touch-Up Services",
         "Garage Floor Epoxy Coating"
     ];
 

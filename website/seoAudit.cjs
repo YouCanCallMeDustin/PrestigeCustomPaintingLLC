@@ -71,7 +71,6 @@ const staticPages = [
     'src/pages/ExteriorPaintingPage.tsx',
     'src/pages/CabinetPaintingPage.tsx',
     'src/pages/CommercialPaintingPage.tsx',
-    'src/pages/DrywallContractorPage.tsx',
     'src/pages/WallpaperInstallerPage.tsx',
     'src/pages/PressureWashingPage.tsx'
 ];

@@ -46,7 +46,6 @@ const Navbar = () => {
                                 <Link to="/exterior-painting-spokane" className="px-4 py-2 hover:bg-brand-gray/50 rounded-xl text-sm font-bold transition-colors">Exterior Painting</Link>
                                 <Link to="/cabinet-painting-spokane" className="px-4 py-2 hover:bg-brand-gray/50 rounded-xl text-sm font-bold transition-colors">Cabinet Painting</Link>
                                 <Link to="/color-consultation" className="px-4 py-2 hover:bg-brand-gray/50 rounded-xl text-sm font-bold transition-colors border-t border-gray-50 mt-1">Color Consultation</Link>
-                                <Link to="/drywall-contractor-spokane" className="px-4 py-2 hover:bg-brand-gray/50 rounded-xl text-sm font-bold transition-colors">Drywall Contractor</Link>
                                 <Link to="/wallpaper-installer-spokane" className="px-4 py-2 hover:bg-brand-gray/50 rounded-xl text-sm font-bold transition-colors">Wallpaper Installer</Link>
                             </div>
                         </div>
@@ -130,7 +129,6 @@ const Navbar = () => {
                                     <Link to="/exterior-painting-spokane" className="px-6 py-2.5 text-sm font-bold text-gray-600 hover:text-brand-green transition-colors">Exterior Painting</Link>
                                     <Link to="/cabinet-painting-spokane" className="px-6 py-2.5 text-sm font-bold text-gray-600 hover:text-brand-green transition-colors">Cabinet Painting</Link>
                                     <Link to="/color-consultation" className="px-6 py-2.5 text-sm font-bold text-gray-600 hover:text-brand-green transition-colors">Color Consultation</Link>
-                                    <Link to="/drywall-contractor-spokane" className="px-6 py-2.5 text-sm font-bold text-gray-600 hover:text-brand-green transition-colors">Drywall Contractor</Link>
                                     <Link to="/wallpaper-installer-spokane" className="px-6 py-2.5 text-sm font-bold text-gray-600 hover:text-brand-green transition-colors">Wallpaper Installer</Link>
                                 </div>
                             )}

@@ -12,7 +12,6 @@ export default function Footer() {
             { label: "Exterior Painting", to: "/exterior-painting-spokane" },
             { label: "Cabinet Painting", to: "/cabinet-painting-spokane" },
             { label: "Commercial Painting", to: "/commercial-painting-spokane" },
-            { label: "Drywall Repair", to: "/drywall-contractor-spokane" },
         ],
         resources: [
             { label: "Painting Costs", to: "/cost-to-paint-a-house" },

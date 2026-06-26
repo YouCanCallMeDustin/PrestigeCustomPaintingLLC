@@ -17,14 +17,7 @@ function App() {
             title: "Expert Painting Services",
             description: "We are professional house painters. We do everything from exterior painting to cabinet painting with meticulous care.",
             link: "/house-painters-spokane",
-            services: ["Exterior painting", "Cabinet painting", "Deck painting", "Door painting", "House Painters", "Commercial Painting", "Kitchen Cabinet Painting", "Ceiling Painting", "Trim and Molding Painting", "Accent Wall Painting", "Exterior Siding Painting", "Stucco Painting", "Brick Painting", "Fence Painting", "Fence Staining", "Deck Staining", "Surface Priming", "Garage Painting", "Baseboard Painting", "Crown Molding Painting", "Color Consultation", "Paint Touch-Up Services", "Wall Texture Matching", "Garage Floor Epoxy Coating"]
-        },
-        {
-            id: "drywall",
-            title: "Drywall Contractor",
-            description: "We are also a local drywall contractor when your walls need more than just a new coat of paint. Sometimes, old Spokane homes have cracks from the ground shifting. We can help with ceiling repair and drywall finishing to make things smooth again.",
-            link: "/drywall-contractor-spokane",
-            services: ["Ceiling repair", "Drywall finishing", "Popcorn ceiling removal", "Hole Repair in Drywall", "Crack Repair in Walls", "Drywall Patching", "Texture Matching", "Wall Texture Application", "Ceiling Texture Removal", "Drywall Installation Repair", "Wall Resurfacing"]
+            services: ["Exterior painting", "Cabinet painting", "Deck painting", "Door painting", "House Painters", "Commercial Painting", "Kitchen Cabinet Painting", "Ceiling Painting", "Trim and Molding Painting", "Accent Wall Painting", "Exterior Siding Painting", "Stucco Painting", "Brick Painting", "Fence Painting", "Fence Staining", "Deck Staining", "Surface Priming", "Garage Painting", "Baseboard Painting", "Crown Molding Painting", "Color Consultation", "Paint Touch-Up Services", "Garage Floor Epoxy Coating"]
         },
         {
             id: "wallpaper",

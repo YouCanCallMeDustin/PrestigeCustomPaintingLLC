@@ -49,7 +49,7 @@ function InteriorPaintingPage() {
         },
         {
             title: "Surface Repair & Sanding",
-            description: "We patch drywall holes, fix nail pops, and sand rough transitions. This ensures the substrate is perfectly smooth before any coating is applied.",
+            description: "We patch wall holes, fix nail pops, and sand rough transitions. This ensures the substrate is perfectly smooth before any coating is applied.",
             proTip: "Always use a light to check for wall imperfections before painting; shadows reveal what the eye misses.",
             pitfall: "Painting over dusty walls. Paint won't adhere properly to dust, leading to peeling later."
         },
@@ -57,7 +57,7 @@ function InteriorPaintingPage() {
             title: "Precision Priming",
             description: "For color shifts or bare patches, we apply high-adhesion primers. This locks in the surface and ensures the topcoat color is true and vibrant.",
             proTip: "Tint your primer toward your final color for better coverage on dark-to-light transitions.",
-            pitfall: "Using the wrong primer. Unsealed drywall requires a different primer than previously painted surfaces."
+            pitfall: "Using the wrong primer. Unsealed walls require a different primer than previously painted surfaces."
         },
         {
             title: "Topcoat Application",
@@ -194,7 +194,7 @@ function InteriorPaintingPage() {
                         </h2>
                         <div className="bg-brand-gray/30 p-8 md:p-10 rounded-3xl border-l-8 border-brand-green italic">
                             <p className="text-xl md:text-2xl text-gray-800 leading-relaxed font-medium">
-                                "Prestige Custom Painting offers top-rated interior painting in Spokane, WA. A professional project includes thorough area protection, drywall patching, precision edge cutting, and the application of low-VOC paints like Benjamin Moore to ensure indoor air quality during the winter months."
+                                "Prestige Custom Painting offers top-rated interior painting in Spokane, WA. A professional project includes thorough area protection, surface patching, precision edge cutting, and the application of low-VOC paints like Benjamin Moore to ensure indoor air quality during the winter months."
                             </p>
                         </div>
 
@@ -244,7 +244,7 @@ function InteriorPaintingPage() {
                                     <h4 className="font-bold text-brand-black mb-2 flex items-center gap-2">
                                         <Shield size={18} className="text-brand-green" /> Protects Surfaces
                                     </h4>
-                                    <p className="text-sm text-gray-500">Seals drywall and wood from moisture and pests.</p>
+                                    <p className="text-sm text-gray-500">Seals walls and wood from moisture and pests.</p>
                                 </div>
                                 <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
                                     <h4 className="font-bold text-brand-black mb-2 flex items-center gap-2">
@@ -328,7 +328,7 @@ function InteriorPaintingPage() {
                         <div className="grid sm:grid-cols-2 gap-4">
                             {[
                                 "Remove all outlet covers and switch plates",
-                                "Patch drywall holes with premium spackle",
+                                "Patch wall holes with premium spackle",
                                 "Sand all surfaces to 150-180 grit",
                                 "Wipe down walls with microfiber cloths",
                                 "Mask all baseboards with 1.5-inch tape",
@@ -463,7 +463,7 @@ function InteriorPaintingPage() {
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {[
                             { m: "Skipping the Primer", s: "Always use primer when changing sheens or applying light colors over dark ones to ensure true color." },
-                            { m: "Poor Lighting Conditions", s: "Use high-output work lights during prep to identify drywall defects before they are highlighted by paint." },
+                            { m: "Poor Lighting Conditions", s: "Use high-output work lights during prep to identify wall defects before they are highlighted by paint." },
                             { m: "Painting Dusty Surfaces", s: "Wipe down all walls with microfiber cloths after sanding; otherwise, paint will peel within months." },
                             { m: "Wrong Sheen in Damp Rooms", s: "Using Flat paint in bathrooms leads to water spots and mold. Always use Satin or Semi-Gloss." },
                             { m: "Removing Tape Too Late", s: "Remove tape while the paint is still wet or score edges with a razor to avoid peeling the finish." }

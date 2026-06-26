@@ -62,7 +62,7 @@ function ColorConsultationPage() {
             title: "Finish & Sheen Calibration",
             description: "We select the specific sheens (matte, satin, semi-gloss) that will maximize both the visual impact and the durability of each surface.",
             proTip: "Matte finishes are excellent for hiding wall imperfections in high-light areas, while satins offer better washability in kitchens.",
-            pitfall: "Using high-gloss on large flat walls. This highlights every bump and joint in the drywall, creating a busy, distracting look."
+            pitfall: "Using high-gloss on large flat walls. This highlights every bump and joint in the wall surface, creating a busy, distracting look."
         },
         {
             title: "Final Specification Document",

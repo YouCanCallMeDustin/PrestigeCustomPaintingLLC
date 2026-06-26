@@ -86,7 +86,7 @@ function SpokaneHomeImprovementPage() {
         },
         {
             title: "Material Selection",
-            description: "Choose materials that can withstand local conditions. From premium paints to moisture-resistant drywall.",
+            description: "Choose materials that can withstand local conditions. From premium paints to moisture-resistant surface materials.",
             proTip: "Use low-VOC paints for interior work to maintain indoor air quality in the winter.",
             pitfall: "Buying 'big box' store-grade paint that requires more coats."
         },

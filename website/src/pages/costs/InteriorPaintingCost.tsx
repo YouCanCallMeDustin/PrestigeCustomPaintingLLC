@@ -21,7 +21,7 @@ const InteriorPaintingCost: React.FC = () => {
         },
         {
             question: "How much does it cost to paint a 2,000 sq ft house interior?",
-            answer: "A full interior repaint of a 2,000 square foot home (including walls, ceilings, and standard trim) ranges from $5,000 to $9,000. Homes with high ceilings, complex wainscoting, or demanding drywall repairs will fall on the higher end of that spectrum."
+            answer: "A full interior repaint of a 2,000 square foot home (including walls, ceilings, and standard trim) ranges from $5,000 to $9,000. Homes with high ceilings, complex wainscoting, or demanding wall repairs will fall on the higher end of that spectrum."
         },
         {
             question: "What is 'Color Drenching' and does it cost more?",
@@ -142,7 +142,7 @@ const InteriorPaintingCost: React.FC = () => {
                             <div className="border border-gray-200 p-8 rounded-3xl hover:border-brand-green transition-colors">
                                 <Clock className="text-brand-green w-10 h-10 mb-4" />
                                 <h3 className="text-xl font-bold mb-2">3. Surface Preparation</h3>
-                                <p className="text-gray-600 text-sm m-0">Does your drywall look like a teenager’s dartboard? Skim-coating rough walls, patching doorknob holes, and sanding out previous DIY paint drips adds hours of labor to a baseline estimate.</p>
+                                <p className="text-gray-600 text-sm m-0">Do your walls look like a teenager’s dartboard? Skim-coating rough walls, patching doorknob holes, and sanding out previous DIY paint drips adds hours of labor to a baseline estimate.</p>
                             </div>
                             <div className="border border-gray-200 p-8 rounded-3xl hover:border-brand-green transition-colors">
                                 <PaintBucket className="text-brand-green w-10 h-10 mb-4" />

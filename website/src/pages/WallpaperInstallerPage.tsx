@@ -17,7 +17,7 @@ function WallpaperInstallerPage() {
         },
         {
             q: "Do I need to remove my old wallpaper before you arrive?",
-            a: "We highly recommend our professional removal service. DIY removal often damages the underlying drywall, leading to higher repair costs later. We use specialized steam and enzymatic strippers to safely lift old paper."
+            a: "We highly recommend our professional removal service. DIY removal often damages the underlying walls, leading to higher repair costs later. We use specialized steam and enzymatic strippers to safely lift old paper."
         },
         {
             q: "Can you install wallpaper over textured walls?",
@@ -36,9 +36,9 @@ function WallpaperInstallerPage() {
     const steps = [
         {
             title: "Old Paper Stripping & Scrape",
-            description: "We use a combination of enzymatic strippers and professional steam technology to gently lift old paper without gouging the drywall substrate.",
-            proTip: "Never dry-scrape wallpaper; it almost always results in permanent damage to the gypsum board underneath.",
-            pitfall: "Using too much water during DIY removal can soak into the drywall core, causing it to crumble and lose structural integrity."
+            description: "We use a combination of enzymatic strippers and professional steam technology to gently lift old paper without gouging the wall substrate.",
+            proTip: "Never dry-scrape wallpaper; it almost always results in permanent damage to the wallboard underneath.",
+            pitfall: "Using too much water during DIY removal can soak into the wall core, causing it to crumble and lose structural integrity."
         },
         {
             title: "Adhesive Neutralization",
@@ -49,7 +49,7 @@ function WallpaperInstallerPage() {
         {
             title: "Substrate Smoothing & Priming",
             description: "We patch all imperfections and apply a specialized 'wallpaper primer/sealer' that creates the perfect grip for the new adhesive.",
-            proTip: "Standard wall primer isn't enough; you need a high-solid sealer to prevent the paper from bonding too permanently to the drywall.",
+            proTip: "Standard wall primer isn't enough; you need a high-solid sealer to prevent the paper from bonding too permanently to the wall.",
             pitfall: "Skiping the sealing phase. This makes future removal impossible without destroying the wall."
         },
         {
@@ -216,10 +216,10 @@ function WallpaperInstallerPage() {
                             </h2>
                             <div className="space-y-6 text-lg text-gray-600 leading-relaxed font-medium">
                                 <p>
-                                    Taking down 30-year-old wallpaper in an older Spokane home is often the most frustrating part of a renovation. Scouring and scraping without the right enzymatic strippers can leave your drywall looking like a battlefield.
+                                    Taking down 30-year-old wallpaper in an older Spokane home is often the most frustrating part of a renovation. Scouring and scraping without the right enzymatic strippers can leave your walls looking like a battlefield.
                                 </p>
                                 <p>
-                                    We utilize professional-grade steaming equipment and ph-balanced stripping solutions that dissolve adhesives without damaging the paper face of your drywall. Our goal is to leave the surface pristine, ready for its next transformation.
+                                    We utilize professional-grade steaming equipment and ph-balanced stripping solutions that dissolve adhesives without damaging the surface of your walls. Our goal is to leave the surface pristine, ready for its next transformation.
                                 </p>
                             </div>
                         </div>
@@ -316,7 +316,7 @@ function WallpaperInstallerPage() {
                                 <div>
                                     <h4 className="text-xl font-bold mb-2 uppercase tracking-tighter">Dedicated Sizing/Priming</h4>
                                     <p className="text-gray-600 leading-relaxed font-medium text-sm">
-                                        We use professional 'sizing' and specialty primers that prevent the adhesive from soaking into the drywall, ensuring a strong bond now and easy removal years later.
+                                        We use professional 'sizing' and specialty primers that prevent the adhesive from soaking into the wall substrate, ensuring a strong bond now and easy removal years later.
                                     </p>
                                 </div>
                             </div>
