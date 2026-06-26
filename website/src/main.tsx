@@ -69,7 +69,7 @@ root.render(
                 <Route path="/painting-airway-heights" element={<AirwayHeightsPage />} />
                 <Route path="/painting-cheney" element={<CheneyPage />} />
                 <Route path="/painting-deer-park" element={<DeerParkPage />} />
-                <Route path="/drywall-contractor-spokane" element={<Navigate to="/interior-painting-spokane" replace />} />
+
                 <Route path="/wallpaper-installer-spokane" element={<WallpaperInstallerPage />} />
                 <Route path="/paint-stripping-spokane" element={<PaintStrippingPage />} />
                 <Route path="/pressure-washing-spokane" element={<PressureWashingPage />} />

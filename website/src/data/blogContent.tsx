@@ -1352,7 +1352,7 @@ export const blogData: Record<string, BlogContent> = {
             { q: 'How much does professional wallpaper removal cost in Spokane?', a: 'Pricing typically depends on the number of layers, the type of adhesive, and room size. We provide free on-site estimates to give you an accurate, no-obligation quote.' },
             { q: 'How long does it take to remove wallpaper from one room?', a: 'A standard 12x12 room usually takes 4-6 hours for a professional team, including full adhesive removal and cleanup.' },
             { q: 'Can you remove wallpaper that has been painted over?', a: 'Yes. It is more difficult as the paint seals the paper, but our heavy-duty steamers and perforation tools can handle painted-over layers safely.' },
-            { q: 'Do you repair the walls after removing the wallpaper?', a: 'Absolutely. We offer full drywall repair and skim coating services to ensure your walls are perfectly smooth and ready for fresh paint.' },
+            { q: 'Do you repair the walls after removing the wallpaper?', a: 'Yes. After stripping the paper, we perform surface preparation including skim coating and priming to ensure your walls are perfectly smooth and ready for fresh paint.' },
             { q: 'Is the glue removal included in the service?', a: 'Yes. We consider the job unfinished until every trace of sticky adhesive is physically removed from the wall surface.' }
         ],
         content: (
@@ -1373,7 +1373,7 @@ export const blogData: Record<string, BlogContent> = {
 
                 <h2 className="text-2xl md:text-3xl font-poppins font-bold text-brand-black mb-4 mt-12">Preparing Your Spokane Walls for Paint</h2>
                 <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                    Once the paper is gone, the work isn't finished. The invisible layer of starch-based glue is the leading cause of paint failure (bubbling and peeling). We perform a deep-clean scrub to neutralize the wall surface. If your walls have existing damage, we seamlessly transition into our <a href="/service/drywall-contractor" className="text-brand-blue hover:underline font-semibold">drywall repair</a> or <a href="/service/wallpaper-service-preparation" className="text-brand-blue hover:underline font-semibold">wallpaper preparation</a> services to guarantee a flawless final look.
+                    Once the paper is gone, the work isn't finished. The invisible layer of starch-based glue is the leading cause of paint failure (bubbling and peeling). We perform a deep-clean scrub to neutralize the wall surface. If your walls have existing damage, we seamlessly transition into our <a href="/service/wallpaper-service-preparation" className="text-brand-blue hover:underline font-semibold">wallpaper preparation</a> and surface priming services to guarantee a flawless final look.
                 </p>
 
                 <div className="bg-blue-50 border-l-4 border-brand-blue p-6 my-8">
